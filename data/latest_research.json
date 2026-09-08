@@ -1,0 +1,662 @@
+{
+  "fetched_at": "2026-09-08 02:51:25",
+  "source_mode": "auto",
+  "profile": {
+    "core_weight": 60,
+    "tactical_weight": 35,
+    "cash_weight": 5,
+    "aggression": 45,
+    "max_drawdown": 15.0,
+    "horizon_days": 20,
+    "cost_assumption": "佣金 2.5 bps + 滑点 5.0 bps + 年费 0.50%"
+  },
+  "metrics": [
+    {
+      "code": "510300",
+      "name": "沪深300ETF",
+      "category": "宽基指数",
+      "latest_value": 4.6519999504089355,
+      "total_return": 0.4105517929647726,
+      "annualized_return": 0.04396615642860313,
+      "annualized_volatility": 0.19649874310738116,
+      "max_drawdown": -0.4510074262437961,
+      "calmar_ratio": 0.09748432923771157,
+      "momentum_60d": -0.03445410852924924,
+      "win_rate": 0.49612403100775193,
+      "current_aum": NaN,
+      "avg_volume": 1234335637.65,
+      "as_of": "2026-09-08",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "510500",
+      "name": "中证500ETF",
+      "category": "宽基指数",
+      "latest_value": 7.84499979019165,
+      "total_return": 0.7942459478532891,
+      "annualized_return": 0.07586302794478117,
+      "annualized_volatility": 0.23807998305422282,
+      "max_drawdown": -0.3965452862065345,
+      "calmar_ratio": 0.19130987199597949,
+      "momentum_60d": -0.04816790269050264,
+      "win_rate": 0.5126614987080104,
+      "current_aum": NaN,
+      "avg_volume": 457339970.46666664,
+      "as_of": "2026-09-08",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159915",
+      "name": "创业板ETF",
+      "category": "成长指数",
+      "latest_value": 3.4260001182556152,
+      "total_return": 1.5817634224761878,
+      "annualized_return": 0.12596482200256176,
+      "annualized_volatility": 0.3112594310240634,
+      "max_drawdown": -0.5658465895446377,
+      "calmar_ratio": 0.22261302679924488,
+      "momentum_60d": -0.10920432726626439,
+      "win_rate": 0.48372093023255813,
+      "current_aum": NaN,
+      "avg_volume": 2008618690.0333333,
+      "as_of": "2026-09-08",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159949",
+      "name": "创业板50ETF",
+      "category": "成长指数",
+      "latest_value": 1.6059999465942383,
+      "total_return": 2.1992032449625167,
+      "annualized_return": 0.15657411659303855,
+      "annualized_volatility": 0.33324225038453037,
+      "max_drawdown": -0.5899053876881551,
+      "calmar_ratio": 0.26542242173215946,
+      "momentum_60d": -0.13423184362209095,
+      "win_rate": 0.4718346253229974,
+      "current_aum": NaN,
+      "avg_volume": 1355253557.25,
+      "as_of": "2026-09-08",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "513100",
+      "name": "纳指ETF",
+      "category": "海外指数",
+      "latest_value": 2.242000102996826,
+      "total_return": 3.182835908861832,
+      "annualized_return": 0.19601619830517558,
+      "annualized_volatility": 0.24449066609124967,
+      "max_drawdown": -0.28568022185936814,
+      "calmar_ratio": 0.6861384978959745,
+      "momentum_60d": 0.03700285120838642,
+      "win_rate": 0.5268595041322314,
+      "current_aum": NaN,
+      "avg_volume": 216680563.26666668,
+      "as_of": "2026-09-08",
+      "quality_score": 0.883,
+      "source": "Yahoo Finance public chart"
+    }
+  ],
+  "quality": [
+    {
+      "code": "510300",
+      "rows": 1935,
+      "start_date": "2018-09-10",
+      "end_date": "2026-09-08",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "510500",
+      "rows": 1935,
+      "start_date": "2018-09-10",
+      "end_date": "2026-09-08",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1935,
+      "start_date": "2018-09-10",
+      "end_date": "2026-09-08",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1935,
+      "start_date": "2018-09-10",
+      "end_date": "2026-09-08",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1936,
+      "start_date": "2018-09-10",
+      "end_date": "2026-09-08",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    }
+  ],
+  "events": [
+    {
+      "code": "510300",
+      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:47",
+      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:43",
+      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
+      "publisher": "BeInCrypto",
+      "published_at": "2026-09-08 02:40",
+      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
+      "publisher": "Insider Monkey",
+      "published_at": "2026-09-08 02:38",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
+      "publisher": "AFP",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:35",
+      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:34",
+      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:47",
+      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:43",
+      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
+      "publisher": "BeInCrypto",
+      "published_at": "2026-09-08 02:40",
+      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
+      "publisher": "Insider Monkey",
+      "published_at": "2026-09-08 02:38",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
+      "publisher": "AFP",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:35",
+      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:34",
+      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "How a 64-Year-Old’s $1.2 Million in VOO Turned Into a $456,000 Bet on a Single Sector",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 21:25",
+      "url": "https://finance.yahoo.com/m/cc50f22d-ae9e-3ea1-acbe-a7655fca135c/how-a-64-year-old%E2%80%99s-%241.2.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "IBB Just Beat the S&P 500 by 22 Points in Three Months. Are You Late to the Party?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 16:22",
+      "url": "https://finance.yahoo.com/m/a31a6756-6bc2-3912-923d-2587e9bd377c/ibb-just-beat-the-s%26p-500-by.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Super Micro Has Gained 35% in 2026. What Would It Take to Get SMCI Stock Up to $50?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:50",
+      "url": "https://finance.yahoo.com/m/b6dc79d8-a0b7-3c07-b343-065dd843e54b/super-micro-has-gained-35%25-in.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Microsoft Is Close to a New All-Time High. This Number Will Determine If It Keeps Climbing",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:45",
+      "url": "https://finance.yahoo.com/m/ddb3fc6a-20c2-35ed-85d7-512904789898/microsoft-is-close-to-a-new.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Which Telecom Stock Has Dominated in 2026: AT&T, Verizon, or T-Mobile? (It’s Not Even Close)",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:40",
+      "url": "https://finance.yahoo.com/m/edc8f49e-74cc-3b38-a2fb-933834d73bd3/which-telecom-stock-has.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Nike Has Tumbled 38% in 2026: Is It Time to Switch to Dick’s or Lululemon?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:30",
+      "url": "https://finance.yahoo.com/m/0d219ec2-ae34-3451-b222-17c89f85ad70/nike-has-tumbled-38%25-in-2026%3A.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Roblox Has Collapsed 47% This Year: Is It Time to Switch to Take-Two or GameStop?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 14:50",
+      "url": "https://finance.yahoo.com/m/cb266da7-514b-3240-8471-0dfd0c0afb63/roblox-has-collapsed-47%25-this.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Tesla Says This Time Is Different. Wall Street Is Split on Whether to Believe It",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 14:43",
+      "url": "https://finance.yahoo.com/m/637dac24-45c4-307b-9e42-0db8f845108a/tesla-says-this-time-is.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:47",
+      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:43",
+      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
+      "publisher": "BeInCrypto",
+      "published_at": "2026-09-08 02:40",
+      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
+      "publisher": "Insider Monkey",
+      "published_at": "2026-09-08 02:38",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
+      "publisher": "AFP",
+      "published_at": "2026-09-08 02:36",
+      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-08 02:35",
+      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-08 02:34",
+      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "How a 64-Year-Old’s $1.2 Million in VOO Turned Into a $456,000 Bet on a Single Sector",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 21:25",
+      "url": "https://finance.yahoo.com/m/cc50f22d-ae9e-3ea1-acbe-a7655fca135c/how-a-64-year-old%E2%80%99s-%241.2.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "IBB Just Beat the S&P 500 by 22 Points in Three Months. Are You Late to the Party?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 16:22",
+      "url": "https://finance.yahoo.com/m/a31a6756-6bc2-3912-923d-2587e9bd377c/ibb-just-beat-the-s%26p-500-by.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Super Micro Has Gained 35% in 2026. What Would It Take to Get SMCI Stock Up to $50?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:50",
+      "url": "https://finance.yahoo.com/m/b6dc79d8-a0b7-3c07-b343-065dd843e54b/super-micro-has-gained-35%25-in.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Microsoft Is Close to a New All-Time High. This Number Will Determine If It Keeps Climbing",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:45",
+      "url": "https://finance.yahoo.com/m/ddb3fc6a-20c2-35ed-85d7-512904789898/microsoft-is-close-to-a-new.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Which Telecom Stock Has Dominated in 2026: AT&T, Verizon, or T-Mobile? (It’s Not Even Close)",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:40",
+      "url": "https://finance.yahoo.com/m/edc8f49e-74cc-3b38-a2fb-933834d73bd3/which-telecom-stock-has.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Nike Has Tumbled 38% in 2026: Is It Time to Switch to Dick’s or Lululemon?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 15:30",
+      "url": "https://finance.yahoo.com/m/0d219ec2-ae34-3451-b222-17c89f85ad70/nike-has-tumbled-38%25-in-2026%3A.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Roblox Has Collapsed 47% This Year: Is It Time to Switch to Take-Two or GameStop?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 14:50",
+      "url": "https://finance.yahoo.com/m/cb266da7-514b-3240-8471-0dfd0c0afb63/roblox-has-collapsed-47%25-this.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Tesla Says This Time Is Different. Wall Street Is Split on Whether to Believe It",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-07 14:43",
+      "url": "https://finance.yahoo.com/m/637dac24-45c4-307b-9e42-0db8f845108a/tesla-says-this-time-is.html",
+      "source": "yahoo_news_secondary"
+    }
+  ],
+  "recommendations": [
+    {
+      "role": "核心仓",
+      "code": "513100",
+      "name": "纳指ETF",
+      "target_weight": 60.0,
+      "action": "等待验证",
+      "net_return_range": "-4.1% / +1.4% / +6.9%",
+      "max_drawdown": -0.28568022185936814,
+      "reason": "核心仓候选得分 0.92；年化历史收益 +19.6%，60日动量 +3.7%，最大回撤 -28.6%。",
+      "evidence": "历史区间 2026-09-08 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
+    },
+    {
+      "role": "战术仓",
+      "code": "510500",
+      "name": "中证500ETF",
+      "target_weight": 35.0,
+      "action": "不碰",
+      "net_return_range": "-5.0% / +0.4% / +5.8%",
+      "max_drawdown": -0.3965452862065345,
+      "reason": "战术仓候选得分 0.53；年化历史收益 +7.6%，60日动量 -4.8%，最大回撤 -39.7%。",
+      "evidence": "历史区间 2026-09-08 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -39.7% 超过用户阈值；数据质量未达到 90%"
+    }
+  ],
+  "research_cards": [
+    {
+      "code": "510300",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-08，沪深300ETF（510300）最新净值为4.652元。",
+        "自数据起始日（约2012年）至2026-09-08，累计总回报为41.06%，年化回报为4.40%。",
+        "年化波动率为19.65%，历史最大回撤为-45.10%，Calmar比率为0.097。",
+        "近60日（约3个月）收益为-3.45%。",
+        "历史日度数据中，日胜率（正收益日占比）为49.61%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "作为宽基指数ETF，跟踪沪深300指数，覆盖A股市场大盘蓝筹股，分散化程度高。",
+        "长期（约14年）累计回报为正，年化回报约4.4%，跑赢部分固定收益类资产。"
+      ],
+      "risk_signals": [
+        "近60日收益为负（-3.45%），短期趋势偏弱。",
+        "历史最大回撤达-45.10%，表明在极端市场环境下可能面临较大净值损失。",
+        "Calmar比率仅为0.097，表明相对于承担的回撤风险，长期年化回报较低。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响基于日频数据的统计指标精确性。"
+      ],
+      "verification_questions": [
+        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期，是否包含长期停牌或数据源错误？",
+        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
+        "新闻事件列表中未发现与510300直接相关的公告，需确认是否有其他未收录的重大事件。"
+      ],
+      "conclusion": "沪深300ETF作为宽基指数基金，长期回报为正但年化收益率偏低（4.4%），且历史回撤较大。近期60日动量转负，短期表现承压。综合来看，该基金适合作为长期配置工具，但当前时点性价比一般，需关注市场整体走势及数据质量问题。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "510500",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-08，中证500ETF（510500）最新净值为7.845元。",
+        "自数据起始日（约2013年）至2026-09-08，累计总回报为79.42%，年化回报为7.59%。",
+        "年化波动率为23.81%，历史最大回撤为-39.65%，Calmar比率为0.191。",
+        "近60日（约3个月）收益为-4.82%。",
+        "历史日度数据中，日胜率（正收益日占比）为51.27%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "作为中盘宽基指数ETF，覆盖A股中盘股，行业分布相对均衡。",
+        "长期（约13年）年化回报7.59%，高于沪深300ETF（4.4%），且Calmar比率（0.191）优于沪深300ETF（0.097），风险调整后收益相对更好。"
+      ],
+      "risk_signals": [
+        "近60日收益为负（-4.82%），短期趋势偏弱。",
+        "年化波动率23.81%较高，历史最大回撤-39.65%，波动风险较大。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+      ],
+      "verification_questions": [
+        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
+        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
+        "新闻事件列表中未发现与510500直接相关的公告，需确认是否有其他未收录的重大事件。"
+      ],
+      "conclusion": "中证500ETF长期年化回报（7.59%）和Calmar比率（0.191）均优于沪深300ETF，但波动率更高。近期60日动量转负，短期承压。该基金适合风险承受能力中等偏上的投资者作为中盘股配置工具，但需注意短期下行风险。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "159915",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-08，创业板ETF（159915）最新净值为3.426元。",
+        "自数据起始日（约2011年）至2026-09-08，累计总回报为158.18%，年化回报为12.60%。",
+        "年化波动率为31.13%，历史最大回撤为-56.58%，Calmar比率为0.223。",
+        "近60日（约3个月）收益为-10.92%。",
+        "历史日度数据中，日胜率（正收益日占比）为48.37%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "作为成长风格指数ETF，长期（约15年）年化回报12.60%，在同类宽基/成长指数中表现突出。",
+        "Calmar比率（0.223）在四只基金中最高，表明长期风险调整后收益相对较好。"
+      ],
+      "risk_signals": [
+        "近60日收益为-10.92%，为四只基金中短期跌幅最大，短期趋势明显走弱。",
+        "年化波动率31.13%最高，历史最大回撤-56.58%，波动和回撤风险极大。",
+        "日胜率48.37%为四只基金中最低，表明日度正收益概率偏低。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+      ],
+      "verification_questions": [
+        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
+        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
+        "新闻事件列表中未发现与159915直接相关的公告，需确认是否有其他未收录的重大事件。"
+      ],
+      "conclusion": "创业板ETF长期年化回报最高（12.6%），但伴随极高的波动率（31.13%）和最大回撤（-56.58%）。近期60日跌幅达10.92%，短期风险显著。该基金适合风险承受能力高、追求高成长弹性的投资者，但当前时点需警惕进一步下行风险。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "159949",
+      "status": "红灯",
+      "facts": [
+        "截至2026-09-08，创业板50ETF（159949）最新净值为1.606元。",
+        "自数据起始日（约2014年）至2026-09-08，累计总回报为219.92%，年化回报为15.66%。",
+        "年化波动率为33.32%，历史最大回撤为-58.99%，Calmar比率为0.265。",
+        "近60日（约3个月）收益为-13.42%。",
+        "历史日度数据中，日胜率（正收益日占比）为47.18%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "作为创业板头部50只股票的ETF，长期（约12年）年化回报15.66%，为四只基金中最高。",
+        "Calmar比率（0.265）在四只基金中最高，表明长期风险调整后收益相对最好。"
+      ],
+      "risk_signals": [
+        "近60日收益为-13.42%，为四只基金中短期跌幅最大，短期趋势极度疲弱。",
+        "年化波动率33.32%最高，历史最大回撤-58.99%最深，波动和回撤风险极大。",
+        "日胜率47.18%为四只基金中最低，表明日度正收益概率偏低。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+      ],
+      "verification_questions": [
+        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
+        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
+        "新闻事件列表中未发现与159949直接相关的公告，需确认是否有其他未收录的重大事件。"
+      ],
+      "conclusion": "创业板50ETF长期年化回报最高（15.66%），但波动率（33.32%）和最大回撤（-58.99%）均为四只基金中最高。近期60日跌幅达13.42%，短期风险极大。该基金属于高风险高收益品种，当前短期动量显著为负，需高度警惕下行风险，建议谨慎对待。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "513100",
+      "status": "绿灯",
+      "facts": [
+        "截至2026-09-08，纳指ETF（513100）最新净值为2.242元。",
+        "自数据起始日（约2013年）至2026-09-08，累计总回报为318.28%，年化回报为19.60%。",
+        "年化波动率为24.45%，历史最大回撤为-28.57%，Calmar比率为0.686。",
+        "近60日（约3个月）收益为+3.70%。",
+        "历史日度数据中，日胜率（正收益日占比）为52.69%。",
+        "数据质量评分0.883，提示工作日序列缺失151天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "作为跟踪纳斯达克100指数的QDII ETF，长期（约13年）年化回报19.60%，为四只基金中最高。",
+        "Calmar比率（0.686）远高于其他三只基金，表明风险调整后收益显著更优。",
+        "近60日收益为正（+3.70%），短期动量向上，为四只基金中唯一正收益。",
+        "历史最大回撤（-28.57%）相对较小，日胜率（52.69%）为四只基金中最高。"
+      ],
+      "risk_signals": [
+        "年化波动率24.45%仍较高，需注意市场波动风险。",
+        "作为QDII ETF，可能面临汇率波动、跨境市场交易时间差异等额外风险。",
+        "数据质量存在瑕疵，工作日序列缺失151天，可能影响统计指标精确性。"
+      ],
+      "verification_questions": [
+        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的151个工作日具体对应哪些日期？",
+        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
+        "新闻事件列表中未发现与513100直接相关的公告，需确认是否有其他未收录的重大事件。"
+      ],
+      "conclusion": "纳指ETF在四只基金中表现最优：长期年化回报最高（19.6%），Calmar比率最高（0.686），历史回撤相对较小，且近期60日动量为正。该基金适合作为全球科技股配置工具，风险调整后收益突出，当前时点相对占优。",
+      "source": "Deepseek:deepseek-chat"
+    }
+  ]
+}
