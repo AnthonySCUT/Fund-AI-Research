@@ -31,9 +31,9 @@ py -3 -m streamlit run app.py
 - `.github/workflows/scheduled_research.yml` 会在工作日北京时间 07:30、12:00、15:30 自动运行，生成 `data/latest_research.json` 和 `data/latest_research.md` 并提交回 GitHub。Streamlit Cloud 会因提交自动重新部署。
 - 侧边栏参数放在表单中，修改后点击“运行抓取与分析”才会发起新任务；选中多支基金时会并行抓取，并将 AI 研究卡片合并为一次请求。
 
-## 下一步接 CPF 数据
+## 下一步接组员抓取的多维数据
 
-1. 把 CPF 的 `fund_master`、`fund_nav_daily`、`fund_event` 映射到 `fund_ai_research/connectors.py` 的统一输出字段。
+1. 把组员的 `fund_master`、`fund_nav_daily`、`fund_event` 映射到 `fund_ai_research/connectors.py` 的统一输出字段。
 2. 保留 `source_id`、来源 URL、发布时间、抓取时间、批次号和原始文件，不覆盖 raw 数据。
 3. 将 `DemoConnector` 替换为 Parquet/DuckDB 读取器，再把抓取任务迁移到 Prefect。
 4. 以 10-20 个标注样本建立 prompt 评测集，验证引用覆盖率、事实准确率、风险漏报率和费用计算一致性。
