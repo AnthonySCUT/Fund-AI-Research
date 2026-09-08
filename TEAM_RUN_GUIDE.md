@@ -6,7 +6,7 @@
 
 `数据抓取 -> 数据质检 -> 标准化 -> 指标计算 -> 费用后情景 -> 个性化候选 -> AI 研究卡片`
 
-当前版本默认自动选择真实行情：优先 Yahoo Finance，失败后尝试东方财富，两个真实接口都失败才使用演示数据。系统不会自动下单。
+当前版本默认使用“官方披露 + 自动真实行情”：事件优先抓取上交所/深交所基金公告，价格历史按 Yahoo Finance -> 东方财富 -> 演示数据回退。系统不会自动下单。
 
 ## 2. 环境要求
 
@@ -72,7 +72,7 @@ python -m streamlit run app.py --server.port 8502
 
 ## 5. 页面怎么用
 
-1. 左侧默认选择“自动选择真实行情（推荐）”；程序优先使用 Yahoo Finance，失败后尝试东方财富。也可以手动选择单一真实接口或“演示数据（离线可用）”。
+1. 左侧默认选择“官方披露 + 自动真实行情（推荐）”；程序优先抓交易所官方公告，价格历史按 Yahoo Finance -> 东方财富回退。也可以手动选择单一真实接口或“演示数据（离线可用）”。
 2. 在“研究基金”中选择要比较的基金。
 3. 设置历史起点、终点和计划持有期。
 4. 调整“激进程度”：数值越高，战术仓目标越高，波动和回撤风险也越高。
@@ -83,7 +83,7 @@ python -m streamlit run app.py --server.port 8502
 9. 在“事件与证据”查看自动抓取的事件线索。新闻只作为线索，必须回到正式公告或定期报告核验。
 10. 在“数据质检”查看重复、缺失、负值、数据质量分和标准化后的样例。
 
-参数修改后请点击“运行抓取与分析”再提交。Yahoo 数据抓取会并行处理选中的基金；Grok 研究卡片会将选中的基金合并为一次请求，默认最多等待 20 秒。首次运行或切换数据源时等待时间较长属于正常现象，页面显示结果后，普通交互不会重复请求 AI。
+参数修改后请点击“运行抓取与分析”再提交。网络数据抓取会并行处理选中的基金；Grok 研究卡片失败或不完整时会自动改用 DeepSeek，最后才使用离线规则基线。首次运行或切换数据源时等待时间较长属于正常现象，页面显示结果后，普通交互不会重复请求 AI。
 
 ## 6. 测试代码
 
@@ -93,7 +93,7 @@ python -m streamlit run app.py --server.port 8502
 python -m pytest -q
 ```
 
-预期结果：2 个测试通过。
+预期结果：5 个测试通过。
 
 ## 7. 测试真实行情抓取
 
@@ -120,9 +120,11 @@ python -m streamlit run app.py
 
 当前只把公开行情指标和事件线索发送给接口，不要把账号、密码、身份证、券商 Token 或未脱敏持仓信息放进输入。生产化前必须增加权限、脱敏、审计和人工审批。
 
+Grok 不可用时，代码会把同一批已抓取事实交给 DeepSeek；DeepSeek 不会自动替代交易所/行情接口，也不会凭空补全财报。官网公告链接仍需人工回看。
+
 ### 8.1 使用 Tailscale + CC Switch 的 Grok 中转
 
-你的 Grok 配置属于 OpenAI Chat Completions 兼容端点，项目不需要 Anthropic SDK，也不需要把 CC Switch 的配置文件复制进项目。只要运行页面的电脑能通过 Tailscale 访问该地址，就可以直接使用：
+你的 Grok 配置属于 OpenAI Chat Completions 兼容端点，项目不需要 Anthropic SDK，也不需要把 CC Switch 的配置文件复制进项目。只要运行页面的电脑能通过 Tailscale 访问该地址，就可以直接使用。Streamlit Cloud 和 GitHub Actions 无法直接访问 `100.x.x.x` 内网地址，云端必须改成公开可访问的 HTTPS 端点：
 
 ```powershell
 $env:GROK_API_KEY = "重新生成的 Key"
@@ -191,6 +193,8 @@ fund_ai_research/analytics.py  标准化、质检和指标计算
 fund_ai_research/recommender.py个性化权重与候选建议
 fund_ai_research/analysis.py   规则化/可选大模型研究卡片
 fund_ai_research/pipeline.py   抓取到建议的总流水线
+scripts/scheduled_research.py  GitHub Actions 定时抓取与快照生成
+.github/workflows/              工作日三次后台调度
 tests/test_mvp.py              核心测试
 requirements.txt               Python 依赖
 ```
@@ -200,4 +204,4 @@ requirements.txt               Python 依赖
 - 当前不接券商账户，不自动下单，不构成投资建议。
 - 真实生产数据应由 CPF 按统一字段交付，并保留来源 URL、发布时间、抓取时间、批次号和原始文件。
 - 下一步优先把 CPF 的 `fund_master`、`fund_nav_daily`、`fund_event` 接入 Parquet/DuckDB。
-- 然后增加 Prefect 三次调度、一级公开披露引用、Prompt 评测集和人工批准流程。
+- 当前已用 GitHub Actions 完成工作日三次调度和一级公开披露引用；后续再增加 Prompt 评测集、权限控制和人工批准流程。

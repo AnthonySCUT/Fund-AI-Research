@@ -70,36 +70,52 @@ class RuleBasedResearchAnalyzer:
 class OpenAICompatibleAnalyzer:
     """Optional JSON analyzer for an OpenAI-compatible endpoint.
 
-    It is disabled unless LLM_API_KEY is explicitly configured, so the MVP never
-    sends user holdings or private data by accident.
+    Provider-specific configuration is explicit so Grok can be the primary
+    provider and DeepSeek can be used as a separate fallback.
     """
 
-    def __init__(self, api_key: Optional[str] = None, base_url: Optional[str] = None, model: Optional[str] = None):
-        # LLM_* is provider-neutral; GROK_* makes the Tailscale/CC Switch setup explicit.
-        self.api_key = (
-            api_key
-            or os.getenv("LLM_API_KEY")
-            or os.getenv("DEEPSEEK_API_KEY")
-            or os.getenv("GROK_API_KEY")
-        )
-        self.base_url = (
-            base_url
-            or os.getenv("LLM_BASE_URL")
-            or os.getenv("DEEPSEEK_BASE_URL")
-            or os.getenv("GROK_BASE_URL")
-            or "https://api.openai.com/v1"
-        ).rstrip("/")
-        self.model = (
-            model
-            or os.getenv("LLM_MODEL")
-            or os.getenv("DEEPSEEK_MODEL")
-            or os.getenv("GROK_MODEL")
-            or "gpt-4o-mini"
-        )
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        base_url: Optional[str] = None,
+        model: Optional[str] = None,
+        provider: str = "auto",
+    ):
+        provider = provider.lower().strip()
+        if provider not in {"auto", "grok", "deepseek"}:
+            raise ValueError("provider must be auto, grok, or deepseek")
+        self.provider = provider
+
+        if provider == "grok":
+            key_name, url_name, model_name = "GROK_API_KEY", "GROK_BASE_URL", "GROK_MODEL"
+            default_url, default_model = "https://api.x.ai/v1", "grok-4.5"
+        elif provider == "deepseek":
+            key_name, url_name, model_name = "DEEPSEEK_API_KEY", "DEEPSEEK_BASE_URL", "DEEPSEEK_MODEL"
+            default_url, default_model = "https://api.deepseek.com/v1", "deepseek-chat"
+        else:
+            key_name = url_name = model_name = ""
+            default_url, default_model = "https://api.openai.com/v1", "gpt-4o-mini"
+
+        if provider == "auto":
+            # Provider-neutral aliases remain supported for local experiments.
+            self.api_key = api_key or os.getenv("LLM_API_KEY") or os.getenv("GROK_API_KEY") or os.getenv("DEEPSEEK_API_KEY")
+            selected_url = base_url or os.getenv("LLM_BASE_URL") or os.getenv("GROK_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL") or default_url
+            selected_model = model or os.getenv("LLM_MODEL") or os.getenv("GROK_MODEL") or os.getenv("DEEPSEEK_MODEL") or default_model
+        else:
+            self.api_key = api_key or os.getenv(key_name)
+            selected_url = base_url or os.getenv(url_name) or default_url
+            selected_model = model or os.getenv(model_name) or default_model
+        self.base_url = selected_url.rstrip("/")
+        self.model = selected_model
         try:
-            self.timeout = max(5, int(os.getenv("LLM_TIMEOUT_SECONDS") or os.getenv("GROK_TIMEOUT_SECONDS") or "20"))
+            timeout_name = "DEEPSEEK_TIMEOUT_SECONDS" if provider == "deepseek" else "GROK_TIMEOUT_SECONDS"
+            self.timeout = max(5, int(os.getenv("LLM_TIMEOUT_SECONDS") or os.getenv(timeout_name) or "20"))
         except ValueError:
             self.timeout = 20
+
+    @property
+    def label(self) -> str:
+        return f"{self.provider.title() if self.provider != 'auto' else 'LLM'}:{self.model}"
 
     @property
     def enabled(self) -> bool:
@@ -154,7 +170,7 @@ class OpenAICompatibleAnalyzer:
                 risk_signals=parsed.get("risk_signals", []),
                 verification_questions=parsed.get("verification_questions", []),
                 conclusion=parsed.get("conclusion", "等待人工复核。"),
-                source=f"LLM:{self.model}",
+                source=self.label,
             )
         except (requests.RequestException, KeyError, IndexError, ValueError, json.JSONDecodeError):
             return None
@@ -229,7 +245,7 @@ class OpenAICompatibleAnalyzer:
                     risk_signals=item.get("risk_signals", []),
                     verification_questions=item.get("verification_questions", []),
                     conclusion=item.get("conclusion", "等待人工复核。"),
-                    source=f"LLM:{self.model}",
+                    source=self.label,
                 )
             return cards
         except (requests.RequestException, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError):
@@ -240,10 +256,24 @@ def analyze_metrics(metrics: Iterable[FundMetrics], quality: Iterable[QualityRep
     quality_map = {item.code: item for item in quality}
     event_list = list(events)
     baseline = RuleBasedResearchAnalyzer()
-    llm = OpenAICompatibleAnalyzer()
     cards: Dict[str, ResearchCard] = {}
     metric_list = list(metrics)
-    llm_cards = llm.analyze_many(metric_list, quality_map.values(), event_list) if llm.enabled else {}
+    # Grok is primary. DeepSeek is tried for provider failures or partial
+    # output. Both receive only structured facts already fetched by connectors.
+    remaining = list(metric_list)
+    for provider in ("grok", "deepseek"):
+        if not remaining:
+            break
+        analyzer = OpenAICompatibleAnalyzer(provider=provider)
+        if not analyzer.enabled:
+            continue
+        provider_cards = analyzer.analyze_many(
+            remaining,
+            [quality_map[item.code] for item in remaining],
+            event_list,
+        )
+        cards.update(provider_cards)
+        remaining = [item for item in remaining if item.code not in cards]
     for metric in metric_list:
-        cards[metric.code] = llm_cards.get(metric.code) or baseline.analyze(metric, quality_map[metric.code], event_list)
+        cards[metric.code] = cards.get(metric.code) or baseline.analyze(metric, quality_map[metric.code], event_list)
     return cards

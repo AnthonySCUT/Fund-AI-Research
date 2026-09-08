@@ -1,6 +1,9 @@
 from datetime import date, datetime, timedelta
 from typing import Dict, Iterable, List, Optional
+from html import unescape
+import re
 import time
+from urllib.parse import urljoin
 
 import numpy as np
 import pandas as pd
@@ -203,12 +206,100 @@ class EastmoneyConnector:
             raise DataFetchError(f"东方财富行情抓取失败：{profile.symbol}，{exc}") from exc
 
 
+class OfficialDisclosureConnector:
+    """Primary-source fund disclosures from the exchange-operated ETF portals.
+
+    These pages are used for event evidence (reports, listings, distributions and
+    other fund notices). They are deliberately kept separate from price history:
+    the exchange disclosure pages do not expose a complete long-range daily close
+    series for every ETF.
+    """
+
+    sse_url = "https://etf.sse.com.cn/disclosure/"
+    szse_url = "https://www.szse.cn/disclosure/notice/fund/index.html"
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; FundResearchBot/1.0)"}
+
+    def __init__(self, profiles: Optional[Iterable[FundProfile]] = None, timeout: int = 12):
+        self.profiles = {p.code: p for p in (profiles or DEFAULT_FUNDS)}
+        self.timeout = timeout
+
+    @staticmethod
+    def _clean(value: str) -> str:
+        value = re.sub(r"<[^>]+>", " ", value)
+        return re.sub(r"\s+", " ", unescape(value)).strip()
+
+    @classmethod
+    def _parse_sse(cls, html: str) -> List[tuple[str, str, str]]:
+        pattern = re.compile(
+            r'<div class="disclosure-item".*?<a href="([^"]+)"[^>]*>(.*?)</a>.*?'
+            r'<div>\s*(\d{4}-\d{2}-\d{2})\s*</div>',
+            re.S,
+        )
+        return [(href, cls._clean(title), published) for href, title, published in pattern.findall(html)]
+
+    @classmethod
+    def _parse_szse(cls, html: str) -> List[tuple[str, str, str]]:
+        pattern = re.compile(
+            r"var\s+curHref\s*=\s*['\"]([^'\"]+)['\"].*?"
+            r"(?<!/)var\s+curTitle\s*=\s*['\"](.*?)['\"].*?"
+            r'<span class="time">\s*(\d{4}-\d{2}-\d{2})',
+            re.S,
+        )
+        return [(href, cls._clean(title), published) for href, title, published in pattern.findall(html)]
+
+    def fetch_events(self, code: str, limit: int = 8) -> List[EventRecord]:
+        profile = self.profiles[code]
+        if profile.symbol.endswith(".SS"):
+            page_url, parser, source_name = self.sse_url, self._parse_sse, "sse_official_disclosure"
+        elif profile.symbol.endswith(".SZ"):
+            page_url, parser, source_name = self.szse_url, self._parse_szse, "szse_official_disclosure"
+        else:
+            return []
+        try:
+            response = requests.get(page_url, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            # Both exchange pages occasionally omit a usable charset header;
+            # requests otherwise decodes Chinese titles as ISO-8859-1 mojibake.
+            apparent_encoding = getattr(response, "apparent_encoding", None)
+            response.encoding = apparent_encoding or getattr(response, "encoding", None)
+            rows = parser(response.text)
+        except (requests.RequestException, ValueError):
+            return []
+
+        # Do not match on the benchmark alone: an exchange page can contain
+        # many different ETFs tracking the same index. A loose benchmark match
+        # would attach another fund's announcement to the selected code.
+        keywords = {code, profile.name}
+        events: List[EventRecord] = []
+        for href, title, published in rows:
+            if not title or not any(keyword and keyword in title for keyword in keywords):
+                continue
+            try:
+                published_at = datetime.strptime(published, "%Y-%m-%d")
+            except ValueError:
+                published_at = datetime.now()
+            events.append(
+                EventRecord(
+                    code=code,
+                    title=title,
+                    publisher="上海证券交易所" if source_name.startswith("sse") else "深圳证券交易所",
+                    published_at=published_at,
+                    url=urljoin(page_url, href),
+                    source=source_name,
+                )
+            )
+            if len(events) >= limit:
+                break
+        return events
+
+
 class CompositeConnector:
     def __init__(self, mode: str = "demo", profiles: Optional[Iterable[FundProfile]] = None):
         self.mode = mode
         self.demo = DemoConnector(profiles)
         self.yahoo = YahooFinanceConnector(profiles)
         self.eastmoney = EastmoneyConnector(profiles)
+        self.official = OfficialDisclosureConnector(profiles)
 
     def fetch_history(self, code: str, start: Optional[date] = None, end: Optional[date] = None) -> tuple[pd.DataFrame, str]:
         if self.mode == "eastmoney":
@@ -227,6 +318,10 @@ class CompositeConnector:
         return self.demo.fetch_history(code, start, end), "演示数据"
 
     def fetch_events(self, code: str) -> List[EventRecord]:
+        if self.mode in {"auto", "yahoo", "eastmoney"}:
+            official_events = self.official.fetch_events(code)
+            if official_events:
+                return official_events
         if self.mode in {"auto", "yahoo"}:
             events = self.yahoo.fetch_events(code)
             if events:

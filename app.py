@@ -1,4 +1,6 @@
 from datetime import date, timedelta
+import json
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -10,7 +12,7 @@ from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
 st.set_page_config(page_title="AI 基金智能投研 MVP", page_icon="📊", layout="wide")
 
-APP_VERSION = "real-market-auto-v2"
+APP_VERSION = "official-disclosure-auto-v3"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -41,20 +43,32 @@ def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_d
 
 
 profiles = {profile.code: profile for profile in DEFAULT_FUNDS}
-llm_config = OpenAICompatibleAnalyzer()
+grok_config = OpenAICompatibleAnalyzer(provider="grok")
+deepseek_config = OpenAICompatibleAnalyzer(provider="deepseek")
+snapshot_path = Path(__file__).parent / "data" / "latest_research.json"
 with st.sidebar:
     st.header("研究参数")
-    if llm_config.enabled:
-        st.success(f"AI 分析：{llm_config.model}")
+    if snapshot_path.exists():
+        try:
+            snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+            st.caption(f"后台快照：{snapshot.get('fetched_at', '未知时间')}")
+        except (OSError, ValueError):
+            st.caption("后台快照：读取失败")
+    if grok_config.enabled and deepseek_config.enabled:
+        st.success(f"AI 分析：{grok_config.label} 主用，{deepseek_config.label} 兜底")
+    elif grok_config.enabled:
+        st.success(f"AI 分析：{grok_config.label}（未配置 DeepSeek 兜底）")
+    elif deepseek_config.enabled:
+        st.warning(f"AI 分析：{deepseek_config.label}（Grok 不可用）")
     else:
         st.info("AI 分析：离线规则基线")
     with st.form("research_parameters"):
         source_label = st.radio(
             "数据源",
-            ["自动选择真实行情（推荐）", "演示数据（离线可用）", "中国 ETF 真实行情（东方财富）", "Yahoo Finance 公共接口"],
+            ["官方披露 + 自动真实行情（推荐）", "演示数据（离线可用）", "中国 ETF 真实行情（东方财富）", "Yahoo Finance 公共接口"],
             index=0,
         )
-        if source_label.startswith("自动"):
+        if source_label.startswith(("官方", "自动")):
             source_mode = "auto"
         elif source_label.startswith("中国"):
             source_mode = "eastmoney"

@@ -1,10 +1,14 @@
 from datetime import date
+import os
 from unittest.mock import patch
 
 import pandas as pd
+import requests
 
+from fund_ai_research.analysis import analyze_metrics
 from fund_ai_research.analytics import calculate_metrics, normalize_history, validate_history
-from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector
+from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, OfficialDisclosureConnector
+from fund_ai_research.models import EventRecord
 from fund_ai_research.recommender import build_personalized_recommendations
 
 
@@ -49,3 +53,55 @@ def test_eastmoney_history_parser_uses_real_close_and_volume():
     assert list(frame["close"]) == [4.62, 4.634]
     assert list(frame["volume"]) == [123456.0, 234567.0]
     assert frame["source_id"].iloc[0] == "eastmoney_kline:510300.SS"
+
+
+def test_official_sse_disclosure_parser_filters_by_fund():
+    html = '''
+    <div class="disclosure-item"><div><a href="/a.pdf">关于沪深300ETF定期报告的公告</a></div>
+    <div>2026-09-08</div></div>
+    <div class="disclosure-item"><div><a href="/b.pdf">其他基金公告</a></div>
+    <div>2026-09-08</div></div>
+    '''
+    class FakeResponse:
+        text = html
+
+        def raise_for_status(self):
+            return None
+
+    with patch("fund_ai_research.connectors.requests.get", return_value=FakeResponse()):
+        events = OfficialDisclosureConnector().fetch_events("510300")
+
+    assert len(events) == 1
+    assert events[0].source == "sse_official_disclosure"
+    assert events[0].url.endswith("/a.pdf")
+
+
+def test_deepseek_fallback_is_used_when_grok_request_fails():
+    metric = calculate_metrics(
+        normalize_history(DemoConnector().fetch_history("510300", date(2025, 1, 1), date(2026, 1, 1)), "510300"),
+        "510300",
+        DEFAULT_FUNDS[0].name,
+        DEFAULT_FUNDS[0].category,
+        validate_history(DemoConnector().fetch_history("510300", date(2025, 1, 1), date(2026, 1, 1)), "510300"),
+        "demo",
+    )
+    quality = validate_history(DemoConnector().fetch_history("510300", date(2025, 1, 1), date(2026, 1, 1)), "510300")
+
+    class FakeResponse:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"choices": [{"message": {"content": '{"cards":[{"code":"510300","status":"黄灯","facts":["ok"],"positive_evidence":[],"risk_signals":[],"verification_questions":[],"conclusion":"fallback"}]}'}}]}
+
+    with patch.dict(os.environ, {
+        "GROK_API_KEY": "grok-test",
+        "GROK_BASE_URL": "https://grok.example/v1",
+        "DEEPSEEK_API_KEY": "deepseek-test",
+        "DEEPSEEK_BASE_URL": "https://deepseek.example/v1",
+    }, clear=False), patch("fund_ai_research.analysis.requests.post", side_effect=[requests.Timeout(), FakeResponse()]) as post:
+        cards = analyze_metrics([metric], [quality], [])
+
+    assert cards["510300"].source == "Deepseek:deepseek-chat"
+    assert cards["510300"].conclusion == "fallback"
+    assert post.call_count == 2
