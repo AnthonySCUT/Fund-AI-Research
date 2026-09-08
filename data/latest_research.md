@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-09-08 02:51:25
+抓取时间：2026-09-08 08:48:19
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -11,62 +11,62 @@
 
 | 代码 | 基金 | 累计收益 | 年化收益 | 年化波动 | 最大回撤 | 数据源 |
 |---|---|---:|---:|---:|---:|---|
-| 510300 | 沪深300ETF | 41.06% | 4.40% | 19.65% | -45.10% | Yahoo Finance public chart |
-| 510500 | 中证500ETF | 79.42% | 7.59% | 23.81% | -39.65% | Yahoo Finance public chart |
-| 159915 | 创业板ETF | 158.18% | 12.60% | 31.13% | -56.58% | Yahoo Finance public chart |
-| 159949 | 创业板50ETF | 219.92% | 15.66% | 33.32% | -58.99% | Yahoo Finance public chart |
-| 513100 | 纳指ETF | 318.28% | 19.60% | 24.45% | -28.57% | Yahoo Finance public chart |
+| 510300 | 沪深300ETF | 40.21% | 4.32% | 19.65% | -45.10% | Yahoo Finance public chart |
+| 510500 | 中证500ETF | 78.12% | 7.49% | 23.80% | -39.65% | Yahoo Finance public chart |
+| 159915 | 创业板ETF | 154.41% | 12.39% | 31.11% | -56.58% | Yahoo Finance public chart |
+| 159949 | 创业板50ETF | 214.94% | 15.43% | 33.30% | -58.99% | Yahoo Finance public chart |
+| 513100 | 纳指ETF | 316.60% | 19.54% | 24.45% | -28.57% | Yahoo Finance public chart |
 
 ## 研究卡片
 
 ### 510300 · 黄灯
 
-沪深300ETF作为宽基指数基金，长期回报为正但年化收益率偏低（4.4%），且历史回撤较大。近期60日动量转负，短期表现承压。综合来看，该基金适合作为长期配置工具，但当前时点性价比一般，需关注市场整体走势及数据质量问题。
+沪深300ETF长期业绩为正，但近期动能不足且历史回撤较大。数据质量存在瑕疵，需进一步验证数据完整性。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。
 
-风险信号：近60日收益为负（-3.45%），短期趋势偏弱。；历史最大回撤达-45.10%，表明在极端市场环境下可能面临较大净值损失。；Calmar比率仅为0.097，表明相对于承担的回撤风险，长期年化回报较低。；数据质量存在瑕疵，工作日序列缺失152天，可能影响基于日频数据的统计指标精确性。
+风险信号：最大回撤高达-45.10%，表明历史波动极端情况下资产价值可能接近腰斩。；近60日收益率为-4.03%，显示近期市场动能偏弱。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
 
 ### 510500 · 黄灯
 
-中证500ETF长期年化回报（7.59%）和Calmar比率（0.191）均优于沪深300ETF，但波动率更高。近期60日动量转负，短期承压。该基金适合风险承受能力中等偏上的投资者作为中盘股配置工具，但需注意短期下行风险。
+中证500ETF长期业绩优于沪深300ETF，但近期同样面临动能不足的问题。历史回撤较大，数据质量存在瑕疵。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。
 
-风险信号：近60日收益为负（-4.82%），短期趋势偏弱。；年化波动率23.81%较高，历史最大回撤-39.65%，波动风险较大。；数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。
+风险信号：最大回撤为-39.65%，虽然低于510300，但仍属较高水平。；近60日收益率为-5.51%，近期市场动能偏弱。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
 
 ### 159915 · 黄灯
 
-创业板ETF长期年化回报最高（12.6%），但伴随极高的波动率（31.13%）和最大回撤（-56.58%）。近期60日跌幅达10.92%，短期风险显著。该基金适合风险承受能力高、追求高成长弹性的投资者，但当前时点需警惕进一步下行风险。
+创业板ETF长期业绩突出，但近期动能显著减弱，且历史回撤极大，风险水平较高。数据质量存在瑕疵，需进一步验证。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。
 
-风险信号：近60日收益为-10.92%，为四只基金中短期跌幅最大，短期趋势明显走弱。；年化波动率31.13%最高，历史最大回撤-56.58%，波动和回撤风险极大。；日胜率48.37%为四只基金中最低，表明日度正收益概率偏低。；数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。
+风险信号：最大回撤高达-56.58%，为所有基金中最高，历史波动极端情况下资产价值可能大幅缩水。；近60日收益率为-12.22%，近期市场动能明显偏弱。；胜率低于50%，表明在观察期内多数时间点未能实现正收益。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
 
-### 159949 · 红灯
+### 159949 · 黄灯
 
-创业板50ETF长期年化回报最高（15.66%），但波动率（33.32%）和最大回撤（-58.99%）均为四只基金中最高。近期60日跌幅达13.42%，短期风险极大。该基金属于高风险高收益品种，当前短期动量显著为负，需高度警惕下行风险，建议谨慎对待。
+创业板50ETF长期业绩最强，但近期动能显著减弱，且历史回撤极大，风险水平最高。数据质量存在瑕疵，需进一步验证。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。
 
-风险信号：近60日收益为-13.42%，为四只基金中短期跌幅最大，短期趋势极度疲弱。；年化波动率33.32%最高，历史最大回撤-58.99%最深，波动和回撤风险极大。；日胜率47.18%为四只基金中最低，表明日度正收益概率偏低。；数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。
+风险信号：最大回撤高达-58.99%，为所有基金中最高，历史波动极端情况下资产价值可能大幅缩水。；近60日收益率为-14.77%，近期市场动能明显偏弱。；胜率低于50%，表明在观察期内多数时间点未能实现正收益。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
 
 ### 513100 · 绿灯
 
-纳指ETF在四只基金中表现最优：长期年化回报最高（19.6%），Calmar比率最高（0.686），历史回撤相对较小，且近期60日动量为正。该基金适合作为全球科技股配置工具，风险调整后收益突出，当前时点相对占优。
+纳指ETF长期业绩表现突出，风险控制相对较好，近期动能较强。数据质量存在瑕疵，但整体风险收益特征在同类中表现最佳。未发现直接相关的治理或基本面风险事件。
 
-风险信号：年化波动率24.45%仍较高，需注意市场波动风险。；作为QDII ETF，可能面临汇率波动、跨境市场交易时间差异等额外风险。；数据质量存在瑕疵，工作日序列缺失151天，可能影响统计指标精确性。
+风险信号：年化波动率（24.45%）仍属较高水平，需关注市场波动风险。；数据质量存在瑕疵，工作日序列缺失151天，可能影响指标计算的准确性。
 
 ## 事件线索（优先官方披露）
 
-- 2026-09-08 02:47 · 510300 · [Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up](https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html) · PR Newswire
-- 2026-09-08 02:43 · 510300 · [Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre](https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html) · PR Newswire
-- 2026-09-08 02:40 · 510300 · [US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor](https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html) · BeInCrypto
-- 2026-09-08 02:38 · 510300 · [A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story](https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html) · Insider Monkey
-- 2026-09-08 02:36 · 510300 · [Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low](https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html) · Motley Fool
-- 2026-09-08 02:36 · 510300 · [Former champ Gauff holds off Jovic to reach US Open quarter-finals](https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html) · AFP
-- 2026-09-08 02:35 · 510300 · [Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?](https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html) · Motley Fool
-- 2026-09-08 02:34 · 510300 · [Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization](https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html) · PR Newswire
-- 2026-09-08 02:47 · 510500 · [Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up](https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html) · PR Newswire
-- 2026-09-08 02:43 · 510500 · [Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre](https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html) · PR Newswire
-- 2026-09-08 02:40 · 510500 · [US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor](https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html) · BeInCrypto
-- 2026-09-08 02:38 · 510500 · [A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story](https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html) · Insider Monkey
-- 2026-09-08 02:36 · 510500 · [Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low](https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html) · Motley Fool
-- 2026-09-08 02:36 · 510500 · [Former champ Gauff holds off Jovic to reach US Open quarter-finals](https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html) · AFP
-- 2026-09-08 02:35 · 510500 · [Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?](https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html) · Motley Fool
-- 2026-09-08 02:34 · 510500 · [Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization](https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html) · PR Newswire
+- 2026-09-08 08:46 · 510300 · [New Zealand to launch nationwide rural plastics recycling scheme](https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html) · Packaging Gateway
+- 2026-09-08 08:43 · 510300 · [Qualitas Energy to buy Cero Generation’s 5.8GW European platform](https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html) · Power Technology
+- 2026-09-08 08:42 · 510300 · [Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology](https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html) · GlobeNewswire
+- 2026-09-08 08:42 · 510300 · [HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization](https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html) · TMX Newsfile
+- 2026-09-08 08:40 · 510300 · [Tetra Pak appoints Michael Wu as Oceania managing director](https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html) · Packaging Gateway
+- 2026-09-08 08:40 · 510300 · [Issue of Shares and Cleansing Notice](https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html) · GlobeNewswire
+- 2026-09-08 08:39 · 510300 · [Mistral AI raises record €3 billion in Samsung-led funding round](https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html) · Euronews
+- 2026-09-08 08:38 · 510300 · [ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology](https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html) · PR Newswire
+- 2026-09-08 08:46 · 510500 · [New Zealand to launch nationwide rural plastics recycling scheme](https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html) · Packaging Gateway
+- 2026-09-08 08:43 · 510500 · [Qualitas Energy to buy Cero Generation’s 5.8GW European platform](https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html) · Power Technology
+- 2026-09-08 08:42 · 510500 · [Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology](https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html) · GlobeNewswire
+- 2026-09-08 08:42 · 510500 · [HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization](https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html) · TMX Newsfile
+- 2026-09-08 08:40 · 510500 · [Tetra Pak appoints Michael Wu as Oceania managing director](https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html) · Packaging Gateway
+- 2026-09-08 08:40 · 510500 · [Issue of Shares and Cleansing Notice](https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html) · GlobeNewswire
+- 2026-09-08 08:39 · 510500 · [Mistral AI raises record €3 billion in Samsung-led funding round](https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html) · Euronews
+- 2026-09-08 08:38 · 510500 · [ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology](https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html) · PR Newswire
 - 2026-09-07 21:25 · 159915 · [How a 64-Year-Old’s $1.2 Million in VOO Turned Into a $456,000 Bet on a Single Sector](https://finance.yahoo.com/m/cc50f22d-ae9e-3ea1-acbe-a7655fca135c/how-a-64-year-old%E2%80%99s-%241.2.html) · 24/7 Wall St.
 - 2026-09-07 16:22 · 159915 · [IBB Just Beat the S&P 500 by 22 Points in Three Months. Are You Late to the Party?](https://finance.yahoo.com/m/a31a6756-6bc2-3912-923d-2587e9bd377c/ibb-just-beat-the-s%26p-500-by.html) · 24/7 Wall St.
 - 2026-09-07 15:50 · 159915 · [Super Micro Has Gained 35% in 2026. What Would It Take to Get SMCI Stock Up to $50?](https://finance.yahoo.com/m/b6dc79d8-a0b7-3c07-b343-065dd843e54b/super-micro-has-gained-35%25-in.html) · 24/7 Wall St.
@@ -75,14 +75,14 @@
 - 2026-09-07 15:30 · 159915 · [Nike Has Tumbled 38% in 2026: Is It Time to Switch to Dick’s or Lululemon?](https://finance.yahoo.com/m/0d219ec2-ae34-3451-b222-17c89f85ad70/nike-has-tumbled-38%25-in-2026%3A.html) · 24/7 Wall St.
 - 2026-09-07 14:50 · 159915 · [Roblox Has Collapsed 47% This Year: Is It Time to Switch to Take-Two or GameStop?](https://finance.yahoo.com/m/cb266da7-514b-3240-8471-0dfd0c0afb63/roblox-has-collapsed-47%25-this.html) · 24/7 Wall St.
 - 2026-09-07 14:43 · 159915 · [Tesla Says This Time Is Different. Wall Street Is Split on Whether to Believe It](https://finance.yahoo.com/m/637dac24-45c4-307b-9e42-0db8f845108a/tesla-says-this-time-is.html) · 24/7 Wall St.
-- 2026-09-08 02:47 · 159949 · [Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up](https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html) · PR Newswire
-- 2026-09-08 02:43 · 159949 · [Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre](https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html) · PR Newswire
-- 2026-09-08 02:40 · 159949 · [US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor](https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html) · BeInCrypto
-- 2026-09-08 02:38 · 159949 · [A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story](https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html) · Insider Monkey
-- 2026-09-08 02:36 · 159949 · [Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low](https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html) · Motley Fool
-- 2026-09-08 02:36 · 159949 · [Former champ Gauff holds off Jovic to reach US Open quarter-finals](https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html) · AFP
-- 2026-09-08 02:35 · 159949 · [Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?](https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html) · Motley Fool
-- 2026-09-08 02:34 · 159949 · [Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization](https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html) · PR Newswire
+- 2026-09-08 08:46 · 159949 · [New Zealand to launch nationwide rural plastics recycling scheme](https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html) · Packaging Gateway
+- 2026-09-08 08:43 · 159949 · [Qualitas Energy to buy Cero Generation’s 5.8GW European platform](https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html) · Power Technology
+- 2026-09-08 08:42 · 159949 · [Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology](https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html) · GlobeNewswire
+- 2026-09-08 08:42 · 159949 · [HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization](https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html) · TMX Newsfile
+- 2026-09-08 08:40 · 159949 · [Tetra Pak appoints Michael Wu as Oceania managing director](https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html) · Packaging Gateway
+- 2026-09-08 08:40 · 159949 · [Issue of Shares and Cleansing Notice](https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html) · GlobeNewswire
+- 2026-09-08 08:39 · 159949 · [Mistral AI raises record €3 billion in Samsung-led funding round](https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html) · Euronews
+- 2026-09-08 08:38 · 159949 · [ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology](https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html) · PR Newswire
 - 2026-09-07 21:25 · 513100 · [How a 64-Year-Old’s $1.2 Million in VOO Turned Into a $456,000 Bet on a Single Sector](https://finance.yahoo.com/m/cc50f22d-ae9e-3ea1-acbe-a7655fca135c/how-a-64-year-old%E2%80%99s-%241.2.html) · 24/7 Wall St.
 - 2026-09-07 16:22 · 513100 · [IBB Just Beat the S&P 500 by 22 Points in Three Months. Are You Late to the Party?](https://finance.yahoo.com/m/a31a6756-6bc2-3912-923d-2587e9bd377c/ibb-just-beat-the-s%26p-500-by.html) · 24/7 Wall St.
 - 2026-09-07 15:50 · 513100 · [Super Micro Has Gained 35% in 2026. What Would It Take to Get SMCI Stock Up to $50?](https://finance.yahoo.com/m/b6dc79d8-a0b7-3c07-b343-065dd843e54b/super-micro-has-gained-35%25-in.html) · 24/7 Wall St.

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-08 02:51:25",
+  "fetched_at": "2026-09-08 08:48:19",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -15,16 +15,16 @@
       "code": "510300",
       "name": "沪深300ETF",
       "category": "宽基指数",
-      "latest_value": 4.6519999504089355,
-      "total_return": 0.4105517929647726,
-      "annualized_return": 0.04396615642860313,
-      "annualized_volatility": 0.19649874310738116,
+      "latest_value": 4.624000072479248,
+      "total_return": 0.40206183629290204,
+      "annualized_return": 0.04317810141591094,
+      "annualized_volatility": 0.196480598398615,
       "max_drawdown": -0.4510074262437961,
-      "calmar_ratio": 0.09748432923771157,
-      "momentum_60d": -0.03445410852924924,
+      "calmar_ratio": 0.0957370076486737,
+      "momentum_60d": -0.04026562344431628,
       "win_rate": 0.49612403100775193,
       "current_aum": NaN,
-      "avg_volume": 1234335637.65,
+      "avg_volume": 1240860227.1833334,
       "as_of": "2026-09-08",
       "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
@@ -33,16 +33,16 @@
       "code": "510500",
       "name": "中证500ETF",
       "category": "宽基指数",
-      "latest_value": 7.84499979019165,
-      "total_return": 0.7942459478532891,
-      "annualized_return": 0.07586302794478117,
-      "annualized_volatility": 0.23807998305422282,
+      "latest_value": 7.788000106811523,
+      "total_return": 0.7812094336826219,
+      "annualized_return": 0.07488211980683634,
+      "annualized_volatility": 0.23800565322298636,
       "max_drawdown": -0.3965452862065345,
-      "calmar_ratio": 0.19130987199597949,
-      "momentum_60d": -0.04816790269050264,
+      "calmar_ratio": 0.18883623740223998,
+      "momentum_60d": -0.05508366172538692,
       "win_rate": 0.5126614987080104,
       "current_aum": NaN,
-      "avg_volume": 457339970.46666664,
+      "avg_volume": 459901708.53333336,
       "as_of": "2026-09-08",
       "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
@@ -51,16 +51,16 @@
       "code": "159915",
       "name": "创业板ETF",
       "category": "成长指数",
-      "latest_value": 3.4260001182556152,
-      "total_return": 1.5817634224761878,
-      "annualized_return": 0.12596482200256176,
-      "annualized_volatility": 0.3112594310240634,
+      "latest_value": 3.375999927520752,
+      "total_return": 1.5440843042332415,
+      "annualized_return": 0.1238960826643789,
+      "annualized_volatility": 0.3110798022346583,
       "max_drawdown": -0.5658465895446377,
-      "calmar_ratio": 0.22261302679924488,
-      "momentum_60d": -0.10920432726626439,
+      "calmar_ratio": 0.21895701936470743,
+      "momentum_60d": -0.12220489702840309,
       "win_rate": 0.48372093023255813,
       "current_aum": NaN,
-      "avg_volume": 2008618690.0333333,
+      "avg_volume": 2021301167.6,
       "as_of": "2026-09-08",
       "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
@@ -69,16 +69,16 @@
       "code": "159949",
       "name": "创业板50ETF",
       "category": "成长指数",
-      "latest_value": 1.6059999465942383,
-      "total_return": 2.1992032449625167,
-      "annualized_return": 0.15657411659303855,
-      "annualized_volatility": 0.33324225038453037,
+      "latest_value": 1.5809999704360962,
+      "total_return": 2.1494024930890667,
+      "annualized_return": 0.15430659614488862,
+      "annualized_volatility": 0.3330401210226656,
       "max_drawdown": -0.5899053876881551,
-      "calmar_ratio": 0.26542242173215946,
-      "momentum_60d": -0.13423184362209095,
+      "calmar_ratio": 0.26157855033265187,
+      "momentum_60d": -0.14770891957955046,
       "win_rate": 0.4718346253229974,
       "current_aum": NaN,
-      "avg_volume": 1355253557.25,
+      "avg_volume": 1363660920.15,
       "as_of": "2026-09-08",
       "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
@@ -87,16 +87,16 @@
       "code": "513100",
       "name": "纳指ETF",
       "category": "海外指数",
-      "latest_value": 2.242000102996826,
-      "total_return": 3.182835908861832,
-      "annualized_return": 0.19601619830517558,
-      "annualized_volatility": 0.24449066609124967,
+      "latest_value": 2.2330000400543213,
+      "total_return": 3.166044747073924,
+      "annualized_return": 0.19541458385662236,
+      "annualized_volatility": 0.24447747153791524,
       "max_drawdown": -0.28568022185936814,
-      "calmar_ratio": 0.6861384978959745,
-      "momentum_60d": 0.03700285120838642,
+      "calmar_ratio": 0.6840325962530901,
+      "momentum_60d": 0.032840009770530365,
       "win_rate": 0.5268595041322314,
       "current_aum": NaN,
-      "avg_volume": 216680563.26666668,
+      "avg_volume": 217906708.2,
       "as_of": "2026-09-08",
       "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
@@ -167,130 +167,130 @@
   "events": [
     {
       "code": "510300",
-      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
+      "title": "New Zealand to launch nationwide rural plastics recycling scheme",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:46",
+      "url": "https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Qualitas Energy to buy Cero Generation’s 5.8GW European platform",
+      "publisher": "Power Technology",
+      "published_at": "2026-09-08 08:43",
+      "url": "https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization",
+      "publisher": "TMX Newsfile",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Tetra Pak appoints Michael Wu as Oceania managing director",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Issue of Shares and Cleansing Notice",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Mistral AI raises record €3 billion in Samsung-led funding round",
+      "publisher": "Euronews",
+      "published_at": "2026-09-08 08:39",
+      "url": "https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:47",
-      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
+      "published_at": "2026-09-08 08:38",
+      "url": "https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510300",
-      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
+      "code": "510500",
+      "title": "New Zealand to launch nationwide rural plastics recycling scheme",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:46",
+      "url": "https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Qualitas Energy to buy Cero Generation’s 5.8GW European platform",
+      "publisher": "Power Technology",
+      "published_at": "2026-09-08 08:43",
+      "url": "https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization",
+      "publisher": "TMX Newsfile",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Tetra Pak appoints Michael Wu as Oceania managing director",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Issue of Shares and Cleansing Notice",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Mistral AI raises record €3 billion in Samsung-led funding round",
+      "publisher": "Euronews",
+      "published_at": "2026-09-08 08:39",
+      "url": "https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:43",
-      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
-      "publisher": "BeInCrypto",
-      "published_at": "2026-09-08 02:40",
-      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
-      "publisher": "Insider Monkey",
-      "published_at": "2026-09-08 02:38",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
-      "publisher": "AFP",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:35",
-      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:34",
-      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:47",
-      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:43",
-      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
-      "publisher": "BeInCrypto",
-      "published_at": "2026-09-08 02:40",
-      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
-      "publisher": "Insider Monkey",
-      "published_at": "2026-09-08 02:38",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
-      "publisher": "AFP",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:35",
-      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:34",
-      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
+      "published_at": "2026-09-08 08:38",
+      "url": "https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html",
       "source": "yahoo_news_secondary"
     },
     {
@@ -359,66 +359,66 @@
     },
     {
       "code": "159949",
-      "title": "Laughter Is in the Air, with Surprises at Every Turn! The 3rd Qingdao Liyuan Comedy Festival Gears Up",
+      "title": "New Zealand to launch nationwide rural plastics recycling scheme",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:46",
+      "url": "https://finance.yahoo.com/m/8f4e61e4-7aa3-3230-ad7d-9a18a0babca2/new-zealand-to-launch.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Qualitas Energy to buy Cero Generation’s 5.8GW European platform",
+      "publisher": "Power Technology",
+      "published_at": "2026-09-08 08:43",
+      "url": "https://finance.yahoo.com/m/3a6d0e2f-ce77-3a07-8f21-2ecd9ae1c83b/qualitas-energy-to-buy-cero.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/himax-unveils-industry-leading-edp-084200229.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "HUAWEI Mate XT 2 | ULTIMATE DESIGN Debuts as the First Smartphone to Feature LogicFolding Tau Chip and Reach Mass Commercialization",
+      "publisher": "TMX Newsfile",
+      "published_at": "2026-09-08 08:42",
+      "url": "https://finance.yahoo.com/technology/articles/huawei-mate-xt-2-ultimate-084200201.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Tetra Pak appoints Michael Wu as Oceania managing director",
+      "publisher": "Packaging Gateway",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/m/a6c700a2-4406-3d88-bf62-e1144feb44cd/tetra-pak-appoints-michael-wu.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Issue of Shares and Cleansing Notice",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-08 08:40",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/issue-shares-cleansing-notice-084000261.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Mistral AI raises record €3 billion in Samsung-led funding round",
+      "publisher": "Euronews",
+      "published_at": "2026-09-08 08:39",
+      "url": "https://finance.yahoo.com/m/99f98122-4d3d-392c-87ae-453f8aa03443/mistral-ai-raises-record-%E2%82%AC3.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "ECOVACS Defines the Future of Robotic Floor Cleaning with Third-Generation OZMO ROLLER Technology",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:47",
-      "url": "https://finance.yahoo.com/media-advertising/articles/laughter-air-surprises-every-turn-024700522.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Coastal Runway Meets Global Chic! 2026 Qingdao Fashion Week Sparkles at the Qingdao International Sailing Centre",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:43",
-      "url": "https://finance.yahoo.com/media-advertising/articles/coastal-runway-meets-global-chic-024300054.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "US Midterm Elections and Trump Pressure Are Stopping Rate Hikes, Says Wharton Professor",
-      "publisher": "BeInCrypto",
-      "published_at": "2026-09-08 02:40",
-      "url": "https://finance.yahoo.com/m/d95852d2-58e0-3283-9170-cb00426dfea3/us-midterm-elections-and.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "A Navy Contract And A Cash Cushion Reshape Hyliion’s (HYLN) Story",
-      "publisher": "Insider Monkey",
-      "published_at": "2026-09-08 02:38",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/navy-contract-cash-cushion-reshape-023837051.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Rigetti Computing CFO Sells 25,000 Shares as the Stock Hovers Near a 52-Week Low",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/6cb1c054-adf0-3937-a4d7-3dd6a78a3e91/rigetti-computing-cfo-sells.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Former champ Gauff holds off Jovic to reach US Open quarter-finals",
-      "publisher": "AFP",
-      "published_at": "2026-09-08 02:36",
-      "url": "https://finance.yahoo.com/m/ebc43cbf-64d3-3fc2-95b8-1439384af41a/former-champ-gauff-holds-off.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Should You Avoid Monster Beverage Stock, Even With Revenue Growing at 20%?",
-      "publisher": "Motley Fool",
-      "published_at": "2026-09-08 02:35",
-      "url": "https://finance.yahoo.com/m/4dd9de87-b719-3fd5-98a9-0a8806d32ec1/should-you-avoid-monster.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Govee Launches Permanent Outdoor Lights 2 Pro with Innovative Dual-Layer Illumination, Redefining Outdoor Lighting Customization",
-      "publisher": "PR Newswire",
-      "published_at": "2026-09-08 02:34",
-      "url": "https://finance.yahoo.com/technology/articles/govee-launches-permanent-outdoor-lights-023400524.html",
+      "published_at": "2026-09-08 08:38",
+      "url": "https://finance.yahoo.com/technology/articles/ecovacs-defines-future-robotic-floor-083800698.html",
       "source": "yahoo_news_secondary"
     },
     {
@@ -495,7 +495,7 @@
       "action": "等待验证",
       "net_return_range": "-4.1% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
-      "reason": "核心仓候选得分 0.92；年化历史收益 +19.6%，60日动量 +3.7%，最大回撤 -28.6%。",
+      "reason": "核心仓候选得分 0.92；年化历史收益 +19.5%，60日动量 +3.3%，最大回撤 -28.6%。",
       "evidence": "历史区间 2026-09-08 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
     },
@@ -507,7 +507,7 @@
       "action": "不碰",
       "net_return_range": "-5.0% / +0.4% / +5.8%",
       "max_drawdown": -0.3965452862065345,
-      "reason": "战术仓候选得分 0.53；年化历史收益 +7.6%，60日动量 -4.8%，最大回撤 -39.7%。",
+      "reason": "战术仓候选得分 0.53；年化历史收益 +7.5%，60日动量 -5.5%，最大回撤 -39.7%。",
       "evidence": "历史区间 2026-09-08 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -39.7% 超过用户阈值；数据质量未达到 90%"
     }
@@ -517,145 +517,140 @@
       "code": "510300",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-08，沪深300ETF（510300）最新净值为4.652元。",
-        "自数据起始日（约2012年）至2026-09-08，累计总回报为41.06%，年化回报为4.40%。",
-        "年化波动率为19.65%，历史最大回撤为-45.10%，Calmar比率为0.097。",
-        "近60日（约3个月）收益为-3.45%。",
-        "历史日度数据中，日胜率（正收益日占比）为49.61%。",
-        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+        "截至2026-09-08，沪深300ETF（510300）最新净值为4.624元。",
+        "自数据起始以来，累计收益率为40.21%，年化收益率为4.32%。",
+        "年化波动率为19.65%，最大回撤为-45.10%，Calmar比率为0.096。",
+        "近60日收益率为-4.03%，胜率为49.61%。",
+        "数据质量评分为0.8822，但存在工作日序列缺失152天的问题。"
       ],
       "positive_evidence": [
-        "作为宽基指数ETF，跟踪沪深300指数，覆盖A股市场大盘蓝筹股，分散化程度高。",
-        "长期（约14年）累计回报为正，年化回报约4.4%，跑赢部分固定收益类资产。"
+        "长期累计收益为正，年化收益率4.32%，表明资产在观察期内实现了正增长。",
+        "Calmar比率大于0，说明在考虑最大回撤后，风险调整后的收益仍为正。"
       ],
       "risk_signals": [
-        "近60日收益为负（-3.45%），短期趋势偏弱。",
-        "历史最大回撤达-45.10%，表明在极端市场环境下可能面临较大净值损失。",
-        "Calmar比率仅为0.097，表明相对于承担的回撤风险，长期年化回报较低。",
-        "数据质量存在瑕疵，工作日序列缺失152天，可能影响基于日频数据的统计指标精确性。"
+        "最大回撤高达-45.10%，表明历史波动极端情况下资产价值可能接近腰斩。",
+        "近60日收益率为-4.03%，显示近期市场动能偏弱。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期，是否包含长期停牌或数据源错误？",
-        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
-        "新闻事件列表中未发现与510300直接相关的公告，需确认是否有其他未收录的重大事件。"
+        "工作日序列缺失152天的具体原因是什么？是否包含节假日或长期停牌？",
+        "当前基金规模（AUM）数据缺失，需确认基金是否正常运行或存在规模变动。",
+        "新闻事件列表中未发现与510300直接相关的公告，需确认是否有未披露的重大事项。"
       ],
-      "conclusion": "沪深300ETF作为宽基指数基金，长期回报为正但年化收益率偏低（4.4%），且历史回撤较大。近期60日动量转负，短期表现承压。综合来看，该基金适合作为长期配置工具，但当前时点性价比一般，需关注市场整体走势及数据质量问题。",
+      "conclusion": "沪深300ETF长期业绩为正，但近期动能不足且历史回撤较大。数据质量存在瑕疵，需进一步验证数据完整性。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "510500",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-08，中证500ETF（510500）最新净值为7.845元。",
-        "自数据起始日（约2013年）至2026-09-08，累计总回报为79.42%，年化回报为7.59%。",
-        "年化波动率为23.81%，历史最大回撤为-39.65%，Calmar比率为0.191。",
-        "近60日（约3个月）收益为-4.82%。",
-        "历史日度数据中，日胜率（正收益日占比）为51.27%。",
-        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+        "截至2026-09-08，中证500ETF（510500）最新净值为7.788元。",
+        "自数据起始以来，累计收益率为78.12%，年化收益率为7.49%。",
+        "年化波动率为23.80%，最大回撤为-39.65%，Calmar比率为0.189。",
+        "近60日收益率为-5.51%，胜率为51.27%。",
+        "数据质量评分为0.8822，但存在工作日序列缺失152天的问题。"
       ],
       "positive_evidence": [
-        "作为中盘宽基指数ETF，覆盖A股中盘股，行业分布相对均衡。",
-        "长期（约13年）年化回报7.59%，高于沪深300ETF（4.4%），且Calmar比率（0.191）优于沪深300ETF（0.097），风险调整后收益相对更好。"
+        "累计收益率和年化收益率均高于510300，表明长期业绩表现更优。",
+        "Calmar比率（0.189）高于510300，风险调整后收益相对更好。",
+        "胜率超过50%，表明在观察期内多数时间点实现正收益。"
       ],
       "risk_signals": [
-        "近60日收益为负（-4.82%），短期趋势偏弱。",
-        "年化波动率23.81%较高，历史最大回撤-39.65%，波动风险较大。",
-        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+        "最大回撤为-39.65%，虽然低于510300，但仍属较高水平。",
+        "近60日收益率为-5.51%，近期市场动能偏弱。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
-        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
-        "新闻事件列表中未发现与510500直接相关的公告，需确认是否有其他未收录的重大事件。"
+        "工作日序列缺失152天的具体原因是什么？是否包含节假日或长期停牌？",
+        "当前基金规模（AUM）数据缺失，需确认基金是否正常运行或存在规模变动。",
+        "新闻事件列表中未发现与510500直接相关的公告，需确认是否有未披露的重大事项。"
       ],
-      "conclusion": "中证500ETF长期年化回报（7.59%）和Calmar比率（0.191）均优于沪深300ETF，但波动率更高。近期60日动量转负，短期承压。该基金适合风险承受能力中等偏上的投资者作为中盘股配置工具，但需注意短期下行风险。",
+      "conclusion": "中证500ETF长期业绩优于沪深300ETF，但近期同样面临动能不足的问题。历史回撤较大，数据质量存在瑕疵。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159915",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-08，创业板ETF（159915）最新净值为3.426元。",
-        "自数据起始日（约2011年）至2026-09-08，累计总回报为158.18%，年化回报为12.60%。",
-        "年化波动率为31.13%，历史最大回撤为-56.58%，Calmar比率为0.223。",
-        "近60日（约3个月）收益为-10.92%。",
-        "历史日度数据中，日胜率（正收益日占比）为48.37%。",
-        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+        "截至2026-09-08，创业板ETF（159915）最新净值为3.376元。",
+        "自数据起始以来，累计收益率为154.41%，年化收益率为12.39%。",
+        "年化波动率为31.11%，最大回撤为-56.58%，Calmar比率为0.219。",
+        "近60日收益率为-12.22%，胜率为48.37%。",
+        "数据质量评分为0.8822，但存在工作日序列缺失152天的问题。"
       ],
       "positive_evidence": [
-        "作为成长风格指数ETF，长期（约15年）年化回报12.60%，在同类宽基/成长指数中表现突出。",
-        "Calmar比率（0.223）在四只基金中最高，表明长期风险调整后收益相对较好。"
+        "累计收益率和年化收益率显著高于宽基指数，表明长期成长性较强。",
+        "Calmar比率（0.219）在同类中相对较高，风险调整后收益表现较好。"
       ],
       "risk_signals": [
-        "近60日收益为-10.92%，为四只基金中短期跌幅最大，短期趋势明显走弱。",
-        "年化波动率31.13%最高，历史最大回撤-56.58%，波动和回撤风险极大。",
-        "日胜率48.37%为四只基金中最低，表明日度正收益概率偏低。",
-        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+        "最大回撤高达-56.58%，为所有基金中最高，历史波动极端情况下资产价值可能大幅缩水。",
+        "近60日收益率为-12.22%，近期市场动能明显偏弱。",
+        "胜率低于50%，表明在观察期内多数时间点未能实现正收益。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
-        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
-        "新闻事件列表中未发现与159915直接相关的公告，需确认是否有其他未收录的重大事件。"
+        "工作日序列缺失152天的具体原因是什么？是否包含节假日或长期停牌？",
+        "当前基金规模（AUM）数据缺失，需确认基金是否正常运行或存在规模变动。",
+        "新闻事件列表中未发现与159915直接相关的公告，需确认是否有未披露的重大事项。"
       ],
-      "conclusion": "创业板ETF长期年化回报最高（12.6%），但伴随极高的波动率（31.13%）和最大回撤（-56.58%）。近期60日跌幅达10.92%，短期风险显著。该基金适合风险承受能力高、追求高成长弹性的投资者，但当前时点需警惕进一步下行风险。",
+      "conclusion": "创业板ETF长期业绩突出，但近期动能显著减弱，且历史回撤极大，风险水平较高。数据质量存在瑕疵，需进一步验证。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159949",
-      "status": "红灯",
+      "status": "黄灯",
       "facts": [
-        "截至2026-09-08，创业板50ETF（159949）最新净值为1.606元。",
-        "自数据起始日（约2014年）至2026-09-08，累计总回报为219.92%，年化回报为15.66%。",
-        "年化波动率为33.32%，历史最大回撤为-58.99%，Calmar比率为0.265。",
-        "近60日（约3个月）收益为-13.42%。",
-        "历史日度数据中，日胜率（正收益日占比）为47.18%。",
-        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+        "截至2026-09-08，创业板50ETF（159949）最新净值为1.581元。",
+        "自数据起始以来，累计收益率为214.94%，年化收益率为15.43%。",
+        "年化波动率为33.30%，最大回撤为-58.99%，Calmar比率为0.262。",
+        "近60日收益率为-14.77%，胜率为47.18%。",
+        "数据质量评分为0.8822，但存在工作日序列缺失152天的问题。"
       ],
       "positive_evidence": [
-        "作为创业板头部50只股票的ETF，长期（约12年）年化回报15.66%，为四只基金中最高。",
-        "Calmar比率（0.265）在四只基金中最高，表明长期风险调整后收益相对最好。"
+        "累计收益率和年化收益率在同类中最高，表明长期成长性最强。",
+        "Calmar比率（0.262）在同类中最高，风险调整后收益表现相对最好。"
       ],
       "risk_signals": [
-        "近60日收益为-13.42%，为四只基金中短期跌幅最大，短期趋势极度疲弱。",
-        "年化波动率33.32%最高，历史最大回撤-58.99%最深，波动和回撤风险极大。",
-        "日胜率47.18%为四只基金中最低，表明日度正收益概率偏低。",
-        "数据质量存在瑕疵，工作日序列缺失152天，可能影响统计指标精确性。"
+        "最大回撤高达-58.99%，为所有基金中最高，历史波动极端情况下资产价值可能大幅缩水。",
+        "近60日收益率为-14.77%，近期市场动能明显偏弱。",
+        "胜率低于50%，表明在观察期内多数时间点未能实现正收益。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的152个工作日具体对应哪些日期？",
-        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
-        "新闻事件列表中未发现与159949直接相关的公告，需确认是否有其他未收录的重大事件。"
+        "工作日序列缺失152天的具体原因是什么？是否包含节假日或长期停牌？",
+        "当前基金规模（AUM）数据缺失，需确认基金是否正常运行或存在规模变动。",
+        "新闻事件列表中未发现与159949直接相关的公告，需确认是否有未披露的重大事项。"
       ],
-      "conclusion": "创业板50ETF长期年化回报最高（15.66%），但波动率（33.32%）和最大回撤（-58.99%）均为四只基金中最高。近期60日跌幅达13.42%，短期风险极大。该基金属于高风险高收益品种，当前短期动量显著为负，需高度警惕下行风险，建议谨慎对待。",
+      "conclusion": "创业板50ETF长期业绩最强，但近期动能显著减弱，且历史回撤极大，风险水平最高。数据质量存在瑕疵，需进一步验证。未发现直接相关的治理或基本面风险事件，但需关注市场整体波动。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "513100",
       "status": "绿灯",
       "facts": [
-        "截至2026-09-08，纳指ETF（513100）最新净值为2.242元。",
-        "自数据起始日（约2013年）至2026-09-08，累计总回报为318.28%，年化回报为19.60%。",
-        "年化波动率为24.45%，历史最大回撤为-28.57%，Calmar比率为0.686。",
-        "近60日（约3个月）收益为+3.70%。",
-        "历史日度数据中，日胜率（正收益日占比）为52.69%。",
-        "数据质量评分0.883，提示工作日序列缺失151天，节假日和停牌需人工确认。"
+        "截至2026-09-08，纳指ETF（513100）最新净值为2.233元。",
+        "自数据起始以来，累计收益率为316.60%，年化收益率为19.54%。",
+        "年化波动率为24.45%，最大回撤为-28.57%，Calmar比率为0.684。",
+        "近60日收益率为3.28%，胜率为52.69%。",
+        "数据质量评分为0.883，但存在工作日序列缺失151天的问题。"
       ],
       "positive_evidence": [
-        "作为跟踪纳斯达克100指数的QDII ETF，长期（约13年）年化回报19.60%，为四只基金中最高。",
-        "Calmar比率（0.686）远高于其他三只基金，表明风险调整后收益显著更优。",
-        "近60日收益为正（+3.70%），短期动量向上，为四只基金中唯一正收益。",
-        "历史最大回撤（-28.57%）相对较小，日胜率（52.69%）为四只基金中最高。"
+        "累计收益率和年化收益率在同类中最高，长期业绩表现突出。",
+        "最大回撤（-28.57%）在同类中最低，风险控制相对较好。",
+        "Calmar比率（0.684）在同类中最高，风险调整后收益表现最佳。",
+        "近60日收益率为正，近期市场动能较强。",
+        "胜率超过50%，表明在观察期内多数时间点实现正收益。"
       ],
       "risk_signals": [
-        "年化波动率24.45%仍较高，需注意市场波动风险。",
-        "作为QDII ETF，可能面临汇率波动、跨境市场交易时间差异等额外风险。",
-        "数据质量存在瑕疵，工作日序列缺失151天，可能影响统计指标精确性。"
+        "年化波动率（24.45%）仍属较高水平，需关注市场波动风险。",
+        "数据质量存在瑕疵，工作日序列缺失151天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "数据源（Yahoo Finance）的净值序列是否已复权？缺失的151个工作日具体对应哪些日期？",
-        "当前基金规模（AUM）未提供，需核实最新基金份额及规模数据。",
-        "新闻事件列表中未发现与513100直接相关的公告，需确认是否有其他未收录的重大事件。"
+        "工作日序列缺失151天的具体原因是什么？是否包含节假日或长期停牌？",
+        "当前基金规模（AUM）数据缺失，需确认基金是否正常运行或存在规模变动。",
+        "新闻事件列表中未发现与513100直接相关的公告，需确认是否有未披露的重大事项。"
       ],
-      "conclusion": "纳指ETF在四只基金中表现最优：长期年化回报最高（19.6%），Calmar比率最高（0.686），历史回撤相对较小，且近期60日动量为正。该基金适合作为全球科技股配置工具，风险调整后收益突出，当前时点相对占优。",
+      "conclusion": "纳指ETF长期业绩表现突出，风险控制相对较好，近期动能较强。数据质量存在瑕疵，但整体风险收益特征在同类中表现最佳。未发现直接相关的治理或基本面风险事件。",
       "source": "Deepseek:deepseek-chat"
     }
   ]
