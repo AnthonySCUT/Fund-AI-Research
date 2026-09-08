@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from fund_ai_research.analysis import OpenAICompatibleAnalyzer, analyze_metrics
+from fund_ai_research.analysis import OpenAICompatibleAnalyzer, ResearchCard, analyze_metrics
 from fund_ai_research.connectors import DEFAULT_FUNDS
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
@@ -27,6 +27,29 @@ def profile_label(profile) -> str:
     return f"{profile.code} · {profile.name} · {profile.category}"
 
 
+def load_snapshot_cards(path: Path) -> dict[str, ResearchCard]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    cards = {}
+    for item in payload.get("research_cards", []):
+        code = item.get("code")
+        if not code:
+            continue
+        cards[code] = ResearchCard(
+            code=code,
+            status=item.get("status", "黄灯"),
+            facts=item.get("facts", []),
+            positive_evidence=item.get("positive_evidence", []),
+            risk_signals=item.get("risk_signals", []),
+            verification_questions=item.get("verification_questions", []),
+            conclusion=item.get("conclusion", "等待人工复核。"),
+            source=item.get("source", "后台快照"),
+        )
+    return cards
+
+
 def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_days, commission_bps, slippage_bps, annual_fee_rate):
     return run_pipeline(
         codes=codes,
@@ -46,6 +69,7 @@ profiles = {profile.code: profile for profile in DEFAULT_FUNDS}
 grok_config = OpenAICompatibleAnalyzer(provider="grok")
 deepseek_config = OpenAICompatibleAnalyzer(provider="deepseek")
 snapshot_path = Path(__file__).parent / "data" / "latest_research.json"
+scheduled_cards = load_snapshot_cards(snapshot_path) if snapshot_path.exists() else {}
 with st.sidebar:
     st.header("研究参数")
     if snapshot_path.exists():
@@ -123,8 +147,15 @@ if run_button or "result" not in st.session_state:
 
 result: PipelineResult = st.session_state.result
 if "cards" not in st.session_state:
-    with st.spinner("正在生成研究卡片（所有基金合并为一次 AI 请求）…"):
-        st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
+    if grok_config.enabled or deepseek_config.enabled:
+        with st.spinner("正在生成研究卡片（所有基金合并为一次 AI 请求）…"):
+            st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
+    elif scheduled_cards:
+        st.session_state.cards = {code: card for code, card in scheduled_cards.items() if code in profiles}
+        st.info("当前使用 GitHub Actions 最近一次后台 AI 快照；配置 Streamlit Secrets 后可在页面内实时分析。")
+    else:
+        with st.spinner("正在生成离线规则研究卡片…"):
+            st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
 cards = st.session_state.cards
 
 profile = result.profile
