@@ -1,11 +1,44 @@
 import json
 import os
+import sys
 from dataclasses import asdict, dataclass
 from typing import Dict, Iterable, List, Optional
 
 import requests
 
 from .models import EventRecord, FundMetrics, QualityReport
+
+
+def _setting(name: str) -> Optional[str]:
+    """Read a string setting from env first, then Streamlit Secrets.
+
+    Streamlit Cloud Secrets are not guaranteed to be mirrored into
+    ``os.environ`` in every runtime version. Values are normalized here so a
+    malformed/non-string secret cannot crash app initialization.
+    """
+    value = os.getenv(name)
+    if value is not None and str(value).strip():
+        return str(value).strip()
+    if "streamlit" not in sys.modules:
+        return None
+    try:
+        import streamlit as st
+
+        value = st.secrets.get(name)
+    except Exception:
+        return None
+    if value is None:
+        return None
+    value = str(value).strip()
+    return value or None
+
+
+def _first_setting(*names: str) -> Optional[str]:
+    for name in names:
+        value = _setting(name)
+        if value:
+            return value
+    return None
 
 
 @dataclass
@@ -81,7 +114,7 @@ class OpenAICompatibleAnalyzer:
         model: Optional[str] = None,
         provider: str = "auto",
     ):
-        provider = provider.lower().strip()
+        provider = str(provider or "auto").lower().strip()
         if provider not in {"auto", "grok", "deepseek"}:
             raise ValueError("provider must be auto, grok, or deepseek")
         self.provider = provider
@@ -98,19 +131,21 @@ class OpenAICompatibleAnalyzer:
 
         if provider == "auto":
             # Provider-neutral aliases remain supported for local experiments.
-            self.api_key = api_key or os.getenv("LLM_API_KEY") or os.getenv("GROK_API_KEY") or os.getenv("DEEPSEEK_API_KEY")
-            selected_url = base_url or os.getenv("LLM_BASE_URL") or os.getenv("GROK_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL") or default_url
-            selected_model = model or os.getenv("LLM_MODEL") or os.getenv("GROK_MODEL") or os.getenv("DEEPSEEK_MODEL") or default_model
+            self.api_key = api_key or _first_setting("LLM_API_KEY", "GROK_API_KEY", "DEEPSEEK_API_KEY")
+            selected_url = base_url or _first_setting("LLM_BASE_URL", "GROK_BASE_URL", "DEEPSEEK_BASE_URL") or default_url
+            selected_model = model or _first_setting("LLM_MODEL", "GROK_MODEL", "DEEPSEEK_MODEL") or default_model
         else:
-            self.api_key = api_key or os.getenv(key_name)
-            selected_url = base_url or os.getenv(url_name) or default_url
-            selected_model = model or os.getenv(model_name) or default_model
-        self.base_url = selected_url.rstrip("/")
-        self.model = selected_model
+            self.api_key = str(api_key).strip() if api_key else _setting(key_name)
+            selected_url = base_url or _setting(url_name) or default_url
+            selected_model = model or _setting(model_name) or default_model
+        self.api_key = str(self.api_key).strip() if self.api_key else None
+        self.base_url = str(selected_url).strip().rstrip("/")
+        self.model = str(selected_model).strip()
         try:
             timeout_name = "DEEPSEEK_TIMEOUT_SECONDS" if provider == "deepseek" else "GROK_TIMEOUT_SECONDS"
-            self.timeout = max(5, int(os.getenv("LLM_TIMEOUT_SECONDS") or os.getenv(timeout_name) or "20"))
-        except ValueError:
+            timeout_value = _first_setting("LLM_TIMEOUT_SECONDS", timeout_name) or "20"
+            self.timeout = max(5, int(timeout_value))
+        except (TypeError, ValueError):
             self.timeout = 20
 
     @property
