@@ -120,7 +120,55 @@ with st.sidebar:
         annual_fee_rate = st.number_input("年化基金费率（%）", 0.0, 10.0, 0.5, 0.1) / 100
         run_button = st.form_submit_button("运行抓取与分析", type="primary", width="stretch")
 
-st.title("AI 基金智能投研 MVP")
+st.markdown(
+    """
+    <style>
+    .project-heading {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin: 0 0 0.35rem;
+    }
+    .project-heading h1 {
+        margin: 0;
+        font-size: 2.65rem;
+        line-height: 1.15;
+        letter-spacing: 0;
+    }
+    .project-team {
+        display: inline-block;
+        padding: 0.28rem 0.75rem;
+        border: 1px solid #b7d4f7;
+        border-radius: 999px;
+        background: #eef6ff;
+        color: #165a9e;
+        font-size: 1.05rem;
+        font-weight: 650;
+        line-height: 1.5;
+        white-space: normal;
+    }
+    .project-team a {
+        color: #0b63b6;
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+    }
+    .project-team a:hover,
+    .project-team a:focus {
+        color: #084b8a;
+    }
+    @media (max-width: 720px) {
+        .project-heading h1 { font-size: 2rem; }
+        .project-team { font-size: 0.95rem; }
+    }
+    </style>
+    <div class="project-heading">
+        <h1>AI 基金智能投研 MVP</h1>
+        <span class="project-team">（协作者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a> · <a href="https://github.com/May-the-first" target="_blank" rel="noopener noreferrer">陈朴凡</a> · 李金洁）</span>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
 
 if not selected_codes:
