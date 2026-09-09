@@ -122,6 +122,9 @@ with st.sidebar:
 
 st.title("AI 基金智能投研 MVP")
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
+st.markdown(
+    "**项目团队**：AnthonySCUT 与 [may-the-first](https://github.com/may-the-first) 共同贡献、共同维护。"
+)
 
 if not selected_codes:
     st.warning("请至少选择一支基金。")
