@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09 01:19:01",
+  "fetched_at": "2026-09-09 08:54:15",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -15,282 +15,298 @@
       "code": "510300",
       "name": "沪深300ETF",
       "category": "宽基指数",
-      "latest_value": 4.633999824523926,
-      "total_return": 0.41022513867784194,
-      "annualized_return": 0.04396667880137728,
-      "annualized_volatility": 0.19653005000773557,
+      "latest_value": 4.63700008392334,
+      "total_return": 0.4111381817049946,
+      "annualized_return": 0.04402043287573676,
+      "annualized_volatility": 0.19647931165599652,
       "max_drawdown": -0.4510074262437961,
-      "calmar_ratio": 0.09748548747312799,
-      "momentum_60d": -0.03819012481890971,
-      "win_rate": 0.4963805584281282,
+      "calmar_ratio": 0.0976046741455231,
+      "momentum_60d": -0.05732873680034034,
+      "win_rate": 0.496640826873385,
       "current_aum": NaN,
-      "avg_volume": 1247202995.1833334,
-      "as_of": "2026-09-07",
-      "quality_score": 0.8829,
+      "avg_volume": 1229702794.9,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "510500",
       "name": "中证500ETF",
       "category": "宽基指数",
-      "latest_value": 7.770999908447266,
-      "total_return": 0.7798085203162533,
-      "annualized_return": 0.07482946051393924,
-      "annualized_volatility": 0.23804994862228424,
+      "latest_value": 7.784999847412109,
+      "total_return": 0.7830149559033199,
+      "annualized_return": 0.07501834692322018,
+      "annualized_volatility": 0.23798895803631562,
       "max_drawdown": -0.3965452862065345,
-      "calmar_ratio": 0.1887034422468597,
-      "momentum_60d": -0.05714629204998678,
-      "win_rate": 0.5129265770423992,
+      "calmar_ratio": 0.18917977222946494,
+      "momentum_60d": -0.08883425253596011,
+      "win_rate": 0.5131782945736434,
       "current_aum": NaN,
-      "avg_volume": 466167683.28333336,
-      "as_of": "2026-09-07",
-      "quality_score": 0.8829,
+      "avg_volume": 457581404.8666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159915",
       "name": "创业板ETF",
       "category": "成长指数",
-      "latest_value": 3.4140000343322754,
-      "total_return": 1.5630630558065932,
-      "annualized_return": 0.12503219896178264,
-      "annualized_volatility": 0.3112860480521531,
+      "latest_value": 3.372999906539917,
+      "total_return": 1.5322821794822916,
+      "annualized_return": 0.12324258318062276,
+      "annualized_volatility": 0.31123926246866607,
       "max_drawdown": -0.5658465895446377,
-      "calmar_ratio": 0.2209648361800708,
-      "momentum_60d": -0.11232447392778744,
-      "win_rate": 0.48345398138572904,
+      "calmar_ratio": 0.21780211360786256,
+      "momentum_60d": -0.16613106479091078,
+      "win_rate": 0.48320413436692505,
       "current_aum": NaN,
-      "avg_volume": 2031185562.75,
-      "as_of": "2026-09-07",
-      "quality_score": 0.8829,
+      "avg_volume": 2025135473.7,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159949",
       "name": "创业板50ETF",
       "category": "成长指数",
-      "latest_value": 1.600000023841858,
-      "total_return": 2.1683169088110303,
-      "annualized_return": 0.15528569006689263,
-      "annualized_volatility": 0.3332653215756196,
+      "latest_value": 1.5789999961853027,
+      "total_return": 2.1267326952370813,
+      "annualized_return": 0.15326399166914562,
+      "annualized_volatility": 0.3332171530935608,
       "max_drawdown": -0.5899053876881551,
-      "calmar_ratio": 0.2632382977132295,
-      "momentum_60d": -0.13746630329362086,
-      "win_rate": 0.47156153050672184,
+      "calmar_ratio": 0.25981114068103134,
+      "momentum_60d": -0.193152793901455,
+      "win_rate": 0.47131782945736433,
       "current_aum": NaN,
-      "avg_volume": 1367679121.0833333,
-      "as_of": "2026-09-07",
-      "quality_score": 0.8829,
+      "avg_volume": 1362567998.4666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "513100",
       "name": "纳指ETF",
       "category": "海外指数",
-      "latest_value": 2.2360000610351562,
-      "total_return": 3.1515037998789097,
-      "annualized_return": 0.19503770930182074,
-      "annualized_volatility": 0.244539815324639,
+      "latest_value": 2.2339999675750732,
+      "total_return": 3.1477902956870523,
+      "annualized_return": 0.1947581292107794,
+      "annualized_volatility": 0.24447746543765986,
       "max_drawdown": -0.28568022185936814,
-      "calmar_ratio": 0.6827133780294807,
-      "momentum_60d": 0.034227623583149125,
-      "win_rate": 0.5266149870801033,
+      "calmar_ratio": 0.6817347310331235,
+      "momentum_60d": -0.010628844341380783,
+      "win_rate": 0.5263429752066116,
       "current_aum": NaN,
-      "avg_volume": 218328272.53333333,
-      "as_of": "2026-09-07",
-      "quality_score": 0.8837,
+      "avg_volume": 211333105.21666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     }
   ],
   "quality": [
     {
       "code": "510300",
-      "rows": 1934,
+      "rows": 1935,
       "start_date": "2018-09-11",
-      "end_date": "2026-09-07",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
-      "missing_dates": 151,
+      "missing_dates": 152,
       "invalid_values": 0,
-      "quality_score": 0.8829,
+      "quality_score": 0.8822,
       "status": "需关注",
-      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
     },
     {
       "code": "510500",
-      "rows": 1934,
+      "rows": 1935,
       "start_date": "2018-09-11",
-      "end_date": "2026-09-07",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
-      "missing_dates": 151,
+      "missing_dates": 152,
       "invalid_values": 0,
-      "quality_score": 0.8829,
+      "quality_score": 0.8822,
       "status": "需关注",
-      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
     },
     {
       "code": "159915",
-      "rows": 1934,
+      "rows": 1935,
       "start_date": "2018-09-11",
-      "end_date": "2026-09-07",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
-      "missing_dates": 151,
+      "missing_dates": 152,
       "invalid_values": 0,
-      "quality_score": 0.8829,
+      "quality_score": 0.8822,
       "status": "需关注",
-      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
     },
     {
       "code": "159949",
-      "rows": 1934,
+      "rows": 1935,
       "start_date": "2018-09-11",
-      "end_date": "2026-09-07",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
-      "missing_dates": 151,
+      "missing_dates": 152,
       "invalid_values": 0,
-      "quality_score": 0.8829,
+      "quality_score": 0.8822,
       "status": "需关注",
-      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
     },
     {
       "code": "513100",
-      "rows": 1935,
+      "rows": 1936,
       "start_date": "2018-09-11",
-      "end_date": "2026-09-07",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
-      "missing_dates": 150,
+      "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.8837,
+      "quality_score": 0.883,
       "status": "需关注",
-      "warnings": "工作日序列缺失 150 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     }
   ],
   "events": [
     {
       "code": "510300",
-      "title": "Centrus Energy, SM Energy, BKV, Select Water Solutions, and ProFrac Stocks Trade Up, What You Need To Know",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:11",
-      "url": "https://finance.yahoo.com/energy/articles/centrus-energy-sm-energy-bkv-011118972.html",
+      "title": "AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:49",
+      "url": "https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "510300",
-      "title": "Williams Prices $2.75 Billion of Senior Notes",
+      "title": "India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol",
+      "publisher": "Forkast News",
+      "published_at": "2026-09-09 08:48",
+      "url": "https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Crowe UK adds 96 trainees across national offices",
+      "publisher": "International Accounting Bulletin",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "BYD’s global sales continue to rise in August",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Posco expands production capacity for premium automotive steel",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:44",
+      "url": "https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Form 8.3",
       "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:10",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/williams-prices-2-75-billion-011000330.html",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510300",
-      "title": "Dow Jones Futures: Dow Skids But AMD, HPE Are New Buys; Apple iPhone Event Due",
-      "publisher": "Investor's Business Daily",
-      "published_at": "2026-09-09 01:08",
-      "url": "https://finance.yahoo.com/m/61edb329-2f31-3e10-8832-6860b7819ab2/dow-jones-futures%3A-dow-skids.html",
+      "code": "510500",
+      "title": "AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:49",
+      "url": "https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510300",
-      "title": "With More Than 2,000 Visitors, ATARASHII GAKKO! and Morimoto of Tontsukatan Lead the Opening-Day Countdown",
+      "code": "510500",
+      "title": "India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol",
+      "publisher": "Forkast News",
+      "published_at": "2026-09-09 08:48",
+      "url": "https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Crowe UK adds 96 trainees across national offices",
+      "publisher": "International Accounting Bulletin",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "BYD’s global sales continue to rise in August",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Posco expands production capacity for premium automotive steel",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:44",
+      "url": "https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Form 8.3",
       "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:07",
-      "url": "https://finance.yahoo.com/media-advertising/articles/more-2-000-visitors-atarashii-010700929.html",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510300",
-      "title": "US to ban Canadian motorcycle, dairy, alcohol imports as trade war sizzles",
-      "publisher": "Reuters",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/news/canadas-retaliatory-tariffs-effect-us-040314518.html",
+      "code": "159915",
+      "title": "How to Profit From Sharp Stock Moves—Up or Down",
+      "publisher": "Barrons.com",
+      "published_at": "2026-09-09 06:00",
+      "url": "https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510300",
-      "title": "Why Is Corning (GLW) Stock Rocketing Higher Today",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-corning-glw-stock-rocketing-010318622.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "U.S. Strikes Iranian Oil Tankers in Response to Tehran’s Attacks on Navy Ships",
-      "publisher": "The Wall Street Journal",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/m/790a2947-a57f-3dc2-81d3-fb504c27626a/u.s.-strikes-iranian-oil.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Hong Kong's first post-colonial leader Tung Chee-hwa dies aged 89",
-      "publisher": "AFP",
-      "published_at": "2026-09-09 01:02",
-      "url": "https://finance.yahoo.com/m/71c3d5dc-e9e2-39a1-a477-eaeb6a3008a4/hong-kong%27s-first.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Centrus Energy, SM Energy, BKV, Select Water Solutions, and ProFrac Stocks Trade Up, What You Need To Know",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:11",
-      "url": "https://finance.yahoo.com/energy/articles/centrus-energy-sm-energy-bkv-011118972.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Williams Prices $2.75 Billion of Senior Notes",
-      "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:10",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/williams-prices-2-75-billion-011000330.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Dow Jones Futures: Dow Skids But AMD, HPE Are New Buys; Apple iPhone Event Due",
-      "publisher": "Investor's Business Daily",
-      "published_at": "2026-09-09 01:08",
-      "url": "https://finance.yahoo.com/m/61edb329-2f31-3e10-8832-6860b7819ab2/dow-jones-futures%3A-dow-skids.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "With More Than 2,000 Visitors, ATARASHII GAKKO! and Morimoto of Tontsukatan Lead the Opening-Day Countdown",
-      "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:07",
-      "url": "https://finance.yahoo.com/media-advertising/articles/more-2-000-visitors-atarashii-010700929.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "US to ban Canadian motorcycle, dairy, alcohol imports as trade war sizzles",
-      "publisher": "Reuters",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/news/canadas-retaliatory-tariffs-effect-us-040314518.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Why Is Corning (GLW) Stock Rocketing Higher Today",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-corning-glw-stock-rocketing-010318622.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "U.S. Strikes Iranian Oil Tankers in Response to Tehran’s Attacks on Navy Ships",
-      "publisher": "The Wall Street Journal",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/m/790a2947-a57f-3dc2-81d3-fb504c27626a/u.s.-strikes-iranian-oil.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Hong Kong's first post-colonial leader Tung Chee-hwa dies aged 89",
-      "publisher": "AFP",
-      "published_at": "2026-09-09 01:02",
-      "url": "https://finance.yahoo.com/m/71c3d5dc-e9e2-39a1-a477-eaeb6a3008a4/hong-kong%27s-first.html",
+      "code": "159915",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-09 05:48",
+      "url": "https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html",
       "source": "yahoo_news_secondary"
     },
     {
@@ -342,83 +358,83 @@
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159915",
-      "title": "AMC Falls 5%, Robinhood Barely Budges: Is the Tokenization Bounce Already Over?",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-08 16:05",
-      "url": "https://finance.yahoo.com/m/381d9ea1-b4df-31e6-90d9-2b9851503cdb/amc-falls-5%25%2C-robinhood.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "SK Hynix Jumps 7% as AI Diverts Memory From Phones, Micron Holds Steady, Apple Slips",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-08 15:58",
-      "url": "https://finance.yahoo.com/m/dc5d32e2-54ad-3ff6-b998-74b6f351428d/sk-hynix-jumps-7%25-as-ai.html",
+      "code": "159949",
+      "title": "AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:49",
+      "url": "https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "159949",
-      "title": "Centrus Energy, SM Energy, BKV, Select Water Solutions, and ProFrac Stocks Trade Up, What You Need To Know",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:11",
-      "url": "https://finance.yahoo.com/energy/articles/centrus-energy-sm-energy-bkv-011118972.html",
+      "title": "India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol",
+      "publisher": "Forkast News",
+      "published_at": "2026-09-09 08:48",
+      "url": "https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "159949",
-      "title": "Williams Prices $2.75 Billion of Senior Notes",
+      "title": "Crowe UK adds 96 trainees across national offices",
+      "publisher": "International Accounting Bulletin",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "BYD’s global sales continue to rise in August",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:46",
+      "url": "https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Posco expands production capacity for premium automotive steel",
+      "publisher": "Just Auto",
+      "published_at": "2026-09-09 08:44",
+      "url": "https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Form 8.3",
       "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:10",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/williams-prices-2-75-billion-011000330.html",
+      "published_at": "2026-09-09 08:43",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159949",
-      "title": "Dow Jones Futures: Dow Skids But AMD, HPE Are New Buys; Apple iPhone Event Due",
-      "publisher": "Investor's Business Daily",
-      "published_at": "2026-09-09 01:08",
-      "url": "https://finance.yahoo.com/m/61edb329-2f31-3e10-8832-6860b7819ab2/dow-jones-futures%3A-dow-skids.html",
+      "code": "513100",
+      "title": "How to Profit From Sharp Stock Moves—Up or Down",
+      "publisher": "Barrons.com",
+      "published_at": "2026-09-09 06:00",
+      "url": "https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159949",
-      "title": "With More Than 2,000 Visitors, ATARASHII GAKKO! and Morimoto of Tontsukatan Lead the Opening-Day Countdown",
-      "publisher": "Business Wire",
-      "published_at": "2026-09-09 01:07",
-      "url": "https://finance.yahoo.com/media-advertising/articles/more-2-000-visitors-atarashii-010700929.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "US to ban Canadian motorcycle, dairy, alcohol imports as trade war sizzles",
-      "publisher": "Reuters",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/news/canadas-retaliatory-tariffs-effect-us-040314518.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Why Is Corning (GLW) Stock Rocketing Higher Today",
-      "publisher": "StockStory",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-corning-glw-stock-rocketing-010318622.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "U.S. Strikes Iranian Oil Tankers in Response to Tehran’s Attacks on Navy Ships",
-      "publisher": "The Wall Street Journal",
-      "published_at": "2026-09-09 01:03",
-      "url": "https://finance.yahoo.com/m/790a2947-a57f-3dc2-81d3-fb504c27626a/u.s.-strikes-iranian-oil.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Hong Kong's first post-colonial leader Tung Chee-hwa dies aged 89",
-      "publisher": "AFP",
-      "published_at": "2026-09-09 01:02",
-      "url": "https://finance.yahoo.com/m/71c3d5dc-e9e2-39a1-a477-eaeb6a3008a4/hong-kong%27s-first.html",
+      "code": "513100",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-09 05:48",
+      "url": "https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html",
       "source": "yahoo_news_secondary"
     },
     {
@@ -467,22 +483,6 @@
       "publisher": "24/7 Wall St.",
       "published_at": "2026-09-08 16:49",
       "url": "https://finance.yahoo.com/m/ba9821e7-0268-3768-9cc4-113cd32362f3/enphase-energy-rises-5%25-as.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "513100",
-      "title": "AMC Falls 5%, Robinhood Barely Budges: Is the Tokenization Bounce Already Over?",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-08 16:05",
-      "url": "https://finance.yahoo.com/m/381d9ea1-b4df-31e6-90d9-2b9851503cdb/amc-falls-5%25%2C-robinhood.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "513100",
-      "title": "SK Hynix Jumps 7% as AI Diverts Memory From Phones, Micron Holds Steady, Apple Slips",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-08 15:58",
-      "url": "https://finance.yahoo.com/m/dc5d32e2-54ad-3ff6-b998-74b6f351428d/sk-hynix-jumps-7%25-as-ai.html",
       "source": "yahoo_news_secondary"
     }
   ],
@@ -495,8 +495,8 @@
       "action": "等待验证",
       "net_return_range": "-4.2% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
-      "reason": "核心仓候选得分 0.92；年化历史收益 +19.5%，60日动量 +3.4%，最大回撤 -28.6%。",
-      "evidence": "历史区间 2026-09-07 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "reason": "核心仓候选得分 0.92；年化历史收益 +19.5%，60日动量 -1.1%，最大回撤 -28.6%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
     },
     {
@@ -507,8 +507,8 @@
       "action": "不碰",
       "net_return_range": "-5.0% / +0.4% / +5.8%",
       "max_drawdown": -0.3965452862065345,
-      "reason": "战术仓候选得分 0.51；年化历史收益 +7.5%，60日动量 -5.7%，最大回撤 -39.7%。",
-      "evidence": "历史区间 2026-09-07 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "reason": "战术仓候选得分 0.55；年化历史收益 +7.5%，60日动量 -8.9%，最大回撤 -39.7%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -39.7% 超过用户阈值；数据质量未达到 90%"
     }
   ],
@@ -517,132 +517,158 @@
       "code": "510300",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-07，沪深300ETF（510300）最新净值为4.634元，成立以来总回报41.02%，年化回报4.40%，年化波动率19.65%，最大回撤-45.10%，Calmar比率0.097，近60日收益率为-3.82%，胜率49.64%。",
-        "数据来源为Yahoo Finance公开行情，质量评分0.8829，存在151个工作日序列缺失，节假日和停牌需人工确认。",
-        "2026-09-09前后，Yahoo Finance聚合新闻涉及美股及全球宏观事件（如美国对伊朗油轮打击、美加贸易摩擦、港股前特首逝世等），但未发现直接针对沪深300ETF或A股市场的公告。"
+        "截至2026-09-09，沪深300ETF（510300）最新净值为4.637元。",
+        "自数据起始日至2026-09-09，该ETF累计收益率为41.11%，年化收益率为4.40%。",
+        "该ETF年化波动率为19.65%，历史最大回撤为-45.10%，Calmar比率为0.098。",
+        "截至2026-09-09，该ETF近60日收益率为-5.73%。",
+        "该ETF历史日度胜率为49.66%。",
+        "数据源为Yahoo Finance公开数据，数据质量评分0.8822，存在152个工作日数据缺失，节假日和停牌需人工确认。"
       ],
       "positive_evidence": [
-        "成立以来总回报为正（41.02%），年化波动率（19.65%）低于创业板类指数，显示相对稳健。"
+        "长期累计收益为正，年化收益率4.40%，表明资产在观察期内实现了正增长。",
+        "Calmar比率大于0，表明在考虑回撤风险后，长期风险调整后收益为正。"
       ],
       "risk_signals": [
-        "近60日收益率为-3.82%，短期动量偏弱。",
-        "最大回撤达-45.10%，历史回撤幅度较大。",
-        "数据序列缺失151天，可能影响指标计算的准确性。",
-        "新闻事件多为海外宏观，未直接关联A股，但地缘政治风险（如美伊冲突）可能通过情绪传导影响全球市场。"
+        "近60日收益率为负（-5.73%），显示近期价格呈下跌趋势。",
+        "历史最大回撤达-45.10%，表明该ETF曾经历大幅价格下跌，风险水平较高。",
+        "年化波动率19.65%，属于中高水平，价格波动较大。",
+        "历史日度胜率低于50%（49.66%），表明在多数交易日中，该ETF并未实现正收益。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "缺失的151个工作日具体对应哪些日期？是否包含A股长期停牌或数据源问题？",
-        "当前基金规模（AUM）未披露，需确认是否存在规模过小或清盘风险？",
-        "新闻中提及的美伊冲突、美加贸易战等事件，对A股沪深300成分股的基本面影响程度如何？"
+        "该ETF跟踪的沪深300指数当前成分股构成及权重分布情况如何？",
+        "数据缺失的152个工作日具体是哪些日期？是否与A股节假日或特殊停牌有关？",
+        "该ETF的基金管理人是谁？基金规模（AUM）和近期资金流向数据为何未提供？",
+        "当前ETF的溢价/折价率是多少？"
       ],
-      "conclusion": "基于公开数据，沪深300ETF长期回报为正但年化收益较低（4.40%），近期动量转弱，且历史回撤较大。数据质量存在瑕疵，需补充完整序列及规模信息后再做进一步判断。当前无直接利空公告，但宏观不确定性较高，建议谨慎观望。",
+      "conclusion": "沪深300ETF（510300）长期业绩为正，但近期动能偏弱，且历史回撤较大。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF，但需关注市场整体趋势。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "510500",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-07，中证500ETF（510500）最新净值为7.771元，成立以来总回报77.98%，年化回报7.48%，年化波动率23.80%，最大回撤-39.65%，Calmar比率0.189，近60日收益率为-5.71%，胜率51.29%。",
-        "数据来源为Yahoo Finance公开行情，质量评分0.8829，存在151个工作日序列缺失，节假日和停牌需人工确认。",
-        "2026-09-09前后，Yahoo Finance聚合新闻涉及美股及全球宏观事件，但未发现直接针对中证500ETF或A股市场的公告。"
+        "截至2026-09-09，中证500ETF（510500）最新净值为7.785元。",
+        "自数据起始日至2026-09-09，该ETF累计收益率为78.30%，年化收益率为7.50%。",
+        "该ETF年化波动率为23.80%，历史最大回撤为-39.65%，Calmar比率为0.189。",
+        "截至2026-09-09，该ETF近60日收益率为-8.88%。",
+        "该ETF历史日度胜率为51.32%。",
+        "数据源为Yahoo Finance公开数据，数据质量评分0.8822，存在152个工作日数据缺失，节假日和停牌需人工确认。"
       ],
       "positive_evidence": [
-        "成立以来总回报77.98%，年化回报7.48%，高于沪深300ETF。",
-        "Calmar比率0.189，优于沪深300ETF（0.097），风险调整后收益相对较好。"
+        "长期累计收益显著为正，年化收益率7.50%，表现优于沪深300ETF。",
+        "Calmar比率（0.189）高于沪深300ETF，表明在考虑回撤后，其风险调整后收益相对更优。",
+        "历史日度胜率超过50%（51.32%）。"
       ],
       "risk_signals": [
-        "近60日收益率为-5.71%，短期动量明显为负。",
-        "年化波动率23.80%，高于沪深300ETF，波动风险较大。",
-        "数据序列缺失151天，可能影响指标计算的准确性。",
-        "新闻事件多为海外宏观，未直接关联A股，但全球风险事件可能通过市场情绪影响中小盘股。"
+        "近60日收益率为负（-8.88%），近期下跌趋势比沪深300ETF更明显。",
+        "历史最大回撤达-39.65%，风险水平较高。",
+        "年化波动率23.80%，高于沪深300ETF，价格波动更为剧烈。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "缺失的151个工作日具体对应哪些日期？是否包含A股长期停牌或数据源问题？",
-        "当前基金规模（AUM）未披露，需确认是否存在规模过小或清盘风险？",
-        "中证500成分股中，出口链或资源股占比如何？美加贸易战、美伊冲突等事件对相关行业基本面的传导路径是什么？"
+        "该ETF跟踪的中证500指数当前成分股构成及权重分布情况如何？",
+        "数据缺失的152个工作日具体是哪些日期？是否与A股节假日或特殊停牌有关？",
+        "该ETF的基金管理人是谁？基金规模（AUM）和近期资金流向数据为何未提供？",
+        "当前ETF的溢价/折价率是多少？"
       ],
-      "conclusion": "中证500ETF长期回报优于沪深300，但近期动量转弱，波动率较高。数据质量存在瑕疵，需补充完整序列及规模信息。当前无直接利空公告，但宏观不确定性较高，建议谨慎观望。",
+      "conclusion": "中证500ETF（510500）长期业绩表现良好，但近期下跌动能较强，且波动性和回撤风险均较高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159915",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-07，创业板ETF（159915）最新净值为3.414元，成立以来总回报156.31%，年化回报12.50%，年化波动率31.13%，最大回撤-56.58%，Calmar比率0.221，近60日收益率为-11.23%，胜率48.35%。",
-        "数据来源为Yahoo Finance公开行情，质量评分0.8829，存在151个工作日序列缺失，节假日和停牌需人工确认。",
-        "2026-09-08至09-09，Yahoo Finance聚合新闻涉及美股市场（如标普500、道指下跌，中东局势推升油价）、个股动态（如Amgen下跌、Enphase Energy上涨）等，但未发现直接针对创业板ETF或A股市场的公告。"
+        "截至2026-09-09，创业板ETF（159915）最新净值为3.373元。",
+        "自数据起始日至2026-09-09，该ETF累计收益率为153.23%，年化收益率为12.32%。",
+        "该ETF年化波动率为31.12%，历史最大回撤为-56.58%，Calmar比率为0.218。",
+        "截至2026-09-09，该ETF近60日收益率为-16.61%。",
+        "该ETF历史日度胜率为48.32%。",
+        "数据源为Yahoo Finance公开数据，数据质量评分0.8822，存在152个工作日数据缺失，节假日和停牌需人工确认。"
       ],
       "positive_evidence": [
-        "成立以来总回报156.31%，年化回报12.50%，为样本中最高。",
-        "Calmar比率0.221，高于沪深300和中证500ETF，风险调整后收益相对较好。"
+        "长期累计收益显著为正，年化收益率12.32%，在三只国内宽基ETF中最高。",
+        "Calmar比率（0.218）在三只国内宽基ETF中最高，表明其长期风险调整后收益相对最优。"
       ],
       "risk_signals": [
-        "近60日收益率为-11.23%，短期动量显著为负，为样本中跌幅最大。",
-        "年化波动率31.13%，最大回撤-56.58%，均为样本中最高，风险水平极高。",
-        "数据序列缺失151天，可能影响指标计算的准确性。",
-        "新闻事件多为海外宏观，未直接关联A股，但全球风险偏好下降可能对高估值成长板块形成压力。"
+        "近60日收益率为-16.61%，为三只国内宽基ETF中跌幅最大，近期下跌趋势非常明显。",
+        "历史最大回撤达-56.58%，为三只国内宽基ETF中最高，风险水平极高。",
+        "年化波动率31.12%，为三只国内宽基ETF中最高，价格波动非常剧烈。",
+        "历史日度胜率低于50%（48.32%），表明在多数交易日中，该ETF并未实现正收益。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "缺失的151个工作日具体对应哪些日期？是否包含A股长期停牌或数据源问题？",
-        "当前基金规模（AUM）未披露，需确认是否存在规模过小或清盘风险？",
-        "创业板成分股中，对海外流动性或风险偏好敏感的行业（如科技、医药）占比如何？美债利率或地缘政治事件的影响程度？"
+        "该ETF跟踪的创业板指数当前成分股构成及权重分布情况如何？",
+        "数据缺失的152个工作日具体是哪些日期？是否与A股节假日或特殊停牌有关？",
+        "该ETF的基金管理人是谁？基金规模（AUM）和近期资金流向数据为何未提供？",
+        "当前ETF的溢价/折价率是多少？"
       ],
-      "conclusion": "创业板ETF长期回报最高，但近期动量大幅转弱，波动率和回撤风险极高。数据质量存在瑕疵，需补充完整序列及规模信息。当前无直接利空公告，但宏观不确定性较高，建议谨慎观望。",
+      "conclusion": "创业板ETF（159915）长期业绩表现突出，但近期回调幅度最大，且波动性和回撤风险在三只国内宽基ETF中最高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159949",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-07，创业板50ETF（159949）最新净值为1.600元，成立以来总回报216.83%，年化回报15.53%，年化波动率33.33%，最大回撤-58.99%，Calmar比率0.263，近60日收益率为-13.75%，胜率47.16%。",
-        "数据来源为Yahoo Finance公开行情，质量评分0.8829，存在151个工作日序列缺失，节假日和停牌需人工确认。",
-        "2026-09-09前后，Yahoo Finance聚合新闻涉及美股及全球宏观事件，但未发现直接针对创业板50ETF或A股市场的公告。"
+        "截至2026-09-09，创业板50ETF（159949）最新净值为1.579元。",
+        "自数据起始日至2026-09-09，该ETF累计收益率为212.67%，年化收益率为15.33%。",
+        "该ETF年化波动率为33.32%，历史最大回撤为-58.99%，Calmar比率为0.260。",
+        "截至2026-09-09，该ETF近60日收益率为-19.32%。",
+        "该ETF历史日度胜率为47.13%。",
+        "数据源为Yahoo Finance公开数据，数据质量评分0.8822，存在152个工作日数据缺失，节假日和停牌需人工确认。"
       ],
       "positive_evidence": [
-        "成立以来总回报216.83%，年化回报15.53%，为样本中最高。",
-        "Calmar比率0.263，为样本中最高，风险调整后收益相对最好。"
+        "长期累计收益显著为正，年化收益率15.33%，在四只ETF中最高。",
+        "Calmar比率（0.260）在四只ETF中最高，表明其长期风险调整后收益相对最优。"
       ],
       "risk_signals": [
-        "近60日收益率为-13.75%，短期动量显著为负，为样本中跌幅最大。",
-        "年化波动率33.33%，最大回撤-58.99%，均为样本中最高，风险水平极高。",
-        "数据序列缺失151天，可能影响指标计算的准确性。",
-        "新闻事件多为海外宏观，未直接关联A股，但全球风险偏好下降可能对高估值成长板块形成压力。"
+        "近60日收益率为-19.32%，为四只ETF中跌幅最大，近期下跌趋势非常明显。",
+        "历史最大回撤达-58.99%，为四只ETF中最高，风险水平极高。",
+        "年化波动率33.32%，为四只ETF中最高，价格波动非常剧烈。",
+        "历史日度胜率低于50%（47.13%），为四只ETF中最低，表明在多数交易日中，该ETF并未实现正收益。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。"
       ],
       "verification_questions": [
-        "缺失的151个工作日具体对应哪些日期？是否包含A股长期停牌或数据源问题？",
-        "当前基金规模（AUM）未披露，需确认是否存在规模过小或清盘风险？",
-        "创业板50成分股中，对海外流动性或风险偏好敏感的行业（如科技、医药）占比如何？美债利率或地缘政治事件的影响程度？"
+        "该ETF跟踪的创业板50指数当前成分股构成及权重分布情况如何？",
+        "数据缺失的152个工作日具体是哪些日期？是否与A股节假日或特殊停牌有关？",
+        "该ETF的基金管理人是谁？基金规模（AUM）和近期资金流向数据为何未提供？",
+        "当前ETF的溢价/折价率是多少？"
       ],
-      "conclusion": "创业板50ETF长期回报最高，但近期动量大幅转弱，波动率和回撤风险极高。数据质量存在瑕疵，需补充完整序列及规模信息。当前无直接利空公告，但宏观不确定性较高，建议谨慎观望。",
+      "conclusion": "创业板50ETF（159949）长期业绩表现最佳，但近期回调幅度也最大，且波动性和回撤风险在四只ETF中最高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "513100",
       "status": "黄灯",
       "facts": [
-        "截至2026-09-07，纳指ETF（513100）最新净值为2.236元，成立以来总回报315.15%，年化回报19.50%，年化波动率24.45%，最大回撤-28.57%，Calmar比率0.683，近60日收益率为3.42%，胜率52.66%。",
-        "数据来源为Yahoo Finance公开行情，质量评分0.8837，存在150个工作日序列缺失，节假日和停牌需人工确认。",
-        "2026-09-08至09-09，Yahoo Finance聚合新闻涉及美股市场（如标普500、道指下跌，中东局势推升油价）、个股动态（如Amgen下跌、Enphase Energy上涨、SK Hynix上涨）等，但未发现直接针对纳指ETF或A股市场的公告。"
+        "截至2026-09-09，纳指ETF（513100）最新净值为2.234元。",
+        "自数据起始日至2026-09-09，该ETF累计收益率为314.78%，年化收益率为19.48%。",
+        "该ETF年化波动率为24.45%，历史最大回撤为-28.57%，Calmar比率为0.682。",
+        "截至2026-09-09，该ETF近60日收益率为-1.06%。",
+        "该ETF历史日度胜率为52.63%。",
+        "数据源为Yahoo Finance公开数据，数据质量评分0.883，存在151个工作日数据缺失，节假日和停牌需人工确认。"
       ],
       "positive_evidence": [
-        "成立以来总回报315.15%，年化回报19.50%，为样本中最高。",
-        "Calmar比率0.683，为样本中最高，风险调整后收益显著优于其他ETF。",
-        "近60日收益率为3.42%，为样本中唯一正收益，短期动量较强。",
-        "最大回撤-28.57%，为样本中最低，回撤控制相对较好。"
+        "长期累计收益显著为正，年化收益率19.48%，在五只ETF中最高。",
+        "Calmar比率（0.682）在五只ETF中最高，表明其长期风险调整后收益显著优于其他ETF。",
+        "历史最大回撤（-28.57%）在五只ETF中最低，风险控制相对较好。",
+        "近60日收益率（-1.06%）在五只ETF中跌幅最小，近期表现相对稳健。",
+        "历史日度胜率超过50%（52.63%）。"
       ],
       "risk_signals": [
-        "年化波动率24.45%，仍处于较高水平。",
-        "数据序列缺失150天，可能影响指标计算的准确性。",
-        "新闻事件显示美股市场受中东局势、通胀数据等宏观因素影响，存在不确定性。",
-        "纳指ETF跟踪海外指数，需关注汇率波动、跨境投资政策等额外风险。"
+        "近60日收益率为负（-1.06%），显示近期价格略有下跌。",
+        "年化波动率24.45%，属于中高水平，价格波动较大。",
+        "数据质量存在瑕疵，工作日序列缺失151天，可能影响指标计算的准确性。",
+        "该ETF为QDII产品，投资于海外市场，需关注汇率风险、跨境市场波动及外汇额度限制等特有风险。"
       ],
       "verification_questions": [
-        "缺失的150个工作日具体对应哪些日期？是否包含美股休市或数据源问题？",
-        "当前基金规模（AUM）未披露，需确认是否存在规模过小或清盘风险？",
-        "纳指ETF的汇率对冲策略如何？人民币兑美元汇率波动对基金净值的影响程度？",
-        "新闻中提及的美伊冲突、通胀数据等事件，对纳斯达克成分股（如科技股）基本面的影响程度如何？"
+        "该ETF跟踪的纳斯达克100指数当前成分股构成及权重分布情况如何？",
+        "数据缺失的151个工作日具体是哪些日期？是否与海外市场节假日或特殊停牌有关？",
+        "该ETF的基金管理人是谁？基金规模（AUM）和近期资金流向数据为何未提供？",
+        "当前ETF的溢价/折价率是多少？是否存在较高的溢价风险？",
+        "该ETF的外汇额度使用情况如何？是否有限购风险？"
       ],
-      "conclusion": "纳指ETF长期回报和风险调整后收益均为样本中最佳，近期动量为正，回撤控制较好。但数据质量存在瑕疵，需补充完整序列及规模信息。当前无直接利空公告，但海外宏观不确定性较高，建议谨慎观望。",
+      "conclusion": "纳指ETF（513100）长期业绩表现优异，风险调整后收益在五只ETF中最高，且近期回调幅度最小。但作为QDII产品，需特别关注汇率、跨境市场波动及溢价等特有风险。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。",
       "source": "Deepseek:deepseek-chat"
     }
   ]
