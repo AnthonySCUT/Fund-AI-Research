@@ -122,8 +122,6 @@ with st.sidebar:
 
 st.title("AI 基金智能投研 MVP")
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
-st.markdown("**项目团队**：AnthonySCUT 与 [may-the-first](https://github.com/may-the-first) 共同贡献、共同维护。")
-
 if not selected_codes:
     st.warning("请至少选择一支基金。")
     st.stop()
@@ -264,3 +262,57 @@ with tab_quality:
 
 st.divider()
 st.caption("研究原型不构成证券或基金投资建议，不自动下单，不承诺收益。生产化前应补充授权数据、公开披露引用、账户隔离、权限控制、审计日志与人工审批。")
+st.markdown(
+    """
+    <style>
+    .creator-credit {
+        position: fixed;
+        right: 150px;
+        bottom: 18px;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #30313d;
+        font-size: 15px;
+        line-height: 1;
+        white-space: nowrap;
+        pointer-events: auto;
+    }
+    .creator-credit a {
+        display: inline-flex;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+    }
+    .creator-credit img {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 8px rgba(48, 49, 61, 0.20);
+    }
+    .creator-credit span {
+        font-weight: 500;
+    }
+    @media (max-width: 720px) {
+        .creator-credit {
+            right: 16px;
+            bottom: 58px;
+            font-size: 13px;
+        }
+        .creator-credit img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    </style>
+    <div class="creator-credit">
+        <span>Created by anthonyscut</span>
+        <a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer" aria-label="打开 AnthonySCUT 的 GitHub 主页">
+            <img src="https://github.com/AnthonySCUT.png?size=96" alt="AnthonySCUT avatar">
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
