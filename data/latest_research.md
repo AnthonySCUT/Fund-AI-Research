@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-09-09 08:54:15
+抓取时间：2026-09-09 12:24:11
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -21,73 +21,73 @@
 
 ### 510300 · 黄灯
 
-沪深300ETF（510300）长期业绩为正，但近期动能偏弱，且历史回撤较大。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF，但需关注市场整体趋势。
+沪深300ETF长期业绩为正，但短期动量转负且历史回撤较大。数据质量存在瑕疵，需人工核实缺失数据后再做进一步判断。当前无明确证据支持或否定其投资价值，建议关注短期趋势变化及数据完整性。
 
-风险信号：近60日收益率为负（-5.73%），显示近期价格呈下跌趋势。；历史最大回撤达-45.10%，表明该ETF曾经历大幅价格下跌，风险水平较高。；年化波动率19.65%，属于中高水平，价格波动较大。；历史日度胜率低于50%（49.66%），表明在多数交易日中，该ETF并未实现正收益。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
+风险信号：近60日收益率为负（-5.73%），显示短期趋势走弱。；最大回撤超过45%，历史波动较大，存在显著下行风险。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
 
 ### 510500 · 黄灯
 
-中证500ETF（510500）长期业绩表现良好，但近期下跌动能较强，且波动性和回撤风险均较高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。
+中证500ETF长期业绩优于沪深300，但短期动量显著为负，回撤风险不容忽视。数据质量瑕疵需人工核实。建议关注短期趋势能否企稳，以及数据完整性验证。
 
-风险信号：近60日收益率为负（-8.88%），近期下跌趋势比沪深300ETF更明显。；历史最大回撤达-39.65%，风险水平较高。；年化波动率23.80%，高于沪深300ETF，价格波动更为剧烈。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
+风险信号：近60日收益率为-8.88%，短期下跌幅度大于沪深300ETF，动量明显走弱。；最大回撤接近40%，波动性较高。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
 
 ### 159915 · 黄灯
 
-创业板ETF（159915）长期业绩表现突出，但近期回调幅度最大，且波动性和回撤风险在三只国内宽基ETF中最高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。
+创业板ETF长期收益显著，但短期动量大幅为负，且历史回撤和波动率极高，风险较大。数据质量瑕疵需人工核实。建议关注短期市场情绪变化及数据完整性。
 
-风险信号：近60日收益率为-16.61%，为三只国内宽基ETF中跌幅最大，近期下跌趋势非常明显。；历史最大回撤达-56.58%，为三只国内宽基ETF中最高，风险水平极高。；年化波动率31.12%，为三只国内宽基ETF中最高，价格波动非常剧烈。；历史日度胜率低于50%（48.32%），表明在多数交易日中，该ETF并未实现正收益。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
+风险信号：近60日收益率为-16.61%，短期跌幅显著，动量急剧恶化。；最大回撤超过56%，波动率超过31%，风险水平较高。；胜率低于50%，历史下跌交易日略多于上涨交易日。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
 
-### 159949 · 黄灯
+### 159949 · 红灯
 
-创业板50ETF（159949）长期业绩表现最佳，但近期回调幅度也最大，且波动性和回撤风险在四只ETF中最高。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。当前无重大基本面事件直接关联该ETF。
+创业板50ETF长期收益最高，但短期动量跌幅为样本中最大，且波动率和回撤均处于极高水平，风险显著。数据质量瑕疵需人工核实。当前短期风险信号强烈，建议谨慎对待，需进一步验证数据完整性和市场环境。
 
-风险信号：近60日收益率为-19.32%，为四只ETF中跌幅最大，近期下跌趋势非常明显。；历史最大回撤达-58.99%，为四只ETF中最高，风险水平极高。；年化波动率33.32%，为四只ETF中最高，价格波动非常剧烈。；历史日度胜率低于50%（47.13%），为四只ETF中最低，表明在多数交易日中，该ETF并未实现正收益。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标计算的准确性。
+风险信号：近60日收益率为-19.32%，为样本中最大跌幅，短期动量极度恶化。；最大回撤接近59%，波动率超过33%，风险水平为样本中最高。；胜率低于48%，历史下跌交易日明显多于上涨交易日。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
 
-### 513100 · 黄灯
+### 513100 · 绿灯
 
-纳指ETF（513100）长期业绩表现优异，风险调整后收益在五只ETF中最高，且近期回调幅度最小。但作为QDII产品，需特别关注汇率、跨境市场波动及溢价等特有风险。数据质量存在瑕疵，需补充基金规模、跟踪误差等基本面信息以进行更全面的评估。
+纳指ETF在样本中表现最优，长期收益高、回撤小、风险调整后收益突出，短期动量相对稳定。数据质量瑕疵需人工核实，但整体基本面与治理结构信号积极。
 
-风险信号：近60日收益率为负（-1.06%），显示近期价格略有下跌。；年化波动率24.45%，属于中高水平，价格波动较大。；数据质量存在瑕疵，工作日序列缺失151天，可能影响指标计算的准确性。；该ETF为QDII产品，投资于海外市场，需关注汇率风险、跨境市场波动及外汇额度限制等特有风险。
+风险信号：近60日收益率为负，短期动量略有走弱。；数据质量存在瑕疵，工作日序列缺失151天，可能影响指标精确性。
 
 ## 事件线索（优先官方披露）
 
-- 2026-09-09 08:49 · 510300 · [AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?](https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html) · Stocktwits
-- 2026-09-09 08:48 · 510300 · [India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol](https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html) · Forkast News
-- 2026-09-09 08:46 · 510300 · [Crowe UK adds 96 trainees across national offices](https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html) · International Accounting Bulletin
-- 2026-09-09 08:46 · 510300 · [META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale](https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html) · Stocktwits
-- 2026-09-09 08:46 · 510300 · [BYD’s global sales continue to rise in August](https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html) · Just Auto
-- 2026-09-09 08:44 · 510300 · [Posco expands production capacity for premium automotive steel](https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html) · Just Auto
-- 2026-09-09 08:43 · 510300 · [Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services](https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html) · GlobeNewswire
-- 2026-09-09 08:43 · 510300 · [Form 8.3](https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html) · Business Wire
-- 2026-09-09 08:49 · 510500 · [AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?](https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html) · Stocktwits
-- 2026-09-09 08:48 · 510500 · [India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol](https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html) · Forkast News
-- 2026-09-09 08:46 · 510500 · [Crowe UK adds 96 trainees across national offices](https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html) · International Accounting Bulletin
-- 2026-09-09 08:46 · 510500 · [META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale](https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html) · Stocktwits
-- 2026-09-09 08:46 · 510500 · [BYD’s global sales continue to rise in August](https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html) · Just Auto
-- 2026-09-09 08:44 · 510500 · [Posco expands production capacity for premium automotive steel](https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html) · Just Auto
-- 2026-09-09 08:43 · 510500 · [Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services](https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html) · GlobeNewswire
-- 2026-09-09 08:43 · 510500 · [Form 8.3](https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html) · Business Wire
+- 2026-09-09 12:21 · 510300 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
+- 2026-09-09 12:19 · 510300 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
+- 2026-09-09 12:18 · 510300 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
+- 2026-09-09 12:18 · 510300 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
+- 2026-09-09 12:18 · 510300 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
+- 2026-09-09 12:18 · 510300 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
+- 2026-09-09 12:18 · 510300 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
+- 2026-09-09 12:18 · 510300 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
+- 2026-09-09 12:21 · 510500 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
+- 2026-09-09 12:19 · 510500 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
+- 2026-09-09 12:18 · 510500 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
+- 2026-09-09 12:18 · 510500 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
+- 2026-09-09 12:18 · 510500 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
+- 2026-09-09 12:18 · 510500 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
+- 2026-09-09 12:18 · 510500 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
+- 2026-09-09 12:18 · 510500 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
+- 2026-09-09 11:43 · 159915 · [Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?](https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html) · 24/7 Wall St.
+- 2026-09-09 10:02 · 159915 · [Has AI Made S&P 500 Index Funds Too Dangerous to Touch?](https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html) · Motley Fool
 - 2026-09-09 06:00 · 159915 · [How to Profit From Sharp Stock Moves—Up or Down](https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html) · Barrons.com
 - 2026-09-09 05:48 · 159915 · [Stock Market: Will S&P 500 Open Up or Down Today?](https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html) · Benzinga Prediction Markets
 - 2026-09-08 22:46 · 159915 · [S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus](https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html) · Stocktwits
 - 2026-09-08 21:45 · 159915 · [QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer](https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html) · 24/7 Wall St.
 - 2026-09-08 21:25 · 159915 · [Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument](https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html) · 24/7 Wall St.
 - 2026-09-08 17:08 · 159915 · [Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%](https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html) · 24/7 Wall St.
-- 2026-09-08 17:05 · 159915 · [Prediction: This ETF Will Beat the SPY Through 2027 (Not the QQQ!)](https://finance.yahoo.com/m/3ef168f4-abc0-3b21-a508-4e99601343f9/prediction%3A-this-etf-will.html) · 24/7 Wall St.
-- 2026-09-08 16:49 · 159915 · [Enphase Energy Rises 5% as Solid-State Transformer Modules Enter Texas Production, SolarEdge Jumps 6%](https://finance.yahoo.com/m/ba9821e7-0268-3768-9cc4-113cd32362f3/enphase-energy-rises-5%25-as.html) · 24/7 Wall St.
-- 2026-09-09 08:49 · 159949 · [AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days?](https://finance.yahoo.com/m/23c3e832-0100-355b-ace8-40178de6f111/aapl-stock-has-mostly.html) · Stocktwits
-- 2026-09-09 08:48 · 159949 · [India Eyes AI-Driven UPI Payments as NPCI Weighs Agent Protocol](https://finance.yahoo.com/technology/ai/articles/india-eyes-ai-driven-upi-084800065.html) · Forkast News
-- 2026-09-09 08:46 · 159949 · [Crowe UK adds 96 trainees across national offices](https://finance.yahoo.com/m/727e6a6a-b484-3603-866b-dec44ee0d9dc/crowe-uk-adds-96-trainees.html) · International Accounting Bulletin
-- 2026-09-09 08:46 · 159949 · [META Stock Rises Premarket: Zuckerberg Says Threads Is ‘Either Bigger Than X’ Or Close In Scale](https://finance.yahoo.com/m/8740f622-2aa3-3efc-9394-a4d07d2a76d3/meta-stock-rises-premarket%3A.html) · Stocktwits
-- 2026-09-09 08:46 · 159949 · [BYD’s global sales continue to rise in August](https://finance.yahoo.com/m/ab5c405a-7b4f-330d-abb1-8523d2637790/byd%E2%80%99s-global-sales-continue.html) · Just Auto
-- 2026-09-09 08:44 · 159949 · [Posco expands production capacity for premium automotive steel](https://finance.yahoo.com/m/c5d9cb5b-c5d4-3389-ac9d-9d02a97068b2/posco-expands-production.html) · Just Auto
-- 2026-09-09 08:43 · 159949 · [Global DNA and Gene Cloning Services Market to Reach $15.6 Billion by 2034 as Therapeutic Pipelines Expand and Organizations Adopt Outsourced, Technology-Enabled Molecular Biology Services](https://finance.yahoo.com/healthcare/articles/global-dna-gene-cloning-services-084300009.html) · GlobeNewswire
-- 2026-09-09 08:43 · 159949 · [Form 8.3](https://finance.yahoo.com/markets/stocks/articles/form-8-3-084300719.html) · Business Wire
+- 2026-09-09 12:21 · 159949 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
+- 2026-09-09 12:19 · 159949 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
+- 2026-09-09 12:18 · 159949 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
+- 2026-09-09 12:18 · 159949 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
+- 2026-09-09 12:18 · 159949 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
+- 2026-09-09 12:18 · 159949 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
+- 2026-09-09 12:18 · 159949 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
+- 2026-09-09 12:18 · 159949 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
+- 2026-09-09 11:43 · 513100 · [Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?](https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html) · 24/7 Wall St.
+- 2026-09-09 10:02 · 513100 · [Has AI Made S&P 500 Index Funds Too Dangerous to Touch?](https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html) · Motley Fool
 - 2026-09-09 06:00 · 513100 · [How to Profit From Sharp Stock Moves—Up or Down](https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html) · Barrons.com
 - 2026-09-09 05:48 · 513100 · [Stock Market: Will S&P 500 Open Up or Down Today?](https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html) · Benzinga Prediction Markets
 - 2026-09-08 22:46 · 513100 · [S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus](https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html) · Stocktwits
 - 2026-09-08 21:45 · 513100 · [QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer](https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html) · 24/7 Wall St.
 - 2026-09-08 21:25 · 513100 · [Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument](https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html) · 24/7 Wall St.
 - 2026-09-08 17:08 · 513100 · [Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%](https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html) · 24/7 Wall St.
-- 2026-09-08 17:05 · 513100 · [Prediction: This ETF Will Beat the SPY Through 2027 (Not the QQQ!)](https://finance.yahoo.com/m/3ef168f4-abc0-3b21-a508-4e99601343f9/prediction%3A-this-etf-will.html) · 24/7 Wall St.
-- 2026-09-08 16:49 · 513100 · [Enphase Energy Rises 5% as Solid-State Transformer Modules Enter Texas Production, SolarEdge Jumps 6%](https://finance.yahoo.com/m/ba9821e7-0268-3768-9cc4-113cd32362f3/enphase-energy-rises-5%25-as.html) · 24/7 Wall St.
