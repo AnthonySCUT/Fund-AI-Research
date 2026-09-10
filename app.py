@@ -157,14 +157,28 @@ st.markdown(
     .project-team a:focus {
         color: #084b8a;
     }
+    .project-affiliation {
+        display: inline-block;
+        padding: 0.26rem 0.7rem;
+        border: 1px solid #ead9ad;
+        border-radius: 999px;
+        background: #fff9eb;
+        color: #775b21;
+        font-size: 0.98rem;
+        font-weight: 600;
+        line-height: 1.5;
+        white-space: normal;
+    }
     @media (max-width: 720px) {
         .project-heading h1 { font-size: 2rem; }
-        .project-team { font-size: 0.95rem; }
+        .project-team,
+        .project-affiliation { font-size: 0.95rem; }
     }
     </style>
     <div class="project-heading">
         <h1>AI 基金智能投研 MVP</h1>
         <span class="project-team">（协作者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a> · <a href="https://github.com/May-the-first" target="_blank" rel="noopener noreferrer">陈朴凡</a> · 李金洁）</span>
+        <span class="project-affiliation">华南理工大学 · 2024级本科生</span>
     </div>
     """,
     unsafe_allow_html=True,
