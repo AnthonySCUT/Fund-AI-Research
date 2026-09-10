@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-09-09 12:24:11
+抓取时间：2026-09-10 08:53:32
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -11,83 +11,83 @@
 
 | 代码 | 基金 | 累计收益 | 年化收益 | 年化波动 | 最大回撤 | 数据源 |
 |---|---|---:|---:|---:|---:|---|
-| 510300 | 沪深300ETF | 41.11% | 4.40% | 19.65% | -45.10% | Yahoo Finance public chart |
-| 510500 | 中证500ETF | 78.30% | 7.50% | 23.80% | -39.65% | Yahoo Finance public chart |
-| 159915 | 创业板ETF | 153.23% | 12.32% | 31.12% | -56.58% | Yahoo Finance public chart |
-| 159949 | 创业板50ETF | 212.67% | 15.33% | 33.32% | -58.99% | Yahoo Finance public chart |
-| 513100 | 纳指ETF | 314.78% | 19.48% | 24.45% | -28.57% | Yahoo Finance public chart |
+| 510300 | 沪深300ETF | 41.50% | 4.44% | 19.65% | -45.10% | Yahoo Finance public chart |
+| 510500 | 中证500ETF | 77.89% | 7.47% | 23.80% | -39.65% | Yahoo Finance public chart |
+| 159915 | 创业板ETF | 154.39% | 12.39% | 31.12% | -56.58% | Yahoo Finance public chart |
+| 159949 | 创业板50ETF | 214.12% | 15.39% | 33.32% | -58.99% | Yahoo Finance public chart |
+| 513100 | 纳指ETF | 307.60% | 19.22% | 24.45% | -28.57% | Yahoo Finance public chart |
 
 ## 研究卡片
 
 ### 510300 · 黄灯
 
-沪深300ETF长期业绩为正，但短期动量转负且历史回撤较大。数据质量存在瑕疵，需人工核实缺失数据后再做进一步判断。当前无明确证据支持或否定其投资价值，建议关注短期趋势变化及数据完整性。
+基于输入数据，510300为宽基指数ETF，总回报和年化回报为正，但最大回撤较大、Calmar比率低、60日动量为负、胜率低于50%，且存在数据完整性警告和AUM缺失。事件列表与基金无直接关联，未找到公开证据支持基本面或治理结构改善。综合判断为黄灯，需进一步验证数据完整性和规模信息。
 
-风险信号：近60日收益率为负（-5.73%），显示短期趋势走弱。；最大回撤超过45%，历史波动较大，存在显著下行风险。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
+风险信号：最大回撤达-0.4510074262437961，回撤幅度较大。；Calmar比率仅0.09838705505987465，单位回撤对应的收益补偿较低。；60日动量为负（-0.05967408422012743），近期趋势偏弱。；胜率0.49612403100775193，低于50%。；质量警告提示工作日序列缺失152天，数据完整性存疑。；当前AUM为NaN，规模信息缺失。；事件列表与基金本身无直接关联，无法提供基本面或治理结构证据。
 
 ### 510500 · 黄灯
 
-中证500ETF长期业绩优于沪深300，但短期动量显著为负，回撤风险不容忽视。数据质量瑕疵需人工核实。建议关注短期趋势能否企稳，以及数据完整性验证。
+基于输入数据，510500为中证500宽基指数ETF，总回报和年化回报为正，胜率略高于50%，但最大回撤较大、Calmar比率低、60日动量为负，且存在数据完整性警告和AUM缺失。事件列表与基金无直接关联，未找到公开证据支持基本面或治理结构改善。综合判断为黄灯，需进一步验证数据完整性和规模信息。
 
-风险信号：近60日收益率为-8.88%，短期下跌幅度大于沪深300ETF，动量明显走弱。；最大回撤接近40%，波动性较高。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
+风险信号：最大回撤达-0.3965452862065345，回撤幅度较大。；Calmar比率仅0.1883884114851879，单位回撤对应的收益补偿较低。；60日动量为负（-0.10310471149584122），近期趋势偏弱。；年化波动率0.23799664561540998，波动较高。；质量警告提示工作日序列缺失152天，数据完整性存疑。；当前AUM为NaN，规模信息缺失。；事件列表与基金本身无直接关联，无法提供基本面或治理结构证据。
 
 ### 159915 · 黄灯
 
-创业板ETF长期收益显著，但短期动量大幅为负，且历史回撤和波动率极高，风险较大。数据质量瑕疵需人工核实。建议关注短期市场情绪变化及数据完整性。
+基于输入数据，159915为创业板成长指数ETF，总回报和年化回报为正，但最大回撤很大、年化波动率高、Calmar比率低、60日动量明显为负、胜率低于50%，且存在数据完整性警告和AUM缺失。事件列表与基金无直接关联，未找到公开证据支持基本面或治理结构改善。综合判断为黄灯，需进一步验证数据完整性和规模信息。
 
-风险信号：近60日收益率为-16.61%，短期跌幅显著，动量急剧恶化。；最大回撤超过56%，波动率超过31%，风险水平较高。；胜率低于50%，历史下跌交易日略多于上涨交易日。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
+风险信号：最大回撤达-0.5658465895446377，回撤幅度很大。；年化波动率0.31122269316790874，波动很高。；Calmar比率仅0.2189428606002356，单位回撤对应的收益补偿较低。；60日动量为负（-0.183167115008806），近期趋势明显偏弱。；胜率0.48320413436692505，低于50%。；质量警告提示工作日序列缺失152天，数据完整性存疑。；当前AUM为NaN，规模信息缺失。；事件列表与基金本身无直接关联，无法提供基本面或治理结构证据。
 
-### 159949 · 红灯
+### 159949 · 黄灯
 
-创业板50ETF长期收益最高，但短期动量跌幅为样本中最大，且波动率和回撤均处于极高水平，风险显著。数据质量瑕疵需人工核实。当前短期风险信号强烈，建议谨慎对待，需进一步验证数据完整性和市场环境。
+基于输入数据，159949为创业板50成长指数ETF，总回报和年化回报为正，但最大回撤很大、年化波动率高、Calmar比率低、60日动量明显为负、胜率低于50%，且存在数据完整性警告和AUM缺失。事件列表与基金无直接关联，未找到公开证据支持基本面或治理结构改善。综合判断为黄灯，需进一步验证数据完整性和规模信息。
 
-风险信号：近60日收益率为-19.32%，为样本中最大跌幅，短期动量极度恶化。；最大回撤接近59%，波动率超过33%，风险水平为样本中最高。；胜率低于48%，历史下跌交易日明显多于上涨交易日。；数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。
+风险信号：最大回撤达-0.5899053876881551，回撤幅度很大。；年化波动率0.3332066116702278，波动很高。；Calmar比率仅0.26093668847113727，单位回撤对应的收益补偿较低。；60日动量为负（-0.20443097220700757），近期趋势明显偏弱。；胜率0.47131782945736433，低于50%。；质量警告提示工作日序列缺失152天，数据完整性存疑。；当前AUM为NaN，规模信息缺失。；事件列表与基金本身无直接关联，无法提供基本面或治理结构证据。
 
 ### 513100 · 绿灯
 
-纳指ETF在样本中表现最优，长期收益高、回撤小、风险调整后收益突出，短期动量相对稳定。数据质量瑕疵需人工核实，但整体基本面与治理结构信号积极。
+基于输入数据，513100为纳指海外指数ETF，总回报和年化回报在五只基金中最高，最大回撤最小，Calmar比率最高，胜率高于50%，质量评分最高。尽管60日动量略为负、存在数据完整性警告和AUM缺失，但整体风险收益特征相对较好。事件列表与基金无直接关联，未找到公开证据支持基本面或治理结构改善。综合判断为绿灯，但需进一步验证数据完整性和规模信息。
 
-风险信号：近60日收益率为负，短期动量略有走弱。；数据质量存在瑕疵，工作日序列缺失151天，可能影响指标精确性。
+风险信号：60日动量为负（-0.026754329414798494），近期趋势略偏弱。；年化波动率0.2444652326022502，波动仍较高。；质量警告提示工作日序列缺失151天，数据完整性存疑。；当前AUM为NaN，规模信息缺失。；事件列表与基金本身无直接关联，无法提供基本面或治理结构证据。
 
 ## 事件线索（优先官方披露）
 
-- 2026-09-09 12:21 · 510300 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
-- 2026-09-09 12:19 · 510300 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
-- 2026-09-09 12:18 · 510300 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
-- 2026-09-09 12:18 · 510300 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
-- 2026-09-09 12:18 · 510300 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
-- 2026-09-09 12:18 · 510300 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
-- 2026-09-09 12:18 · 510300 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
-- 2026-09-09 12:18 · 510300 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
-- 2026-09-09 12:21 · 510500 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
-- 2026-09-09 12:19 · 510500 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
-- 2026-09-09 12:18 · 510500 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
-- 2026-09-09 12:18 · 510500 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
-- 2026-09-09 12:18 · 510500 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
-- 2026-09-09 12:18 · 510500 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
-- 2026-09-09 12:18 · 510500 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
-- 2026-09-09 12:18 · 510500 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
-- 2026-09-09 11:43 · 159915 · [Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?](https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html) · 24/7 Wall St.
-- 2026-09-09 10:02 · 159915 · [Has AI Made S&P 500 Index Funds Too Dangerous to Touch?](https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html) · Motley Fool
-- 2026-09-09 06:00 · 159915 · [How to Profit From Sharp Stock Moves—Up or Down](https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html) · Barrons.com
-- 2026-09-09 05:48 · 159915 · [Stock Market: Will S&P 500 Open Up or Down Today?](https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html) · Benzinga Prediction Markets
-- 2026-09-08 22:46 · 159915 · [S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus](https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html) · Stocktwits
-- 2026-09-08 21:45 · 159915 · [QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer](https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html) · 24/7 Wall St.
-- 2026-09-08 21:25 · 159915 · [Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument](https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html) · 24/7 Wall St.
-- 2026-09-08 17:08 · 159915 · [Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%](https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html) · 24/7 Wall St.
-- 2026-09-09 12:21 · 159949 · [Accenture and Google Cloud establish Gemini Enterprise Business Group](https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html) · Verdict
-- 2026-09-09 12:19 · 159949 · [Why Guggenheim Sees Oracle as a Decade Stock](https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html) · GuruFocus.com
-- 2026-09-09 12:18 · 159949 · [Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance](https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html) · MT Newswires
-- 2026-09-09 12:18 · 159949 · [UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target](https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html) · MT Newswires
-- 2026-09-09 12:18 · 159949 · [Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target](https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html) · MT Newswires
-- 2026-09-09 12:18 · 159949 · [BofA Adjusts Price Target on Phillips 66 to $255 From $213](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html) · MT Newswires
-- 2026-09-09 12:18 · 159949 · [EU proposes new rules to simplify public tenders, promotes "Buy European"](https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html) · Investing.com
-- 2026-09-09 12:18 · 159949 · [BofA Adjusts Price Target on Smithfield Foods to $29 From $25](https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html) · MT Newswires
-- 2026-09-09 11:43 · 513100 · [Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?](https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html) · 24/7 Wall St.
-- 2026-09-09 10:02 · 513100 · [Has AI Made S&P 500 Index Funds Too Dangerous to Touch?](https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html) · Motley Fool
-- 2026-09-09 06:00 · 513100 · [How to Profit From Sharp Stock Moves—Up or Down](https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html) · Barrons.com
-- 2026-09-09 05:48 · 513100 · [Stock Market: Will S&P 500 Open Up or Down Today?](https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html) · Benzinga Prediction Markets
-- 2026-09-08 22:46 · 513100 · [S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus](https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html) · Stocktwits
-- 2026-09-08 21:45 · 513100 · [QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer](https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html) · 24/7 Wall St.
-- 2026-09-08 21:25 · 513100 · [Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument](https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html) · 24/7 Wall St.
-- 2026-09-08 17:08 · 513100 · [Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%](https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html) · 24/7 Wall St.
+- 2026-09-10 08:51 · 510300 · [Aimbridge to manage three Gorman-owned boutique hotels](https://finance.yahoo.com/m/129a4c30-cd8c-3757-bde2-0a2c7f14eb33/aimbridge-to-manage-three.html) · Hotel Management Network
+- 2026-09-10 08:48 · 510300 · [Dimensional Fund Advisors Ltd. : Form 8.3 - STHREE PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084800158.html) · GlobeNewswire
+- 2026-09-10 08:47 · 510300 · [Boring Secures $3 Billion Series D Led by UAE Investors](https://finance.yahoo.com/technology/articles/boring-secures-3-billion-series-084747831.html) · MT Newswires
+- 2026-09-10 08:47 · 510300 · [Market Chatter: Stratolaunch Readying US Initial Public Offering to Raise Up To $500 Million](https://finance.yahoo.com/markets/stocks/articles/market-chatter-stratolaunch-readying-us-084720246.html) · MT Newswires
+- 2026-09-10 08:46 · 510300 · [79% of Multi-Agent Failures Are Specification Problems – And the New Protocol Stack Isn’t Solving That Layer](https://finance.yahoo.com/m/7a33bf7c-4b8e-3898-80a1-107f951a0596/79%25-of-multi-agent-failures.html) · Forkast News
+- 2026-09-10 08:45 · 510300 · [Market Chatter: Justice Department Probes Nvidia Licensing Deal With Groq](https://finance.yahoo.com/technology/ai/articles/market-chatter-justice-department-probes-084549477.html) · MT Newswires
+- 2026-09-10 08:45 · 510300 · [Dimensional Fund Advisors Ltd. : Form 8.3 - ROTORK PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084500126.html) · GlobeNewswire
+- 2026-09-10 08:44 · 510300 · [Wars pose a test as India hosts BRICS summit with Russia, Iran leaders](https://finance.yahoo.com/m/45ee561a-dd33-3648-920e-12f52e2d9926/wars-pose-a-test-as-india.html) · AFP
+- 2026-09-10 08:51 · 510500 · [Aimbridge to manage three Gorman-owned boutique hotels](https://finance.yahoo.com/m/129a4c30-cd8c-3757-bde2-0a2c7f14eb33/aimbridge-to-manage-three.html) · Hotel Management Network
+- 2026-09-10 08:48 · 510500 · [Dimensional Fund Advisors Ltd. : Form 8.3 - STHREE PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084800158.html) · GlobeNewswire
+- 2026-09-10 08:47 · 510500 · [Boring Secures $3 Billion Series D Led by UAE Investors](https://finance.yahoo.com/technology/articles/boring-secures-3-billion-series-084747831.html) · MT Newswires
+- 2026-09-10 08:47 · 510500 · [Market Chatter: Stratolaunch Readying US Initial Public Offering to Raise Up To $500 Million](https://finance.yahoo.com/markets/stocks/articles/market-chatter-stratolaunch-readying-us-084720246.html) · MT Newswires
+- 2026-09-10 08:46 · 510500 · [79% of Multi-Agent Failures Are Specification Problems – And the New Protocol Stack Isn’t Solving That Layer](https://finance.yahoo.com/m/7a33bf7c-4b8e-3898-80a1-107f951a0596/79%25-of-multi-agent-failures.html) · Forkast News
+- 2026-09-10 08:45 · 510500 · [Market Chatter: Justice Department Probes Nvidia Licensing Deal With Groq](https://finance.yahoo.com/technology/ai/articles/market-chatter-justice-department-probes-084549477.html) · MT Newswires
+- 2026-09-10 08:45 · 510500 · [Dimensional Fund Advisors Ltd. : Form 8.3 - ROTORK PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084500126.html) · GlobeNewswire
+- 2026-09-10 08:44 · 510500 · [Wars pose a test as India hosts BRICS summit with Russia, Iran leaders](https://finance.yahoo.com/m/45ee561a-dd33-3648-920e-12f52e2d9926/wars-pose-a-test-as-india.html) · AFP
+- 2026-09-09 22:55 · 159915 · [From Farmland to Fast Trading, ETFs Are Doing It All](https://finance.yahoo.com/m/41c925e9-d258-3ea8-a204-798973ed1216/from-farmland-to-fast.html) · etf.com
+- 2026-09-09 22:15 · 159915 · [Forget VUG. Vanguard’s Value Fund Is Beating Its Growth Twin by 11 Points This Year, With None of the Magnificent Seven](https://finance.yahoo.com/m/ea106c59-4974-3bde-b9a1-d31ad4db7af6/forget-vug.-vanguard%E2%80%99s-value.html) · 24/7 Wall St.
+- 2026-09-09 22:01 · 159915 · [S&P 500, Dow, Nasdaq End Lower As Oil Crosses $101, Yields Pop Following Bessent’s Expanded Buyback Plan — AAPL, META, AMZN, CRM In Focus](https://finance.yahoo.com/m/59c7e40c-3fdd-3c12-a091-40ac1b4c32d6/s%26p-500%2C-dow%2C-nasdaq-end.html) · Stocktwits
+- 2026-09-09 21:35 · 159915 · [A $100,000 Gold Gain in IAU Hands the IRS $28,000. The Same Gain in VOO Costs $15,000](https://finance.yahoo.com/m/6fba10c1-3001-3cee-b16f-d9fcbdf7a242/a-%24100%2C000-gold-gain-in-iau.html) · 24/7 Wall St.
+- 2026-09-09 19:15 · 159915 · [Apple Unveils Its First Foldable iPhone Today: The ETFs That Will Feel It Most](https://finance.yahoo.com/m/458a1a52-461d-3099-b9ca-a999f70f1993/apple-unveils-its-first.html) · etf.com
+- 2026-09-09 19:01 · 159915 · [Pinterest Tumbles 8%, Reddit and Snap Pull Back: Is the Premium Multiple Unwinding?](https://finance.yahoo.com/m/e30f6af7-eb57-38e8-a325-6f9f597001b0/pinterest-tumbles-8%25%2C-reddit.html) · 24/7 Wall St.
+- 2026-09-09 18:41 · 159915 · [Barclays Sees S&P 500 at 7,950 in 2026: What Do Prediction Markets Say?](https://finance.yahoo.com/m/6f0f5eec-be34-3de7-8490-ed7c71fc6c57/barclays-sees-s%26p-500-at.html) · Benzinga Prediction Markets
+- 2026-09-09 18:12 · 159915 · [How to Research Any ETF in Five Minutes](https://finance.yahoo.com/m/0031d439-8d4c-35ad-ae3e-4b58ec6a5fb5/how-to-research-any-etf-in.html) · etf.com
+- 2026-09-10 08:51 · 159949 · [Aimbridge to manage three Gorman-owned boutique hotels](https://finance.yahoo.com/m/129a4c30-cd8c-3757-bde2-0a2c7f14eb33/aimbridge-to-manage-three.html) · Hotel Management Network
+- 2026-09-10 08:48 · 159949 · [Dimensional Fund Advisors Ltd. : Form 8.3 - STHREE PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084800158.html) · GlobeNewswire
+- 2026-09-10 08:47 · 159949 · [Boring Secures $3 Billion Series D Led by UAE Investors](https://finance.yahoo.com/technology/articles/boring-secures-3-billion-series-084747831.html) · MT Newswires
+- 2026-09-10 08:47 · 159949 · [Market Chatter: Stratolaunch Readying US Initial Public Offering to Raise Up To $500 Million](https://finance.yahoo.com/markets/stocks/articles/market-chatter-stratolaunch-readying-us-084720246.html) · MT Newswires
+- 2026-09-10 08:46 · 159949 · [79% of Multi-Agent Failures Are Specification Problems – And the New Protocol Stack Isn’t Solving That Layer](https://finance.yahoo.com/m/7a33bf7c-4b8e-3898-80a1-107f951a0596/79%25-of-multi-agent-failures.html) · Forkast News
+- 2026-09-10 08:45 · 159949 · [Market Chatter: Justice Department Probes Nvidia Licensing Deal With Groq](https://finance.yahoo.com/technology/ai/articles/market-chatter-justice-department-probes-084549477.html) · MT Newswires
+- 2026-09-10 08:45 · 159949 · [Dimensional Fund Advisors Ltd. : Form 8.3 - ROTORK PLC - Ordinary Shares](https://finance.yahoo.com/markets/stocks/articles/dimensional-fund-advisors-ltd-form-084500126.html) · GlobeNewswire
+- 2026-09-10 08:44 · 159949 · [Wars pose a test as India hosts BRICS summit with Russia, Iran leaders](https://finance.yahoo.com/m/45ee561a-dd33-3648-920e-12f52e2d9926/wars-pose-a-test-as-india.html) · AFP
+- 2026-09-09 22:55 · 513100 · [From Farmland to Fast Trading, ETFs Are Doing It All](https://finance.yahoo.com/m/41c925e9-d258-3ea8-a204-798973ed1216/from-farmland-to-fast.html) · etf.com
+- 2026-09-09 22:15 · 513100 · [Forget VUG. Vanguard’s Value Fund Is Beating Its Growth Twin by 11 Points This Year, With None of the Magnificent Seven](https://finance.yahoo.com/m/ea106c59-4974-3bde-b9a1-d31ad4db7af6/forget-vug.-vanguard%E2%80%99s-value.html) · 24/7 Wall St.
+- 2026-09-09 22:01 · 513100 · [S&P 500, Dow, Nasdaq End Lower As Oil Crosses $101, Yields Pop Following Bessent’s Expanded Buyback Plan — AAPL, META, AMZN, CRM In Focus](https://finance.yahoo.com/m/59c7e40c-3fdd-3c12-a091-40ac1b4c32d6/s%26p-500%2C-dow%2C-nasdaq-end.html) · Stocktwits
+- 2026-09-09 21:35 · 513100 · [A $100,000 Gold Gain in IAU Hands the IRS $28,000. The Same Gain in VOO Costs $15,000](https://finance.yahoo.com/m/6fba10c1-3001-3cee-b16f-d9fcbdf7a242/a-%24100%2C000-gold-gain-in-iau.html) · 24/7 Wall St.
+- 2026-09-09 19:15 · 513100 · [Apple Unveils Its First Foldable iPhone Today: The ETFs That Will Feel It Most](https://finance.yahoo.com/m/458a1a52-461d-3099-b9ca-a999f70f1993/apple-unveils-its-first.html) · etf.com
+- 2026-09-09 19:01 · 513100 · [Pinterest Tumbles 8%, Reddit and Snap Pull Back: Is the Premium Multiple Unwinding?](https://finance.yahoo.com/m/e30f6af7-eb57-38e8-a325-6f9f597001b0/pinterest-tumbles-8%25%2C-reddit.html) · 24/7 Wall St.
+- 2026-09-09 18:41 · 513100 · [Barclays Sees S&P 500 at 7,950 in 2026: What Do Prediction Markets Say?](https://finance.yahoo.com/m/6f0f5eec-be34-3de7-8490-ed7c71fc6c57/barclays-sees-s%26p-500-at.html) · Benzinga Prediction Markets
+- 2026-09-09 18:12 · 513100 · [How to Research Any ETF in Five Minutes](https://finance.yahoo.com/m/0031d439-8d4c-35ad-ae3e-4b58ec6a5fb5/how-to-research-any-etf-in.html) · etf.com
