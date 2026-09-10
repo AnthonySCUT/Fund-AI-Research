@@ -170,7 +170,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
-
 if not selected_codes:
     st.warning("请至少选择一支基金。")
     st.stop()

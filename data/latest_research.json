@@ -1,0 +1,657 @@
+{
+  "fetched_at": "2026-09-09 12:24:11",
+  "source_mode": "auto",
+  "profile": {
+    "core_weight": 60,
+    "tactical_weight": 35,
+    "cash_weight": 5,
+    "aggression": 45,
+    "max_drawdown": 15.0,
+    "horizon_days": 20,
+    "cost_assumption": "佣金 2.5 bps + 滑点 5.0 bps + 年费 0.50%"
+  },
+  "metrics": [
+    {
+      "code": "510300",
+      "name": "沪深300ETF",
+      "category": "宽基指数",
+      "latest_value": 4.63700008392334,
+      "total_return": 0.4111381817049946,
+      "annualized_return": 0.04402043287573676,
+      "annualized_volatility": 0.19647931165599652,
+      "max_drawdown": -0.4510074262437961,
+      "calmar_ratio": 0.0976046741455231,
+      "momentum_60d": -0.05732873680034034,
+      "win_rate": 0.496640826873385,
+      "current_aum": NaN,
+      "avg_volume": 1229702794.9,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "510500",
+      "name": "中证500ETF",
+      "category": "宽基指数",
+      "latest_value": 7.784999847412109,
+      "total_return": 0.7830149559033199,
+      "annualized_return": 0.07501834692322018,
+      "annualized_volatility": 0.23798895803631562,
+      "max_drawdown": -0.3965452862065345,
+      "calmar_ratio": 0.18917977222946494,
+      "momentum_60d": -0.08883425253596011,
+      "win_rate": 0.5131782945736434,
+      "current_aum": NaN,
+      "avg_volume": 457581404.8666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159915",
+      "name": "创业板ETF",
+      "category": "成长指数",
+      "latest_value": 3.372999906539917,
+      "total_return": 1.5322821794822916,
+      "annualized_return": 0.12324258318062276,
+      "annualized_volatility": 0.31123926246866607,
+      "max_drawdown": -0.5658465895446377,
+      "calmar_ratio": 0.21780211360786256,
+      "momentum_60d": -0.16613106479091078,
+      "win_rate": 0.48320413436692505,
+      "current_aum": NaN,
+      "avg_volume": 2025135473.7,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159949",
+      "name": "创业板50ETF",
+      "category": "成长指数",
+      "latest_value": 1.5789999961853027,
+      "total_return": 2.1267326952370813,
+      "annualized_return": 0.15326399166914562,
+      "annualized_volatility": 0.3332171530935608,
+      "max_drawdown": -0.5899053876881551,
+      "calmar_ratio": 0.25981114068103134,
+      "momentum_60d": -0.193152793901455,
+      "win_rate": 0.47131782945736433,
+      "current_aum": NaN,
+      "avg_volume": 1362567998.4666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "513100",
+      "name": "纳指ETF",
+      "category": "海外指数",
+      "latest_value": 2.2339999675750732,
+      "total_return": 3.1477902956870523,
+      "annualized_return": 0.1947581292107794,
+      "annualized_volatility": 0.24447746543765986,
+      "max_drawdown": -0.28568022185936814,
+      "calmar_ratio": 0.6817347310331235,
+      "momentum_60d": -0.010628844341380783,
+      "win_rate": 0.5263429752066116,
+      "current_aum": NaN,
+      "avg_volume": 211333105.21666667,
+      "as_of": "2026-09-09",
+      "quality_score": 0.883,
+      "source": "Yahoo Finance public chart"
+    }
+  ],
+  "quality": [
+    {
+      "code": "510300",
+      "rows": 1935,
+      "start_date": "2018-09-11",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "510500",
+      "rows": 1935,
+      "start_date": "2018-09-11",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1935,
+      "start_date": "2018-09-11",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1935,
+      "start_date": "2018-09-11",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1936,
+      "start_date": "2018-09-11",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    }
+  ],
+  "events": [
+    {
+      "code": "510300",
+      "title": "Accenture and Google Cloud establish Gemini Enterprise Business Group",
+      "publisher": "Verdict",
+      "published_at": "2026-09-09 12:21",
+      "url": "https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Why Guggenheim Sees Oracle as a Decade Stock",
+      "publisher": "GuruFocus.com",
+      "published_at": "2026-09-09 12:19",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "BofA Adjusts Price Target on Phillips 66 to $255 From $213",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "EU proposes new rules to simplify public tenders, promotes \"Buy European\"",
+      "publisher": "Investing.com",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "BofA Adjusts Price Target on Smithfield Foods to $29 From $25",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Accenture and Google Cloud establish Gemini Enterprise Business Group",
+      "publisher": "Verdict",
+      "published_at": "2026-09-09 12:21",
+      "url": "https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Why Guggenheim Sees Oracle as a Decade Stock",
+      "publisher": "GuruFocus.com",
+      "published_at": "2026-09-09 12:19",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "BofA Adjusts Price Target on Phillips 66 to $255 From $213",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "EU proposes new rules to simplify public tenders, promotes \"Buy European\"",
+      "publisher": "Investing.com",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "BofA Adjusts Price Target on Smithfield Foods to $29 From $25",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-09 11:43",
+      "url": "https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Has AI Made S&P 500 Index Funds Too Dangerous to Touch?",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-09 10:02",
+      "url": "https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "How to Profit From Sharp Stock Moves—Up or Down",
+      "publisher": "Barrons.com",
+      "published_at": "2026-09-09 06:00",
+      "url": "https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-09 05:48",
+      "url": "https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-08 22:46",
+      "url": "https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 21:45",
+      "url": "https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 21:25",
+      "url": "https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 17:08",
+      "url": "https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Accenture and Google Cloud establish Gemini Enterprise Business Group",
+      "publisher": "Verdict",
+      "published_at": "2026-09-09 12:21",
+      "url": "https://finance.yahoo.com/m/16ac4c7a-b9e0-3136-89e8-a0bcb284f3e3/accenture-and-google-cloud.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Why Guggenheim Sees Oracle as a Decade Stock",
+      "publisher": "GuruFocus.com",
+      "published_at": "2026-09-09 12:19",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-guggenheim-sees-oracle-decade-121923459.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Academy Sports and Outdoors Fiscal Q2 Adjusted Earnings, Sales Rise; Lifts Fiscal 2026 Adjusted EPS Guidance",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/academy-sports-outdoors-fiscal-q2-121849168.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "UBS Initiates Coverage on HeartFlow With Neutral Rating, $55 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-initiates-coverage-heartflow-neutral-121835477.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Jefferies Initiates Coverage on Lindblad Expeditions With Hold Rating, $29 Price Target",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-coverage-lindblad-expeditions-121823237.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "BofA Adjusts Price Target on Phillips 66 to $255 From $213",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-phillips-121810387.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "EU proposes new rules to simplify public tenders, promotes \"Buy European\"",
+      "publisher": "Investing.com",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/economy/policy/articles/eu-proposes-rules-simplify-public-121807624.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "BofA Adjusts Price Target on Smithfield Foods to $29 From $25",
+      "publisher": "MT Newswires",
+      "published_at": "2026-09-09 12:18",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-adjusts-price-target-smithfield-121803060.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-09 11:43",
+      "url": "https://finance.yahoo.com/m/f50a2b91-75fd-3559-b91f-ac99ba2d8cf5/oracle-is-the-disruptive.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Has AI Made S&P 500 Index Funds Too Dangerous to Touch?",
+      "publisher": "Motley Fool",
+      "published_at": "2026-09-09 10:02",
+      "url": "https://finance.yahoo.com/m/c5bf30e2-e185-327c-b102-dfa195501b31/has-ai-made-s%26p-500-index.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "How to Profit From Sharp Stock Moves—Up or Down",
+      "publisher": "Barrons.com",
+      "published_at": "2026-09-09 06:00",
+      "url": "https://finance.yahoo.com/m/fdbeaefd-7bd3-36de-88c5-6e0c1dc9b022/how-to-profit-from-sharp.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-09 05:48",
+      "url": "https://finance.yahoo.com/m/81ea0594-0236-3ffb-970f-d855bd4325c8/stock-market%3A-will-s%26p-500.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-08 22:46",
+      "url": "https://finance.yahoo.com/m/3bed56b4-2f7e-38b8-908a-a80cb7e000b0/s%26p-500%2C-dow-end-lower-as.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 21:45",
+      "url": "https://finance.yahoo.com/m/2d8a3770-a624-36d6-b4cd-553393e5eef5/qqq-vs-qqqm%3A-same-index%2C-same.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Live on the Dividends or Sell Shares Every Year? Retirees Have Argued About It Forever, but These 4 ETFs End the Argument",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 21:25",
+      "url": "https://finance.yahoo.com/m/4fc4330d-2192-39c6-9b85-b44d18b247e3/live-on-the-dividends-or-sell.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "513100",
+      "title": "Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-08 17:08",
+      "url": "https://finance.yahoo.com/m/f554f58f-771f-3dd0-aae3-7a4dc5a78a82/amgen-falls-10%25-as-novartis.html",
+      "source": "yahoo_news_secondary"
+    }
+  ],
+  "recommendations": [
+    {
+      "role": "核心仓",
+      "code": "513100",
+      "name": "纳指ETF",
+      "target_weight": 60.0,
+      "action": "等待验证",
+      "net_return_range": "-4.2% / +1.4% / +6.9%",
+      "max_drawdown": -0.28568022185936814,
+      "reason": "核心仓候选得分 0.92；年化历史收益 +19.5%，60日动量 -1.1%，最大回撤 -28.6%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
+    },
+    {
+      "role": "战术仓",
+      "code": "510500",
+      "name": "中证500ETF",
+      "target_weight": 35.0,
+      "action": "不碰",
+      "net_return_range": "-5.0% / +0.4% / +5.8%",
+      "max_drawdown": -0.3965452862065345,
+      "reason": "战术仓候选得分 0.55；年化历史收益 +7.5%，60日动量 -8.9%，最大回撤 -39.7%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -39.7% 超过用户阈值；数据质量未达到 90%"
+    }
+  ],
+  "research_cards": [
+    {
+      "code": "510300",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-09，沪深300ETF（510300）最新净值为4.637元。",
+        "自数据起始日至2026-09-09，累计收益率为41.11%，年化收益率为4.40%。",
+        "年化波动率为19.65%，最大回撤为-45.10%，Calmar比率为0.098。",
+        "近60日收益率为-5.73%，胜率为49.66%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "长期年化收益率为正，且累计收益率超过40%，显示长期增值能力。",
+        "Calmar比率大于0，表明在控制回撤的前提下仍能获得正收益。"
+      ],
+      "risk_signals": [
+        "近60日收益率为负（-5.73%），显示短期趋势走弱。",
+        "最大回撤超过45%，历史波动较大，存在显著下行风险。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。"
+      ],
+      "verification_questions": [
+        "缺失的152个工作日数据是否包含极端市场行情，导致回撤或收益指标失真？",
+        "当前AUM数据缺失，基金规模是否发生重大变化？",
+        "近期新闻事件（如Accenture与Google Cloud合作、Oracle评级等）对沪深300成分股的实际影响需进一步确认。"
+      ],
+      "conclusion": "沪深300ETF长期业绩为正，但短期动量转负且历史回撤较大。数据质量存在瑕疵，需人工核实缺失数据后再做进一步判断。当前无明确证据支持或否定其投资价值，建议关注短期趋势变化及数据完整性。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "510500",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-09，中证500ETF（510500）最新净值为7.785元。",
+        "自数据起始日至2026-09-09，累计收益率为78.30%，年化收益率为7.50%。",
+        "年化波动率为23.80%，最大回撤为-39.65%，Calmar比率为0.189。",
+        "近60日收益率为-8.88%，胜率为51.32%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "长期年化收益率7.50%，累计收益率接近80%，表现优于沪深300ETF。",
+        "Calmar比率0.189，高于沪深300ETF，风险调整后收益相对较好。",
+        "胜率超过50%，历史上涨交易日略多于下跌交易日。"
+      ],
+      "risk_signals": [
+        "近60日收益率为-8.88%，短期下跌幅度大于沪深300ETF，动量明显走弱。",
+        "最大回撤接近40%，波动性较高。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。"
+      ],
+      "verification_questions": [
+        "缺失的152个工作日数据是否包含极端市场行情，导致回撤或收益指标失真？",
+        "当前AUM数据缺失，基金规模是否发生重大变化？",
+        "近期新闻事件（如EU采购规则、油价波动等）对中证500成分股的实际影响需进一步确认。"
+      ],
+      "conclusion": "中证500ETF长期业绩优于沪深300，但短期动量显著为负，回撤风险不容忽视。数据质量瑕疵需人工核实。建议关注短期趋势能否企稳，以及数据完整性验证。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "159915",
+      "status": "黄灯",
+      "facts": [
+        "截至2026-09-09，创业板ETF（159915）最新净值为3.373元。",
+        "自数据起始日至2026-09-09，累计收益率为153.23%，年化收益率为12.32%。",
+        "年化波动率为31.12%，最大回撤为-56.58%，Calmar比率为0.218。",
+        "近60日收益率为-16.61%，胜率为48.32%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "长期年化收益率12.32%，累计收益率超过150%，在同类中表现突出。",
+        "Calmar比率0.218，表明在承担高波动的同时获得了相对较高的收益补偿。"
+      ],
+      "risk_signals": [
+        "近60日收益率为-16.61%，短期跌幅显著，动量急剧恶化。",
+        "最大回撤超过56%，波动率超过31%，风险水平较高。",
+        "胜率低于50%，历史下跌交易日略多于上涨交易日。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。"
+      ],
+      "verification_questions": [
+        "缺失的152个工作日数据是否包含极端市场行情，导致回撤或收益指标失真？",
+        "当前AUM数据缺失，基金规模是否发生重大变化？",
+        "近期新闻（如AI对S&P500影响、中东局势等）对创业板成分股的实际影响需进一步确认。"
+      ],
+      "conclusion": "创业板ETF长期收益显著，但短期动量大幅为负，且历史回撤和波动率极高，风险较大。数据质量瑕疵需人工核实。建议关注短期市场情绪变化及数据完整性。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "159949",
+      "status": "红灯",
+      "facts": [
+        "截至2026-09-09，创业板50ETF（159949）最新净值为1.579元。",
+        "自数据起始日至2026-09-09，累计收益率为212.67%，年化收益率为15.33%。",
+        "年化波动率为33.32%，最大回撤为-58.99%，Calmar比率为0.260。",
+        "近60日收益率为-19.32%，胜率为47.13%。",
+        "数据质量评分0.8822，提示工作日序列缺失152天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "长期年化收益率15.33%，累计收益率超过200%，为样本中最高。",
+        "Calmar比率0.260，在样本中最高，表明风险调整后收益相对最优。"
+      ],
+      "risk_signals": [
+        "近60日收益率为-19.32%，为样本中最大跌幅，短期动量极度恶化。",
+        "最大回撤接近59%，波动率超过33%，风险水平为样本中最高。",
+        "胜率低于48%，历史下跌交易日明显多于上涨交易日。",
+        "数据质量存在瑕疵，工作日序列缺失152天，可能影响指标精确性。"
+      ],
+      "verification_questions": [
+        "缺失的152个工作日数据是否包含极端市场行情，导致回撤或收益指标失真？",
+        "当前AUM数据缺失，基金规模是否发生重大变化？",
+        "近期新闻（如Amgen下跌、中东局势等）对创业板50成分股的实际影响需进一步确认。"
+      ],
+      "conclusion": "创业板50ETF长期收益最高，但短期动量跌幅为样本中最大，且波动率和回撤均处于极高水平，风险显著。数据质量瑕疵需人工核实。当前短期风险信号强烈，建议谨慎对待，需进一步验证数据完整性和市场环境。",
+      "source": "Deepseek:deepseek-chat"
+    },
+    {
+      "code": "513100",
+      "status": "绿灯",
+      "facts": [
+        "截至2026-09-09，纳指ETF（513100）最新净值为2.234元。",
+        "自数据起始日至2026-09-09，累计收益率为314.78%，年化收益率为19.48%。",
+        "年化波动率为24.45%，最大回撤为-28.57%，Calmar比率为0.682。",
+        "近60日收益率为-1.06%，胜率为52.63%。",
+        "数据质量评分0.883，提示工作日序列缺失151天，节假日和停牌需人工确认。"
+      ],
+      "positive_evidence": [
+        "长期年化收益率19.48%，累计收益率超过300%，为样本中最高。",
+        "Calmar比率0.682，远高于其他ETF，风险调整后收益最优。",
+        "最大回撤-28.57%，为样本中最小，风险控制相对较好。",
+        "近60日收益率仅微跌1.06%，短期动量相对稳定。",
+        "胜率52.63%，为样本中最高。"
+      ],
+      "risk_signals": [
+        "近60日收益率为负，短期动量略有走弱。",
+        "数据质量存在瑕疵，工作日序列缺失151天，可能影响指标精确性。"
+      ],
+      "verification_questions": [
+        "缺失的151个工作日数据是否包含极端市场行情，导致回撤或收益指标失真？",
+        "当前AUM数据缺失，基金规模是否发生重大变化？",
+        "近期新闻（如Oracle评级、AI对S&P500影响等）对纳指成分股的实际影响需进一步确认。"
+      ],
+      "conclusion": "纳指ETF在样本中表现最优，长期收益高、回撤小、风险调整后收益突出，短期动量相对稳定。数据质量瑕疵需人工核实，但整体基本面与治理结构信号积极。",
+      "source": "Deepseek:deepseek-chat"
+    }
+  ]
+}
