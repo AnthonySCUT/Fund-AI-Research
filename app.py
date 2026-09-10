@@ -177,7 +177,7 @@ st.markdown(
     </style>
     <div class="project-heading">
         <h1>AI 基金智能投研 MVP</h1>
-        <span class="project-team">（参与者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a> · <a href="https://github.com/May-the-first" target="_blank" rel="noopener noreferrer">陈朴凡</a> · 李金洁）</span>
+        <span class="project-team">参与者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a> · <a href="https://github.com/May-the-first" target="_blank" rel="noopener noreferrer">陈朴凡</a> · 李金洁</span>
         <span class="project-affiliation">华南理工大学 · 2024级本科生</span>
     </div>
     """,
