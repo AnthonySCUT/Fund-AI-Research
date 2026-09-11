@@ -7,7 +7,7 @@ import requests
 
 from fund_ai_research.analysis import analyze_metrics
 from fund_ai_research.analytics import calculate_metrics, normalize_history, validate_history
-from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, OfficialDisclosureConnector
+from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, EastmoneyFundDisclosureConnector, OfficialDisclosureConnector
 from fund_ai_research.models import EventRecord
 from fund_ai_research.recommender import build_personalized_recommendations
 
@@ -19,6 +19,11 @@ def test_demo_history_is_normalized_and_validated():
     assert len(clean) > 200
     assert report.quality_score > 0.95
     assert {"daily_return", "drawdown"}.issubset(clean.columns)
+
+
+def test_default_universe_covers_at_least_ten_passive_funds():
+    assert len(DEFAULT_FUNDS) >= 10
+    assert len({profile.code for profile in DEFAULT_FUNDS}) == len(DEFAULT_FUNDS)
 
 
 def test_metrics_and_personalized_weights_include_costs():
@@ -74,6 +79,22 @@ def test_official_sse_disclosure_parser_filters_by_fund():
     assert len(events) == 1
     assert events[0].source == "sse_official_disclosure"
     assert events[0].url.endswith("/a.pdf")
+
+
+def test_eastmoney_public_disclosure_parser_classifies_reports():
+    class FakeResponse:
+        text = 'jQuery({"Data":[{"TITLE":"沪深300ETF 2026年中期报告","PUBLISHDATE":"2026-08-29T00:00:00","ID":"AN202608291234567890","NEWCATEGORY":"3"}],"ErrCode":0})'
+
+        def raise_for_status(self):
+            return None
+
+    with patch("fund_ai_research.connectors.requests.get", return_value=FakeResponse()):
+        events = EastmoneyFundDisclosureConnector().fetch_events("510300")
+
+    assert len(events) == 1
+    assert events[0].document_type == "半年报"
+    assert events[0].source == "eastmoney_fund_disclosure"
+    assert "AN202608291234567890" in events[0].url
 
 
 def test_deepseek_fallback_is_used_when_grok_request_fails():
