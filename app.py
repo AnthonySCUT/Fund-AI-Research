@@ -21,12 +21,13 @@ except ImportError as exc:
     st.stop()
 
 from fund_ai_research.connectors import DEFAULT_FUNDS
+from fund_ai_research.analytics import max_drawdown_recovery_days, rolling_returns
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
 
 st.set_page_config(page_title="AI 基金智能投研 MVP", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v4"
+APP_VERSION = "expanded-universe-reports-v5"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -39,6 +40,21 @@ def pct(value: float) -> str:
 
 def profile_label(profile) -> str:
     return f"{profile.code} · {profile.name} · {profile.category}"
+
+
+def source_status(source: str) -> tuple[str, str]:
+    """Classify provenance for display and recommendation guardrails."""
+    if "演示数据" in source:
+        return "演示数据", "不可用于实际走势比较"
+    if "回退" in source:
+        return "真实行情（回退）", "建议核对主数据源"
+    return "真实行情", "可进入研究流程"
+
+
+def as_display_number(value: float, suffix: str = "") -> str:
+    if pd.isna(value):
+        return "暂无"
+    return f"{value:,.2f}{suffix}"
 
 
 def load_snapshot_cards(path: Path) -> dict[str, ResearchCard]:
@@ -254,22 +270,48 @@ kpi1.metric("研究基金", len(result.metrics))
 kpi2.metric("核心仓目标", f"{profile['core_weight']}%")
 kpi3.metric("战术仓目标", f"{profile['tactical_weight']}%")
 kpi4.metric("现金缓冲", f"{profile['cash_weight']}%")
-st.caption(f"截至 {result.fetched_at} · 数据源：{result.metrics[0].source if result.metrics else '无'} · 口径：{profile['cost_assumption']}")
-fallback_codes = [item.code for item in result.metrics if "演示数据" in item.source]
-if fallback_codes and params["source_mode"] != "demo":
+source_rows = []
+for item in result.metrics:
+    status, note = source_status(item.source)
+    source_rows.append({"code": item.code, "status": status, "note": note, "source": item.source})
+source_frame = pd.DataFrame(source_rows)
+demo_codes = [item.code for item in result.metrics if "演示数据" in item.source]
+fallback_codes = [item.code for item in result.metrics if "回退" in item.source and "演示数据" not in item.source]
+latest_as_of = max((item.as_of for item in result.metrics), default=None)
+freshness_days = (date.today() - latest_as_of).days if latest_as_of else None
+if demo_codes:
     st.error(
-        "真实行情抓取失败，以下标的使用了随机演示数据，不能与实际基金走势比较："
-        + "、".join(fallback_codes)
+        "以下标的使用了随机演示数据，不能与实际基金走势比较，也不能形成可执行候选："
+        + "、".join(demo_codes)
         + "。请检查网络或改用东方财富接口。"
     )
+elif fallback_codes:
+    st.warning("部分标的使用了真实行情回退接口：" + "、".join(fallback_codes) + "；建议核对来源和更新时间。")
+else:
+    st.success("当前结果全部来自真实行情接口，可进入研究流程；仍需人工核对公告原文。")
+freshness_label = "暂无有效日期"
+if freshness_days is not None:
+    freshness_label = f"最新交易日 {latest_as_of.isoformat()}（距今天 {freshness_days} 个日历日）"
+st.caption(
+    f"抓取完成 {result.fetched_at} · {freshness_label} · "
+    f"口径：{profile['cost_assumption']}"
+)
+with st.expander("查看数据来源状态"):
+    if not source_frame.empty:
+        source_frame = source_frame.rename(columns={"code": "代码", "status": "状态", "note": "说明", "source": "接口标签"})
+        st.dataframe(source_frame, hide_index=True, width="stretch")
 
-tab_reco, tab_metrics, tab_events, tab_quality = st.tabs(["个性化建议", "基金对比", "事件与证据", "数据质检"])
+tab_reco, tab_metrics, tab_detail, tab_events, tab_quality = st.tabs(["个性化建议", "基金对比", "基金详情", "事件与证据", "数据质检"])
 
 with tab_reco:
     st.subheader("候选组合")
     st.info("AI 负责统一执行数据整理、规则计算和证据结构化；使用者负责选择研究假设、风险偏好和最终行动。")
+    if demo_codes:
+        st.warning("当前组合含演示数据，以下候选只用于验证页面流程，不代表真实基金判断。")
     if result.recommendations:
         display = result.recommendations_frame[["role", "code", "name", "target_weight", "action", "net_return_range", "max_drawdown"]].copy()
+        if demo_codes:
+            display["action"] = "仅演示，不可执行"
         display["target_weight"] = display["target_weight"].map(lambda x: f"{x:.0f}%")
         display["max_drawdown"] = display["max_drawdown"].map(pct)
         display.columns = ["仓位角色", "代码", "基金", "目标权重", "研究状态", "净收益情景（低/中/高）", "历史最大回撤"]
@@ -337,6 +379,53 @@ with tab_metrics:
     history = result.histories[selected_chart].set_index("trade_date")
     st.line_chart(history[["close"]].rename(columns={"close": "净值/收盘价"}))
     st.line_chart(history[["drawdown"]].rename(columns={"drawdown": "回撤"}))
+
+with tab_detail:
+    st.subheader("基金详情与风险画像")
+    detail_code = st.selectbox(
+        "选择基金",
+        options=list(result.histories),
+        format_func=lambda code: profile_label(profiles[code]),
+        key="detail_select",
+    )
+    detail_metric = next(item for item in result.metrics if item.code == detail_code)
+    detail_profile = profiles[detail_code]
+    detail_history = result.histories[detail_code]
+    detail_col1, detail_col2, detail_col3, detail_col4 = st.columns(4)
+    detail_col1.metric("最新值", as_display_number(detail_metric.latest_value))
+    detail_col2.metric("年化收益", pct(detail_metric.annualized_return))
+    detail_col3.metric("最大回撤", pct(detail_metric.max_drawdown))
+    recovery_days = max_drawdown_recovery_days(detail_history)
+    detail_col4.metric("最大回撤恢复", f"{recovery_days} 个交易日" if recovery_days is not None else "尚未恢复")
+    detail_info = pd.DataFrame(
+        [
+            {
+                "代码": detail_profile.code,
+                "基金": detail_profile.name,
+                "类别": detail_profile.category,
+                "市场": detail_profile.market,
+                "跟踪基准": detail_profile.benchmark,
+                "成立日期": detail_profile.inception_date.isoformat(),
+                "样本截至": detail_metric.as_of.isoformat(),
+                "数据源": detail_metric.source,
+                "质量分": pct(detail_metric.quality_score),
+                "平均成交量（60日）": as_display_number(detail_metric.avg_volume),
+            }
+        ]
+    )
+    st.dataframe(detail_info, hide_index=True, width="stretch")
+    detail_roll = rolling_returns(detail_history).set_index("trade_date")
+    detail_roll.columns = ["21日滚动收益", "63日滚动收益", "252日滚动收益"]
+    st.line_chart(detail_roll)
+    st.caption("滚动收益用于观察不同持有期的稳定性；缺少完整窗口的前段数据会显示为空。")
+    if len(result.histories) >= 2:
+        close_series = {}
+        for code, history_frame in result.histories.items():
+            close_series[profiles[code].name] = history_frame.set_index("trade_date")["close"].pct_change()
+        correlation = pd.DataFrame(close_series).corr().round(2)
+        st.subheader("研究样本收益相关性")
+        st.dataframe(correlation.style.format("{:.2f}"), width="stretch")
+        st.caption("相关性高不等于风险低；它只说明样本期内收益变化的同步程度。")
 
 with tab_events:
     st.subheader("自动抓取的事件线索")

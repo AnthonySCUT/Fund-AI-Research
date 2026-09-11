@@ -6,7 +6,13 @@ import pandas as pd
 import requests
 
 from fund_ai_research.analysis import analyze_metrics
-from fund_ai_research.analytics import calculate_metrics, normalize_history, validate_history
+from fund_ai_research.analytics import (
+    calculate_metrics,
+    max_drawdown_recovery_days,
+    normalize_history,
+    rolling_returns,
+    validate_history,
+)
 from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, EastmoneyFundDisclosureConnector, OfficialDisclosureConnector
 from fund_ai_research.models import EventRecord
 from fund_ai_research.recommender import build_personalized_recommendations
@@ -39,6 +45,20 @@ def test_metrics_and_personalized_weights_include_costs():
     assert recommendations
     assert profile["core_weight"] + profile["tactical_weight"] + profile["cash_weight"] == 100
     assert all("/" in item.net_return_range for item in recommendations)
+
+
+def test_detail_metrics_include_rolling_returns_and_recovery_time():
+    history = pd.DataFrame(
+        {
+            "trade_date": pd.date_range("2026-01-01", periods=5, freq="B"),
+            "close": [100, 120, 60, 80, 120],
+            "aum": [100] * 5,
+            "volume": [10] * 5,
+        }
+    )
+    rolling = rolling_returns(history, windows=(2,))
+    assert rolling["rolling_2d"].iloc[2] == -0.4
+    assert max_drawdown_recovery_days(history) == 2
 
 
 def test_eastmoney_history_parser_uses_real_close_and_volume():

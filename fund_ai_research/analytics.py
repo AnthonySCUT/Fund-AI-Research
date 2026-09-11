@@ -1,5 +1,5 @@
 from datetime import date
-from typing import Iterable, List, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -108,6 +108,38 @@ def calculate_metrics(
         quality_score=quality.quality_score,
         source=source,
     )
+
+
+def rolling_returns(history: pd.DataFrame, windows: Tuple[int, ...] = (21, 63, 252)) -> pd.DataFrame:
+    """Return rolling total-return series for detail charts.
+
+    Windows are trading-day counts.  The function keeps the date column and
+    omits no rows, so callers can align it with the original history.
+    """
+    frame = normalize_history(history, str(history.get("code", "")))
+    output = frame[["trade_date"]].copy()
+    for window in windows:
+        output[f"rolling_{window}d"] = frame["close"].pct_change(window)
+    return output
+
+
+def max_drawdown_recovery_days(history: pd.DataFrame) -> Optional[int]:
+    """Return trading days needed to recover the historical worst drawdown.
+
+    ``None`` means the series has not recovered to its prior peak by the end
+    of the available sample.
+    """
+    frame = normalize_history(history, str(history.get("code", "")))
+    if frame.empty:
+        return None
+    trough_index = int(frame["drawdown"].idxmin())
+    recovered = frame.iloc[trough_index + 1 :]
+    if recovered.empty:
+        return None
+    recovered = recovered[recovered["drawdown"] >= -1e-12]
+    if recovered.empty:
+        return None
+    return int(recovered.index[0] - trough_index)
 
 
 def holding_scenarios(
