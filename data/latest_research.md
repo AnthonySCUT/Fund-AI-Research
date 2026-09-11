@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-09-11 01:14:10
+抓取时间：2026-09-11 08:50:49
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -11,83 +11,293 @@
 
 | 代码 | 基金 | 累计收益 | 年化收益 | 年化波动 | 最大回撤 | 数据源 |
 |---|---|---:|---:|---:|---:|---|
-| 510300 | 沪深300ETF | 40.60% | 4.36% | 19.65% | -45.10% | Yahoo Finance public chart |
-| 510500 | 中证500ETF | 77.87% | 7.47% | 23.80% | -39.65% | Yahoo Finance public chart |
-| 159915 | 创业板ETF | 154.37% | 12.40% | 31.13% | -56.58% | Yahoo Finance public chart |
-| 159949 | 创业板50ETF | 212.06% | 15.31% | 33.33% | -58.99% | Yahoo Finance public chart |
-| 513100 | 纳指ETF | 314.47% | 19.48% | 24.45% | -28.57% | Yahoo Finance public chart |
+| 510300 | 沪深300ETF | 38.84% | 4.19% | 19.65% | -45.10% | Yahoo Finance public chart |
+| 510500 | 中证500ETF | 73.90% | 7.17% | 23.81% | -39.65% | Yahoo Finance public chart |
+| 159915 | 创业板ETF | 151.96% | 12.25% | 31.12% | -56.58% | Yahoo Finance public chart |
+| 159949 | 创业板50ETF | 209.49% | 15.18% | 33.32% | -58.99% | Yahoo Finance public chart |
+| 513100 | 纳指ETF | 308.35% | 19.24% | 24.45% | -28.57% | Yahoo Finance public chart |
+| 512100 | 中证1000ETF | 85.80% | 8.06% | 25.48% | -45.82% | Yahoo Finance public chart |
+| 588000 | 科创50ETF | 13.83% | 2.20% | 32.32% | -59.64% | Yahoo Finance public chart |
+| 512880 | 证券ETF | 50.28% | 5.23% | 30.28% | -45.00% | Yahoo Finance public chart |
+| 512480 | 半导体ETF | -4.00% | -0.55% | 72.66% | -66.80% | Yahoo Finance public chart |
+| 516160 | 新能源ETF | 130.13% | 15.94% | 100.41% | -66.84% | Yahoo Finance public chart |
+| 515050 | 5GETF | 4.70% | 0.66% | 93.35% | -73.54% | Yahoo Finance public chart |
+| 512010 | 医药ETF | -8.12% | -1.05% | 26.69% | -65.51% | Yahoo Finance public chart |
+| 159919 | 沪深300ETF（深市） | 48.02% | 5.03% | 20.12% | -42.80% | Yahoo Finance public chart |
+| 512660 | 军工ETF | 58.56% | 5.94% | 31.09% | -50.95% | Yahoo Finance public chart |
+| 515790 | 光伏ETF | -20.70% | -3.95% | 34.83% | -67.07% | Yahoo Finance public chart |
 
 ## 研究卡片
 
-### 510300 · 黄灯
+### 510300 · 红灯
 
-沪深300ETF为宽基指数产品，历史年化回报为正但最大回撤较大，近期动量偏弱，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险与收益特征需进一步验证，暂标记为黄灯。
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
 
-风险信号：最大回撤达-45.10%，历史回撤幅度较大。；60日动量为负，近期价格趋势偏弱。；胜率低于50%，历史上涨交易日占比不足一半。；数据质量警告显示工作日序列缺失151天，数据完整性存疑。；当前AUM缺失，无法评估基金规模及潜在流动性风险。；事件列表新闻与沪深300ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。
+风险信号：历史最大回撤达到 -45.1%，应与用户回撤阈值核对。；工作日序列缺失 152 天；节假日和停牌需人工确认
 
-### 510500 · 黄灯
+### 510500 · 红灯
 
-中证500ETF为宽基指数产品，历史年化回报为正，胜率略高于50%，但最大回撤较大，近期动量偏弱，波动率高于沪深300ETF。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险与收益特征需进一步验证，暂标记为黄灯。
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
 
-风险信号：最大回撤达-39.65%，历史回撤幅度较大。；60日动量为负，近期价格趋势偏弱。；年化波动率0.2380，高于沪深300ETF。；数据质量警告显示工作日序列缺失151天，数据完整性存疑。；当前AUM缺失，无法评估基金规模及潜在流动性风险。；事件列表新闻与中证500ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。
+风险信号：历史最大回撤达到 -39.7%，应与用户回撤阈值核对。；工作日序列缺失 152 天；节假日和停牌需人工确认
 
-### 159915 · 黄灯
+### 159915 · 红灯
 
-创业板ETF为成长指数产品，历史年化回报较高，但最大回撤超过56%，波动率较高，近期动量显著为负，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险特征较为突出，暂标记为黄灯。
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
 
-风险信号：最大回撤达-56.58%，历史回撤幅度很大。；60日动量为-17.95%，近期价格趋势明显偏弱。；胜率低于50%，历史上涨交易日占比不足一半。；年化波动率0.3113，高于宽基指数，波动风险较大。；数据质量警告显示工作日序列缺失151天，数据完整性存疑。；当前AUM缺失，无法评估基金规模及潜在流动性风险。；事件列表新闻与创业板ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。
+风险信号：历史最大回撤达到 -56.6%，应与用户回撤阈值核对。；年化波动达到 31.1%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
 
-### 159949 · 黄灯
+### 159949 · 红灯
 
-创业板50ETF为成长指数产品，历史年化回报较高，但最大回撤接近59%，波动率为所列基金中最高，近期动量显著为负，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险特征较为突出，暂标记为黄灯。
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
 
-风险信号：最大回撤达-58.99%，历史回撤幅度很大。；60日动量为-20.49%，近期价格趋势明显偏弱。；胜率低于50%，历史上涨交易日占比不足一半。；年化波动率0.3333，为所列基金中最高，波动风险较大。；数据质量警告显示工作日序列缺失151天，数据完整性存疑。；当前AUM缺失，无法评估基金规模及潜在流动性风险。；事件列表新闻与创业板50ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。
+风险信号：历史最大回撤达到 -59.0%，应与用户回撤阈值核对。；年化波动达到 33.3%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
 
-### 513100 · 绿灯
+### 513100 · 黄灯
 
-纳指ETF为海外指数产品，历史年化回报在所列基金中最高，最大回撤最小，Calmar比率最高，胜率高于50%，近期动量仅小幅为负。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险收益特征相对较好，暂标记为绿灯。
+等待验证：存在回撤、波动或数据口径风险，暂不因故事买入。
 
-风险信号：数据质量警告显示工作日序列缺失150天，数据完整性存疑。；当前AUM缺失，无法评估基金规模及潜在流动性风险。；事件列表新闻与纳指ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。；年化波动率0.2445，仍存在一定波动风险。
+风险信号：历史最大回撤达到 -28.6%，应与用户回撤阈值核对。；工作日序列缺失 151 天；节假日和停牌需人工确认
+
+### 512100 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -45.8%，应与用户回撤阈值核对。；年化波动达到 25.5%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
+
+### 588000 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -59.6%，应与用户回撤阈值核对。；年化波动达到 32.3%，战术仓需控制仓位和交易频率。；工作日序列缺失 134 天；节假日和停牌需人工确认
+
+### 512880 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -45.0%，应与用户回撤阈值核对。；年化波动达到 30.3%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
+
+### 512480 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -66.8%，应与用户回撤阈值核对。；年化波动达到 72.7%，战术仓需控制仓位和交易频率。；工作日序列缺失 150 天；节假日和停牌需人工确认
+
+### 516160 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -66.8%，应与用户回撤阈值核对。；年化波动达到 100.4%，战术仓需控制仓位和交易频率。；工作日序列缺失 112 天；节假日和停牌需人工确认
+
+### 515050 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -73.5%，应与用户回撤阈值核对。；年化波动达到 93.4%，战术仓需控制仓位和交易频率。；工作日序列缺失 141 天；节假日和停牌需人工确认
+
+### 512010 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -65.5%，应与用户回撤阈值核对。；年化波动达到 26.7%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
+
+### 159919 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -42.8%，应与用户回撤阈值核对。；工作日序列缺失 152 天；节假日和停牌需人工确认
+
+### 512660 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -50.9%，应与用户回撤阈值核对。；年化波动达到 31.1%，战术仓需控制仓位和交易频率。；工作日序列缺失 152 天；节假日和停牌需人工确认
+
+### 515790 · 红灯
+
+不碰：风险信号与数据/回撤约束叠加，先完成核查。
+
+风险信号：历史最大回撤达到 -67.1%，应与用户回撤阈值核对。；年化波动达到 34.8%，战术仓需控制仓位和交易频率。；工作日序列缺失 113 天；节假日和停牌需人工确认
 
 ## 事件线索（优先官方披露）
 
-- 2026-09-11 01:05 · 510300 · [Why American Eagle (AEO) Shares Are Plunging Today](https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html) · StockStory
-- 2026-09-11 01:05 · 510300 · [Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.](https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html) · Motley Fool
-- 2026-09-11 01:05 · 510300 · [Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work](https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html) · PR Newswire
-- 2026-09-11 01:05 · 510300 · [Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway](https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html) · PR Newswire
-- 2026-09-11 01:02 · 510300 · [Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries](https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html) · GlobeNewswire
-- 2026-09-11 01:01 · 510300 · [THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...](https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html) · GuruFocus.com
-- 2026-09-11 01:01 · 510300 · [High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...](https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html) · GuruFocus.com
-- 2026-09-11 01:01 · 510300 · [HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’](https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html) · Stocktwits
-- 2026-09-11 01:05 · 510500 · [Why American Eagle (AEO) Shares Are Plunging Today](https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html) · StockStory
-- 2026-09-11 01:05 · 510500 · [Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.](https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html) · Motley Fool
-- 2026-09-11 01:05 · 510500 · [Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work](https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html) · PR Newswire
-- 2026-09-11 01:05 · 510500 · [Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway](https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html) · PR Newswire
-- 2026-09-11 01:02 · 510500 · [Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries](https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html) · GlobeNewswire
-- 2026-09-11 01:01 · 510500 · [THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...](https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html) · GuruFocus.com
-- 2026-09-11 01:01 · 510500 · [High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...](https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html) · GuruFocus.com
-- 2026-09-11 01:01 · 510500 · [HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’](https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html) · Stocktwits
-- 2026-09-10 22:46 · 159915 · [S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike — ORCL, ADBE, M, NVDA, UBER In Focus](https://finance.yahoo.com/m/50c1d25d-5afe-3ac4-b54d-03eaed24655d/s%26p-500%2C-dow%2C-nasdaq-end.html) · Stocktwits
-- 2026-09-10 21:25 · 159915 · [We Did the Math on What $100,000 Earns in the 5 Most Popular Dividend ETFs, and the Best Pays More Than Double the Worst](https://finance.yahoo.com/m/4498558a-18e3-3ab4-a7b0-fb6136a7484e/we-did-the-math-on-what.html) · 24/7 Wall St.
-- 2026-09-10 21:05 · 159915 · [How a 68-Year-Old’s $750,000 in SCHD Pays Her Every Quarter: March’s Reshuffle Changed What She Owns](https://finance.yahoo.com/m/4f742c5d-bd55-349e-8766-41d8253beb50/how-a-68-year-old%E2%80%99s-%24750%2C000.html) · 24/7 Wall St.
-- 2026-09-10 19:13 · 159915 · [Nio Just Dropped 25% in a Month. Is It Time to Sell?](https://finance.yahoo.com/m/acf2965d-462c-3333-a757-29095ae9a3e2/nio-just-dropped-25%25-in-a.html) · 24/7 Wall St.
-- 2026-09-10 19:09 · 159915 · [Carnival Just Dropped 20% in a Month. Is It Time to Sell?](https://finance.yahoo.com/m/91cf7e39-be08-3def-8052-5b6d170443e6/carnival-just-dropped-20%25-in.html) · 24/7 Wall St.
-- 2026-09-10 19:03 · 159915 · [Fitch Says AI Bust Could Crash US Stocks 35%, Trigger Recession](https://finance.yahoo.com/m/99fa3a90-3beb-38e9-a597-c3b91e620d12/fitch-says-ai-bust-could.html) · Benzinga Prediction Markets
-- 2026-09-10 17:58 · 159915 · [Oracle Jumped 36% in a Day After Last September’s Earnings, but Traders Are Betting Against It Tonight](https://finance.yahoo.com/m/f0fa7124-ddb1-3b61-83c9-3facbfe02d59/oracle-jumped-36%25-in-a-day.html) · 24/7 Wall St.
-- 2026-09-10 17:39 · 159915 · [Nuclear Stocks Slide as Piper Sandler Splits the Sector: Oklo, NuScale Power and X-Energy All Drop 5%](https://finance.yahoo.com/m/80887f91-6fc3-3743-8caf-f7081f56397c/nuclear-stocks-slide-as-piper.html) · 24/7 Wall St.
-- 2026-09-11 01:05 · 159949 · [Why American Eagle (AEO) Shares Are Plunging Today](https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html) · StockStory
-- 2026-09-11 01:05 · 159949 · [Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.](https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html) · Motley Fool
-- 2026-09-11 01:05 · 159949 · [Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work](https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html) · PR Newswire
-- 2026-09-11 01:05 · 159949 · [Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway](https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html) · PR Newswire
-- 2026-09-11 01:02 · 159949 · [Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries](https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html) · GlobeNewswire
-- 2026-09-11 01:01 · 159949 · [THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...](https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html) · GuruFocus.com
-- 2026-09-11 01:01 · 159949 · [High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...](https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html) · GuruFocus.com
-- 2026-09-11 01:01 · 159949 · [HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’](https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html) · Stocktwits
-- 2026-09-10 22:46 · 513100 · [S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike — ORCL, ADBE, M, NVDA, UBER In Focus](https://finance.yahoo.com/m/50c1d25d-5afe-3ac4-b54d-03eaed24655d/s%26p-500%2C-dow%2C-nasdaq-end.html) · Stocktwits
-- 2026-09-10 21:25 · 513100 · [We Did the Math on What $100,000 Earns in the 5 Most Popular Dividend ETFs, and the Best Pays More Than Double the Worst](https://finance.yahoo.com/m/4498558a-18e3-3ab4-a7b0-fb6136a7484e/we-did-the-math-on-what.html) · 24/7 Wall St.
-- 2026-09-10 21:05 · 513100 · [How a 68-Year-Old’s $750,000 in SCHD Pays Her Every Quarter: March’s Reshuffle Changed What She Owns](https://finance.yahoo.com/m/4f742c5d-bd55-349e-8766-41d8253beb50/how-a-68-year-old%E2%80%99s-%24750%2C000.html) · 24/7 Wall St.
-- 2026-09-10 19:13 · 513100 · [Nio Just Dropped 25% in a Month. Is It Time to Sell?](https://finance.yahoo.com/m/acf2965d-462c-3333-a757-29095ae9a3e2/nio-just-dropped-25%25-in-a.html) · 24/7 Wall St.
-- 2026-09-10 19:09 · 513100 · [Carnival Just Dropped 20% in a Month. Is It Time to Sell?](https://finance.yahoo.com/m/91cf7e39-be08-3def-8052-5b6d170443e6/carnival-just-dropped-20%25-in.html) · 24/7 Wall St.
-- 2026-09-10 19:03 · 513100 · [Fitch Says AI Bust Could Crash US Stocks 35%, Trigger Recession](https://finance.yahoo.com/m/99fa3a90-3beb-38e9-a597-c3b91e620d12/fitch-says-ai-bust-could.html) · Benzinga Prediction Markets
-- 2026-09-10 17:58 · 513100 · [Oracle Jumped 36% in a Day After Last September’s Earnings, but Traders Are Betting Against It Tonight](https://finance.yahoo.com/m/f0fa7124-ddb1-3b61-83c9-3facbfe02d59/oracle-jumped-36%25-in-a-day.html) · 24/7 Wall St.
-- 2026-09-10 17:39 · 513100 · [Nuclear Stocks Slide as Piper Sandler Splits the Sector: Oklo, NuScale Power and X-Energy All Drop 5%](https://finance.yahoo.com/m/80887f91-6fc3-3743-8caf-f7081f56397c/nuclear-stocks-slide-as-piper.html) · 24/7 Wall St.
+- 2026-09-04 00:00 · 510300 · [华泰柏瑞基金关于网上直销平台业务系统维护的通知](https://fund.eastmoney.com/gonggao/510300,AN202609051829063120.html) · 东方财富公开基金公告索引
+- 2026-09-03 00:00 · 510300 · [华泰柏瑞基金产品风险等级-20260903](https://fund.eastmoney.com/gonggao/510300,AN202609031828937734.html) · 东方财富公开基金公告索引
+- 2026-08-29 00:00 · 510300 · [华泰柏瑞基金管理有限公司旗下部分基金中期报告提示性公告](https://fund.eastmoney.com/gonggao/510300,AN202608291828704530.html) · 东方财富公开基金公告索引
+- 2026-08-29 00:00 · 510300 · [华泰柏瑞沪深300交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/510300,AN202608291828684524.html) · 东方财富公开基金公告索引
+- 2026-08-28 00:00 · 510300 · [华泰柏瑞基金产品风险等级表(20260828)](https://fund.eastmoney.com/gonggao/510300,AN202608281828563904.html) · 东方财富公开基金公告索引
+- 2026-08-25 00:00 · 510300 · [华泰柏瑞基金产品风险等级-20260825](https://fund.eastmoney.com/gonggao/510300,AN202608251828400970.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 510300 · [华泰柏瑞基金关于网上直销平台业务系统维护的通知](https://fund.eastmoney.com/gonggao/510300,AN202608221828329834.html) · 东方财富公开基金公告索引
+- 2026-08-15 00:00 · 510300 · [华泰柏瑞基金产品风险等级-20260814](https://fund.eastmoney.com/gonggao/510300,AN202608151827998830.html) · 东方财富公开基金公告索引
+- 2026-08-13 00:00 · 510300 · [华泰柏瑞沪深300交易型开放式指数证券投资基金更新的招募说明书2026年第1号](https://fund.eastmoney.com/gonggao/510300,AN202608121827910087.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 510300 · [关于中国银行快捷支付系统维护的通知](https://fund.eastmoney.com/gonggao/510300,AN202608071827749019.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 510300 · [华泰柏瑞基金管理有限公司关于高级管理人员变更的公告](https://fund.eastmoney.com/gonggao/510300,AN202608061827696250.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 510300 · [华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(1)](https://fund.eastmoney.com/gonggao/510300,AN202608041827630581.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 510500 · [关于国信证券股份有限公司为中证500交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/510500,AN202608311828821688.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 510500 · [中证500交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/510500,AN202608301828743003.html) · 东方财富公开基金公告索引
+- 2026-08-07 00:00 · 510500 · [关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示](https://fund.eastmoney.com/gonggao/510500,AN202608071827751922.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 510500 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/510500,AN202608051827675691.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 510500 · [关于东海证券股份有限公司终止为中证500交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/510500,AN202608051827673459.html) · 东方财富公开基金公告索引
+- 2026-08-04 00:00 · 510500 · [关于中信建投证券股份有限公司为中证500交易型开放式指数证券投资基金提供主做市服务的公告](https://fund.eastmoney.com/gonggao/510500,AN202608041827624316.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 510500 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/510500,AN202607301827495522.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 510500 · [南方基金关于直销平台相关业务费率优惠的公告](https://fund.eastmoney.com/gonggao/510500,AN202607301827487265.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 510500 · [南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/510500,AN202607291827438228.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 510500 · [中证500交易型开放式指数证券投资基金招募说明书(20260729更新)](https://fund.eastmoney.com/gonggao/510500,AN202607281827424164.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 510500 · [中证500交易型开放式指数证券投资基金基金产品资料概要(20260729更新)](https://fund.eastmoney.com/gonggao/510500,AN202607281827424147.html) · 东方财富公开基金公告索引
+- 2026-07-28 00:00 · 510500 · [南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告](https://fund.eastmoney.com/gonggao/510500,AN202607271827388601.html) · 东方财富公开基金公告索引
+- 2026-09-08 00:00 · 159915 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/159915,AN202609081829127267.html) · 东方财富公开基金公告索引
+- 2026-09-03 00:00 · 159915 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/159915,AN202609031828958274.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 159915 · [易方达创业板交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/159915,AN202608301828738228.html) · 东方财富公开基金公告索引
+- 2026-08-26 00:00 · 159915 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/159915,AN202608261828469484.html) · 东方财富公开基金公告索引
+- 2026-08-22 00:00 · 159915 · [易方达基金管理有限公司及易方达财富管理基金销售(广州)有限公司关于零售直销业务迁移安排的联合提示性公告](https://fund.eastmoney.com/gonggao/159915,AN202608211828268918.html) · 东方财富公开基金公告索引
+- 2026-08-20 00:00 · 159915 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/159915,AN202608201828199653.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 159915 · [关于网上交易平台暂停兴业银行卡快速赎回业务的通知](https://fund.eastmoney.com/gonggao/159915,AN202608151828013648.html) · 东方财富公开基金公告索引
+- 2026-08-12 00:00 · 159915 · [易方达基金管理有限公司关于旗下部分基金获配江波龙(301308)非公开发行A股的公告](https://fund.eastmoney.com/gonggao/159915,AN202608111827864524.html) · 东方财富公开基金公告索引
+- 2026-08-11 00:00 · 159915 · [易方达创业板交易型开放式指数证券投资基金基金产品资料概要更新](https://fund.eastmoney.com/gonggao/159915,AN202608101827818466.html) · 东方财富公开基金公告索引
+- 2026-08-10 00:00 · 159915 · [易方达基金管理有限公司旗下部分ETF增加诚通证券为一级交易商的公告](https://fund.eastmoney.com/gonggao/159915,AN202608091827792176.html) · 东方财富公开基金公告索引
+- 2026-08-04 00:00 · 159915 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/159915,AN202608051827666862.html) · 东方财富公开基金公告索引
+- 2026-07-23 00:00 · 159915 · [易方达基金管理有限公司及易方达财富管理基金销售(广州)有限公司关于零售直销业务迁移安排的联合提示性公告](https://fund.eastmoney.com/gonggao/159915,AN202607221827262007.html) · 东方财富公开基金公告索引
+- 2026-09-02 00:00 · 159949 · [华安基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/159949,AN202609021828899449.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 159949 · [华安基金管理有限公司旗下部分基金2026年中期报告的提示性公告](https://fund.eastmoney.com/gonggao/159949,AN202609011828876962.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 159949 · [华安创业板50交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/159949,AN202608301828737103.html) · 东方财富公开基金公告索引
+- 2026-08-19 00:00 · 159949 · [华安基金管理有限公司关于终止洪泰财富(青岛)基金销售有限责任公司办理本公司旗下基金相关销售业务的公告](https://fund.eastmoney.com/gonggao/159949,AN202608191828129178.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 159949 · [华安基金管理有限公司关于旗下部分基金增加长江证券股份有限公司为一级交易商的公告](https://fund.eastmoney.com/gonggao/159949,AN202608131827948909.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 159949 · [华安基金管理有限公司关于旗下部分基金增加民生证券股份有限公司为一级交易商的公告](https://fund.eastmoney.com/gonggao/159949,AN202608131827948055.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 159949 · [基金产品风险等级划分规则和投资者风险承受能力说明](https://fund.eastmoney.com/gonggao/159949,AN202608061827710799.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 159949 · [华安公募基金产品风险等级划分名录](https://fund.eastmoney.com/gonggao/159949,AN202608061827710798.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 159949 · [华安基金管理有限公司旗下部分基金2026年第2季度报告的提示性公告](https://fund.eastmoney.com/gonggao/159949,AN202607211827211042.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 159949 · [华安基金管理有限公司关于旗下部分基金增加世纪证券有限责任公司为一级交易商的公告](https://fund.eastmoney.com/gonggao/159949,AN202607201827152563.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 159949 · [华安创业板50交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/159949,AN202607201827152487.html) · 东方财富公开基金公告索引
+- 2026-07-17 00:00 · 159949 · [关于因设备维护、可能短暂影响服务的通知](https://fund.eastmoney.com/gonggao/159949,AN202607171827054000.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告](https://fund.eastmoney.com/gonggao/513100,AN202609111829254979.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 513100 · [关于纳斯达克100交易型开放式指数证券投资基金调整最小申购、赎回单位的公告](https://fund.eastmoney.com/gonggao/513100,AN202609101829233775.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告](https://fund.eastmoney.com/gonggao/513100,AN202609101829233771.html) · 东方财富公开基金公告索引
+- 2026-09-10 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告](https://fund.eastmoney.com/gonggao/513100,AN202609101829205349.html) · 东方财富公开基金公告索引
+- 2026-09-10 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告](https://fund.eastmoney.com/gonggao/513100,AN202609091829181288.html) · 东方财富公开基金公告索引
+- 2026-09-09 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告](https://fund.eastmoney.com/gonggao/513100,AN202609091829165456.html) · 东方财富公开基金公告索引
+- 2026-09-09 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告](https://fund.eastmoney.com/gonggao/513100,AN202609081829137288.html) · 东方财富公开基金公告索引
+- 2026-09-08 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告](https://fund.eastmoney.com/gonggao/513100,AN202609081829121849.html) · 东方财富公开基金公告索引
+- 2026-09-08 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告](https://fund.eastmoney.com/gonggao/513100,AN202609071829104336.html) · 东方财富公开基金公告索引
+- 2026-09-08 00:00 · 513100 · [关于纳斯达克100交易型开放式指数证券投资基金恢复申购业务的公告](https://fund.eastmoney.com/gonggao/513100,AN202609071829104335.html) · 东方财富公开基金公告索引
+- 2026-09-07 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告](https://fund.eastmoney.com/gonggao/513100,AN202609071829092865.html) · 东方财富公开基金公告索引
+- 2026-09-07 00:00 · 513100 · [国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告](https://fund.eastmoney.com/gonggao/513100,AN202609071829086142.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512100 · [关于国信证券股份有限公司为南方中证1000交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/512100,AN202608311828819993.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512100 · [南方中证1000交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/512100,AN202608301828742444.html) · 东方财富公开基金公告索引
+- 2026-08-08 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202608071827758083.html) · 东方财富公开基金公告索引
+- 2026-08-07 00:00 · 512100 · [关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示](https://fund.eastmoney.com/gonggao/512100,AN202608071827751922.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202608051827675691.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202607301827495522.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202607301827495506.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 512100 · [南方基金关于直销平台相关业务费率优惠的公告](https://fund.eastmoney.com/gonggao/512100,AN202607301827487265.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 512100 · [南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/512100,AN202607291827438228.html) · 东方财富公开基金公告索引
+- 2026-07-27 00:00 · 512100 · [关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示](https://fund.eastmoney.com/gonggao/512100,AN202607271827384585.html) · 东方财富公开基金公告索引
+- 2026-07-25 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202607241827322410.html) · 东方财富公开基金公告索引
+- 2026-07-24 00:00 · 512100 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/512100,AN202607231827294065.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 588000 · [华夏基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告](https://fund.eastmoney.com/gonggao/588000,AN202609101829236367.html) · 东方财富公开基金公告索引
+- 2026-09-05 00:00 · 588000 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/588000,AN202609041829024153.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 588000 · [关于国信证券股份有限公司为华夏上证科创板50成份交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/588000,AN202608311828820096.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 588000 · [华夏基金管理有限公司旗下部分基金2026年中期报告提示性公告](https://fund.eastmoney.com/gonggao/588000,AN202608311828806099.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 588000 · [华夏上证科创板50成份交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/588000,AN202608301828742576.html) · 东方财富公开基金公告索引
+- 2026-08-27 00:00 · 588000 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/588000,AN202608261828494543.html) · 东方财富公开基金公告索引
+- 2026-08-26 00:00 · 588000 · [华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告](https://fund.eastmoney.com/gonggao/588000,AN202608261828449568.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 588000 · [关于暂停部分电子交易的服务提示](https://fund.eastmoney.com/gonggao/588000,AN202608221828329858.html) · 东方财富公开基金公告索引
+- 2026-08-18 00:00 · 588000 · [华夏基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/588000,AN202608181828080834.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 588000 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/588000,AN202608131827947942.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 588000 · [关于东海证券股份有限公司终止为华夏上证科创板50成份交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/588000,AN202607311827531510.html) · 东方财富公开基金公告索引
+- 2026-07-27 00:00 · 588000 · [华夏基金管理有限公司关于旗下部分ETF在长鑫科技上市首日的风险提示公告](https://fund.eastmoney.com/gonggao/588000,AN202607261827356181.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512880 · [国泰基金管理有限公司旗下部分基金2026年中期报告提示性公告](https://fund.eastmoney.com/gonggao/512880,AN202609011828875592.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512880 · [国泰中证全指证券公司交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/512880,AN202608301828741542.html) · 东方财富公开基金公告索引
+- 2026-08-27 00:00 · 512880 · [国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知](https://fund.eastmoney.com/gonggao/512880,AN202608281828631066.html) · 东方财富公开基金公告索引
+- 2026-08-22 00:00 · 512880 · [国泰基金管理有限公司调整长期停牌股票估值方法的公告](https://fund.eastmoney.com/gonggao/512880,AN202608221828311214.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 512880 · [国泰基金管理有限公司关于网上交易系统停机维护期间暂停对外服务的通知](https://fund.eastmoney.com/gonggao/512880,AN202608221828329708.html) · 东方财富公开基金公告索引
+- 2026-08-17 00:00 · 512880 · [国泰基金管理有限公司关于旗下部分交易型开放式基金新增国新证券股份有限公司为一级交易商的公告](https://fund.eastmoney.com/gonggao/512880,AN202608161828029907.html) · 东方财富公开基金公告索引
+- 2026-07-30 00:00 · 512880 · [国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知](https://fund.eastmoney.com/gonggao/512880,AN202607311827526755.html) · 东方财富公开基金公告索引
+- 2026-07-24 00:00 · 512880 · [国泰基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/512880,AN202607241827305150.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 512880 · [国泰中证全指证券公司交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/512880,AN202607201827153504.html) · 东方财富公开基金公告索引
+- 2026-07-14 00:00 · 512880 · [国泰基金管理有限公司调整长期停牌股票估值方法的公告](https://fund.eastmoney.com/gonggao/512880,AN202607141826944824.html) · 东方财富公开基金公告索引
+- 2026-07-09 00:00 · 512880 · [关于不法分子冒用国泰基金管理有限公司名义事宜的严正声明](https://fund.eastmoney.com/gonggao/512880,AN202607091826843805.html) · 东方财富公开基金公告索引
+- 2026-07-07 00:00 · 512880 · [国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知](https://fund.eastmoney.com/gonggao/512880,AN202607081826813999.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512480 · [国联安基金管理有限公司旗下全部基金2026年中期报告提示性公告](https://fund.eastmoney.com/gonggao/512480,AN202608311828818029.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512480 · [关于东方证券股份有限公司为国联安中证全指半导体产品与设备交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/512480,AN202608311828817961.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512480 · [国联安中证全指半导体产品与设备交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/512480,AN202608301828741709.html) · 东方财富公开基金公告索引
+- 2026-08-04 00:00 · 512480 · [关于中信建投证券股份有限公司为国联安中证全指半导体产品与设备交易型开放式指数证券投资基金提供主做市服务的公告](https://fund.eastmoney.com/gonggao/512480,AN202608041827624244.html) · 东方财富公开基金公告索引
+- 2026-07-24 00:00 · 512480 · [国联安基金管理有限公司关于旗下部分基金参与北京证券交易所股票投资及相关风险揭示的公告](https://fund.eastmoney.com/gonggao/512480,AN202607241827302793.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 512480 · [国联安中证全指半导体产品与设备交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/512480,AN202607201827153442.html) · 东方财富公开基金公告索引
+- 2026-07-03 00:00 · 512480 · [国联安基金管理有限公司关于国联安中证全指半导体产品与设备交易型开放式指数证券投资基金基金份额拆分结果的公告](https://fund.eastmoney.com/gonggao/512480,AN202607031826683755.html) · 东方财富公开基金公告索引
+- 2026-07-01 00:00 · 512480 · [国联安基金管理有限公司关于旗下证券投资基金估值调整的公告](https://fund.eastmoney.com/gonggao/512480,AN202607011826618298.html) · 东方财富公开基金公告索引
+- 2026-06-29 00:00 · 512480 · [国联安基金管理有限公司关于国联安中证全指半导体产品与设备交易型开放式指数证券投资基金实施基金份额拆分并调整最小申购、赎回单位及相关业务安排的公告](https://fund.eastmoney.com/gonggao/512480,AN202606291826521348.html) · 东方财富公开基金公告索引
+- 2026-06-26 00:00 · 512480 · [国联安基金管理有限公司关于终止浦领基金销售有限公司办理旗下基金相关销售业务的公告](https://fund.eastmoney.com/gonggao/512480,AN202606261823871044.html) · 东方财富公开基金公告索引
+- 2026-06-22 00:00 · 512480 · [国联安基金管理有限公司基金行业高级管理人员变更公告](https://fund.eastmoney.com/gonggao/512480,AN202606221823715234.html) · 东方财富公开基金公告索引
+- 2026-06-16 00:00 · 512480 · [国联安基金管理有限公司关于旗下部分基金增加金融街证券为基金申购赎回代办券商的公告](https://fund.eastmoney.com/gonggao/512480,AN202606151823571915.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 516160 · [关于国信证券股份有限公司为南方中证新能源交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/516160,AN202608311828821052.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 516160 · [南方中证新能源交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/516160,AN202608301828743042.html) · 东方财富公开基金公告索引
+- 2026-08-07 00:00 · 516160 · [关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示](https://fund.eastmoney.com/gonggao/516160,AN202608071827751922.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 516160 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/516160,AN202608051827675691.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 516160 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/516160,AN202607301827495522.html) · 东方财富公开基金公告索引
+- 2026-07-31 00:00 · 516160 · [南方基金关于直销平台相关业务费率优惠的公告](https://fund.eastmoney.com/gonggao/516160,AN202607301827487265.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 516160 · [南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/516160,AN202607291827438228.html) · 东方财富公开基金公告索引
+- 2026-07-27 00:00 · 516160 · [关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示](https://fund.eastmoney.com/gonggao/516160,AN202607271827384585.html) · 东方财富公开基金公告索引
+- 2026-07-24 00:00 · 516160 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/516160,AN202607231827294065.html) · 东方财富公开基金公告索引
+- 2026-07-22 00:00 · 516160 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/516160,AN202607211827217751.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 516160 · [南方中证新能源交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/516160,AN202607201827158604.html) · 东方财富公开基金公告索引
+- 2026-07-16 00:00 · 516160 · [南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告](https://fund.eastmoney.com/gonggao/516160,AN202607151826991509.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 515050 · [华夏基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告](https://fund.eastmoney.com/gonggao/515050,AN202609101829236367.html) · 东方财富公开基金公告索引
+- 2026-09-05 00:00 · 515050 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/515050,AN202609041829024153.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 515050 · [关于国信证券股份有限公司为华夏中证5G通信主题交易型开放式指数证券投资基金提供一般做市服务的公告](https://fund.eastmoney.com/gonggao/515050,AN202608311828819697.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 515050 · [华夏基金管理有限公司旗下部分基金2026年中期报告提示性公告](https://fund.eastmoney.com/gonggao/515050,AN202608311828806099.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 515050 · [华夏中证5G通信主题交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/515050,AN202608301828742249.html) · 东方财富公开基金公告索引
+- 2026-08-27 00:00 · 515050 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/515050,AN202608261828494543.html) · 东方财富公开基金公告索引
+- 2026-08-26 00:00 · 515050 · [华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告](https://fund.eastmoney.com/gonggao/515050,AN202608261828449568.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 515050 · [关于暂停部分电子交易的服务提示](https://fund.eastmoney.com/gonggao/515050,AN202608221828329858.html) · 东方财富公开基金公告索引
+- 2026-08-18 00:00 · 515050 · [华夏基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/515050,AN202608181828080834.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 515050 · [华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告](https://fund.eastmoney.com/gonggao/515050,AN202608131827947942.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 515050 · [关于东方财富证券股份有限公司终止为华夏中证5G通信主题交易型开放式指数证券投资基金提供主做市服务的公告](https://fund.eastmoney.com/gonggao/515050,AN202608051827673431.html) · 东方财富公开基金公告索引
+- 2026-08-04 00:00 · 515050 · [关于国投证券股份有限公司为华夏中证5G通信主题交易型开放式指数证券投资基金提供主做市服务的公告](https://fund.eastmoney.com/gonggao/515050,AN202608041827624215.html) · 东方财富公开基金公告索引
+- 2026-09-11 00:00 · 512010 · [易方达基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告](https://fund.eastmoney.com/gonggao/512010,AN202609101829236232.html) · 东方财富公开基金公告索引
+- 2026-09-08 00:00 · 512010 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/512010,AN202609081829127267.html) · 东方财富公开基金公告索引
+- 2026-09-05 00:00 · 512010 · [易方达基金管理有限公司关于旗下基金关联交易事项的公告](https://fund.eastmoney.com/gonggao/512010,AN202609041829024324.html) · 东方财富公开基金公告索引
+- 2026-09-03 00:00 · 512010 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/512010,AN202609031828958274.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512010 · [易方达沪深300医药卫生交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/512010,AN202608301828742660.html) · 东方财富公开基金公告索引
+- 2026-08-28 00:00 · 512010 · [易方达沪深300医药卫生交易型开放式指数证券投资基金增加长江证券为一级交易商的公告](https://fund.eastmoney.com/gonggao/512010,AN202608271828553161.html) · 东方财富公开基金公告索引
+- 2026-08-26 00:00 · 512010 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/512010,AN202608261828469484.html) · 东方财富公开基金公告索引
+- 2026-08-22 00:00 · 512010 · [易方达基金管理有限公司及易方达财富管理基金销售(广州)有限公司关于零售直销业务迁移安排的联合提示性公告](https://fund.eastmoney.com/gonggao/512010,AN202608211828268918.html) · 东方财富公开基金公告索引
+- 2026-08-20 00:00 · 512010 · [易方达基金管理有限公司关于网上交易平台系统维护的通知](https://fund.eastmoney.com/gonggao/512010,AN202608201828199653.html) · 东方财富公开基金公告索引
+- 2026-08-17 00:00 · 512010 · [易方达基金管理有限公司旗下部分ETF增加诚通证券为一级交易商的公告](https://fund.eastmoney.com/gonggao/512010,AN202608161828030813.html) · 东方财富公开基金公告索引
+- 2026-08-14 00:00 · 512010 · [关于网上交易平台暂停兴业银行卡快速赎回业务的通知](https://fund.eastmoney.com/gonggao/512010,AN202608151828013648.html) · 东方财富公开基金公告索引
+- 2026-08-11 00:00 · 512010 · [易方达沪深300医药卫生交易型开放式指数证券投资基金基金产品资料概要更新](https://fund.eastmoney.com/gonggao/512010,AN202608101827817752.html) · 东方财富公开基金公告索引
+- 2026-09-03 00:00 · 159919 · [嘉实基金管理有限公司关于终止瑞银基金销售(深圳)有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/159919,AN202609031828943973.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 159919 · [嘉实沪深300交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/159919,AN202608301828737312.html) · 东方财富公开基金公告索引
+- 2026-07-29 00:00 · 159919 · [嘉实基金2026年7月30日21:00~23:00暂停部分直销服务的通知](https://fund.eastmoney.com/gonggao/159919,AN202607291827453122.html) · 东方财富公开基金公告索引
+- 2026-07-27 00:00 · 159919 · [嘉实基金管理有限公司关于旗下交易型开放式指数基金在科创板股票上市首日的风险提示性公告](https://fund.eastmoney.com/gonggao/159919,AN202607261827355701.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 159919 · [嘉实基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/159919,AN202607211827178747.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 159919 · [嘉实沪深300交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/159919,AN202607201827154441.html) · 东方财富公开基金公告索引
+- 2026-07-18 00:00 · 159919 · [嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告](https://fund.eastmoney.com/gonggao/159919,AN202607181827074579.html) · 东方财富公开基金公告索引
+- 2026-07-16 00:00 · 159919 · [嘉实基金2026年7月25日凌晨2点~7点暂停直销服务通知](https://fund.eastmoney.com/gonggao/159919,AN202607161827022994.html) · 东方财富公开基金公告索引
+- 2026-07-14 00:00 · 159919 · [嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告](https://fund.eastmoney.com/gonggao/159919,AN202607141826942599.html) · 东方财富公开基金公告索引
+- 2026-07-09 00:00 · 159919 · [嘉实基金管理有限公司高级管理人员变更公告](https://fund.eastmoney.com/gonggao/159919,AN202607081826820898.html) · 东方财富公开基金公告索引
+- 2026-07-01 00:00 · 159919 · [嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告](https://fund.eastmoney.com/gonggao/159919,AN202607011826618327.html) · 东方财富公开基金公告索引
+- 2026-06-29 00:00 · 159919 · [嘉实基金管理有限公司关于指定旗下部分证券投资基金主流动性服务商的公告](https://fund.eastmoney.com/gonggao/159919,AN202606281826515757.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512660 · [国泰基金管理有限公司旗下部分基金2026年中期报告提示性公告](https://fund.eastmoney.com/gonggao/512660,AN202609011828875592.html) · 东方财富公开基金公告索引
+- 2026-08-31 00:00 · 512660 · [国泰中证军工交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/512660,AN202608301828741650.html) · 东方财富公开基金公告索引
+- 2026-08-27 00:00 · 512660 · [国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知](https://fund.eastmoney.com/gonggao/512660,AN202608281828631066.html) · 东方财富公开基金公告索引
+- 2026-08-22 00:00 · 512660 · [国泰基金管理有限公司调整长期停牌股票估值方法的公告](https://fund.eastmoney.com/gonggao/512660,AN202608221828311214.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 512660 · [国泰基金管理有限公司关于网上交易系统停机维护期间暂停对外服务的通知](https://fund.eastmoney.com/gonggao/512660,AN202608221828329708.html) · 东方财富公开基金公告索引
+- 2026-08-17 00:00 · 512660 · [国泰基金管理有限公司关于旗下部分交易型开放式基金新增国新证券股份有限公司为一级交易商的公告](https://fund.eastmoney.com/gonggao/512660,AN202608161828029907.html) · 东方财富公开基金公告索引
+- 2026-08-04 00:00 · 512660 · [关于中信建投证券股份有限公司为国泰中证军工交易型开放式指数证券投资基金提供主做市服务的公告](https://fund.eastmoney.com/gonggao/512660,AN202608041827624318.html) · 东方财富公开基金公告索引
+- 2026-07-30 00:00 · 512660 · [国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知](https://fund.eastmoney.com/gonggao/512660,AN202607311827526755.html) · 东方财富公开基金公告索引
+- 2026-07-24 00:00 · 512660 · [国泰基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告](https://fund.eastmoney.com/gonggao/512660,AN202607241827305150.html) · 东方财富公开基金公告索引
+- 2026-07-21 00:00 · 512660 · [国泰中证军工交易型开放式指数证券投资基金2026年第2季度报告](https://fund.eastmoney.com/gonggao/512660,AN202607201827153676.html) · 东方财富公开基金公告索引
+- 2026-07-14 00:00 · 512660 · [国泰基金管理有限公司调整长期停牌股票估值方法的公告](https://fund.eastmoney.com/gonggao/512660,AN202607141826944824.html) · 东方财富公开基金公告索引
+- 2026-07-09 00:00 · 512660 · [关于不法分子冒用国泰基金管理有限公司名义事宜的严正声明](https://fund.eastmoney.com/gonggao/512660,AN202607091826843805.html) · 东方财富公开基金公告索引
+- 2026-09-04 00:00 · 515790 · [华泰柏瑞基金关于网上直销平台业务系统维护的通知](https://fund.eastmoney.com/gonggao/515790,AN202609051829063120.html) · 东方财富公开基金公告索引
+- 2026-09-03 00:00 · 515790 · [华泰柏瑞基金产品风险等级-20260903](https://fund.eastmoney.com/gonggao/515790,AN202609031828937734.html) · 东方财富公开基金公告索引
+- 2026-08-29 00:00 · 515790 · [华泰柏瑞基金管理有限公司旗下部分基金中期报告提示性公告](https://fund.eastmoney.com/gonggao/515790,AN202608291828704530.html) · 东方财富公开基金公告索引
+- 2026-08-29 00:00 · 515790 · [华泰柏瑞中证光伏产业交易型开放式指数证券投资基金2026年中期报告](https://fund.eastmoney.com/gonggao/515790,AN202608291828683700.html) · 东方财富公开基金公告索引
+- 2026-08-28 00:00 · 515790 · [华泰柏瑞基金产品风险等级表(20260828)](https://fund.eastmoney.com/gonggao/515790,AN202608281828563904.html) · 东方财富公开基金公告索引
+- 2026-08-25 00:00 · 515790 · [华泰柏瑞基金产品风险等级-20260825](https://fund.eastmoney.com/gonggao/515790,AN202608251828400970.html) · 东方财富公开基金公告索引
+- 2026-08-21 00:00 · 515790 · [华泰柏瑞基金关于网上直销平台业务系统维护的通知](https://fund.eastmoney.com/gonggao/515790,AN202608221828329834.html) · 东方财富公开基金公告索引
+- 2026-08-15 00:00 · 515790 · [华泰柏瑞基金产品风险等级-20260814](https://fund.eastmoney.com/gonggao/515790,AN202608151827998830.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 515790 · [关于中国银行快捷支付系统维护的通知](https://fund.eastmoney.com/gonggao/515790,AN202608071827749019.html) · 东方财富公开基金公告索引
+- 2026-08-06 00:00 · 515790 · [华泰柏瑞基金管理有限公司关于高级管理人员变更的公告](https://fund.eastmoney.com/gonggao/515790,AN202608061827696250.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 515790 · [华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(1)](https://fund.eastmoney.com/gonggao/515790,AN202608041827630581.html) · 东方财富公开基金公告索引
+- 2026-08-05 00:00 · 515790 · [华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(2)](https://fund.eastmoney.com/gonggao/515790,AN202608041827630580.html) · 东方财富公开基金公告索引
