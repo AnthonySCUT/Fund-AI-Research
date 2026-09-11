@@ -11,6 +11,16 @@ from .models import EventRecord, FundMetrics, QualityReport
 
 FIVE_YEAR_TEN_X_ANNUALIZED = 10 ** (1 / 5) - 1
 
+# Stable import surface used by the Streamlit app and scheduled job.  Keeping
+# this explicit makes a partial or stale deployment fail at the module API
+# boundary instead of with an ambiguous attribute lookup in the app.
+__all__ = [
+    "FIVE_YEAR_TEN_X_ANNUALIZED",
+    "OpenAICompatibleAnalyzer",
+    "ResearchCard",
+    "analyze_metrics",
+]
+
 
 def _setting(name: str) -> Optional[str]:
     """Read a string setting from env first, then Streamlit Secrets.
