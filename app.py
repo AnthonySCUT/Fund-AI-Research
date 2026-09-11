@@ -21,8 +21,35 @@ except ImportError as exc:
     st.stop()
 
 from fund_ai_research.connectors import DEFAULT_FUNDS
-from fund_ai_research.analytics import max_drawdown_recovery_days, rolling_returns
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
+
+try:
+    from fund_ai_research.analytics import max_drawdown_recovery_days, rolling_returns
+except ImportError:
+    # A short-lived mixed-version Streamlit deployment can load app.py before
+    # the updated analytics.py. Keep the UI usable while the source cache
+    # converges; the normal path still uses the shared analytics functions.
+    def rolling_returns(history, windows=(21, 63, 252)):
+        frame = history.copy()
+        frame["trade_date"] = pd.to_datetime(frame["trade_date"], errors="coerce")
+        frame["close"] = pd.to_numeric(frame["close"], errors="coerce")
+        frame = frame.dropna(subset=["trade_date", "close"]).sort_values("trade_date")
+        output = frame[["trade_date"]].copy()
+        for window in windows:
+            output[f"rolling_{window}d"] = frame["close"].pct_change(window)
+        return output
+
+    def max_drawdown_recovery_days(history):
+        frame = history.copy()
+        frame["close"] = pd.to_numeric(frame["close"], errors="coerce")
+        frame = frame.dropna(subset=["close"]).reset_index(drop=True)
+        if frame.empty:
+            return None
+        drawdown = frame["close"] / frame["close"].cummax() - 1
+        trough_index = int(drawdown.idxmin())
+        recovered = drawdown.iloc[trough_index + 1 :]
+        recovered = recovered[recovered >= -1e-12]
+        return int(recovered.index[0] - trough_index) if not recovered.empty else None
 
 
 st.set_page_config(page_title="AI 基金智能投研 MVP", page_icon="📊", layout="wide")
