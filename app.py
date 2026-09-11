@@ -5,7 +5,21 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from fund_ai_research.analysis import FIVE_YEAR_TEN_X_ANNUALIZED, OpenAICompatibleAnalyzer, ResearchCard, analyze_metrics
+try:
+    from fund_ai_research.analysis import (
+        FIVE_YEAR_TEN_X_ANNUALIZED,
+        OpenAICompatibleAnalyzer,
+        ResearchCard,
+        analyze_metrics,
+    )
+except ImportError as exc:
+    # Streamlit redacts startup tracebacks; expose only the import type/message
+    # so a missing cloud dependency can be fixed without revealing secrets.
+    st.set_page_config(page_title="AI 基金智能投研 MVP", page_icon="📊")
+    st.error("应用依赖加载失败，暂时无法启动分析页面。")
+    st.code(f"{type(exc).__name__}: {exc}")
+    st.stop()
+
 from fund_ai_research.connectors import DEFAULT_FUNDS
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
