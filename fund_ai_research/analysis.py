@@ -9,6 +9,9 @@ import requests
 from .models import EventRecord, FundMetrics, QualityReport
 
 
+FIVE_YEAR_TEN_X_ANNUALIZED = 10 ** (1 / 5) - 1
+
+
 def _setting(name: str) -> Optional[str]:
     """Read a string setting from env first, then Streamlit Secrets.
 
@@ -51,6 +54,7 @@ class ResearchCard:
     verification_questions: List[str]
     conclusion: str
     source: str
+    goal_fit: str = ""
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -65,6 +69,10 @@ class RuleBasedResearchAnalyzer:
             f"历史累计收益 {metric.total_return:+.1%}，年化历史收益 {metric.annualized_return:+.1%}。",
             f"年化波动 {metric.annualized_volatility:.1%}，历史最大回撤 {metric.max_drawdown:.1%}。",
         ]
+        goal_fit = (
+            f"五年十倍目标对应约 {FIVE_YEAR_TEN_X_ANNUALIZED:.1%} 年化收益；"
+            f"该标的历史样本年化收益为 {metric.annualized_return:+.1%}，仅作压力测试比较，不能外推未来。"
+        )
         positive: List[str] = []
         risks: List[str] = []
         if quality.quality_score >= 0.95:
@@ -97,7 +105,7 @@ class RuleBasedResearchAnalyzer:
             "黄灯": "等待验证：存在回撤、波动或数据口径风险，暂不因故事买入。",
             "红灯": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
         }[status]
-        return ResearchCard(metric.code, status, facts, positive, risks, questions, conclusion, "规则化基线")
+        return ResearchCard(metric.code, status, facts, positive, risks, questions, conclusion, "规则化基线", goal_fit)
 
 
 class OpenAICompatibleAnalyzer:
@@ -166,6 +174,8 @@ class OpenAICompatibleAnalyzer:
                 "只基于输入事实，不得补写未提供的公告内容",
                 "区分已披露事实、风险信号、仍需验证问题和普通投资者研究结论",
                 "证据不足写未找到公开证据，不输出买卖指令或收益承诺",
+                f"将五年十倍目标换算为约 {FIVE_YEAR_TEN_X_ANNUALIZED:.1%} 年化门槛，只作压力测试，不得承诺达到",
+                "报告类公告要标注文档类型、发布日期和原文链接；公告索引不能替代原文核验",
             ],
             "metric": metric.as_dict(),
             "quality": {"score": quality.quality_score, "warnings": quality.warnings},
@@ -177,6 +187,7 @@ class OpenAICompatibleAnalyzer:
                 "risk_signals": ["string"],
                 "verification_questions": ["string"],
                 "conclusion": "string",
+                "goal_fit": "string",
             },
         }
         try:
@@ -206,6 +217,7 @@ class OpenAICompatibleAnalyzer:
                 verification_questions=parsed.get("verification_questions", []),
                 conclusion=parsed.get("conclusion", "等待人工复核。"),
                 source=self.label,
+                goal_fit=parsed.get("goal_fit", ""),
             )
         except (requests.RequestException, KeyError, IndexError, ValueError, json.JSONDecodeError):
             return None
@@ -226,6 +238,8 @@ class OpenAICompatibleAnalyzer:
                 "只基于输入事实，不得补写未提供的公告内容",
                 "区分已披露事实、风险信号、仍需验证问题和普通投资者研究结论",
                 "证据不足写未找到公开证据，不输出买卖指令或收益承诺",
+                f"将五年十倍目标换算为约 {FIVE_YEAR_TEN_X_ANNUALIZED:.1%} 年化门槛，只作压力测试，不得承诺达到",
+                "报告类公告要标注文档类型、发布日期和原文链接；公告索引不能替代原文核验",
             ],
             "funds": [
                 {
@@ -245,6 +259,7 @@ class OpenAICompatibleAnalyzer:
                         "risk_signals": ["string"],
                         "verification_questions": ["string"],
                         "conclusion": "string",
+                        "goal_fit": "string",
                     }
                 ]
             },
@@ -281,6 +296,7 @@ class OpenAICompatibleAnalyzer:
                     verification_questions=item.get("verification_questions", []),
                     conclusion=item.get("conclusion", "等待人工复核。"),
                     source=self.label,
+                    goal_fit=item.get("goal_fit", ""),
                 )
             return cards
         except (requests.RequestException, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError):

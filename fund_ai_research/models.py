@@ -111,6 +111,8 @@ class EventRecord:
     published_at: datetime
     url: str
     source: str
+    document_type: str = "其他公告"
+    evidence_level: str = "待核验"
 
     def as_dict(self) -> Dict[str, Any]:
         return {
@@ -120,4 +122,6 @@ class EventRecord:
             "published_at": self.published_at.strftime("%Y-%m-%d %H:%M"),
             "url": self.url,
             "source": self.source,
+            "document_type": self.document_type,
+            "evidence_level": self.evidence_level,
         }

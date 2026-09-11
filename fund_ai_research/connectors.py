@@ -1,6 +1,7 @@
 from datetime import date, datetime, timedelta
 from typing import Dict, Iterable, List, Optional
 from html import unescape
+import json
 import re
 import time
 from urllib.parse import urljoin
@@ -22,7 +23,36 @@ DEFAULT_FUNDS: List[FundProfile] = [
     FundProfile("159915", "创业板ETF", "159915.SZ", "中国场内", "成长指数", "创业板指", date(2011, 12, 9)),
     FundProfile("159949", "创业板50ETF", "159949.SZ", "中国场内", "成长指数", "创业板50", date(2016, 6, 30)),
     FundProfile("513100", "纳指ETF", "513100.SS", "中国场内", "海外指数", "纳斯达克100", date(2013, 4, 25)),
+    FundProfile("512100", "中证1000ETF", "512100.SS", "中国场内", "小盘指数", "中证1000", date(2018, 3, 28)),
+    FundProfile("588000", "科创50ETF", "588000.SS", "中国场内", "科技成长", "科创50", date(2020, 9, 22)),
+    FundProfile("512880", "证券ETF", "512880.SS", "中国场内", "行业指数", "证券公司", date(2016, 8, 5)),
+    FundProfile("512480", "半导体ETF", "512480.SS", "中国场内", "行业指数", "半导体", date(2016, 7, 18)),
+    FundProfile("516160", "新能源ETF", "516160.SS", "中国场内", "行业指数", "新能源", date(2020, 6, 10)),
+    FundProfile("515050", "5GETF", "515050.SS", "中国场内", "行业指数", "5G通信", date(2019, 9, 16)),
+    FundProfile("512010", "医药ETF", "512010.SS", "中国场内", "行业指数", "中证医药", date(2013, 12, 16)),
+    FundProfile("159919", "沪深300ETF（深市）", "159919.SZ", "中国场内", "宽基指数", "沪深300", date(2012, 5, 28)),
+    FundProfile("512660", "军工ETF", "512660.SS", "中国场内", "行业指数", "中证军工", date(2016, 8, 8)),
+    FundProfile("515790", "光伏ETF", "515790.SS", "中国场内", "行业指数", "光伏产业", date(2020, 2, 7)),
 ]
+
+
+def classify_document(title: str, category: Optional[str] = None) -> str:
+    """Map public disclosure titles to a stable, human-readable document type."""
+    value = f"{category or ''} {title}"
+    rules = (
+        ("年报", ("年度报告", "年报")),
+        ("半年报", ("中期报告", "半年报")),
+        ("季报", ("季度报告", "季报")),
+        ("招募说明书/基金合同", ("招募说明书", "基金合同", "托管协议")),
+        ("分红公告", ("分红", "收益分配")),
+        ("治理与人事", ("董事", "监事", "高级管理人员", "人事调整", "持有人大会")),
+        ("交易与做市", ("上市交易", "做市", "申购赎回", "流动性服务")),
+        ("关联交易", ("关联方", "关联交易")),
+    )
+    for document_type, keywords in rules:
+        if any(keyword in value for keyword in keywords):
+            return document_type
+    return "其他公告"
 
 
 class DemoConnector:
@@ -67,7 +97,16 @@ class DemoConnector:
             f"{profile.name}：基准指数调整及成分变化示例",
         ]
         return [
-            EventRecord(code, title, "演示数据", now - timedelta(days=i * 19), "https://example.com/demo-event", "demo")
+            EventRecord(
+                code,
+                title,
+                "演示数据",
+                now - timedelta(days=i * 19),
+                "https://example.com/demo-event",
+                "demo",
+                "演示事件",
+                "不可作为证据",
+            )
             for i, title in enumerate(titles[:limit])
         ]
 
@@ -148,6 +187,8 @@ class YahooFinanceConnector:
                     published_at=published_at,
                     url=item.get("link", ""),
                     source="yahoo_news_secondary",
+                    document_type="新闻线索",
+                    evidence_level="二级线索，必须回到公开披露核验",
                 )
             )
         return events
@@ -286,11 +327,103 @@ class OfficialDisclosureConnector:
                     published_at=published_at,
                     url=urljoin(page_url, href),
                     source=source_name,
+                    document_type=classify_document(title),
+                    evidence_level="交易所公开披露（一级来源）",
                 )
             )
             if len(events) >= limit:
                 break
         return events
+
+
+class EastmoneyFundDisclosureConnector:
+    """Public fund announcement index with report and document categories.
+
+    Eastmoney's public index exposes the title, publication date and a stable
+    announcement identifier. The detail page is retained as the evidence link;
+    the application never treats the index title as proof of the document's
+    contents.
+    """
+
+    api_url = "https://api.fund.eastmoney.com/f10/JJGG"
+    detail_url = "https://fund.eastmoney.com/gonggao/{code},{announcement_id}.html"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; FundResearchBot/1.0)",
+        "Referer": "https://fund.eastmoney.com/",
+    }
+
+    def __init__(self, profiles: Optional[Iterable[FundProfile]] = None, timeout: int = 12):
+        self.profiles = {p.code: p for p in (profiles or DEFAULT_FUNDS)}
+        self.timeout = timeout
+
+    @staticmethod
+    def _decode_jsonp(value: str) -> dict:
+        text = value.strip()
+        if "(" in text and text.endswith(")"):
+            text = text[text.find("(") + 1 : -1]
+        return json.loads(text)
+
+    def fetch_events(self, code: str, limit: int = 16) -> List[EventRecord]:
+        """Fetch ordinary notices and periodic reports from the public index.
+
+        ``type=0`` contains the general notice stream while ``type=3`` is the
+        periodic-report stream. They overlap for some funds, so records are
+        deduplicated by announcement ID before the newest items are returned.
+        A failure in one stream must not hide the other stream.
+        """
+        if code not in self.profiles:
+            return []
+
+        page_size = min(max(limit, 1), 20)
+        rows_by_id: Dict[str, dict] = {}
+        for announcement_type in (0, 3):
+            try:
+                response = requests.get(
+                    self.api_url,
+                    params={
+                        "callback": "jQuery",
+                        "fundcode": code,
+                        "pageIndex": 1,
+                        "pageSize": page_size,
+                        "type": announcement_type,
+                    },
+                    headers=self.headers,
+                    timeout=self.timeout,
+                )
+                response.raise_for_status()
+                payload = self._decode_jsonp(response.text)
+                for item in payload.get("Data") or []:
+                    announcement_id = str(item.get("ID") or "").strip()
+                    if announcement_id:
+                        rows_by_id[announcement_id] = item
+            except (requests.RequestException, AttributeError, TypeError, ValueError, json.JSONDecodeError):
+                continue
+
+        events: List[EventRecord] = []
+        for item in rows_by_id.values():
+            title = str(item.get("TITLE") or "").strip()
+            announcement_id = str(item.get("ID") or "").strip()
+            if not title or not announcement_id:
+                continue
+            published_text = str(item.get("PUBLISHDATE") or item.get("PUBLISHDATEDesc") or "")[:10]
+            try:
+                published_at = datetime.strptime(published_text, "%Y-%m-%d")
+            except ValueError:
+                published_at = datetime.min
+            events.append(
+                EventRecord(
+                    code=code,
+                    title=title,
+                    publisher="东方财富公开基金公告索引",
+                    published_at=published_at if published_at != datetime.min else datetime.now(),
+                    url=self.detail_url.format(code=code, announcement_id=announcement_id),
+                    source="eastmoney_fund_disclosure",
+                    document_type=classify_document(title, str(item.get("NEWCATEGORY") or "")),
+                    evidence_level="公开披露文件索引，需打开原文核验",
+                )
+            )
+        events.sort(key=lambda event: event.published_at, reverse=True)
+        return events[:limit]
 
 
 class CompositeConnector:
@@ -300,6 +433,7 @@ class CompositeConnector:
         self.yahoo = YahooFinanceConnector(profiles)
         self.eastmoney = EastmoneyConnector(profiles)
         self.official = OfficialDisclosureConnector(profiles)
+        self.fund_disclosure = EastmoneyFundDisclosureConnector(profiles)
 
     def fetch_history(self, code: str, start: Optional[date] = None, end: Optional[date] = None) -> tuple[pd.DataFrame, str]:
         if self.mode == "eastmoney":
@@ -319,9 +453,15 @@ class CompositeConnector:
 
     def fetch_events(self, code: str) -> List[EventRecord]:
         if self.mode in {"auto", "yahoo", "eastmoney"}:
-            official_events = self.official.fetch_events(code)
-            if official_events:
-                return official_events
+            # The fund-level public index is especially useful for annual,
+            # semi-annual and quarterly reports. Exchange pages supplement it
+            # with notices that may not be mirrored in the index.
+            events = self.fund_disclosure.fetch_events(code, limit=12)
+            official_events = self.official.fetch_events(code, limit=8)
+            seen = {(item.title, item.url) for item in events}
+            events.extend(item for item in official_events if (item.title, item.url) not in seen)
+            if events:
+                return events[:16]
         if self.mode in {"auto", "yahoo"}:
             events = self.yahoo.fetch_events(code)
             if events:
