@@ -5,14 +5,14 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from fund_ai_research.analysis import OpenAICompatibleAnalyzer, ResearchCard, analyze_metrics
+from fund_ai_research.analysis import FIVE_YEAR_TEN_X_ANNUALIZED, OpenAICompatibleAnalyzer, ResearchCard, analyze_metrics
 from fund_ai_research.connectors import DEFAULT_FUNDS
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
 
 st.set_page_config(page_title="AI 基金智能投研 MVP", page_icon="📊", layout="wide")
 
-APP_VERSION = "official-disclosure-auto-v3"
+APP_VERSION = "expanded-universe-reports-v4"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -46,6 +46,7 @@ def load_snapshot_cards(path: Path) -> dict[str, ResearchCard]:
             verification_questions=item.get("verification_questions", []),
             conclusion=item.get("conclusion", "等待人工复核。"),
             source=item.get("source", "后台快照"),
+            goal_fit=item.get("goal_fit", ""),
         )
     return cards
 
@@ -100,13 +101,14 @@ with st.sidebar:
             source_mode = "yahoo"
         else:
             source_mode = "demo"
-        default_codes = list(profiles)[:4]
+        default_codes = list(profiles)[:12]
         selected_codes = st.multiselect(
             "研究基金",
             options=list(profiles),
             default=default_codes,
             format_func=lambda code: profile_label(profiles[code]),
         )
+        st.caption("默认纳入 12 支被动 ETF；可继续勾选最多 15 支研究标的。")
         today = date.today()
         start = st.date_input("历史起点", value=max(date(2017, 1, 1), today - timedelta(days=365 * 8)))
         end = st.date_input("历史终点", value=today)
@@ -184,6 +186,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
+st.info(
+    f"五年十倍目标的数学门槛约为 {FIVE_YEAR_TEN_X_ANNUALIZED:.1%} 年化收益。"
+    "本页面将其作为压力测试基准，与历史指标和风险信号对照，不代表预测或收益承诺。"
+)
 if not selected_codes:
     st.warning("请至少选择一支基金。")
     st.stop()
@@ -213,7 +219,16 @@ if "cards" not in st.session_state:
             st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
     elif scheduled_cards:
         st.session_state.cards = {code: card for code, card in scheduled_cards.items() if code in profiles}
-        st.info("当前使用 GitHub Actions 最近一次后台 AI 快照；配置 Streamlit Secrets 后可在页面内实时分析。")
+        missing_codes = {metric.code for metric in result.metrics if metric.code not in st.session_state.cards}
+        if missing_codes:
+            st.session_state.cards.update(
+                analyze_metrics(
+                    [metric for metric in result.metrics if metric.code in missing_codes],
+                    [item for item in result.quality if item.code in missing_codes],
+                    result.events,
+                )
+            )
+        st.info("当前使用 GitHub Actions 最近一次后台 AI 快照；新增标的暂以离线规则基线补齐，配置 Streamlit Secrets 后可实时分析全部标的。")
     else:
         with st.spinner("正在生成离线规则研究卡片…"):
             st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
@@ -281,16 +296,25 @@ with tab_reco:
                 st.write("**仍需验证**")
                 for item in card.verification_questions:
                     st.markdown(f"- {item}")
+            if card.goal_fit:
+                st.write("**五年目标压力测试**")
+                st.caption(card.goal_fit)
 
 with tab_metrics:
     st.subheader("历史指标对比")
     frame = result.metrics_frame.copy()
-    shown = frame[["code", "name", "category", "total_return", "annualized_return", "annualized_volatility", "max_drawdown", "calmar_ratio", "quality_score", "as_of"]].copy()
-    shown.columns = ["代码", "基金", "类型", "累计收益", "年化收益", "年化波动", "最大回撤", "收益/回撤", "质量分", "截至"]
+    frame["goal_gap"] = frame["annualized_return"] - FIVE_YEAR_TEN_X_ANNUALIZED
+    frame["goal_status"] = frame["annualized_return"].map(
+        lambda value: "达到压力门槛（历史样本）" if value >= FIVE_YEAR_TEN_X_ANNUALIZED else "未达到压力门槛"
+    )
+    shown = frame[["code", "name", "category", "total_return", "annualized_return", "goal_gap", "goal_status", "annualized_volatility", "max_drawdown", "calmar_ratio", "quality_score", "as_of"]].copy()
+    shown.columns = ["代码", "基金", "类型", "累计收益", "年化收益", "距58.5%门槛", "压力测试口径", "年化波动", "最大回撤", "收益/回撤", "质量分", "截至"]
     for column in ["累计收益", "年化收益", "年化波动", "最大回撤", "质量分"]:
         shown[column] = shown[column].map(pct)
+    shown["距58.5%门槛"] = shown["距58.5%门槛"].map(pct)
     shown["收益/回撤"] = shown["收益/回撤"].map(lambda x: f"{x:.2f}")
     st.dataframe(shown, hide_index=True, width="stretch")
+    st.caption("“达到压力门槛”只表示历史样本年化收益不低于五年十倍所需约 58.5%，不代表未来可重复，也不等于建议买入。")
     compare = frame.set_index("name")[["total_return", "annualized_return", "max_drawdown"]].rename(
         columns={"total_return": "累计收益", "annualized_return": "年化收益", "max_drawdown": "最大回撤"}
     )
@@ -305,7 +329,23 @@ with tab_events:
     st.caption("事件线索必须回到原始公告、定期报告或监管文件核验；新闻摘要不直接作为交易依据。")
     if result.events:
         events = pd.DataFrame([event.as_dict() for event in result.events])
-        events = events.rename(columns={"code": "代码", "title": "标题", "publisher": "发布方", "published_at": "发布时间", "url": "链接", "source": "来源"})
+        report_types = {"年报", "半年报", "季报", "招募说明书/基金合同"}
+        report_count = int(events["document_type"].isin(report_types).sum())
+        public_count = int(events["evidence_level"].str.contains("公开披露|交易所", regex=True, na=False).sum())
+        event_kpi1, event_kpi2, event_kpi3 = st.columns(3)
+        event_kpi1.metric("公开信息条数", len(events))
+        event_kpi2.metric("报告/合同类", report_count)
+        event_kpi3.metric("公开披露来源", public_count)
+        type_counts = events["document_type"].value_counts().rename("条数")
+        if not type_counts.empty:
+            st.bar_chart(type_counts)
+        filter_col1, filter_col2 = st.columns(2)
+        with filter_col1:
+            event_codes = st.multiselect("筛选基金", options=sorted(events["code"].unique()), default=sorted(events["code"].unique()))
+        with filter_col2:
+            event_types = st.multiselect("筛选文档类型", options=sorted(events["document_type"].unique()), default=sorted(events["document_type"].unique()))
+        events = events[events["code"].isin(event_codes) & events["document_type"].isin(event_types)]
+        events = events.rename(columns={"code": "代码", "title": "标题", "publisher": "发布方", "published_at": "发布时间", "url": "链接", "source": "来源", "document_type": "文档类型", "evidence_level": "证据级别"})
         try:
             st.dataframe(events, hide_index=True, width="stretch", column_config={"链接": st.column_config.LinkColumn("链接")})
         except AttributeError:
