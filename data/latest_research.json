@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10 12:17:27",
+  "fetched_at": "2026-09-11 01:14:10",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -15,474 +15,474 @@
       "code": "510300",
       "name": "沪深300ETF",
       "category": "宽基指数",
-      "latest_value": 4.617000102996826,
-      "total_return": 0.4149555889684169,
-      "annualized_return": 0.04437329247826072,
-      "annualized_volatility": 0.19646478486811936,
+      "latest_value": 4.63700008392334,
+      "total_return": 0.4060036225453749,
+      "annualized_return": 0.04357499019918887,
+      "annualized_volatility": 0.19648034290428776,
       "max_drawdown": -0.4510074262437961,
-      "calmar_ratio": 0.09838705505987465,
-      "momentum_60d": -0.05967408422012743,
-      "win_rate": 0.49612403100775193,
+      "calmar_ratio": 0.09661701263347716,
+      "momentum_60d": -0.05560076822256077,
+      "win_rate": 0.4963805584281282,
       "current_aum": NaN,
-      "avg_volume": 1222528598.3333333,
-      "as_of": "2026-09-10",
-      "quality_score": 0.8822,
+      "avg_volume": 1224769174.7,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8829,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "510500",
       "name": "中证500ETF",
       "category": "宽基指数",
-      "latest_value": 7.742000102996826,
-      "total_return": 0.77885818876319,
-      "annualized_return": 0.07470453655038822,
-      "annualized_volatility": 0.23799664561540998,
+      "latest_value": 7.784999847412109,
+      "total_return": 0.7787455400153598,
+      "annualized_return": 0.0747490875623451,
+      "annualized_volatility": 0.2380399982801873,
       "max_drawdown": -0.3965452862065345,
-      "calmar_ratio": 0.1883884114851879,
-      "momentum_60d": -0.10310471149584122,
-      "win_rate": 0.5131782945736434,
+      "calmar_ratio": 0.18850075933928312,
+      "momentum_60d": -0.09812327676839638,
+      "win_rate": 0.5129265770423992,
       "current_aum": NaN,
-      "avg_volume": 457089068.43333334,
-      "as_of": "2026-09-10",
-      "quality_score": 0.8822,
+      "avg_volume": 457068025.31666666,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8829,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159915",
       "name": "创业板ETF",
       "category": "成长指数",
-      "latest_value": 3.3580000400543213,
-      "total_return": 1.5439393231965104,
-      "annualized_return": 0.12388807097579035,
-      "annualized_volatility": 0.31122269316790874,
+      "latest_value": 3.372999906539917,
+      "total_return": 1.5437405502362878,
+      "annualized_return": 0.12396704945116532,
+      "annualized_volatility": 0.3112929694456112,
       "max_drawdown": -0.5658465895446377,
-      "calmar_ratio": 0.2189428606002356,
-      "momentum_60d": -0.183167115008806,
-      "win_rate": 0.48320413436692505,
+      "calmar_ratio": 0.2190824363736595,
+      "momentum_60d": -0.1795184002768926,
+      "win_rate": 0.48293691830403307,
       "current_aum": NaN,
-      "avg_volume": 2033886500.5833333,
-      "as_of": "2026-09-10",
-      "quality_score": 0.8822,
+      "avg_volume": 2033679971.3166666,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8829,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159949",
       "name": "创业板50ETF",
       "category": "成长指数",
-      "latest_value": 1.5800000429153442,
-      "total_return": 2.1411530358078146,
-      "annualized_return": 0.15392795837462958,
-      "annualized_volatility": 0.3332066116702278,
+      "latest_value": 1.5789999961853027,
+      "total_return": 2.1205534609508874,
+      "annualized_return": 0.15309115314368205,
+      "annualized_volatility": 0.3332879844373961,
       "max_drawdown": -0.5899053876881551,
-      "calmar_ratio": 0.26093668847113727,
-      "momentum_60d": -0.20443097220700757,
-      "win_rate": 0.47131782945736433,
+      "calmar_ratio": 0.2595181470432873,
+      "momentum_60d": -0.20493452042419535,
+      "win_rate": 0.47104446742502587,
       "current_aum": NaN,
-      "avg_volume": 1367056911.6666667,
-      "as_of": "2026-09-10",
-      "quality_score": 0.8822,
+      "avg_volume": 1366040670.05,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8829,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "513100",
       "name": "纳指ETF",
       "category": "海外指数",
-      "latest_value": 2.2190001010894775,
-      "total_return": 3.0760473841618055,
-      "annualized_return": 0.19215342140054648,
-      "annualized_volatility": 0.2444652326022502,
+      "latest_value": 2.2339999675750732,
+      "total_return": 3.144712564604416,
+      "annualized_return": 0.19479283633291278,
+      "annualized_volatility": 0.24448405702558829,
       "max_drawdown": -0.28568022185936814,
-      "calmar_ratio": 0.6726171666694444,
-      "momentum_60d": -0.026754329414798494,
-      "win_rate": 0.5258264462809917,
+      "calmar_ratio": 0.6818562204449823,
+      "momentum_60d": -0.020175440522772425,
+      "win_rate": 0.5266149870801033,
       "current_aum": NaN,
-      "avg_volume": 207522211.08333334,
-      "as_of": "2026-09-10",
-      "quality_score": 0.883,
+      "avg_volume": 207373353.51666668,
+      "as_of": "2026-09-09",
+      "quality_score": 0.8837,
       "source": "Yahoo Finance public chart"
     }
   ],
   "quality": [
     {
       "code": "510300",
-      "rows": 1935,
-      "start_date": "2018-09-12",
-      "end_date": "2026-09-10",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "510500",
-      "rows": 1935,
-      "start_date": "2018-09-12",
-      "end_date": "2026-09-10",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159915",
-      "rows": 1935,
-      "start_date": "2018-09-12",
-      "end_date": "2026-09-10",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159949",
-      "rows": 1935,
-      "start_date": "2018-09-12",
-      "end_date": "2026-09-10",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "513100",
-      "rows": 1936,
-      "start_date": "2018-09-12",
-      "end_date": "2026-09-10",
+      "rows": 1934,
+      "start_date": "2018-09-13",
+      "end_date": "2026-09-09",
       "duplicate_rows": 0,
       "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.883,
+      "quality_score": 0.8829,
       "status": "需关注",
       "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "510500",
+      "rows": 1934,
+      "start_date": "2018-09-13",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.8829,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1934,
+      "start_date": "2018-09-13",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.8829,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1934,
+      "start_date": "2018-09-13",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.8829,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1935,
+      "start_date": "2018-09-13",
+      "end_date": "2026-09-09",
+      "duplicate_rows": 0,
+      "missing_dates": 150,
+      "invalid_values": 0,
+      "quality_score": 0.8837,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 150 天；节假日和停牌需人工确认"
     }
   ],
   "events": [
     {
       "code": "510300",
-      "title": "Nvidia Just Put Palantir at the Center of a Bigger AI Bet",
-      "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:15",
-      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-just-put-palantir-center-121516008.html",
+      "title": "Why American Eagle (AEO) Shares Are Plunging Today",
+      "publisher": "StockStory",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "510300",
-      "title": "Daimler Truck Defence signs Poland engine assembly deal with PGZ",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:14",
-      "url": "https://finance.yahoo.com/m/b80f68f3-38d5-3b11-89b1-37120e025e6b/daimler-truck-defence-signs.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "German state Lower Saxony opposes Volkswagen division spin-off plan – report",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:12",
-      "url": "https://finance.yahoo.com/m/39db4e79-ca4d-35ee-9ed8-606519ce46b7/german-state-lower-saxony.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Meta Stock Gets Stunning JPMorgan Upgrade on AI Growth",
-      "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/technology/ai/articles/meta-stock-gets-stunning-jpmorgan-121151743.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Meet the Cheap High-Yield Dividend Stock That's Crushing the Market in 2026",
+      "title": "Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.",
       "publisher": "Motley Fool",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/m/682cead7-77cf-36b7-8f10-40ec7b415b57/meet-the-cheap-high-yield.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "510300",
-      "title": "Alphabet’s Dip is a Clear Buying Opportunity",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/m/2d971a7d-f1a0-3dd1-9d1d-9a6cc08a5791/alphabet%E2%80%99s-dip-is-a-clear.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Why AT&T CEO sees a 'complementary dynamic' with Elon Musk's Starlink",
-      "publisher": "Yahoo Finance",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/markets/article/why-att-ceo-sees-a-complementary-dynamic-with-elon-musks-starlink-121000743.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510300",
-      "title": "Consano Bio Announces Peer-Reviewed Publication Supporting the Therapeutic Potential of C-1101 in Chronic, Painful Lumbosacral Radiculopathy (LSR) or Chronic Sciatica",
+      "title": "Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/healthcare/articles/consano-bio-announces-peer-reviewed-121000418.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510500",
-      "title": "Nvidia Just Put Palantir at the Center of a Bigger AI Bet",
+      "code": "510300",
+      "title": "Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-11 01:02",
+      "url": "https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...",
       "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:15",
-      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-just-put-palantir-center-121516008.html",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "510500",
-      "title": "Daimler Truck Defence signs Poland engine assembly deal with PGZ",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:14",
-      "url": "https://finance.yahoo.com/m/b80f68f3-38d5-3b11-89b1-37120e025e6b/daimler-truck-defence-signs.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "German state Lower Saxony opposes Volkswagen division spin-off plan – report",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:12",
-      "url": "https://finance.yahoo.com/m/39db4e79-ca4d-35ee-9ed8-606519ce46b7/german-state-lower-saxony.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Meta Stock Gets Stunning JPMorgan Upgrade on AI Growth",
+      "code": "510300",
+      "title": "High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...",
       "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/technology/ai/articles/meta-stock-gets-stunning-jpmorgan-121151743.html",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510300",
+      "title": "HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "510500",
-      "title": "Meet the Cheap High-Yield Dividend Stock That's Crushing the Market in 2026",
+      "title": "Why American Eagle (AEO) Shares Are Plunging Today",
+      "publisher": "StockStory",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.",
       "publisher": "Motley Fool",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/m/682cead7-77cf-36b7-8f10-40ec7b415b57/meet-the-cheap-high-yield.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "510500",
-      "title": "Alphabet’s Dip is a Clear Buying Opportunity",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/m/2d971a7d-f1a0-3dd1-9d1d-9a6cc08a5791/alphabet%E2%80%99s-dip-is-a-clear.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Why AT&T CEO sees a 'complementary dynamic' with Elon Musk's Starlink",
-      "publisher": "Yahoo Finance",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/markets/article/why-att-ceo-sees-a-complementary-dynamic-with-elon-musks-starlink-121000743.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "510500",
-      "title": "Consano Bio Announces Peer-Reviewed Publication Supporting the Therapeutic Potential of C-1101 in Chronic, Painful Lumbosacral Radiculopathy (LSR) or Chronic Sciatica",
+      "title": "Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/healthcare/articles/consano-bio-announces-peer-reviewed-121000418.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159915",
-      "title": "Treasury Picks The Stocks America’s Kids Will Own",
-      "publisher": "Moby",
-      "published_at": "2026-08-20 21:19",
-      "url": "https://finance.yahoo.com/m/207974f1-3b78-32de-8e45-71b5a277920a/treasury-picks-the-stocks.html",
+      "code": "510500",
+      "title": "Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159915",
-      "title": "Wall Street Pricey? Try These 5 Dividend ETFs Under $50",
-      "publisher": "Zacks",
-      "published_at": "2026-08-14 12:00",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-pricey-try-5-120000317.html",
+      "code": "510500",
+      "title": "Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-11 01:02",
+      "url": "https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159915",
-      "title": "JPMorgan Sees S&P 500 at 8,000: ETFs That Are Worth Buying",
-      "publisher": "Zacks",
-      "published_at": "2026-08-12 15:27",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-sees-p-500-8-152700914.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "ETF League Tables: SPDR Inflows Total $7.6B",
-      "publisher": "etf.com",
-      "published_at": "2026-08-06 21:00",
-      "url": "https://finance.yahoo.com/m/87f3b9bf-5370-37af-b6ea-528b23f4996e/etf-league-tables%3A-spdr.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "The Cheapest ETFs for Building a Core Portfolio",
-      "publisher": "Zacks",
-      "published_at": "2026-08-05 20:31",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/cheapest-etfs-building-core-portfolio-203100733.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "Should State Street SPDR Portfolio S&P 500 ETF (SPYM) Be on Your Investing Radar?",
-      "publisher": "Zacks",
-      "published_at": "2026-08-05 10:20",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-spdr-portfolio-p-102002119.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "ETF Zoo: Leveraged Lunacy Surpasses $65B in Gains",
-      "publisher": "etf.com",
-      "published_at": "2026-07-25 05:33",
-      "url": "https://finance.yahoo.com/m/459405a2-5d3a-3792-bb06-b9a3991db48b/etf-zoo%3A-leveraged-lunacy.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159915",
-      "title": "Trump Accounts: Comparing the 5 Selected Low-Cost Index ETFs",
-      "publisher": "MarketBeat",
-      "published_at": "2026-07-16 16:00",
-      "url": "https://finance.yahoo.com/m/49bff918-c6bb-3fe9-aa8e-9f7211232fe0/trump-accounts%3A-comparing-the.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Nvidia Just Put Palantir at the Center of a Bigger AI Bet",
+      "code": "510500",
+      "title": "THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...",
       "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:15",
-      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-just-put-palantir-center-121516008.html",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html",
       "source": "yahoo_news_secondary"
     },
     {
-      "code": "159949",
-      "title": "Daimler Truck Defence signs Poland engine assembly deal with PGZ",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:14",
-      "url": "https://finance.yahoo.com/m/b80f68f3-38d5-3b11-89b1-37120e025e6b/daimler-truck-defence-signs.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "German state Lower Saxony opposes Volkswagen division spin-off plan – report",
-      "publisher": "Just Auto",
-      "published_at": "2026-09-10 12:12",
-      "url": "https://finance.yahoo.com/m/39db4e79-ca4d-35ee-9ed8-606519ce46b7/german-state-lower-saxony.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Meta Stock Gets Stunning JPMorgan Upgrade on AI Growth",
+      "code": "510500",
+      "title": "High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...",
       "publisher": "GuruFocus.com",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/technology/ai/articles/meta-stock-gets-stunning-jpmorgan-121151743.html",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "510500",
+      "title": "HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike — ORCL, ADBE, M, NVDA, UBER In Focus",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-10 22:46",
+      "url": "https://finance.yahoo.com/m/50c1d25d-5afe-3ac4-b54d-03eaed24655d/s%26p-500%2C-dow%2C-nasdaq-end.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "We Did the Math on What $100,000 Earns in the 5 Most Popular Dividend ETFs, and the Best Pays More Than Double the Worst",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 21:25",
+      "url": "https://finance.yahoo.com/m/4498558a-18e3-3ab4-a7b0-fb6136a7484e/we-did-the-math-on-what.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "How a 68-Year-Old’s $750,000 in SCHD Pays Her Every Quarter: March’s Reshuffle Changed What She Owns",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 21:05",
+      "url": "https://finance.yahoo.com/m/4f742c5d-bd55-349e-8766-41d8253beb50/how-a-68-year-old%E2%80%99s-%24750%2C000.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Nio Just Dropped 25% in a Month. Is It Time to Sell?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 19:13",
+      "url": "https://finance.yahoo.com/m/acf2965d-462c-3333-a757-29095ae9a3e2/nio-just-dropped-25%25-in-a.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Carnival Just Dropped 20% in a Month. Is It Time to Sell?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 19:09",
+      "url": "https://finance.yahoo.com/m/91cf7e39-be08-3def-8052-5b6d170443e6/carnival-just-dropped-20%25-in.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Fitch Says AI Bust Could Crash US Stocks 35%, Trigger Recession",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-10 19:03",
+      "url": "https://finance.yahoo.com/m/99fa3a90-3beb-38e9-a597-c3b91e620d12/fitch-says-ai-bust-could.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Oracle Jumped 36% in a Day After Last September’s Earnings, but Traders Are Betting Against It Tonight",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 17:58",
+      "url": "https://finance.yahoo.com/m/f0fa7124-ddb1-3b61-83c9-3facbfe02d59/oracle-jumped-36%25-in-a-day.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159915",
+      "title": "Nuclear Stocks Slide as Piper Sandler Splits the Sector: Oklo, NuScale Power and X-Energy All Drop 5%",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 17:39",
+      "url": "https://finance.yahoo.com/m/80887f91-6fc3-3743-8caf-f7081f56397c/nuclear-stocks-slide-as-piper.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "159949",
-      "title": "Meet the Cheap High-Yield Dividend Stock That's Crushing the Market in 2026",
+      "title": "Why American Eagle (AEO) Shares Are Plunging Today",
+      "publisher": "StockStory",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-american-eagle-aeo-shares-010504808.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Nvidia's Jensen Huang Claims AGI Has Arrived. Here's How to Invest.",
       "publisher": "Motley Fool",
-      "published_at": "2026-09-10 12:11",
-      "url": "https://finance.yahoo.com/m/682cead7-77cf-36b7-8f10-40ec7b415b57/meet-the-cheap-high-yield.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/m/62684323-0c12-377a-b95b-4d01dde414f5/nvidia%27s-jensen-huang-claims.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "159949",
-      "title": "Alphabet’s Dip is a Clear Buying Opportunity",
-      "publisher": "24/7 Wall St.",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/m/2d971a7d-f1a0-3dd1-9d1d-9a6cc08a5791/alphabet%E2%80%99s-dip-is-a-clear.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Why AT&T CEO sees a 'complementary dynamic' with Elon Musk's Starlink",
-      "publisher": "Yahoo Finance",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/markets/article/why-att-ceo-sees-a-complementary-dynamic-with-elon-musks-starlink-121000743.html",
-      "source": "yahoo_news_secondary"
-    },
-    {
-      "code": "159949",
-      "title": "Consano Bio Announces Peer-Reviewed Publication Supporting the Therapeutic Potential of C-1101 in Chronic, Painful Lumbosacral Radiculopathy (LSR) or Chronic Sciatica",
+      "title": "Governor Kehoe Joins United WE to Celebrate New Law Removing Barriers to Work",
       "publisher": "PR Newswire",
-      "published_at": "2026-09-10 12:10",
-      "url": "https://finance.yahoo.com/healthcare/articles/consano-bio-announces-peer-reviewed-121000418.html",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/economy/policy/articles/governor-kehoe-joins-united-celebrate-010500891.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Insomnia Cookies' Eighth Annual PJ Party Returns with Free Cookies and a Dream Dorm Giveaway",
+      "publisher": "PR Newswire",
+      "published_at": "2026-09-11 01:05",
+      "url": "https://finance.yahoo.com/small-business/articles/insomnia-cookies-eighth-annual-pj-010500200.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "Defiance Launches AIFR, the First U.S.-Listed ETF Dedicated to Semiconductor Foundries",
+      "publisher": "GlobeNewswire",
+      "published_at": "2026-09-11 01:02",
+      "url": "https://finance.yahoo.com/technology/articles/defiance-launches-aifr-first-u-010200236.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "THG PLC (STU:HG0) (H1 2026) Earnings Call Highlights: Revenue Up 7. ...",
+      "publisher": "GuruFocus.com",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/thg-plc-stu-hg0-h1-010128792.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "High Co (STU:HIH) (H1 2026) Earnings Call Highlights: Strong Organic Growth and Strategic ...",
+      "publisher": "GuruFocus.com",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/high-co-stu-hih-h1-010122522.html",
+      "source": "yahoo_news_secondary"
+    },
+    {
+      "code": "159949",
+      "title": "HOOD Stock Falls Overnight Despite Strong August Figures: Retail Says ‘Load Up’",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-11 01:01",
+      "url": "https://finance.yahoo.com/m/35e56b24-5fe5-33a5-87b6-1a4edf32da6c/hood-stock-falls-overnight.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "Treasury Picks The Stocks America’s Kids Will Own",
-      "publisher": "Moby",
-      "published_at": "2026-08-20 21:19",
-      "url": "https://finance.yahoo.com/m/207974f1-3b78-32de-8e45-71b5a277920a/treasury-picks-the-stocks.html",
+      "title": "S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike — ORCL, ADBE, M, NVDA, UBER In Focus",
+      "publisher": "Stocktwits",
+      "published_at": "2026-09-10 22:46",
+      "url": "https://finance.yahoo.com/m/50c1d25d-5afe-3ac4-b54d-03eaed24655d/s%26p-500%2C-dow%2C-nasdaq-end.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "Wall Street Pricey? Try These 5 Dividend ETFs Under $50",
-      "publisher": "Zacks",
-      "published_at": "2026-08-14 12:00",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-pricey-try-5-120000317.html",
+      "title": "We Did the Math on What $100,000 Earns in the 5 Most Popular Dividend ETFs, and the Best Pays More Than Double the Worst",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 21:25",
+      "url": "https://finance.yahoo.com/m/4498558a-18e3-3ab4-a7b0-fb6136a7484e/we-did-the-math-on-what.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "JPMorgan Sees S&P 500 at 8,000: ETFs That Are Worth Buying",
-      "publisher": "Zacks",
-      "published_at": "2026-08-12 15:27",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-sees-p-500-8-152700914.html",
+      "title": "How a 68-Year-Old’s $750,000 in SCHD Pays Her Every Quarter: March’s Reshuffle Changed What She Owns",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 21:05",
+      "url": "https://finance.yahoo.com/m/4f742c5d-bd55-349e-8766-41d8253beb50/how-a-68-year-old%E2%80%99s-%24750%2C000.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "ETF League Tables: SPDR Inflows Total $7.6B",
-      "publisher": "etf.com",
-      "published_at": "2026-08-06 21:00",
-      "url": "https://finance.yahoo.com/m/87f3b9bf-5370-37af-b6ea-528b23f4996e/etf-league-tables%3A-spdr.html",
+      "title": "Nio Just Dropped 25% in a Month. Is It Time to Sell?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 19:13",
+      "url": "https://finance.yahoo.com/m/acf2965d-462c-3333-a757-29095ae9a3e2/nio-just-dropped-25%25-in-a.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "The Cheapest ETFs for Building a Core Portfolio",
-      "publisher": "Zacks",
-      "published_at": "2026-08-05 20:31",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/cheapest-etfs-building-core-portfolio-203100733.html",
+      "title": "Carnival Just Dropped 20% in a Month. Is It Time to Sell?",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 19:09",
+      "url": "https://finance.yahoo.com/m/91cf7e39-be08-3def-8052-5b6d170443e6/carnival-just-dropped-20%25-in.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "Should State Street SPDR Portfolio S&P 500 ETF (SPYM) Be on Your Investing Radar?",
-      "publisher": "Zacks",
-      "published_at": "2026-08-05 10:20",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-spdr-portfolio-p-102002119.html",
+      "title": "Fitch Says AI Bust Could Crash US Stocks 35%, Trigger Recession",
+      "publisher": "Benzinga Prediction Markets",
+      "published_at": "2026-09-10 19:03",
+      "url": "https://finance.yahoo.com/m/99fa3a90-3beb-38e9-a597-c3b91e620d12/fitch-says-ai-bust-could.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "ETF Zoo: Leveraged Lunacy Surpasses $65B in Gains",
-      "publisher": "etf.com",
-      "published_at": "2026-07-25 05:33",
-      "url": "https://finance.yahoo.com/m/459405a2-5d3a-3792-bb06-b9a3991db48b/etf-zoo%3A-leveraged-lunacy.html",
+      "title": "Oracle Jumped 36% in a Day After Last September’s Earnings, but Traders Are Betting Against It Tonight",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 17:58",
+      "url": "https://finance.yahoo.com/m/f0fa7124-ddb1-3b61-83c9-3facbfe02d59/oracle-jumped-36%25-in-a-day.html",
       "source": "yahoo_news_secondary"
     },
     {
       "code": "513100",
-      "title": "Trump Accounts: Comparing the 5 Selected Low-Cost Index ETFs",
-      "publisher": "MarketBeat",
-      "published_at": "2026-07-16 16:00",
-      "url": "https://finance.yahoo.com/m/49bff918-c6bb-3fe9-aa8e-9f7211232fe0/trump-accounts%3A-comparing-the.html",
+      "title": "Nuclear Stocks Slide as Piper Sandler Splits the Sector: Oklo, NuScale Power and X-Energy All Drop 5%",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-09-10 17:39",
+      "url": "https://finance.yahoo.com/m/80887f91-6fc3-3743-8caf-f7081f56397c/nuclear-stocks-slide-as-piper.html",
       "source": "yahoo_news_secondary"
     }
   ],
@@ -493,10 +493,10 @@
       "name": "纳指ETF",
       "target_weight": 60.0,
       "action": "等待验证",
-      "net_return_range": "-4.2% / +1.3% / +6.8%",
+      "net_return_range": "-4.2% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
-      "reason": "核心仓候选得分 0.92；年化历史收益 +19.2%，60日动量 -2.7%，最大回撤 -28.6%。",
-      "evidence": "历史区间 2026-09-10 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "reason": "核心仓候选得分 0.92；年化历史收益 +19.5%，60日动量 -2.0%，最大回撤 -28.6%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
     },
     {
@@ -507,8 +507,8 @@
       "action": "不碰",
       "net_return_range": "-4.3% / +0.2% / +4.6%",
       "max_drawdown": -0.4510074262437961,
-      "reason": "战术仓候选得分 0.57；年化历史收益 +4.4%，60日动量 -6.0%，最大回撤 -45.1%。",
-      "evidence": "历史区间 2026-09-10 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "reason": "战术仓候选得分 0.57；年化历史收益 +4.4%，60日动量 -5.6%，最大回撤 -45.1%。",
+      "evidence": "历史区间 2026-09-09 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -45.1% 超过用户阈值；数据质量未达到 90%"
     }
   ],
@@ -517,184 +517,169 @@
       "code": "510300",
       "status": "黄灯",
       "facts": [
-        "标的：沪深300ETF，宽基指数，数据截至2026-09-10。",
-        "最新净值/价格：4.6170；区间总回报：41.50%；年化回报：4.44%。",
-        "年化波动率：19.65%；最大回撤：-45.10%；Calmar比率：0.0984。",
-        "近60日动量：-5.97%；胜率：49.61%。",
-        "平均成交量：1,222,528,598.33；当前AUM：未提供（NaN）。",
-        "数据质量评分：0.8822；警告：工作日序列缺失152天，节假日和停牌需人工确认。",
-        "事件列表共8条，均为Yahoo Finance二级来源新闻，标题涉及Nvidia/Palantir、Daimler Truck、Volkswagen、Meta、Alphabet、AT&T/Starlink、Consano Bio等，与沪深300ETF无直接基本面关联。"
+        "代码510300，名称沪深300ETF，类别宽基指数，数据截至2026-09-09。",
+        "最新值4.63700008392334，总回报0.4060036225453749，年化回报0.04357499019918887。",
+        "年化波动率0.19648034290428776，最大回撤-0.4510074262437961，Calmar比率0.09661701263347716。",
+        "60日动量-0.05560076822256077，胜率0.4963805584281282。",
+        "当前AUM为NaN，平均成交量1224769174.7。",
+        "数据质量评分0.8829，警告：工作日序列缺失151天；节假日和停牌需人工确认。",
+        "事件列表包含8条新闻，标题涉及American Eagle、Nvidia、Governor Kehoe、Insomnia Cookies、Defiance AIFR ETF、THG PLC、High Co、HOOD等，均与沪深300ETF无直接关联。"
       ],
       "positive_evidence": [
-        "区间总回报为正（41.50%），年化回报为正（4.44%）。",
-        "平均成交量较高，显示二级市场流动性较好。",
-        "数据质量评分0.8822，处于较高水平。"
+        "总回报为正，年化回报为正，显示历史区间内取得正收益。",
+        "平均成交量较高，显示二级市场流动性较好。"
       ],
       "risk_signals": [
         "最大回撤达-45.10%，历史回撤幅度较大。",
-        "近60日动量为-5.97%，短期趋势偏弱。",
-        "胜率49.61%，低于50%，历史上涨交易日占比略低于一半。",
-        "Calmar比率仅0.0984，单位回撤对应的年化回报较低。",
-        "工作日序列缺失152天，数据完整性存在明显缺口。",
-        "当前AUM未提供，无法评估规模与流动性稳定性。",
-        "事件列表新闻与沪深300ETF无直接关联，未找到公开证据表明这些事件对该ETF构成直接基本面影响。"
+        "60日动量为负，近期价格趋势偏弱。",
+        "胜率低于50%，历史上涨交易日占比不足一半。",
+        "数据质量警告显示工作日序列缺失151天，数据完整性存疑。",
+        "当前AUM缺失，无法评估基金规模及潜在流动性风险。",
+        "事件列表新闻与沪深300ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。"
       ],
       "verification_questions": [
-        "工作日序列缺失152天的具体原因是什么？是否为数据源问题、节假日或停牌？",
-        "当前AUM实际数值是多少？规模是否稳定？",
-        "事件列表中新闻与沪深300ETF的关联性是否经过验证？是否存在未披露的直接影响？",
-        "最大回撤-45.10%对应的具体历史区间是什么？",
-        "近60日动量-5.97%是否与近期市场整体走势一致？"
+        "工作日序列缺失151天的具体原因是什么？是否影响指标计算准确性？",
+        "当前AUM缺失，需核实基金最新规模及份额变化。",
+        "事件列表中的新闻是否与沪深300ETF存在任何直接或间接关联？",
+        "最大回撤和波动率数据是否基于完整、连续的价格序列？"
       ],
-      "conclusion": "沪深300ETF为宽基指数产品，区间总回报和年化回报为正，流动性指标较好，但最大回撤较大、短期动量偏弱、胜率略低于50%，且数据存在152个工作日缺失，当前AUM未提供。事件列表新闻与标的无直接关联。综合判断为黄灯，需进一步验证数据完整性和规模信息。",
+      "conclusion": "沪深300ETF为宽基指数产品，历史年化回报为正但最大回撤较大，近期动量偏弱，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险与收益特征需进一步验证，暂标记为黄灯。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "510500",
       "status": "黄灯",
       "facts": [
-        "标的：中证500ETF，宽基指数，数据截至2026-09-10。",
-        "最新净值/价格：7.7420；区间总回报：77.89%；年化回报：7.47%。",
-        "年化波动率：23.80%；最大回撤：-39.65%；Calmar比率：0.1884。",
-        "近60日动量：-10.31%；胜率：51.32%。",
-        "平均成交量：457,089,068.43；当前AUM：未提供（NaN）。",
-        "数据质量评分：0.8822；警告：工作日序列缺失152天，节假日和停牌需人工确认。",
-        "事件列表共8条，均为Yahoo Finance二级来源新闻，标题涉及Nvidia/Palantir、Daimler Truck、Volkswagen、Meta、Alphabet、AT&T/Starlink、Consano Bio等，与中证500ETF无直接基本面关联。"
+        "代码510500，名称中证500ETF，类别宽基指数，数据截至2026-09-09。",
+        "最新值7.784999847412109，总回报0.7787455400153598，年化回报0.0747490875623451。",
+        "年化波动率0.2380399982801873，最大回撤-0.3965452862065345，Calmar比率0.18850075933928312。",
+        "60日动量-0.09812327676839638，胜率0.5129265770423992。",
+        "当前AUM为NaN，平均成交量457068025.31666666。",
+        "数据质量评分0.8829，警告：工作日序列缺失151天；节假日和停牌需人工确认。",
+        "事件列表包含8条新闻，标题涉及American Eagle、Nvidia、Governor Kehoe、Insomnia Cookies、Defiance AIFR ETF、THG PLC、High Co、HOOD等，均与中证500ETF无直接关联。"
       ],
       "positive_evidence": [
-        "区间总回报为正（77.89%），年化回报为正（7.47%）。",
-        "胜率51.32%，略高于50%。",
-        "平均成交量较高，显示二级市场流动性较好。",
-        "数据质量评分0.8822，处于较高水平。"
+        "总回报和年化回报均为正，历史区间内取得正收益。",
+        "胜率略高于50%，上涨交易日占比略高于一半。",
+        "平均成交量较高，流动性较好。"
       ],
       "risk_signals": [
         "最大回撤达-39.65%，历史回撤幅度较大。",
-        "近60日动量为-10.31%，短期趋势明显偏弱。",
-        "年化波动率23.80%，高于沪深300ETF。",
-        "Calmar比率0.1884，单位回撤对应的年化回报仍较低。",
-        "工作日序列缺失152天，数据完整性存在明显缺口。",
-        "当前AUM未提供，无法评估规模与流动性稳定性。",
-        "事件列表新闻与中证500ETF无直接关联，未找到公开证据表明这些事件对该ETF构成直接基本面影响。"
+        "60日动量为负，近期价格趋势偏弱。",
+        "年化波动率0.2380，高于沪深300ETF。",
+        "数据质量警告显示工作日序列缺失151天，数据完整性存疑。",
+        "当前AUM缺失，无法评估基金规模及潜在流动性风险。",
+        "事件列表新闻与中证500ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。"
       ],
       "verification_questions": [
-        "工作日序列缺失152天的具体原因是什么？是否为数据源问题、节假日或停牌？",
-        "当前AUM实际数值是多少？规模是否稳定？",
-        "事件列表中新闻与中证500ETF的关联性是否经过验证？是否存在未披露的直接影响？",
-        "最大回撤-39.65%对应的具体历史区间是什么？",
-        "近60日动量-10.31%是否与近期中小盘市场整体走势一致？"
+        "工作日序列缺失151天的具体原因是什么？是否影响指标计算准确性？",
+        "当前AUM缺失，需核实基金最新规模及份额变化。",
+        "事件列表中的新闻是否与中证500ETF存在任何直接或间接关联？",
+        "最大回撤和波动率数据是否基于完整、连续的价格序列？"
       ],
-      "conclusion": "中证500ETF为宽基指数产品，区间总回报和年化回报为正，胜率略高于50%，流动性指标较好，但最大回撤较大、短期动量明显偏弱、波动率较高，且数据存在152个工作日缺失，当前AUM未提供。事件列表新闻与标的无直接关联。综合判断为黄灯，需进一步验证数据完整性和规模信息。",
+      "conclusion": "中证500ETF为宽基指数产品，历史年化回报为正，胜率略高于50%，但最大回撤较大，近期动量偏弱，波动率高于沪深300ETF。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险与收益特征需进一步验证，暂标记为黄灯。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159915",
       "status": "黄灯",
       "facts": [
-        "标的：创业板ETF，成长指数，数据截至2026-09-10。",
-        "最新净值/价格：3.3580；区间总回报：154.39%；年化回报：12.39%。",
-        "年化波动率：31.12%；最大回撤：-56.58%；Calmar比率：0.2189。",
-        "近60日动量：-18.32%；胜率：48.32%。",
-        "平均成交量：2,033,886,500.58；当前AUM：未提供（NaN）。",
-        "数据质量评分：0.8822；警告：工作日序列缺失152天，节假日和停牌需人工确认。",
-        "事件列表共8条，均为Yahoo Finance二级来源新闻，标题涉及Treasury、Dividend ETFs、JPMorgan、ETF League Tables、Cheapest ETFs、SPYM、Leveraged Lunacy、Trump Accounts等，与创业板ETF无直接基本面关联。"
+        "代码159915，名称创业板ETF，类别成长指数，数据截至2026-09-09。",
+        "最新值3.372999906539917，总回报1.5437405502362878，年化回报0.12396704945116532。",
+        "年化波动率0.3112929694456112，最大回撤-0.5658465895446377，Calmar比率0.2190824363736595。",
+        "60日动量-0.1795184002768926，胜率0.48293691830403307。",
+        "当前AUM为NaN，平均成交量2033679971.3166666。",
+        "数据质量评分0.8829，警告：工作日序列缺失151天；节假日和停牌需人工确认。",
+        "事件列表包含8条新闻，标题涉及S&P 500、Dow、Nasdaq、股息ETF、Nio、Carnival、Fitch AI泡沫、Oracle、核能股等，均与创业板ETF无直接关联。"
       ],
       "positive_evidence": [
-        "区间总回报为正（154.39%），年化回报为正（12.39%）。",
-        "平均成交量很高，显示二级市场流动性很好。",
-        "数据质量评分0.8822，处于较高水平。"
+        "总回报和年化回报均为正，历史区间内取得正收益。",
+        "平均成交量很高，显示二级市场流动性较好。"
       ],
       "risk_signals": [
         "最大回撤达-56.58%，历史回撤幅度很大。",
-        "近60日动量为-18.32%，短期趋势显著偏弱。",
-        "年化波动率31.12%，波动性较高。",
-        "胜率48.32%，低于50%。",
-        "Calmar比率0.2189，单位回撤对应的年化回报较低。",
-        "工作日序列缺失152天，数据完整性存在明显缺口。",
-        "当前AUM未提供，无法评估规模与流动性稳定性。",
-        "事件列表新闻与创业板ETF无直接关联，未找到公开证据表明这些事件对该ETF构成直接基本面影响。"
+        "60日动量为-17.95%，近期价格趋势明显偏弱。",
+        "胜率低于50%，历史上涨交易日占比不足一半。",
+        "年化波动率0.3113，高于宽基指数，波动风险较大。",
+        "数据质量警告显示工作日序列缺失151天，数据完整性存疑。",
+        "当前AUM缺失，无法评估基金规模及潜在流动性风险。",
+        "事件列表新闻与创业板ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。"
       ],
       "verification_questions": [
-        "工作日序列缺失152天的具体原因是什么？是否为数据源问题、节假日或停牌？",
-        "当前AUM实际数值是多少？规模是否稳定？",
-        "事件列表中新闻与创业板ETF的关联性是否经过验证？是否存在未披露的直接影响？",
-        "最大回撤-56.58%对应的具体历史区间是什么？",
-        "近60日动量-18.32%是否与近期成长股整体走势一致？"
+        "工作日序列缺失151天的具体原因是什么？是否影响指标计算准确性？",
+        "当前AUM缺失，需核实基金最新规模及份额变化。",
+        "事件列表中的新闻是否与创业板ETF存在任何直接或间接关联？",
+        "最大回撤和波动率数据是否基于完整、连续的价格序列？"
       ],
-      "conclusion": "创业板ETF为成长指数产品，区间总回报和年化回报为正，流动性很好，但最大回撤很大、短期动量显著偏弱、波动率高、胜率低于50%，且数据存在152个工作日缺失，当前AUM未提供。事件列表新闻与标的无直接关联。综合判断为黄灯，需进一步验证数据完整性和规模信息。",
+      "conclusion": "创业板ETF为成长指数产品，历史年化回报较高，但最大回撤超过56%，波动率较高，近期动量显著为负，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险特征较为突出，暂标记为黄灯。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "159949",
       "status": "黄灯",
       "facts": [
-        "标的：创业板50ETF，成长指数，数据截至2026-09-10。",
-        "最新净值/价格：1.5800；区间总回报：214.12%；年化回报：15.39%。",
-        "年化波动率：33.32%；最大回撤：-58.99%；Calmar比率：0.2609。",
-        "近60日动量：-20.44%；胜率：47.13%。",
-        "平均成交量：1,367,056,911.67；当前AUM：未提供（NaN）。",
-        "数据质量评分：0.8822；警告：工作日序列缺失152天，节假日和停牌需人工确认。",
-        "事件列表共8条，均为Yahoo Finance二级来源新闻，标题涉及Nvidia/Palantir、Daimler Truck、Volkswagen、Meta、Alphabet、AT&T/Starlink、Consano Bio等，与创业板50ETF无直接基本面关联。"
+        "代码159949，名称创业板50ETF，类别成长指数，数据截至2026-09-09。",
+        "最新值1.5789999961853027，总回报2.1205534609508874，年化回报0.15309115314368205。",
+        "年化波动率0.3332879844373961，最大回撤-0.5899053876881551，Calmar比率0.2595181470432873。",
+        "60日动量-0.20493452042419535，胜率0.47104446742502587。",
+        "当前AUM为NaN，平均成交量1366040670.05。",
+        "数据质量评分0.8829，警告：工作日序列缺失151天；节假日和停牌需人工确认。",
+        "事件列表包含8条新闻，标题涉及American Eagle、Nvidia、Governor Kehoe、Insomnia Cookies、Defiance AIFR ETF、THG PLC、High Co、HOOD等，均与创业板50ETF无直接关联。"
       ],
       "positive_evidence": [
-        "区间总回报为正（214.12%），年化回报为正（15.39%）。",
-        "平均成交量较高，显示二级市场流动性较好。",
-        "数据质量评分0.8822，处于较高水平。"
+        "总回报和年化回报均为正，历史区间内取得正收益。",
+        "平均成交量较高，流动性较好。"
       ],
       "risk_signals": [
         "最大回撤达-58.99%，历史回撤幅度很大。",
-        "近60日动量为-20.44%，短期趋势显著偏弱。",
-        "年化波动率33.32%，波动性很高。",
-        "胜率47.13%，低于50%。",
-        "Calmar比率0.2609，单位回撤对应的年化回报较低。",
-        "工作日序列缺失152天，数据完整性存在明显缺口。",
-        "当前AUM未提供，无法评估规模与流动性稳定性。",
-        "事件列表新闻与创业板50ETF无直接关联，未找到公开证据表明这些事件对该ETF构成直接基本面影响。"
+        "60日动量为-20.49%，近期价格趋势明显偏弱。",
+        "胜率低于50%，历史上涨交易日占比不足一半。",
+        "年化波动率0.3333，为所列基金中最高，波动风险较大。",
+        "数据质量警告显示工作日序列缺失151天，数据完整性存疑。",
+        "当前AUM缺失，无法评估基金规模及潜在流动性风险。",
+        "事件列表新闻与创业板50ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。"
       ],
       "verification_questions": [
-        "工作日序列缺失152天的具体原因是什么？是否为数据源问题、节假日或停牌？",
-        "当前AUM实际数值是多少？规模是否稳定？",
-        "事件列表中新闻与创业板50ETF的关联性是否经过验证？是否存在未披露的直接影响？",
-        "最大回撤-58.99%对应的具体历史区间是什么？",
-        "近60日动量-20.44%是否与近期创业板龙头整体走势一致？"
+        "工作日序列缺失151天的具体原因是什么？是否影响指标计算准确性？",
+        "当前AUM缺失，需核实基金最新规模及份额变化。",
+        "事件列表中的新闻是否与创业板50ETF存在任何直接或间接关联？",
+        "最大回撤和波动率数据是否基于完整、连续的价格序列？"
       ],
-      "conclusion": "创业板50ETF为成长指数产品，区间总回报和年化回报为正，流动性较好，但最大回撤很大、短期动量显著偏弱、波动率很高、胜率低于50%，且数据存在152个工作日缺失，当前AUM未提供。事件列表新闻与标的无直接关联。综合判断为黄灯，需进一步验证数据完整性和规模信息。",
+      "conclusion": "创业板50ETF为成长指数产品，历史年化回报较高，但最大回撤接近59%，波动率为所列基金中最高，近期动量显著为负，胜率低于50%。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险特征较为突出，暂标记为黄灯。",
       "source": "Deepseek:deepseek-chat"
     },
     {
       "code": "513100",
       "status": "绿灯",
       "facts": [
-        "标的：纳指ETF，海外指数，数据截至2026-09-10。",
-        "最新净值/价格：2.2190；区间总回报：307.60%；年化回报：19.22%。",
-        "年化波动率：24.45%；最大回撤：-28.57%；Calmar比率：0.6726。",
-        "近60日动量：-2.68%；胜率：52.58%。",
-        "平均成交量：207,522,211.08；当前AUM：未提供（NaN）。",
-        "数据质量评分：0.8830；警告：工作日序列缺失151天，节假日和停牌需人工确认。",
-        "事件列表共8条，均为Yahoo Finance二级来源新闻，标题涉及Treasury、Dividend ETFs、JPMorgan、ETF League Tables、Cheapest ETFs、SPYM、Leveraged Lunacy、Trump Accounts等，与纳指ETF无直接基本面关联。"
+        "代码513100，名称纳指ETF，类别海外指数，数据截至2026-09-09。",
+        "最新值2.2339999675750732，总回报3.144712564604416，年化回报0.19479283633291278。",
+        "年化波动率0.24448405702558829，最大回撤-0.28568022185936814，Calmar比率0.6818562204449823。",
+        "60日动量-0.020175440522772425，胜率0.5266149870801033。",
+        "当前AUM为NaN，平均成交量207373353.51666668。",
+        "数据质量评分0.8837，警告：工作日序列缺失150天；节假日和停牌需人工确认。",
+        "事件列表包含8条新闻，标题涉及S&P 500、Dow、Nasdaq、股息ETF、Nio、Carnival、Fitch AI泡沫、Oracle、核能股等，均与纳指ETF无直接关联。"
       ],
       "positive_evidence": [
-        "区间总回报为正（307.60%），年化回报为正（19.22%），在五只标的中最高。",
-        "最大回撤-28.57%，在五只标的中最小。",
-        "Calmar比率0.6726，在五只标的中最高。",
-        "胜率52.58%，高于50%。",
-        "近60日动量-2.68%，短期回撤幅度在五只标的中最小。",
-        "数据质量评分0.8830，处于较高水平。"
+        "总回报和年化回报均为正，且年化回报在所列基金中最高。",
+        "最大回撤-28.57%，在所列基金中最小。",
+        "Calmar比率0.6819，在所列基金中最高，显示风险调整后收益较好。",
+        "胜率高于50%，上涨交易日占比略高于一半。",
+        "60日动量仅-2.02%，近期价格趋势相对平稳。"
       ],
       "risk_signals": [
-        "近60日动量为-2.68%，短期趋势略偏弱。",
-        "年化波动率24.45%，波动性中等偏高。",
-        "工作日序列缺失151天，数据完整性存在明显缺口。",
-        "当前AUM未提供，无法评估规模与流动性稳定性。",
-        "事件列表新闻与纳指ETF无直接关联，未找到公开证据表明这些事件对该ETF构成直接基本面影响。"
+        "数据质量警告显示工作日序列缺失150天，数据完整性存疑。",
+        "当前AUM缺失，无法评估基金规模及潜在流动性风险。",
+        "事件列表新闻与纳指ETF无直接关联，未找到公开证据表明这些事件对该ETF有直接影响。",
+        "年化波动率0.2445，仍存在一定波动风险。"
       ],
       "verification_questions": [
-        "工作日序列缺失151天的具体原因是什么？是否为数据源问题、节假日或停牌？",
-        "当前AUM实际数值是多少？规模是否稳定？",
-        "事件列表中新闻与纳指ETF的关联性是否经过验证？是否存在未披露的直接影响？",
-        "最大回撤-28.57%对应的具体历史区间是什么？",
-        "近60日动量-2.68%是否与近期美股科技股整体走势一致？"
+        "工作日序列缺失150天的具体原因是什么？是否影响指标计算准确性？",
+        "当前AUM缺失，需核实基金最新规模及份额变化。",
+        "事件列表中的新闻是否与纳指ETF存在任何直接或间接关联？",
+        "最大回撤和波动率数据是否基于完整、连续的价格序列？"
       ],
-      "conclusion": "纳指ETF为海外指数产品，区间总回报和年化回报在五只标的中最高，最大回撤和Calmar比率表现相对最好，胜率高于50%，短期动量回撤幅度最小。但数据存在151个工作日缺失，当前AUM未提供，事件列表新闻与标的无直接关联。综合判断为绿灯，仍需关注数据完整性和规模信息。",
+      "conclusion": "纳指ETF为海外指数产品，历史年化回报在所列基金中最高，最大回撤最小，Calmar比率最高，胜率高于50%，近期动量仅小幅为负。数据质量存在工作日缺失警告，AUM缺失，事件列表新闻与产品无直接关联。基于现有事实，风险收益特征相对较好，暂标记为绿灯。",
       "source": "Deepseek:deepseek-chat"
     }
   ]
