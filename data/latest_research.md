@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-09-14 14:16:46
+抓取时间：2026-09-15 01:36:35
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -11,21 +11,21 @@
 
 | 代码 | 基金 | 累计收益 | 年化收益 | 年化波动 | 最大回撤 | 数据源 |
 |---|---|---:|---:|---:|---:|---|
-| 510300 | 沪深300ETF | 39.12% | 4.22% | 19.64% | -45.10% | Yahoo Finance public chart |
-| 510500 | 中证500ETF | 77.61% | 7.45% | 23.80% | -39.65% | Yahoo Finance public chart |
-| 159915 | 创业板ETF | 156.52% | 12.51% | 31.12% | -56.58% | Yahoo Finance public chart |
-| 159949 | 创业板50ETF | 213.41% | 15.37% | 33.32% | -58.99% | Yahoo Finance public chart |
-| 513100 | 纳指ETF | 304.39% | 19.10% | 24.44% | -28.57% | Yahoo Finance public chart |
-| 512100 | 中证1000ETF | 91.82% | 8.49% | 25.46% | -45.82% | Yahoo Finance public chart |
-| 588000 | 科创50ETF | 12.02% | 1.92% | 32.30% | -59.64% | Yahoo Finance public chart |
-| 512880 | 证券ETF | 50.72% | 5.27% | 30.29% | -45.00% | Yahoo Finance public chart |
-| 512480 | 半导体ETF | -5.30% | -0.74% | 72.62% | -66.80% | Yahoo Finance public chart |
-| 516160 | 新能源ETF | 132.33% | 16.11% | 100.34% | -66.84% | Yahoo Finance public chart |
-| 515050 | 5GETF | 1.60% | 0.23% | 93.31% | -73.54% | Yahoo Finance public chart |
-| 512010 | 医药ETF | -3.88% | -0.49% | 26.69% | -65.51% | Yahoo Finance public chart |
-| 159919 | 沪深300ETF（深市） | 48.35% | 5.06% | 20.12% | -42.80% | Yahoo Finance public chart |
-| 512660 | 军工ETF | 62.75% | 6.28% | 31.07% | -50.95% | Yahoo Finance public chart |
-| 515790 | 光伏ETF | -20.70% | -3.94% | 34.80% | -67.07% | Yahoo Finance public chart |
+| 510300 | 沪深300ETF | 39.94% | 4.30% | 19.65% | -45.10% | Yahoo Finance public chart |
+| 510500 | 中证500ETF | 77.91% | 7.48% | 23.81% | -39.65% | Yahoo Finance public chart |
+| 159915 | 创业板ETF | 159.39% | 12.68% | 31.12% | -56.58% | Yahoo Finance public chart |
+| 159949 | 创业板50ETF | 218.29% | 15.61% | 33.32% | -58.99% | Yahoo Finance public chart |
+| 513100 | 纳指ETF | 306.24% | 19.19% | 24.45% | -28.57% | Yahoo Finance public chart |
+| 512100 | 中证1000ETF | 90.62% | 8.42% | 25.47% | -45.82% | Yahoo Finance public chart |
+| 588000 | 科创50ETF | 13.83% | 2.20% | 32.30% | -59.64% | Yahoo Finance public chart |
+| 512880 | 证券ETF | 51.58% | 5.35% | 30.29% | -45.00% | Yahoo Finance public chart |
+| 512480 | 半导体ETF | -4.00% | -0.55% | 72.64% | -66.80% | Yahoo Finance public chart |
+| 516160 | 新能源ETF | 130.13% | 15.94% | 100.37% | -66.84% | Yahoo Finance public chart |
+| 515050 | 5GETF | 4.70% | 0.66% | 93.33% | -73.54% | Yahoo Finance public chart |
+| 512010 | 医药ETF | -5.68% | -0.73% | 26.68% | -65.51% | Yahoo Finance public chart |
+| 159919 | 沪深300ETF（深市） | 49.35% | 5.15% | 20.12% | -42.80% | Yahoo Finance public chart |
+| 512660 | 军工ETF | 65.30% | 6.50% | 31.07% | -50.95% | Yahoo Finance public chart |
+| 515790 | 光伏ETF | -20.70% | -3.95% | 34.81% | -67.07% | Yahoo Finance public chart |
 
 ## 研究卡片
 
@@ -87,7 +87,7 @@
 
 不碰：风险信号与数据/回撤约束叠加，先完成核查。
 
-风险信号：历史最大回撤达到 -66.8%，应与用户回撤阈值核对。；年化波动达到 100.3%，战术仓需控制仓位和交易频率。；工作日序列缺失 111 天；节假日和停牌需人工确认
+风险信号：历史最大回撤达到 -66.8%，应与用户回撤阈值核对。；年化波动达到 100.4%，战术仓需控制仓位和交易频率。；工作日序列缺失 111 天；节假日和停牌需人工确认
 
 ### 515050 · 红灯
 
