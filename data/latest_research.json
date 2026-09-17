@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17 09:23:10",
+  "fetched_at": "2026-09-17 12:39:47",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -827,6 +827,26 @@
     },
     {
       "code": "159949",
+      "title": "华安创业板50交易型开放式指数证券投资基金更新的招募说明书(2026年第1号)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609171829531466.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "招募说明书/基金合同",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安创业板50交易型开放式指数证券投资基金基金产品资料概要更新",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609171829531465.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
       "title": "关于因服务器升级、可能短暂影响服务的通知",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-09-16 00:00",
@@ -926,23 +946,13 @@
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
-      "code": "159949",
-      "title": "华安基金管理有限公司关于旗下部分基金增加世纪证券有限责任公司为一级交易商的公告",
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
       "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-07-21 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/159949,AN202607201827152563.html",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609171829527773.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "159949",
-      "title": "华安创业板50交易型开放式指数证券投资基金2026年第2季度报告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-07-21 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/159949,AN202607201827152487.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "季报",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -1051,16 +1061,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-09-14 00:00",
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202609131829338384.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-09-11 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609111829254979.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
