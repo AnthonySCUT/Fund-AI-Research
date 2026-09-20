@@ -55,7 +55,7 @@ except ImportError:
 
 st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v6-cache"
+APP_VERSION = "expanded-universe-reports-v7-cache-label"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -127,6 +127,23 @@ CACHE_TTL_SECONDS = cache_ttl_seconds()
 CACHE_SCHEMA_VERSION = "research-cache-v1"
 
 
+def cache_duration_label(seconds: int) -> str:
+    if seconds % 86400 == 0:
+        return f"{seconds // 86400} 天"
+    if seconds % 3600 == 0:
+        return f"{seconds // 3600} 小时"
+    return f"{max(1, seconds // 60)} 分钟"
+
+
+def cache_times(fetched_at: str):
+    """Return the snapshot timestamp and its expected cache expiry."""
+    try:
+        created = pd.Timestamp(fetched_at)
+        return created, created + pd.Timedelta(seconds=CACHE_TTL_SECONDS)
+    except (TypeError, ValueError):
+        return None, None
+
+
 def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_days, commission_bps, slippage_bps, annual_fee_rate):
     return run_pipeline(
         codes=codes,
@@ -192,6 +209,7 @@ with st.sidebar:
             st.caption(f"后台快照：{snapshot.get('fetched_at', '未知时间')}")
         except (OSError, ValueError):
             st.caption("后台快照：读取失败")
+    st.caption(f"共享缓存周期：{cache_duration_label(CACHE_TTL_SECONDS)}")
     if grok_config.enabled and deepseek_config.enabled:
         st.success(f"AI 分析：{grok_config.label} 主用，{deepseek_config.label} 兜底")
     elif grok_config.enabled:
@@ -387,8 +405,24 @@ else:
 freshness_label = "暂无有效日期"
 if freshness_days is not None:
     freshness_label = f"最新交易日 {latest_as_of.isoformat()}（距今天 {freshness_days} 个日历日）"
+snapshot_created, snapshot_expires = cache_times(result.fetched_at)
+st.info(
+    "当前页面展示的是共享缓存结果：行情抓取、数据质检和 AI 研究报告均绑定到同一份缓存快照。"
+    "同一组研究参数在缓存有效期内会直接复用，不会重复抓取或重复调用 AI。"
+)
+cache_col1, cache_col2, cache_col3 = st.columns(3)
+cache_col1.metric("缓存状态", "已缓存")
+cache_col2.metric(
+    "数据与报告生成时间",
+    snapshot_created.strftime("%Y-%m-%d %H:%M:%S") if snapshot_created is not None else "未知",
+)
+cache_col3.metric(
+    "预计自动刷新时间",
+    snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知",
+)
 st.caption(
     f"抓取完成 {result.fetched_at} · {freshness_label} · "
+    f"缓存有效期：{cache_duration_label(CACHE_TTL_SECONDS)} · "
     f"口径：{profile['cost_assumption']}"
 )
 with st.expander("查看数据来源状态"):
