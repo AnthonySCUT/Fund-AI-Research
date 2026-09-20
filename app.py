@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -54,7 +55,7 @@ except ImportError:
 
 st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v5"
+APP_VERSION = "expanded-universe-reports-v6-cache"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -108,6 +109,24 @@ def load_snapshot_cards(path: Path) -> dict[str, ResearchCard]:
     return cards
 
 
+def cache_ttl_seconds() -> int:
+    """Return the shared data/AI cache lifetime, with a bounded fallback."""
+    raw = os.getenv("CACHE_TTL_SECONDS")
+    if not raw:
+        try:
+            raw = st.secrets.get("CACHE_TTL_SECONDS")
+        except Exception:
+            raw = None
+    try:
+        return max(60, min(int(raw or 1800), 86400))
+    except (TypeError, ValueError):
+        return 1800
+
+
+CACHE_TTL_SECONDS = cache_ttl_seconds()
+CACHE_SCHEMA_VERSION = "research-cache-v1"
+
+
 def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_days, commission_bps, slippage_bps, annual_fee_rate):
     return run_pipeline(
         codes=codes,
@@ -121,6 +140,43 @@ def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_d
         slippage_bps=slippage_bps,
         annual_fee_rate=annual_fee_rate,
     )
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, max_entries=128, show_spinner=False)
+def cached_run_once(
+    cache_schema,
+    codes,
+    source_mode,
+    start,
+    end,
+    aggression,
+    max_drawdown,
+    horizon_days,
+    commission_bps,
+    slippage_bps,
+    annual_fee_rate,
+):
+    """Share one fetched/validated result across sessions until the TTL expires."""
+    del cache_schema
+    return run_once(
+        codes=codes,
+        source_mode=source_mode,
+        start=start,
+        end=end,
+        aggression=aggression,
+        max_drawdown=max_drawdown,
+        horizon_days=horizon_days,
+        commission_bps=commission_bps,
+        slippage_bps=slippage_bps,
+        annual_fee_rate=annual_fee_rate,
+    )
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, max_entries=128, show_spinner=False)
+def cached_analyze_metrics(cache_schema, metrics, quality, events, analyzer_signature):
+    """Reuse the structured AI report for the same fetched facts and model setup."""
+    del cache_schema, analyzer_signature
+    return analyze_metrics(metrics, quality, events)
 
 
 profiles = {profile.code: profile for profile in DEFAULT_FUNDS}
@@ -141,7 +197,7 @@ with st.sidebar:
     elif grok_config.enabled:
         st.success(f"AI 分析：{grok_config.label}（未配置 DeepSeek 兜底）")
     elif deepseek_config.enabled:
-        st.warning(f"AI 分析：{deepseek_config.label}（Grok 不可用）")
+        st.warning(f"AI 分析：{deepseek_config.label}")
     else:
         st.info("AI 分析：离线规则基线")
     with st.form("research_parameters"):
@@ -265,15 +321,27 @@ params = {
 }
 if run_button or "result" not in st.session_state:
     with st.spinner("正在抓取、质检并计算候选组合…"):
-        st.session_state.result = run_once(**params)
+        st.session_state.result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
         st.session_state.params = params
     st.session_state.pop("cards", None)
 
 result: PipelineResult = st.session_state.result
 if "cards" not in st.session_state:
     if grok_config.enabled or deepseek_config.enabled:
-        with st.spinner("正在生成研究卡片（所有基金合并为一次 AI 请求）…"):
-            st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
+        with st.spinner("正在生成研究卡片…"):
+            analyzer_signature = "|".join(
+                [
+                    f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
+                    f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
+                ]
+            )
+            st.session_state.cards = cached_analyze_metrics(
+                CACHE_SCHEMA_VERSION,
+                result.metrics,
+                result.quality,
+                result.events,
+                analyzer_signature,
+            )
     elif scheduled_cards:
         st.session_state.cards = {code: card for code, card in scheduled_cards.items() if code in profiles}
         missing_codes = {metric.code for metric in result.metrics if metric.code not in st.session_state.cards}
