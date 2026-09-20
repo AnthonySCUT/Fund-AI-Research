@@ -1,0 +1,2680 @@
+{
+  "fetched_at": "2026-09-18 12:17:55",
+  "source_mode": "auto",
+  "profile": {
+    "core_weight": 60,
+    "tactical_weight": 35,
+    "cash_weight": 5,
+    "aggression": 45,
+    "max_drawdown": 15.0,
+    "horizon_days": 20,
+    "cost_assumption": "佣金 2.5 bps + 滑点 5.0 bps + 年费 0.50%"
+  },
+  "metrics": [
+    {
+      "code": "510300",
+      "name": "沪深300ETF",
+      "category": "宽基指数",
+      "latest_value": 4.581999778747559,
+      "total_return": 0.3564238455561437,
+      "annualized_return": 0.03886894059234258,
+      "annualized_volatility": 0.19630374001633702,
+      "max_drawdown": -0.4510074262437961,
+      "calmar_ratio": 0.08618248465676401,
+      "momentum_60d": -0.09231380608917672,
+      "win_rate": 0.49560723514211885,
+      "current_aum": NaN,
+      "avg_volume": 1073360078.8666667,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "510500",
+      "name": "中证500ETF",
+      "category": "宽基指数",
+      "latest_value": 7.829999923706055,
+      "total_return": 0.7829817197873761,
+      "annualized_return": 0.07501584034033426,
+      "annualized_volatility": 0.23803465917460973,
+      "max_drawdown": -0.3965452862065345,
+      "calmar_ratio": 0.18917345117869694,
+      "momentum_60d": -0.1381398028807158,
+      "win_rate": 0.5126614987080104,
+      "current_aum": NaN,
+      "avg_volume": 461873749.71666664,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159915",
+      "name": "创业板ETF",
+      "category": "成长指数",
+      "latest_value": 3.3910000324249268,
+      "total_return": 1.5689393164232555,
+      "annualized_return": 0.12526370829981603,
+      "annualized_volatility": 0.31123427106491597,
+      "max_drawdown": -0.5658465895446377,
+      "calmar_ratio": 0.2213739741731436,
+      "momentum_60d": -0.22844139996786372,
+      "win_rate": 0.482687338501292,
+      "current_aum": NaN,
+      "avg_volume": 2015340547.0833333,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159949",
+      "name": "创业板50ETF",
+      "category": "成长指数",
+      "latest_value": 1.5770000219345093,
+      "total_return": 2.128968247163428,
+      "annualized_return": 0.15336710013288513,
+      "annualized_volatility": 0.33328611515133816,
+      "max_drawdown": -0.5899053876881551,
+      "calmar_ratio": 0.259985928818064,
+      "momentum_60d": -0.2543735154498057,
+      "win_rate": 0.47131782945736433,
+      "current_aum": NaN,
+      "avg_volume": 1333427366.5333333,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "513100",
+      "name": "纳指ETF",
+      "category": "海外指数",
+      "latest_value": 2.2690000534057617,
+      "total_return": 3.215904804453138,
+      "annualized_return": 0.19719487881886844,
+      "annualized_volatility": 0.24470623510137549,
+      "max_drawdown": -0.28568022185936814,
+      "calmar_ratio": 0.6902643715949702,
+      "momentum_60d": 0.03749429163573792,
+      "win_rate": 0.5266149870801033,
+      "current_aum": NaN,
+      "avg_volume": 181554300.45,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "512100",
+      "name": "中证1000ETF",
+      "category": "小盘指数",
+      "latest_value": 3.128999948501587,
+      "total_return": 0.9321016139421898,
+      "annualized_return": 0.08587099888748706,
+      "annualized_volatility": 0.2546705929935714,
+      "max_drawdown": -0.4582253453508478,
+      "calmar_ratio": 0.187399059782995,
+      "momentum_60d": -0.12328384884141863,
+      "win_rate": 0.5209302325581395,
+      "current_aum": NaN,
+      "avg_volume": 1353598085.95,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "588000",
+      "name": "科创50ETF",
+      "category": "科技成长",
+      "latest_value": 1.74399995803833,
+      "total_return": 0.21117841291161366,
+      "annualized_return": 0.03260633516403644,
+      "annualized_volatility": 0.3233220230420246,
+      "max_drawdown": -0.5964071604096659,
+      "calmar_ratio": 0.054671267094847556,
+      "momentum_60d": -0.1992653905324835,
+      "win_rate": 0.47755960729312763,
+      "current_aum": NaN,
+      "avg_volume": 4383633135.65,
+      "as_of": "2026-09-18",
+      "quality_score": 0.859,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "512880",
+      "name": "证券ETF",
+      "category": "行业指数",
+      "latest_value": 1.0570000410079956,
+      "total_return": 0.4783217899000385,
+      "annualized_return": 0.05011208694238278,
+      "annualized_volatility": 0.302785946993892,
+      "max_drawdown": -0.4499999868519168,
+      "calmar_ratio": 0.11136019645901314,
+      "momentum_60d": -0.08006962901219905,
+      "win_rate": 0.4635658914728682,
+      "current_aum": NaN,
+      "avg_volume": 2046466479.4,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "512480",
+      "name": "半导体ETF",
+      "category": "行业指数",
+      "latest_value": 1.0410000085830688,
+      "total_return": 0.04100000858306885,
+      "annualized_return": 0.0054708219925416746,
+      "annualized_volatility": 0.7258958641410799,
+      "max_drawdown": -0.6679884544897683,
+      "calmar_ratio": 0.008189994835644981,
+      "momentum_60d": -0.6247296196587555,
+      "win_rate": 0.49915397631133673,
+      "current_aum": NaN,
+      "avg_volume": 1564177560.9,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8731,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "516160",
+      "name": "新能源ETF",
+      "category": "行业指数",
+      "latest_value": 2.3340001106262207,
+      "total_return": 1.3333000044690073,
+      "annualized_return": 0.1616769001301206,
+      "annualized_volatility": 1.002280651402836,
+      "max_drawdown": -0.6684456141994413,
+      "calmar_ratio": 0.24186993929753237,
+      "momentum_60d": -0.21939795880206703,
+      "win_rate": 0.4596774193548387,
+      "current_aum": NaN,
+      "avg_volume": 67111873.75,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8768,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "515050",
+      "name": "5GETF",
+      "category": "行业指数",
+      "latest_value": 1.0700000524520874,
+      "total_return": 0.0700000524520874,
+      "annualized_return": 0.009707621243522757,
+      "annualized_volatility": 0.9323736538853616,
+      "max_drawdown": -0.7354354346721623,
+      "calmar_ratio": 0.013199828001012975,
+      "momentum_60d": -0.2564280440224411,
+      "win_rate": 0.5,
+      "current_aum": NaN,
+      "avg_volume": 1294301940.2333333,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8747,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "512010",
+      "name": "医药ETF",
+      "category": "行业指数",
+      "latest_value": 0.37299999594688416,
+      "total_return": -0.06340242757399828,
+      "annualized_return": -0.008159831139249896,
+      "annualized_volatility": 0.2667516904134588,
+      "max_drawdown": -0.6550561616402983,
+      "calmar_ratio": -0.012456689391054973,
+      "momentum_60d": 0.09384166016943984,
+      "win_rate": 0.4635658914728682,
+      "current_aum": NaN,
+      "avg_volume": 1494854861.9,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "159919",
+      "name": "沪深300ETF（深市）",
+      "category": "宽基指数",
+      "latest_value": 4.781000137329102,
+      "total_return": 0.44769995967976284,
+      "annualized_return": 0.047366254321459245,
+      "annualized_volatility": 0.20107974535241774,
+      "max_drawdown": -0.42797998550651917,
+      "calmar_ratio": 0.11067399393782573,
+      "momentum_60d": -0.09192777615008096,
+      "win_rate": 0.49509043927648577,
+      "current_aum": NaN,
+      "avg_volume": 231427929.08333334,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "512660",
+      "name": "军工ETF",
+      "category": "行业指数",
+      "latest_value": 1.159999966621399,
+      "total_return": 0.6178520980169693,
+      "annualized_return": 0.062026223980093054,
+      "annualized_volatility": 0.3105989651542464,
+      "max_drawdown": -0.5094850941943216,
+      "calmar_ratio": 0.12174296105400045,
+      "momentum_60d": -0.0793650988878909,
+      "win_rate": 0.48578811369509045,
+      "current_aum": NaN,
+      "avg_volume": 281881393.26666665,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8822,
+      "source": "Yahoo Finance public chart"
+    },
+    {
+      "code": "515790",
+      "name": "光伏ETF",
+      "category": "行业指数",
+      "latest_value": 0.8149999976158142,
+      "total_return": -0.1850000023841858,
+      "annualized_return": -0.034775608604206476,
+      "annualized_volatility": 0.3477929305564855,
+      "max_drawdown": -0.6706996425100948,
+      "calmar_ratio": -0.051849749724121943,
+      "momentum_60d": -0.19146826933777472,
+      "win_rate": 0.46886184681460275,
+      "current_aum": NaN,
+      "avg_volume": 238265305.98333332,
+      "as_of": "2026-09-18",
+      "quality_score": 0.8787,
+      "source": "Yahoo Finance public chart"
+    }
+  ],
+  "quality": [
+    {
+      "code": "510300",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "510500",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512100",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "588000",
+      "rows": 1426,
+      "start_date": "2020-09-28",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 134,
+      "invalid_values": 0,
+      "quality_score": 0.859,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 134 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512880",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512480",
+      "rows": 1773,
+      "start_date": "2019-05-08",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 150,
+      "invalid_values": 0,
+      "quality_score": 0.8731,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 150 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "516160",
+      "rows": 1364,
+      "start_date": "2021-01-22",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 112,
+      "invalid_values": 0,
+      "quality_score": 0.8768,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 112 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515050",
+      "rows": 1688,
+      "start_date": "2019-09-17",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 141,
+      "invalid_values": 0,
+      "quality_score": 0.8747,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 141 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512010",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159919",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512660",
+      "rows": 1935,
+      "start_date": "2018-09-20",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 152,
+      "invalid_values": 0,
+      "quality_score": 0.8822,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515790",
+      "rows": 1397,
+      "start_date": "2020-12-07",
+      "end_date": "2026-09-18",
+      "duplicate_rows": 0,
+      "missing_dates": 113,
+      "invalid_values": 0,
+      "quality_score": 0.8787,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 113 天；节假日和停牌需人工确认"
+    }
+  ],
+  "events": [
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金关于网上直销平台业务系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202609051829063120.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金产品风险等级-20260903",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202609031828937734.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金管理有限公司旗下部分基金中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608291828704530.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞沪深300交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608291828684524.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金产品风险等级表(20260828)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-28 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608281828563904.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金产品风险等级-20260825",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-25 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608251828400970.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金关于网上直销平台业务系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608221828329834.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金产品风险等级-20260814",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608151827998830.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞沪深300交易型开放式指数证券投资基金更新的招募说明书2026年第1号",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-13 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608121827910087.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "招募说明书/基金合同",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "关于中国银行快捷支付系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608071827749019.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金管理有限公司关于高级管理人员变更的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608061827696250.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "治理与人事",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510300",
+      "title": "华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(1)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510300,AN202608041827630581.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "南方基金管理股份有限公司关于设立武汉分公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202609171829489410.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "关于国信证券股份有限公司为中证500交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608311828821688.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "中证500交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608301828743003.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-07 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608071827751922.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608051827675691.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "关于东海证券股份有限公司终止为中证500交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608051827673459.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "关于中信建投证券股份有限公司为中证500交易型开放式指数证券投资基金提供主做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202608041827624316.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202607301827495522.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "南方基金关于直销平台相关业务费率优惠的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202607301827487265.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202607291827438228.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "中证500交易型开放式指数证券投资基金招募说明书(20260729更新)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202607281827424164.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "招募说明书/基金合同",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "510500",
+      "title": "中证500交易型开放式指数证券投资基金基金产品资料概要(20260729更新)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/510500,AN202607281827424147.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202609181829614008.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-08 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202609081829127267.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202609031828958274.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达创业板交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608301828738228.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-26 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608261828469484.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司及易方达财富管理基金销售(广州)有限公司关于零售直销业务迁移安排的联合提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608211828268918.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-20 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608201828199653.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "关于网上交易平台暂停兴业银行卡快速赎回业务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608151828013648.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于旗下部分基金获配江波龙(301308)非公开发行A股的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-12 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608111827864524.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达创业板交易型开放式指数证券投资基金基金产品资料概要更新",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608101827818466.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司旗下部分ETF增加诚通证券为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-10 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608091827792176.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608051827666862.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安创业板50交易型开放式指数证券投资基金更新的招募说明书(2026年第1号)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609171829531466.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "招募说明书/基金合同",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安创业板50交易型开放式指数证券投资基金基金产品资料概要更新",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609171829531465.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "关于因服务器升级、可能短暂影响服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609161829460748.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-02 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609021828899449.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司旗下部分基金2026年中期报告的提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202609011828876962.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安创业板50交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608301828737103.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司关于终止洪泰财富(青岛)基金销售有限责任公司办理本公司旗下基金相关销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-19 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608191828129178.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司关于旗下部分基金增加长江证券股份有限公司为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608131827948909.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司关于旗下部分基金增加民生证券股份有限公司为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608131827948055.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "基金产品风险等级划分规则和投资者风险承受能力说明",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608061827710799.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安公募基金产品风险等级划分名录",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202608061827710798.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159949",
+      "title": "华安基金管理有限公司旗下部分基金2026年第2季度报告的提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159949,AN202607211827211042.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609181829607688.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609171829527773.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-17 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609171829495414.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-17 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609161829469021.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609161829454866.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609151829422815.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于系统停机维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609161829461617.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609151829403109.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829377968.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "纳斯达克100交易型开放式指数证券投资基金更新招募说明书(2026年第一号)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829377964.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "招募说明书/基金合同",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "纳斯达克100交易型开放式指数证券投资基金基金产品资料概要更新",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829377952.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829361640.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于设立武汉分公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202609171829489410.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "关于国信证券股份有限公司为南方中证1000交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202608311828819993.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方中证1000交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202608301828742444.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-08 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202608071827758083.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-07 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202608071827751922.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202608051827675691.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607301827495522.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607301827495506.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金关于直销平台相关业务费率优惠的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607301827487265.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607291827438228.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607271827384585.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-25 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607241827322410.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于暂停部分电子交易的服务提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202609121829312402.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202609101829236367.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202609041829024153.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "关于国信证券股份有限公司为华夏上证科创板50成份交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608311828820096.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司旗下部分基金2026年中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608311828806099.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏上证科创板50成份交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608301828742576.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608261828494543.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-26 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608261828449568.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "关于暂停部分电子交易的服务提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608221828329858.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608181828080834.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608131827947942.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
+      "title": "关于东海证券股份有限公司终止为华夏上证科创板50成份交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202607311827531510.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于系统停机维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202609161829461617.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司旗下部分基金2026年中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202609011828875592.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰中证全指证券公司交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202608301828741542.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202608281828631066.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司调整长期停牌股票估值方法的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202608221828311214.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于网上交易系统停机维护期间暂停对外服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202608221828329708.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于旗下部分交易型开放式基金新增国新证券股份有限公司为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-17 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202608161828029907.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-30 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202607311827526755.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-24 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202607241827305150.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰中证全指证券公司交易型开放式指数证券投资基金2026年第2季度报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202607201827153504.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "国泰基金管理有限公司调整长期停牌股票估值方法的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202607141826944824.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512880",
+      "title": "关于不法分子冒用国泰基金管理有限公司名义事宜的严正声明",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-09 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512880,AN202607091826843805.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司旗下全部基金2026年中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202608311828818029.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "关于东方证券股份有限公司为国联安中证全指半导体产品与设备交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202608311828817961.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安中证全指半导体产品与设备交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202608301828741709.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "关于中信建投证券股份有限公司为国联安中证全指半导体产品与设备交易型开放式指数证券投资基金提供主做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202608041827624244.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于旗下部分基金参与北京证券交易所股票投资及相关风险揭示的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-24 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202607241827302793.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安中证全指半导体产品与设备交易型开放式指数证券投资基金2026年第2季度报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202607201827153442.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于国联安中证全指半导体产品与设备交易型开放式指数证券投资基金基金份额拆分结果的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202607031826683755.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于旗下证券投资基金估值调整的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-01 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202607011826618298.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于国联安中证全指半导体产品与设备交易型开放式指数证券投资基金实施基金份额拆分并调整最小申购、赎回单位及相关业务安排的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-06-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202606291826521348.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于终止浦领基金销售有限公司办理旗下基金相关销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-06-26 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202606261823871044.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司基金行业高级管理人员变更公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-06-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202606221823715234.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "治理与人事",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512480",
+      "title": "国联安基金管理有限公司关于旗下部分基金增加金融街证券为基金申购赎回代办券商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-06-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512480,AN202606151823571915.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于设立武汉分公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202609171829489410.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "关于国信证券股份有限公司为南方中证新能源交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202608311828821052.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方中证新能源交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202608301828743042.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-07 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202608071827751922.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202608051827675691.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607301827495522.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金关于直销平台相关业务费率优惠的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607301827487265.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607291827438228.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "关于注意防范冒用南方基金及子公司、南方基金员工名义从事诈骗活动的风险提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607271827384585.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-24 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607231827294065.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销证券的关联交易公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607211827217751.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "516160",
+      "title": "南方中证新能源交易型开放式指数证券投资基金2026年第2季度报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/516160,AN202607201827158604.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于暂停部分电子交易的服务提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202609121829312402.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202609101829236367.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202609041829024153.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "关于国信证券股份有限公司为华夏中证5G通信主题交易型开放式指数证券投资基金提供一般做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608311828819697.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司旗下部分基金2026年中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608311828806099.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏中证5G通信主题交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608301828742249.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608261828494543.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-26 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608261828449568.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "关于暂停部分电子交易的服务提示",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608221828329858.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608181828080834.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608131827947942.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
+      "title": "关于东方财富证券股份有限公司终止为华夏中证5G通信主题交易型开放式指数证券投资基金提供主做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608051827673431.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609181829614008.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于旗下部分ETF在燧原科技上市首日的风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-11 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609101829236232.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-08 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609081829127267.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于旗下基金关联交易事项的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609041829024324.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609031828958274.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达沪深300医药卫生交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608301828742660.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达沪深300医药卫生交易型开放式指数证券投资基金增加长江证券为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-28 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608271828553161.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-26 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608261828469484.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司及易方达财富管理基金销售(广州)有限公司关于零售直销业务迁移安排的联合提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608211828268918.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-20 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608201828199653.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "易方达基金管理有限公司旗下部分ETF增加诚通证券为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-17 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608161828030813.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
+      "title": "关于网上交易平台暂停兴业银行卡快速赎回业务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202608151828013648.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于终止瑞银基金销售(深圳)有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202609031828943973.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实沪深300交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202608301828737312.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金2026年7月30日21:00~23:00暂停部分直销服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607291827453122.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于旗下交易型开放式指数基金在科创板股票上市首日的风险提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607261827355701.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607211827178747.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实沪深300交易型开放式指数证券投资基金2026年第2季度报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607201827154441.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-18 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607181827074579.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金2026年7月25日凌晨2点~7点暂停直销服务通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-16 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607161827022994.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607141826942599.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司高级管理人员变更公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-09 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607081826820898.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "治理与人事",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于旗下基金持有停牌股票估值调整的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-01 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202607011826618327.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159919",
+      "title": "嘉实基金管理有限公司关于指定旗下部分证券投资基金主流动性服务商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-06-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159919,AN202606281826515757.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于系统停机维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202609161829461617.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司旗下部分基金2026年中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202609011828875592.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰中证军工交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-31 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608301828741650.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-27 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608281828631066.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司调整长期停牌股票估值方法的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608221828311214.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于网上交易系统停机维护期间暂停对外服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608221828329708.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于旗下部分交易型开放式基金新增国新证券股份有限公司为一级交易商的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-17 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608161828029907.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "关于中信建投证券股份有限公司为国泰中证军工交易型开放式指数证券投资基金提供主做市服务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202608041827624318.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于直销系统升级维护暂停网上交易系统服务的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-30 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202607311827526755.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-24 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202607241827305150.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰中证军工交易型开放式指数证券投资基金2026年第2季度报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202607201827153676.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "季报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512660",
+      "title": "国泰基金管理有限公司调整长期停牌股票估值方法的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-07-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512660,AN202607141826944824.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金关于网上直销平台业务系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202609051829063120.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金产品风险等级-20260903",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-03 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202609031828937734.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金管理有限公司旗下部分基金中期报告提示性公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608291828704530.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞中证光伏产业交易型开放式指数证券投资基金2026年中期报告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608291828683700.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "半年报",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金产品风险等级表(20260828)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-28 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608281828563904.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金产品风险等级-20260825",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-25 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608251828400970.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金关于网上直销平台业务系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-21 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608221828329834.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金产品风险等级-20260814",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-15 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608151827998830.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "关于中国银行快捷支付系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608071827749019.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金管理有限公司关于高级管理人员变更的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-06 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608061827696250.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "治理与人事",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(1)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608041827630581.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515790",
+      "title": "华泰柏瑞基金管理有限公司关于旗下基金投资关联方承销期内承销证券的公告(2)",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-08-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515790,AN202608041827630580.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "关联交易",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    }
+  ],
+  "recommendations": [
+    {
+      "role": "核心仓",
+      "code": "513100",
+      "name": "纳指ETF",
+      "target_weight": 60.0,
+      "action": "等待验证",
+      "net_return_range": "-4.1% / +1.4% / +6.9%",
+      "max_drawdown": -0.28568022185936814,
+      "reason": "核心仓候选得分 0.98；年化历史收益 +19.7%，60日动量 +3.7%，最大回撤 -28.6%。",
+      "evidence": "历史区间 2026-09-18 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
+    },
+    {
+      "role": "战术仓",
+      "code": "510500",
+      "name": "中证500ETF",
+      "target_weight": 35.0,
+      "action": "不碰",
+      "net_return_range": "-5.0% / +0.4% / +5.8%",
+      "max_drawdown": -0.3965452862065345,
+      "reason": "战术仓候选得分 0.68；年化历史收益 +7.5%，60日动量 -13.8%，最大回撤 -39.7%。",
+      "evidence": "历史区间 2026-09-18 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
+      "risk_flags": "历史最大回撤 -39.7% 超过用户阈值；数据质量未达到 90%"
+    }
+  ],
+  "research_cards": [
+    {
+      "code": "510300",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 4.5820；样本质量 88%。",
+        "历史累计收益 +35.6%，年化历史收益 +3.9%。",
+        "年化波动 19.6%，历史最大回撤 -45.1%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -45.1%，应与用户回撤阈值核对。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.9%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "510500",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 7.8300；样本质量 88%。",
+        "历史累计收益 +78.3%，年化历史收益 +7.5%。",
+        "年化波动 23.8%，历史最大回撤 -39.7%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -39.7%，应与用户回撤阈值核对。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +7.5%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "159915",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 3.3910；样本质量 88%。",
+        "历史累计收益 +156.9%，年化历史收益 +12.5%。",
+        "年化波动 31.1%，历史最大回撤 -56.6%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -56.6%，应与用户回撤阈值核对。",
+        "年化波动达到 31.1%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +12.5%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "159949",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.5770；样本质量 88%。",
+        "历史累计收益 +212.9%，年化历史收益 +15.3%。",
+        "年化波动 33.3%，历史最大回撤 -59.0%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -59.0%，应与用户回撤阈值核对。",
+        "年化波动达到 33.3%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +15.3%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "513100",
+      "status": "黄灯",
+      "facts": [
+        "截至 2026-09-18，最新值 2.2690；样本质量 88%。",
+        "历史累计收益 +321.6%，年化历史收益 +19.7%。",
+        "年化波动 24.5%，历史最大回撤 -28.6%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。",
+        "收益/回撤比为 0.69，可作为继续研究的量化证据。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -28.6%，应与用户回撤阈值核对。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "等待验证：存在回撤、波动或数据口径风险，暂不因故事买入。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +19.7%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512100",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 3.1290；样本质量 88%。",
+        "历史累计收益 +93.2%，年化历史收益 +8.6%。",
+        "年化波动 25.5%，历史最大回撤 -45.8%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -45.8%，应与用户回撤阈值核对。",
+        "年化波动达到 25.5%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +8.6%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "588000",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.7440；样本质量 86%。",
+        "历史累计收益 +21.1%，年化历史收益 +3.3%。",
+        "年化波动 32.3%，历史最大回撤 -59.6%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -59.6%，应与用户回撤阈值核对。",
+        "年化波动达到 32.3%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 134 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.3%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512880",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.0570；样本质量 88%。",
+        "历史累计收益 +47.8%，年化历史收益 +5.0%。",
+        "年化波动 30.3%，历史最大回撤 -45.0%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -45.0%，应与用户回撤阈值核对。",
+        "年化波动达到 30.3%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +5.0%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512480",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.0410；样本质量 87%。",
+        "历史累计收益 +4.1%，年化历史收益 +0.5%。",
+        "年化波动 72.6%，历史最大回撤 -66.8%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -66.8%，应与用户回撤阈值核对。",
+        "年化波动达到 72.6%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 150 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +0.5%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "516160",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 2.3340；样本质量 88%。",
+        "历史累计收益 +133.3%，年化历史收益 +16.2%。",
+        "年化波动 100.2%，历史最大回撤 -66.8%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -66.8%，应与用户回撤阈值核对。",
+        "年化波动达到 100.2%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 112 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +16.2%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "515050",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.0700；样本质量 87%。",
+        "历史累计收益 +7.0%，年化历史收益 +1.0%。",
+        "年化波动 93.2%，历史最大回撤 -73.5%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -73.5%，应与用户回撤阈值核对。",
+        "年化波动达到 93.2%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 141 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +1.0%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512010",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 0.3730；样本质量 88%。",
+        "历史累计收益 -6.3%，年化历史收益 -0.8%。",
+        "年化波动 26.7%，历史最大回撤 -65.5%。"
+      ],
+      "positive_evidence": [],
+      "risk_signals": [
+        "历史最大回撤达到 -65.5%，应与用户回撤阈值核对。",
+        "年化波动达到 26.7%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -0.8%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "159919",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 4.7810；样本质量 88%。",
+        "历史累计收益 +44.8%，年化历史收益 +4.7%。",
+        "年化波动 20.1%，历史最大回撤 -42.8%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -42.8%，应与用户回撤阈值核对。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +4.7%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512660",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 1.1600；样本质量 88%。",
+        "历史累计收益 +61.8%，年化历史收益 +6.2%。",
+        "年化波动 31.1%，历史最大回撤 -50.9%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -50.9%，应与用户回撤阈值核对。",
+        "年化波动达到 31.1%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +6.2%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "515790",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-09-18，最新值 0.8150；样本质量 88%。",
+        "历史累计收益 -18.5%，年化历史收益 -3.5%。",
+        "年化波动 34.8%，历史最大回撤 -67.1%。"
+      ],
+      "positive_evidence": [],
+      "risk_signals": [
+        "历史最大回撤达到 -67.1%，应与用户回撤阈值核对。",
+        "年化波动达到 34.8%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 113 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -3.5%，仅作压力测试比较，不能外推未来。"
+    }
+  ]
+}
