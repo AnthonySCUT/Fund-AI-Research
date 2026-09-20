@@ -15,7 +15,7 @@ try:
 except ImportError as exc:
     # Streamlit redacts startup tracebacks; expose only the import type/message
     # so a missing cloud dependency can be fixed without revealing secrets.
-    st.set_page_config(page_title="AI 基金智能投研 · 潘逸航版", page_icon="📊")
+    st.set_page_config(page_title="AI 基金智能投研", page_icon="📊")
     st.error("应用依赖加载失败，暂时无法启动分析页面。")
     st.code(f"{type(exc).__name__}: {exc}")
     st.stop()
@@ -52,7 +52,7 @@ except ImportError:
         return int(recovered.index[0] - trough_index) if not recovered.empty else None
 
 
-st.set_page_config(page_title="AI 基金智能投研 · 潘逸航版", page_icon="📊", layout="wide")
+st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
 APP_VERSION = "expanded-universe-reports-v5"
 if st.session_state.get("_app_version") != APP_VERSION:
@@ -235,7 +235,7 @@ st.markdown(
     }
     </style>
     <div class="project-heading">
-        <h1>AI 基金智能投研 · 潘逸航版</h1>
+        <h1>AI 基金智能投研</h1>
         <span class="project-team">创建者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a></span>
         <span class="project-affiliation">华南理工大学 · 2024级本科生</span>
     </div>
