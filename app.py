@@ -345,17 +345,18 @@ if run_button or "result" not in st.session_state:
         refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
         st.session_state.result = refreshed_result
         st.session_state.params = params
-    cache_hit = (
-        previous_result is not None
-        and previous_params == params
-        and previous_result.fetched_at == refreshed_result.fetched_at
-    )
-    if cache_hit:
-        cache_notice = "本次运行已命中缓存：已直接读取现有行情和 AI 报告，没有重复抓取或重复计费。"
-        st.toast("已命中缓存，结果已更新到页面。", icon="✅")
-    else:
-        cache_notice = "本次运行已完成新的抓取与分析，结果已写入共享缓存。"
-        st.toast("抓取与分析已完成。", icon="🔄")
+    if run_button:
+        cache_hit = (
+            previous_result is not None
+            and previous_params == params
+            and previous_result.fetched_at == refreshed_result.fetched_at
+        )
+        if cache_hit:
+            cache_notice = "本次运行已命中缓存：已直接读取现有行情和 AI 报告，没有重复抓取或重复计费。"
+            st.toast("已命中缓存，结果已更新到页面。", icon="✅")
+        else:
+            cache_notice = "本次运行已完成新的抓取与分析，结果已写入共享缓存。"
+            st.toast("抓取与分析已完成。", icon="🔄")
     st.session_state.pop("cards", None)
 
 result: PipelineResult = st.session_state.result
