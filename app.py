@@ -337,10 +337,25 @@ params = {
     "slippage_bps": slippage_bps,
     "annual_fee_rate": annual_fee_rate,
 }
+cache_notice = None
 if run_button or "result" not in st.session_state:
+    previous_result = st.session_state.get("result")
+    previous_params = st.session_state.get("params")
     with st.spinner("正在抓取、质检并计算候选组合…"):
-        st.session_state.result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
+        refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
+        st.session_state.result = refreshed_result
         st.session_state.params = params
+    cache_hit = (
+        previous_result is not None
+        and previous_params == params
+        and previous_result.fetched_at == refreshed_result.fetched_at
+    )
+    if cache_hit:
+        cache_notice = "本次运行已命中缓存：已直接读取现有行情和 AI 报告，没有重复抓取或重复计费。"
+        st.toast("已命中缓存，结果已更新到页面。", icon="✅")
+    else:
+        cache_notice = "本次运行已完成新的抓取与分析，结果已写入共享缓存。"
+        st.toast("抓取与分析已完成。", icon="🔄")
     st.session_state.pop("cards", None)
 
 result: PipelineResult = st.session_state.result
@@ -406,20 +421,19 @@ freshness_label = "暂无有效日期"
 if freshness_days is not None:
     freshness_label = f"最新交易日 {latest_as_of.isoformat()}（距今天 {freshness_days} 个日历日）"
 snapshot_created, snapshot_expires = cache_times(result.fetched_at)
+if cache_notice:
+    st.success(cache_notice)
 st.info(
     "当前页面展示的是共享缓存结果：行情抓取、数据质检和 AI 研究报告均绑定到同一份缓存快照。"
     "同一组研究参数在缓存有效期内会直接复用，不会重复抓取或重复调用 AI。"
 )
-cache_col1, cache_col2, cache_col3 = st.columns(3)
-cache_col1.metric("缓存状态", "已缓存")
-cache_col2.metric(
-    "数据与报告生成时间",
-    snapshot_created.strftime("%Y-%m-%d %H:%M:%S") if snapshot_created is not None else "未知",
-)
-cache_col3.metric(
-    "预计自动刷新时间",
-    snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知",
-)
+cache_col1, cache_col2, cache_col3 = st.columns([0.8, 1.35, 1.35])
+cache_col1.caption("缓存状态")
+cache_col1.write("已缓存")
+cache_col2.caption("数据与报告生成时间")
+cache_col2.write(snapshot_created.strftime("%Y-%m-%d %H:%M:%S") if snapshot_created is not None else "未知")
+cache_col3.caption("预计自动刷新时间")
+cache_col3.write(snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知")
 st.caption(
     f"抓取完成 {result.fetched_at} · {freshness_label} · "
     f"缓存有效期：{cache_duration_label(CACHE_TTL_SECONDS)} · "
