@@ -355,13 +355,36 @@ params = {
     "annual_fee_rate": annual_fee_rate,
 }
 cache_notice = None
+old_result_placeholder = None
 if run_button or "result" not in st.session_state:
     previous_result = st.session_state.get("result")
     previous_params = st.session_state.get("params")
+    if run_button and previous_result is not None:
+        # Keep the last usable snapshot visible while the new network/AI run is in progress.
+        old_result_placeholder = st.empty()
+        with old_result_placeholder.container(border=True):
+            st.warning(
+                "正在后台抓取、质检并生成新报告；以下内容是上一份缓存结果，标记为旧数据。"
+                "新结果完成后会自动替换。"
+            )
+            old_created = format_beijing_time(previous_result.fetched_at)
+            old_latest = max((item.as_of for item in previous_result.metrics), default=None)
+            old_cols = st.columns(3)
+            old_cols[0].metric("旧结果生成时间", f"{old_created}（北京时间）")
+            old_cols[1].metric("旧结果基金数", len(previous_result.metrics))
+            old_cols[2].metric("旧结果最新交易日", old_latest.isoformat() if old_latest else "未知")
+            old_display = previous_result.recommendations_frame[
+                ["role", "code", "name", "target_weight", "action"]
+            ].copy()
+            old_display.columns = ["仓位角色", "代码", "基金", "目标权重", "研究状态"]
+            old_display["目标权重"] = old_display["目标权重"].map(lambda value: f"{value:.0f}%")
+            st.dataframe(old_display, hide_index=True, width="stretch")
     with st.spinner("正在抓取、质检并计算候选组合…"):
         refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
         st.session_state.result = refreshed_result
         st.session_state.params = params
+    if old_result_placeholder is not None:
+        old_result_placeholder.empty()
     if run_button:
         cache_hit = (
             previous_result is not None
