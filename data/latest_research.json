@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T17:22:38+08:00",
+  "fetched_at": "2026-09-21T22:26:31+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -36,13 +36,13 @@
       "latest_value": 7.872000217437744,
       "total_return": 0.7686350603635472,
       "annualized_return": 0.07398251682089119,
-      "annualized_volatility": 0.23797405262293733,
+      "annualized_volatility": 0.2379771427673472,
       "max_drawdown": -0.3965452862065345,
       "calmar_ratio": 0.1865676365204819,
       "momentum_60d": -0.12279917121514627,
       "win_rate": 0.5126614987080104,
       "current_aum": NaN,
-      "avg_volume": 465913533.8833333,
+      "avg_volume": 473607939.4,
       "as_of": "2026-09-21",
       "quality_score": 0.8837,
       "source": "Yahoo Finance public chart"
@@ -90,13 +90,13 @@
       "latest_value": 2.2829999923706055,
       "total_return": 3.2137318182738284,
       "annualized_return": 0.197265307222952,
-      "annualized_volatility": 0.2526632908677917,
+      "annualized_volatility": 0.2444809696525609,
       "max_drawdown": -0.28568022185936814,
       "calmar_ratio": 0.6905109004012879,
       "momentum_60d": 0.048209375739584726,
-      "win_rate": 0.5268595041322314,
+      "win_rate": 0.5273760330578512,
       "current_aum": NaN,
-      "avg_volume": 171370953.23333332,
+      "avg_volume": 173419627.56666666,
       "as_of": "2026-09-21",
       "quality_score": 0.8846,
       "source": "Yahoo Finance public chart"
@@ -270,13 +270,13 @@
       "latest_value": 0.8199999928474426,
       "total_return": -0.18000000715255737,
       "annualized_return": -0.03370654290197683,
-      "annualized_volatility": 0.34763841992465194,
+      "annualized_volatility": 0.34764358708954324,
       "max_drawdown": -0.6706996425100948,
       "calmar_ratio": -0.05025579374968805,
       "momentum_60d": -0.18892189645818724,
       "win_rate": 0.46890636168691924,
       "current_aum": NaN,
-      "avg_volume": 230550384.65,
+      "avg_volume": 232438835.1,
       "as_of": "2026-09-21",
       "quality_score": 0.8799,
       "source": "Yahoo Finance public chart"
@@ -947,6 +947,16 @@
     },
     {
       "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-22 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609211829727758.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
       "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-09-21 00:00",
@@ -1053,16 +1063,6 @@
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829377968.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "纳斯达克100交易型开放式指数证券投资基金更新招募说明书(2026年第一号)",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-09-15 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609141829377964.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "招募说明书/基金合同",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -2273,9 +2273,9 @@
       "name": "纳指ETF",
       "target_weight": 60.0,
       "action": "等待验证",
-      "net_return_range": "-4.3% / +1.4% / +7.1%",
+      "net_return_range": "-4.1% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
-      "reason": "核心仓候选得分 0.97；年化历史收益 +19.7%，60日动量 +4.8%，最大回撤 -28.6%。",
+      "reason": "核心仓候选得分 0.98；年化历史收益 +19.7%，60日动量 +4.8%，最大回撤 -28.6%。",
       "evidence": "历史区间 2026-09-21 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
     },
@@ -2401,7 +2401,7 @@
       "facts": [
         "截至 2026-09-21，最新值 2.2830；样本质量 88%。",
         "历史累计收益 +321.4%，年化历史收益 +19.7%。",
-        "年化波动 25.3%，历史最大回撤 -28.6%。"
+        "年化波动 24.4%，历史最大回撤 -28.6%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。",
@@ -2409,7 +2409,6 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -28.6%，应与用户回撤阈值核对。",
-        "年化波动达到 25.3%，战术仓需控制仓位和交易频率。",
         "工作日序列缺失 149 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
