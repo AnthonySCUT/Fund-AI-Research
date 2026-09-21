@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Optional, Sequence
 
@@ -9,6 +9,9 @@ from .analytics import calculate_metrics, normalize_history, validate_history
 from .connectors import CompositeConnector, DEFAULT_FUNDS
 from .models import EventRecord, FundMetrics, FundProfile, QualityReport, Recommendation
 from .recommender import build_personalized_recommendations
+
+
+BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
 @dataclass
@@ -102,5 +105,5 @@ def run_pipeline(
         slippage_bps=slippage_bps,
         annual_fee_rate=annual_fee_rate,
     )
-    fetched_at = pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S")
+    fetched_at = datetime.now(BEIJING_TZ).isoformat(timespec="seconds")
     return PipelineResult(histories, metrics, quality, events, recommendations, profile, fetched_at)

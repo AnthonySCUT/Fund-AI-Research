@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -125,6 +125,7 @@ def cache_ttl_seconds() -> int:
 
 CACHE_TTL_SECONDS = cache_ttl_seconds()
 CACHE_SCHEMA_VERSION = "research-cache-v1"
+BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
 def cache_duration_label(seconds: int) -> str:
@@ -135,13 +136,29 @@ def cache_duration_label(seconds: int) -> str:
     return f"{max(1, seconds // 60)} 分钟"
 
 
-def cache_times(fetched_at: str):
-    """Return the snapshot timestamp and its expected cache expiry."""
+def beijing_time(value) -> pd.Timestamp | None:
+    """Parse new Beijing timestamps and convert legacy server timestamps."""
     try:
-        created = pd.Timestamp(fetched_at)
-        return created, created + pd.Timedelta(seconds=CACHE_TTL_SECONDS)
+        parsed = pd.Timestamp(value)
+        if pd.isna(parsed):
+            return None
+        if parsed.tzinfo is None:
+            # Existing cache entries were written by the cloud host in UTC.
+            parsed = parsed.tz_localize("UTC")
+        return parsed.tz_convert(BEIJING_TZ)
     except (TypeError, ValueError):
-        return None, None
+        return None
+
+
+def format_beijing_time(value) -> str:
+    parsed = beijing_time(value)
+    return parsed.strftime("%Y-%m-%d %H:%M:%S") if parsed is not None else "未知时间"
+
+
+def cache_times(fetched_at: str):
+    """Return the Beijing snapshot timestamp and its expected cache expiry."""
+    created = beijing_time(fetched_at)
+    return (created, created + pd.Timedelta(seconds=CACHE_TTL_SECONDS)) if created is not None else (None, None)
 
 
 def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_days, commission_bps, slippage_bps, annual_fee_rate):
@@ -206,7 +223,7 @@ with st.sidebar:
     if snapshot_path.exists():
         try:
             snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
-            st.caption(f"后台快照：{snapshot.get('fetched_at', '未知时间')}")
+            st.caption(f"后台快照：{format_beijing_time(snapshot.get('fetched_at'))}（北京时间）")
         except (OSError, ValueError):
             st.caption("后台快照：读取失败")
     st.caption(f"共享缓存周期：{cache_duration_label(CACHE_TTL_SECONDS)}")
@@ -436,7 +453,7 @@ cache_col2.write(snapshot_created.strftime("%Y-%m-%d %H:%M:%S") if snapshot_crea
 cache_col3.caption("预计自动刷新时间")
 cache_col3.write(snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知")
 st.caption(
-    f"抓取完成 {result.fetched_at} · {freshness_label} · "
+    f"抓取完成 {format_beijing_time(result.fetched_at)}（北京时间） · {freshness_label} · "
     f"缓存有效期：{cache_duration_label(CACHE_TTL_SECONDS)} · "
     f"口径：{profile['cost_assumption']}"
 )
