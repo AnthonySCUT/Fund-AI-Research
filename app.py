@@ -448,9 +448,9 @@ st.info(
 cache_col1, cache_col2, cache_col3 = st.columns([0.8, 1.35, 1.35])
 cache_col1.caption("缓存状态")
 cache_col1.write("已缓存")
-cache_col2.caption("数据与报告生成时间")
+cache_col2.caption("数据与报告生成时间（北京时间）")
 cache_col2.write(snapshot_created.strftime("%Y-%m-%d %H:%M:%S") if snapshot_created is not None else "未知")
-cache_col3.caption("预计自动刷新时间")
+cache_col3.caption("预计自动刷新时间（北京时间）")
 cache_col3.write(snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知")
 st.caption(
     f"抓取完成 {format_beijing_time(result.fetched_at)}（北京时间） · {freshness_label} · "
