@@ -14,8 +14,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from fund_ai_research.analysis import analyze_metrics  # noqa: E402
+from fund_ai_research.analysis import ResearchCard, analyze_metrics  # noqa: E402
 from fund_ai_research.connectors import DEFAULT_FUNDS  # noqa: E402
+from fund_ai_research.incremental import fingerprints_for_records, fingerprints_for_snapshot  # noqa: E402
 from fund_ai_research.pipeline import run_pipeline  # noqa: E402
 
 
@@ -33,7 +34,30 @@ def _number(name: str, default: float) -> float:
         return default
 
 
+def _load_previous_snapshot() -> dict:
+    path = ROOT / "data" / "latest_research.json"
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _card_from_dict(item: dict) -> ResearchCard:
+    return ResearchCard(
+        code=item.get("code", ""),
+        status=item.get("status", "黄灯"),
+        facts=item.get("facts", []),
+        positive_evidence=item.get("positive_evidence", []),
+        risk_signals=item.get("risk_signals", []),
+        verification_questions=item.get("verification_questions", []),
+        conclusion=item.get("conclusion", "等待人工复核。"),
+        source=item.get("source", "后台快照"),
+        goal_fit=item.get("goal_fit", ""),
+    )
+
+
 def build_snapshot() -> dict:
+    previous_snapshot = _load_previous_snapshot()
     today = date.today()
     result = run_pipeline(
         codes=[profile.code for profile in DEFAULT_FUNDS],
@@ -47,7 +71,27 @@ def build_snapshot() -> dict:
         slippage_bps=_number("RESEARCH_SLIPPAGE_BPS", 5.0),
         annual_fee_rate=_number("RESEARCH_ANNUAL_FEE_RATE", 0.005),
     )
-    cards = analyze_metrics(result.metrics, result.quality, result.events)
+    current_fingerprints = fingerprints_for_records(result.metrics, result.quality, result.events)
+    previous_fingerprints = fingerprints_for_snapshot(previous_snapshot)
+    previous_cards = {
+        item.get("code"): item
+        for item in previous_snapshot.get("research_cards", [])
+        if item.get("code")
+    }
+    changed_codes = {
+        code
+        for code, fingerprint in current_fingerprints.items()
+        if previous_fingerprints.get(code) != fingerprint or code not in previous_cards
+    }
+    changed_metrics = [metric for metric in result.metrics if metric.code in changed_codes]
+    changed_quality = [item for item in result.quality if item.code in changed_codes]
+    changed_events = [event for event in result.events if event.code in changed_codes]
+    cards = {
+        code: _card_from_dict(card)
+        for code, card in previous_cards.items()
+        if code in current_fingerprints and code not in changed_codes
+    }
+    cards.update(analyze_metrics(changed_metrics, changed_quality, changed_events))
     return {
         "fetched_at": result.fetched_at,
         "source_mode": os.getenv("RESEARCH_SOURCE_MODE", "auto"),
@@ -56,7 +100,7 @@ def build_snapshot() -> dict:
         "quality": result.quality_frame.to_dict(orient="records"),
         "events": [item.as_dict() for item in result.events],
         "recommendations": [item.as_dict() for item in result.recommendations],
-        "research_cards": [item.as_dict() for item in cards.values()],
+        "research_cards": [cards[metric.code].as_dict() for metric in result.metrics if metric.code in cards],
     }
 
 

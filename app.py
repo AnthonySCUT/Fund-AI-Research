@@ -22,6 +22,7 @@ except ImportError as exc:
     st.stop()
 
 from fund_ai_research.connectors import DEFAULT_FUNDS
+from fund_ai_research.incremental import fingerprints_for_records
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
 try:
@@ -159,6 +160,19 @@ def cache_times(fetched_at: str):
     """Return the Beijing snapshot timestamp and its expected cache expiry."""
     created = beijing_time(fetched_at)
     return (created, created + pd.Timedelta(seconds=CACHE_TTL_SECONDS)) if created is not None else (None, None)
+
+
+def changed_research_codes(previous: PipelineResult | None, current: PipelineResult) -> set[str]:
+    """Return funds whose AI input facts changed since the previous fetch."""
+    current_fingerprints = fingerprints_for_records(current.metrics, current.quality, current.events)
+    if previous is None:
+        return set(current_fingerprints)
+    previous_fingerprints = fingerprints_for_records(previous.metrics, previous.quality, previous.events)
+    return {
+        code
+        for code, fingerprint in current_fingerprints.items()
+        if previous_fingerprints.get(code) != fingerprint
+    }
 
 
 def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_days, commission_bps, slippage_bps, annual_fee_rate):
@@ -336,6 +350,7 @@ old_result_placeholder = None
 if run_button or "result" not in st.session_state:
     previous_result = st.session_state.get("result")
     previous_params = st.session_state.get("params")
+    previous_cards = dict(st.session_state.get("cards", {}))
     if run_button and previous_result is not None:
         # Keep the last usable snapshot visible while the new network/AI run is in progress.
         old_result_placeholder = st.empty()
@@ -360,6 +375,15 @@ if run_button or "result" not in st.session_state:
         refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
         st.session_state.result = refreshed_result
         st.session_state.params = params
+        changed_codes = changed_research_codes(previous_result, refreshed_result)
+        st.session_state["_research_refresh_codes"] = changed_codes
+        if previous_cards:
+            current_codes = {metric.code for metric in refreshed_result.metrics}
+            st.session_state.cards = {
+                code: card for code, card in previous_cards.items() if code in current_codes
+            }
+        else:
+            st.session_state.pop("cards", None)
     if old_result_placeholder is not None:
         old_result_placeholder.empty()
     if run_button:
@@ -371,21 +395,26 @@ if run_button or "result" not in st.session_state:
         if cache_hit:
             cache_notice = "本次运行已命中缓存：已直接读取现有行情和 AI 报告，没有重复抓取或重复计费。"
             st.toast("已命中缓存，结果已更新到页面。", icon="✅")
+        elif changed_codes:
+            cache_notice = (
+                f"本次抓取检测到 {len(changed_codes)} 支基金的指标、质量或公告发生变化；"
+                "仅更新这些基金的 AI 研究报告，其余报告沿用缓存。"
+            )
+            st.toast(f"已更新 {len(changed_codes)} 支基金的研究报告。", icon="🔄")
         else:
-            cache_notice = "本次运行已完成新的抓取与分析，结果已写入共享缓存。"
-            st.toast("抓取与分析已完成。", icon="🔄")
-    st.session_state.pop("cards", None)
+            cache_notice = "本次抓取未检测到基金事实变化，已沿用全部 AI 研究报告，未重复调用 AI。"
+            st.toast("数据未变化，已沿用缓存报告。", icon="✅")
 
 result: PipelineResult = st.session_state.result
 if "cards" not in st.session_state:
     if grok_config.enabled or deepseek_config.enabled:
+        analyzer_signature = "|".join(
+            [
+                f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
+                f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
+            ]
+        )
         with st.spinner("正在生成研究卡片…"):
-            analyzer_signature = "|".join(
-                [
-                    f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
-                    f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
-                ]
-            )
             st.session_state.cards = cached_analyze_metrics(
                 CACHE_SCHEMA_VERSION,
                 result.metrics,
@@ -393,6 +422,7 @@ if "cards" not in st.session_state:
                 result.events,
                 analyzer_signature,
             )
+        st.session_state["_cards_analyzer_signature"] = analyzer_signature
     elif scheduled_cards:
         st.session_state.cards = {code: card for code, card in scheduled_cards.items() if code in profiles}
         missing_codes = {metric.code for metric in result.metrics if metric.code not in st.session_state.cards}
@@ -408,6 +438,37 @@ if "cards" not in st.session_state:
     else:
         with st.spinner("正在生成离线规则研究卡片…"):
             st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
+    st.session_state.pop("_research_refresh_codes", None)
+else:
+    analyzer_signature = "|".join(
+        [
+            f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
+            f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
+        ]
+    )
+    refresh_codes = set(st.session_state.pop("_research_refresh_codes", set()))
+    if grok_config.enabled or deepseek_config.enabled:
+        current_codes = {metric.code for metric in result.metrics}
+        previous_signature = st.session_state.get("_cards_analyzer_signature")
+        if previous_signature != analyzer_signature:
+            refresh_codes = current_codes
+        else:
+            refresh_codes |= current_codes - set(st.session_state.cards)
+        if refresh_codes:
+            changed_metrics = [metric for metric in result.metrics if metric.code in refresh_codes]
+            changed_quality = [item for item in result.quality if item.code in refresh_codes]
+            changed_events = [event for event in result.events if event.code in refresh_codes]
+            with st.spinner(f"正在更新 {len(refresh_codes)} 支基金的研究卡片…"):
+                st.session_state.cards.update(
+                    cached_analyze_metrics(
+                        CACHE_SCHEMA_VERSION,
+                        changed_metrics,
+                        changed_quality,
+                        changed_events,
+                        analyzer_signature,
+                    )
+                )
+        st.session_state["_cards_analyzer_signature"] = analyzer_signature
 cards = st.session_state.cards
 
 profile = result.profile
@@ -443,7 +504,8 @@ if cache_notice:
     st.success(cache_notice)
 st.info(
     "当前页面展示的是共享缓存结果：行情抓取、数据质检和 AI 研究报告均绑定到同一份缓存快照。"
-    "同一组研究参数在缓存有效期内会直接复用，不会重复抓取或重复调用 AI。"
+    f"抓取缓存周期为 {cache_duration_label(CACHE_TTL_SECONDS)}；到期后会逐基金对比指标、数据质量和公告事件，"
+    "仅对发生变化的基金更新研究报告，未变化的基金继续复用缓存，不重复消耗 AI token。"
 )
 cache_col1, cache_col2, cache_col3 = st.columns([0.8, 1.35, 1.35])
 cache_col1.caption("缓存状态")
@@ -454,7 +516,7 @@ cache_col3.caption("预计自动刷新时间（北京时间）")
 cache_col3.write(snapshot_expires.strftime("%Y-%m-%d %H:%M:%S") if snapshot_expires is not None else "未知")
 st.caption(
     f"抓取完成 {format_beijing_time(result.fetched_at)}（北京时间） · {freshness_label} · "
-    f"缓存有效期：{cache_duration_label(CACHE_TTL_SECONDS)} · "
+    f"抓取缓存周期：{cache_duration_label(CACHE_TTL_SECONDS)} · "
     f"口径：{profile['cost_assumption']}"
 )
 with st.expander("查看数据来源状态"):
