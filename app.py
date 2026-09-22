@@ -286,27 +286,6 @@ st.markdown(
         line-height: 1.15;
         letter-spacing: 0;
     }
-    .project-team {
-        display: inline-block;
-        padding: 0.28rem 0.75rem;
-        border: 1px solid #b7d4f7;
-        border-radius: 999px;
-        background: #eef6ff;
-        color: #165a9e;
-        font-size: 1.05rem;
-        font-weight: 650;
-        line-height: 1.5;
-        white-space: normal;
-    }
-    .project-team a {
-        color: #0b63b6;
-        text-decoration: none;
-        border-bottom: 1px solid currentColor;
-    }
-    .project-team a:hover,
-    .project-team a:focus {
-        color: #084b8a;
-    }
     .project-affiliation {
         display: inline-block;
         padding: 0.26rem 0.7rem;
@@ -321,13 +300,11 @@ st.markdown(
     }
     @media (max-width: 720px) {
         .project-heading h1 { font-size: 2rem; }
-        .project-team,
         .project-affiliation { font-size: 0.95rem; }
     }
     </style>
     <div class="project-heading">
         <h1>AI 基金智能投研</h1>
-        <span class="project-team">创建者：<a href="https://github.com/AnthonySCUT" target="_blank" rel="noopener noreferrer">潘逸航</a></span>
         <span class="project-affiliation">华南理工大学 · 2024级本科生</span>
     </div>
     """,
