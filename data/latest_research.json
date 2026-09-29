@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T18:12:12+08:00",
+  "fetched_at": "2026-09-29T22:14:50+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -947,6 +947,26 @@
     },
     {
       "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-30 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609291830002815.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "关于纳斯达克100交易型开放式指数证券投资基金暂停申购业务的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-09-30 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609291830002552.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
       "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-09-29 00:00",
@@ -1041,26 +1061,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-09-22 00:00",
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202609221829752156.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-09-22 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609211829727758.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-09-21 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202609211829711536.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
