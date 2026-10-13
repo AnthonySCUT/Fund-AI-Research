@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-13T19:15:20+08:00",
+  "fetched_at": "2026-10-13T23:13:00+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -1187,6 +1187,16 @@
     },
     {
       "code": "588000",
+      "title": "华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-10-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/588000,AN202610131830415115.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "588000",
       "title": "华夏基金管理有限公司关于终止瑞银基金销售(深圳)有限公司办理本公司旗下基金销售业务的公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-08 00:00",
@@ -1293,16 +1303,6 @@
       "url": "https://fund.eastmoney.com/gonggao/588000,AN202608181828080834.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "588000",
-      "title": "华夏基金管理有限公司关于旗下基金投资关联方承销证券的公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-08-14 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/588000,AN202608131827947942.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "关联交易",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -1667,6 +1667,16 @@
     },
     {
       "code": "515050",
+      "title": "华夏基金管理有限公司关于旗下部分上交所ETF新增申购赎回代办证券公司的公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-10-14 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/515050,AN202610131830415115.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "交易与做市",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "515050",
       "title": "华夏基金管理有限公司关于旗下部分ETF在粤芯半导体上市首日的风险提示公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-13 00:00",
@@ -1771,16 +1781,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-08-21 00:00",
       "url": "https://fund.eastmoney.com/gonggao/515050,AN202608221828329858.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "515050",
-      "title": "华夏基金管理有限公司关于终止浦领基金销售有限公司办理本公司旗下基金销售业务的公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-08-18 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/515050,AN202608181828080834.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
