@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-22T16:59:39+08:00",
+  "fetched_at": "2026-10-22T21:06:15+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -18,15 +18,15 @@
       "latest_value": 4.10699987411499,
       "total_return": 0.26563945114204346,
       "annualized_return": 0.02990581414715332,
-      "annualized_volatility": 0.1930200569032015,
+      "annualized_volatility": 0.19286873726167475,
       "max_drawdown": -0.4510074262437961,
       "calmar_ratio": 0.06630891734139088,
-      "momentum_60d": -0.14205144760962352,
-      "win_rate": 0.4930232558139535,
+      "momentum_60d": -0.13809024361125755,
+      "win_rate": 0.4927685950413223,
       "current_aum": NaN,
-      "avg_volume": 969412627.85,
+      "avg_volume": 971917650.75,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -36,15 +36,15 @@
       "latest_value": 6.684000015258789,
       "total_return": 0.6948851816748942,
       "annualized_return": 0.0682235631310586,
-      "annualized_volatility": 0.23565297243624775,
+      "annualized_volatility": 0.23557779078332516,
       "max_drawdown": -0.3965452862065345,
       "calmar_ratio": 0.17204482187571737,
-      "momentum_60d": -0.14219710314076095,
-      "win_rate": 0.5126614987080104,
+      "momentum_60d": -0.13643408101894805,
+      "win_rate": 0.512396694214876,
       "current_aum": NaN,
-      "avg_volume": 439663982.1166667,
+      "avg_volume": 434374756.8333333,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -54,15 +54,15 @@
       "latest_value": 2.5920000076293945,
       "total_return": 1.114192586018111,
       "annualized_return": 0.09817336436122814,
-      "annualized_volatility": 0.3105822431043287,
+      "annualized_volatility": 0.3102278847992536,
       "max_drawdown": -0.5658465895446377,
       "calmar_ratio": 0.17349819929149468,
-      "momentum_60d": -0.3011593609276636,
-      "win_rate": 0.4811369509043928,
+      "momentum_60d": -0.2771890595523874,
+      "win_rate": 0.48088842975206614,
       "current_aum": NaN,
-      "avg_volume": 2023277807.0166667,
+      "avg_volume": 2043464011.5,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -72,15 +72,15 @@
       "latest_value": 1.1799999475479126,
       "total_return": 1.5764190753081255,
       "annualized_return": 0.12567300941495851,
-      "annualized_volatility": 0.3320495650977667,
+      "annualized_volatility": 0.3316472255873599,
       "max_drawdown": -0.5899053876881551,
       "calmar_ratio": 0.2130392636478067,
-      "momentum_60d": -0.33182337152755703,
-      "win_rate": 0.4697674418604651,
+      "momentum_60d": -0.30710511886664515,
+      "win_rate": 0.46952479338842973,
       "current_aum": NaN,
-      "avg_volume": 1269260882.5166667,
+      "avg_volume": 1267838531.6833334,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -90,15 +90,15 @@
       "latest_value": 2.26200008392334,
       "total_return": 3.4179687040705193,
       "annualized_return": 0.20422619794354158,
-      "annualized_volatility": 0.24335791814777966,
+      "annualized_volatility": 0.2431871067591828,
       "max_drawdown": -0.28568022185936814,
       "calmar_ratio": 0.7148769229256481,
       "momentum_60d": 0.06197181332878432,
-      "win_rate": 0.5284090909090909,
+      "win_rate": 0.5281362932369644,
       "current_aum": NaN,
-      "avg_volume": 167114763.9,
+      "avg_volume": 169435904.81666666,
       "as_of": "2026-10-22",
-      "quality_score": 0.883,
+      "quality_score": 0.8838,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -108,15 +108,15 @@
       "latest_value": 2.671999931335449,
       "total_return": 0.8640212748157257,
       "annualized_return": 0.08100950636460258,
-      "annualized_volatility": 0.25305288933818787,
+      "annualized_volatility": 0.25297233137497843,
       "max_drawdown": -0.4582253453508478,
       "calmar_ratio": 0.17678966732531198,
-      "momentum_60d": -0.08898743559325095,
-      "win_rate": 0.5214470284237727,
+      "momentum_60d": -0.07575236894957194,
+      "win_rate": 0.5211776859504132,
       "current_aum": NaN,
-      "avg_volume": 1242618569.8666666,
+      "avg_volume": 1214506934.2666667,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -126,15 +126,15 @@
       "latest_value": 1.3769999742507935,
       "total_return": -0.04369685577953797,
       "annualized_return": -0.007340639051469977,
-      "annualized_volatility": 0.32371152484847016,
+      "annualized_volatility": 0.3236101861622747,
       "max_drawdown": -0.5964071604096659,
       "calmar_ratio": -0.0123081001348605,
-      "momentum_60d": -0.3169643094725143,
-      "win_rate": 0.4757617728531856,
+      "momentum_60d": -0.29565220254554203,
+      "win_rate": 0.47612456747404847,
       "current_aum": NaN,
-      "avg_volume": 4439505181.516666,
+      "avg_volume": 4409790214.65,
       "as_of": "2026-10-22",
-      "quality_score": 0.8546,
+      "quality_score": 0.8557,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -144,15 +144,15 @@
       "latest_value": 1.0,
       "total_return": 0.38504154575812244,
       "annualized_return": 0.04158558685325686,
-      "annualized_volatility": 0.29896005432615513,
+      "annualized_volatility": 0.29886183528065313,
       "max_drawdown": -0.4499999868519168,
       "calmar_ratio": 0.09241241792956227,
-      "momentum_60d": -0.10952807028401212,
-      "win_rate": 0.4630490956072351,
+      "momentum_60d": -0.10233390180685542,
+      "win_rate": 0.4628099173553719,
       "current_aum": NaN,
-      "avg_volume": 1583797225.9833333,
+      "avg_volume": 1571092782.7833333,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -162,15 +162,15 @@
       "latest_value": 0.8080000281333923,
       "total_return": -0.19199997186660767,
       "annualized_return": -0.028181481025716826,
-      "annualized_volatility": 0.7231736009967414,
+      "annualized_volatility": 0.722984518317754,
       "max_drawdown": -0.7087238469036397,
       "calmar_ratio": -0.03976369801699148,
-      "momentum_60d": -0.2937063020863292,
-      "win_rate": 0.4963707426018984,
+      "momentum_60d": -0.2986110564965133,
+      "win_rate": 0.4966517857142857,
       "current_aum": NaN,
-      "avg_volume": 1438321267.5166667,
+      "avg_volume": 1417817954.2666667,
       "as_of": "2026-10-22",
-      "quality_score": 0.8693,
+      "quality_score": 0.8703,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -180,15 +180,15 @@
       "latest_value": 1.9450000524520874,
       "total_return": 0.9444166306663291,
       "annualized_return": 0.12267136317951266,
-      "annualized_volatility": 0.9963086029772611,
+      "annualized_volatility": 0.9958529818389186,
       "max_drawdown": -0.6684456141994413,
       "calmar_ratio": 0.18351734318195664,
-      "momentum_60d": -0.19059510683344527,
-      "win_rate": 0.4565846599131693,
+      "momentum_60d": -0.1855108697106369,
+      "win_rate": 0.45625451916124365,
       "current_aum": NaN,
-      "avg_volume": 59099468.03333333,
+      "avg_volume": 58370295.18333333,
       "as_of": "2026-10-22",
-      "quality_score": 0.8719,
+      "quality_score": 0.8731,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -198,15 +198,15 @@
       "latest_value": 0.7760000228881836,
       "total_return": -0.2239999771118164,
       "annualized_return": -0.03510526281261539,
-      "annualized_volatility": 0.9288407337807445,
+      "annualized_volatility": 0.9286643388142748,
       "max_drawdown": -0.7669669547545964,
       "calmar_ratio": -0.04577154542968268,
-      "momentum_60d": -0.29963899383059667,
-      "win_rate": 0.4970691676436108,
+      "momentum_60d": -0.2686144858051621,
+      "win_rate": 0.4973637961335677,
       "current_aum": NaN,
-      "avg_volume": 1036388474.25,
+      "avg_volume": 1020405829.9,
       "as_of": "2026-10-22",
-      "quality_score": 0.8708,
+      "quality_score": 0.8717,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -216,15 +216,15 @@
       "latest_value": 0.36800000071525574,
       "total_return": -0.008754216376337887,
       "annualized_return": -0.001099243148574569,
-      "annualized_volatility": 0.26514287289302235,
+      "annualized_volatility": 0.2650473425164406,
       "max_drawdown": -0.6550561616402983,
       "calmar_ratio": -0.001678089930216061,
-      "momentum_60d": -0.02127656032996883,
-      "win_rate": 0.4625322997416021,
+      "momentum_60d": -0.023872687642178647,
+      "win_rate": 0.46229338842975204,
       "current_aum": NaN,
-      "avg_volume": 1129985196.95,
+      "avg_volume": 1115902826.95,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -234,15 +234,15 @@
       "latest_value": 4.289000034332275,
       "total_return": 0.3483478637456887,
       "annualized_return": 0.038093226027152705,
-      "annualized_volatility": 0.19832548009894213,
+      "annualized_volatility": 0.19816568339659424,
       "max_drawdown": -0.42797998550651917,
       "calmar_ratio": 0.08900702677034988,
-      "momentum_60d": -0.1413413147952025,
-      "win_rate": 0.4945736434108527,
+      "momentum_60d": -0.13702208945830052,
+      "win_rate": 0.4943181818181818,
       "current_aum": NaN,
-      "avg_volume": 206439800.93333334,
+      "avg_volume": 210545730.66666666,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -252,15 +252,15 @@
       "latest_value": 1.0379999876022339,
       "total_return": 0.616822361359554,
       "annualized_return": 0.061941647243352715,
-      "annualized_volatility": 0.3091194969695629,
+      "annualized_volatility": 0.3089768526727927,
       "max_drawdown": -0.5094850941943216,
       "calmar_ratio": 0.12157695671412064,
-      "momentum_60d": -0.047706462554121254,
-      "win_rate": 0.4847545219638243,
+      "momentum_60d": -0.041551209033224734,
+      "win_rate": 0.484504132231405,
       "current_aum": NaN,
-      "avg_volume": 266680393.81666666,
+      "avg_volume": 265656886.1,
       "as_of": "2026-10-22",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
@@ -270,69 +270,21 @@
       "latest_value": 0.7059999704360962,
       "total_return": -0.2940000295639038,
       "annualized_return": -0.057558278961208575,
-      "annualized_volatility": 0.346640251041789,
+      "annualized_volatility": 0.34650703769364405,
       "max_drawdown": -0.6706996425100948,
       "calmar_ratio": -0.08581826396357778,
-      "momentum_60d": -0.13374236502893821,
-      "win_rate": 0.46713780918727915,
+      "momentum_60d": -0.1390244187874714,
+      "win_rate": 0.4668079096045198,
       "current_aum": NaN,
-      "avg_volume": 191744588.7,
+      "avg_volume": 189147762.86666667,
       "as_of": "2026-10-22",
-      "quality_score": 0.8739,
+      "quality_score": 0.875,
       "source": "Yahoo Finance public chart"
     }
   ],
   "quality": [
     {
       "code": "510300",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "510500",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159915",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159949",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "513100",
       "rows": 1936,
       "start_date": "2018-10-24",
       "end_date": "2026-10-22",
@@ -344,124 +296,172 @@
       "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
-      "code": "512100",
-      "rows": 1935,
+      "code": "510500",
+      "rows": 1936,
       "start_date": "2018-10-24",
       "end_date": "2026-10-22",
       "duplicate_rows": 0,
-      "missing_dates": 152,
+      "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1937,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 150,
+      "invalid_values": 0,
+      "quality_score": 0.8838,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 150 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512100",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
       "code": "588000",
-      "rows": 1444,
+      "rows": 1445,
       "start_date": "2020-09-28",
       "end_date": "2026-10-22",
       "duplicate_rows": 0,
-      "missing_dates": 140,
+      "missing_dates": 139,
       "invalid_values": 0,
-      "quality_score": 0.8546,
+      "quality_score": 0.8557,
       "status": "需关注",
-      "warnings": "工作日序列缺失 140 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 139 天；节假日和停牌需人工确认"
     },
     {
       "code": "512880",
-      "rows": 1935,
+      "rows": 1936,
       "start_date": "2018-10-24",
       "end_date": "2026-10-22",
       "duplicate_rows": 0,
-      "missing_dates": 152,
+      "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
       "code": "512480",
-      "rows": 1791,
+      "rows": 1792,
       "start_date": "2019-05-08",
       "end_date": "2026-10-22",
       "duplicate_rows": 0,
-      "missing_dates": 156,
+      "missing_dates": 155,
       "invalid_values": 0,
-      "quality_score": 0.8693,
+      "quality_score": 0.8703,
       "status": "需关注",
-      "warnings": "工作日序列缺失 156 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 155 天；节假日和停牌需人工确认"
     },
     {
       "code": "516160",
-      "rows": 1382,
+      "rows": 1383,
       "start_date": "2021-01-22",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 117,
+      "invalid_values": 0,
+      "quality_score": 0.8731,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 117 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515050",
+      "rows": 1707,
+      "start_date": "2019-09-17",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 146,
+      "invalid_values": 0,
+      "quality_score": 0.8717,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 146 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512010",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159919",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512660",
+      "rows": 1936,
+      "start_date": "2018-10-24",
+      "end_date": "2026-10-22",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515790",
+      "rows": 1416,
+      "start_date": "2020-12-07",
       "end_date": "2026-10-22",
       "duplicate_rows": 0,
       "missing_dates": 118,
       "invalid_values": 0,
-      "quality_score": 0.8719,
+      "quality_score": 0.875,
       "status": "需关注",
       "warnings": "工作日序列缺失 118 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "515050",
-      "rows": 1706,
-      "start_date": "2019-09-17",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 147,
-      "invalid_values": 0,
-      "quality_score": 0.8708,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 147 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "512010",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159919",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "512660",
-      "rows": 1935,
-      "start_date": "2018-10-24",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "515790",
-      "rows": 1415,
-      "start_date": "2020-12-07",
-      "end_date": "2026-10-22",
-      "duplicate_rows": 0,
-      "missing_dates": 119,
-      "invalid_values": 0,
-      "quality_score": 0.8739,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 119 天；节假日和停牌需人工确认"
     }
   ],
   "events": [
@@ -947,6 +947,16 @@
     },
     {
       "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-10-23 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610221830808058.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
       "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-22 00:00",
@@ -1051,16 +1061,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-16 00:00",
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202610151830524515.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-10-15 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610151830496898.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
@@ -2273,7 +2273,7 @@
       "name": "纳指ETF",
       "target_weight": 60.0,
       "action": "等待验证",
-      "net_return_range": "-4.1% / +1.4% / +6.9%",
+      "net_return_range": "-4.0% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
       "reason": "核心仓候选得分 0.98；年化历史收益 +20.4%，60日动量 +6.2%，最大回撤 -28.6%。",
       "evidence": "历史区间 2026-10-22 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
@@ -2287,7 +2287,7 @@
       "action": "不碰",
       "net_return_range": "-6.7% / +0.3% / +7.3%",
       "max_drawdown": -0.5094850941943216,
-      "reason": "战术仓候选得分 0.66；年化历史收益 +6.2%，60日动量 -4.8%，最大回撤 -50.9%。",
+      "reason": "战术仓候选得分 0.66；年化历史收益 +6.2%，60日动量 -4.2%，最大回撤 -50.9%。",
       "evidence": "历史区间 2026-10-22 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -50.9% 超过用户阈值；数据质量未达到 90%"
     }
@@ -2306,7 +2306,7 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -45.1%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2331,7 +2331,7 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -39.7%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2349,15 +2349,15 @@
       "facts": [
         "截至 2026-10-22，最新值 2.5920；样本质量 88%。",
         "历史累计收益 +111.4%，年化历史收益 +9.8%。",
-        "年化波动 31.1%，历史最大回撤 -56.6%。"
+        "年化波动 31.0%，历史最大回撤 -56.6%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。"
       ],
       "risk_signals": [
         "历史最大回撤达到 -56.6%，应与用户回撤阈值核对。",
-        "年化波动达到 31.1%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "年化波动达到 31.0%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2383,7 +2383,7 @@
       "risk_signals": [
         "历史最大回撤达到 -59.0%，应与用户回撤阈值核对。",
         "年化波动达到 33.2%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2409,7 +2409,7 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -28.6%，应与用户回撤阈值核对。",
-        "工作日序列缺失 151 天；节假日和停牌需人工确认"
+        "工作日序列缺失 150 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2435,7 +2435,7 @@
       "risk_signals": [
         "历史最大回撤达到 -45.8%，应与用户回撤阈值核对。",
         "年化波动达到 25.3%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2451,7 +2451,7 @@
       "code": "588000",
       "status": "红灯",
       "facts": [
-        "截至 2026-10-22，最新值 1.3770；样本质量 85%。",
+        "截至 2026-10-22，最新值 1.3770；样本质量 86%。",
         "历史累计收益 -4.4%，年化历史收益 -0.7%。",
         "年化波动 32.4%，历史最大回撤 -59.6%。"
       ],
@@ -2459,7 +2459,7 @@
       "risk_signals": [
         "历史最大回撤达到 -59.6%，应与用户回撤阈值核对。",
         "年化波动达到 32.4%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 140 天；节假日和停牌需人工确认"
+        "工作日序列缺失 139 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2485,7 +2485,7 @@
       "risk_signals": [
         "历史最大回撤达到 -45.0%，应与用户回撤阈值核对。",
         "年化波动达到 29.9%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2509,7 +2509,7 @@
       "risk_signals": [
         "历史最大回撤达到 -70.9%，应与用户回撤阈值核对。",
         "年化波动达到 72.3%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 156 天；节假日和停牌需人工确认"
+        "工作日序列缺失 155 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2535,7 +2535,7 @@
       "risk_signals": [
         "历史最大回撤达到 -66.8%，应与用户回撤阈值核对。",
         "年化波动达到 99.6%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 118 天；节假日和停牌需人工确认"
+        "工作日序列缺失 117 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2559,7 +2559,7 @@
       "risk_signals": [
         "历史最大回撤达到 -76.7%，应与用户回撤阈值核对。",
         "年化波动达到 92.9%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 147 天；节假日和停牌需人工确认"
+        "工作日序列缺失 146 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2583,7 +2583,7 @@
       "risk_signals": [
         "历史最大回撤达到 -65.5%，应与用户回撤阈值核对。",
         "年化波动达到 26.5%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2608,7 +2608,7 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -42.8%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2634,7 +2634,7 @@
       "risk_signals": [
         "历史最大回撤达到 -50.9%，应与用户回撤阈值核对。",
         "年化波动达到 30.9%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2650,7 +2650,7 @@
       "code": "515790",
       "status": "红灯",
       "facts": [
-        "截至 2026-10-22，最新值 0.7060；样本质量 87%。",
+        "截至 2026-10-22，最新值 0.7060；样本质量 88%。",
         "历史累计收益 -29.4%，年化历史收益 -5.8%。",
         "年化波动 34.7%，历史最大回撤 -67.1%。"
       ],
@@ -2658,7 +2658,7 @@
       "risk_signals": [
         "历史最大回撤达到 -67.1%，应与用户回撤阈值核对。",
         "年化波动达到 34.7%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 119 天；节假日和停牌需人工确认"
+        "工作日序列缺失 118 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
