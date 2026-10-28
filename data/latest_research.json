@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T18:16:39+08:00",
+  "fetched_at": "2026-10-28T22:16:36+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -947,6 +947,16 @@
     },
     {
       "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-10-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610281831127027.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
       "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-28 00:00",
@@ -1056,13 +1066,13 @@
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "code": "512100",
+      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告",
       "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-10-22 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610221830790652.html",
+      "published_at": "2026-10-29 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512100,AN202610281831127028.html",
       "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
+      "document_type": "关联交易",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -1171,16 +1181,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-07-31 00:00",
       "url": "https://fund.eastmoney.com/gonggao/512100,AN202607301827495522.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "关联交易",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "512100",
-      "title": "南方基金管理股份有限公司关于旗下基金投资关联方承销可转换公司债券的关联交易公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-07-31 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/512100,AN202607301827495506.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "关联交易",
       "evidence_level": "公开披露文件索引，需打开原文核验"
