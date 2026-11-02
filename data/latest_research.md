@@ -1,6 +1,6 @@
 # AI 基金智能投研后台快照
 
-抓取时间：2026-11-02T19:45:45+08:00
+抓取时间：2026-11-03T01:19:54+08:00
 数据模式：auto（价格使用真实行情回退链，事件优先使用交易所公告）
 
 ## 个性化参数
@@ -11,21 +11,21 @@
 
 | 代码 | 基金 | 累计收益 | 年化收益 | 年化波动 | 最大回撤 | 数据源 |
 |---|---|---:|---:|---:|---:|---|
-| 510300 | 沪深300ETF | 23.04% | 2.63% | 19.21% | -45.10% | Yahoo Finance public chart |
-| 510500 | 中证500ETF | 56.47% | 5.76% | 23.64% | -39.65% | Yahoo Finance public chart |
-| 159915 | 创业板ETF | 92.15% | 8.52% | 31.13% | -56.58% | Yahoo Finance public chart |
-| 159949 | 创业板50ETF | 131.26% | 11.06% | 33.26% | -58.99% | Yahoo Finance public chart |
-| 513100 | 纳指ETF | 347.90% | 20.64% | 24.31% | -28.57% | Yahoo Finance public chart |
-| 512100 | 中证1000ETF | 71.08% | 6.95% | 25.40% | -45.82% | Yahoo Finance public chart |
-| 588000 | 科创50ETF | -12.50% | -2.17% | 32.54% | -59.64% | Yahoo Finance public chart |
-| 512880 | 证券ETF | 29.31% | 3.27% | 29.84% | -45.00% | Yahoo Finance public chart |
-| 512480 | 半导体ETF | -26.20% | -3.98% | 72.28% | -74.04% | Yahoo Finance public chart |
-| 516160 | 新能源ETF | 95.14% | 12.27% | 99.36% | -66.84% | Yahoo Finance public chart |
-| 515050 | 5GETF | -32.20% | -5.31% | 92.80% | -79.76% | Yahoo Finance public chart |
-| 512010 | 医药ETF | -3.67% | -0.47% | 26.41% | -65.51% | Yahoo Finance public chart |
-| 159919 | 沪深300ETF（深市） | 31.30% | 3.47% | 19.75% | -42.80% | Yahoo Finance public chart |
-| 512660 | 军工ETF | 51.66% | 5.35% | 30.96% | -50.95% | Yahoo Finance public chart |
-| 515790 | 光伏ETF | -31.20% | -6.14% | 34.64% | -67.07% | Yahoo Finance public chart |
+| 510300 | 沪深300ETF | 22.44% | 2.57% | 19.21% | -45.10% | Yahoo Finance public chart |
+| 510500 | 中证500ETF | 52.81% | 5.45% | 23.63% | -39.65% | Yahoo Finance public chart |
+| 159915 | 创业板ETF | 89.20% | 8.31% | 31.14% | -56.58% | Yahoo Finance public chart |
+| 159949 | 创业板50ETF | 127.95% | 10.87% | 33.26% | -58.99% | Yahoo Finance public chart |
+| 513100 | 纳指ETF | 346.91% | 20.63% | 24.32% | -28.57% | Yahoo Finance public chart |
+| 512100 | 中证1000ETF | 66.62% | 6.60% | 25.39% | -45.82% | Yahoo Finance public chart |
+| 588000 | 科创50ETF | -14.72% | -2.58% | 32.54% | -59.64% | Yahoo Finance public chart |
+| 512880 | 证券ETF | 23.65% | 2.69% | 29.80% | -45.00% | Yahoo Finance public chart |
+| 512480 | 半导体ETF | -28.00% | -4.30% | 72.29% | -74.04% | Yahoo Finance public chart |
+| 516160 | 新能源ETF | 90.44% | 11.81% | 99.39% | -66.84% | Yahoo Finance public chart |
+| 515050 | 5GETF | -32.60% | -5.39% | 92.83% | -79.76% | Yahoo Finance public chart |
+| 512010 | 医药ETF | -2.90% | -0.37% | 26.42% | -65.51% | Yahoo Finance public chart |
+| 159919 | 沪深300ETF（深市） | 30.47% | 3.39% | 19.76% | -42.80% | Yahoo Finance public chart |
+| 512660 | 军工ETF | 48.34% | 5.06% | 30.96% | -50.95% | Yahoo Finance public chart |
+| 515790 | 光伏ETF | -33.10% | -6.59% | 34.63% | -67.07% | Yahoo Finance public chart |
 
 ## 研究卡片
 
