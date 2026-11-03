@@ -7,7 +7,7 @@ from .schemas import FundResearchRequest, FundResearchResponse
 
 
 class FundResearchAPIError(RuntimeError):
-    """Raised when the private research service returns an invalid response."""
+    """Raised when the research service returns an invalid response."""
 
 
 class FundResearchClient:
