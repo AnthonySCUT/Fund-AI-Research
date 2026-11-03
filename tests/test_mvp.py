@@ -14,6 +14,7 @@ from fund_ai_research.analytics import (
     validate_history,
 )
 from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, EastmoneyFundDisclosureConnector, OfficialDisclosureConnector
+from fund_ai_research.incremental import fingerprints_for_records
 from fund_ai_research.models import EventRecord
 from fund_ai_research.recommender import build_personalized_recommendations
 
@@ -146,3 +147,29 @@ def test_deepseek_fallback_is_used_when_grok_request_fails():
     assert cards["510300"].source == "Deepseek:deepseek-chat"
     assert cards["510300"].conclusion == "fallback"
     assert post.call_count == 2
+
+
+def test_incremental_fingerprints_change_only_the_affected_fund():
+    connector = DemoConnector()
+    metrics = []
+    quality = []
+    for profile in DEFAULT_FUNDS[:2]:
+        history = connector.fetch_history(profile.code, date(2025, 1, 1), date(2026, 1, 1))
+        report = validate_history(history, profile.code)
+        quality.append(report)
+        metrics.append(calculate_metrics(history, profile.code, profile.name, profile.category, report, "demo"))
+
+    before = fingerprints_for_records(metrics, quality, [])
+    changed_metrics = list(metrics)
+    changed_metrics[0] = calculate_metrics(
+        connector.fetch_history("510300", date(2024, 1, 1), date(2026, 1, 1)),
+        "510300",
+        DEFAULT_FUNDS[0].name,
+        DEFAULT_FUNDS[0].category,
+        quality[0],
+        "demo",
+    )
+    after = fingerprints_for_records(changed_metrics, quality, [])
+
+    assert before["510300"] != after["510300"]
+    assert before["510500"] == after["510500"]

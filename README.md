@@ -1,5 +1,7 @@
 # AI 基金智能投研
 
+本仓库统一维护 Streamlit 研究网站、核心分析流程，以及公开 API 请求/响应模型和 Python 客户端。
+
 这个原型把项目第一阶段落成一个可运行闭环：
 
 `数据抓取 -> 数据质检 -> 标准化 -> 指标计算 -> 费用后情景 -> 个性化候选 -> 研究卡片`
@@ -7,7 +9,8 @@
 ## 运行
 
 ```powershell
-cd C:\Users\AIR\Documents\Codex\2026-08-12\new-chat\fund-ai-research
+git clone https://github.com/AnthonySCUT/Fund-AI-Research-Pan.git
+cd Fund-AI-Research-Pan
 py -3 -m pip install -r requirements.txt
 py -3 -m streamlit run app.py
 ```
@@ -35,6 +38,12 @@ py -3 -m streamlit run app.py
 - 指标对比表会额外展示历史年化收益距离五年十倍所需约 58.5% 年化门槛的差距；这是压力测试和筛选视图，不是收益预测。
 - 结果顶部明确标注真实行情、真实接口回退或演示数据，并显示最新交易日和抓取完成时间；含演示数据时，候选组合会标记为“仅演示，不可执行”。
 - 新增“基金详情”页：展示基金基本信息、最大回撤恢复时间、21/63/252 日滚动收益和研究样本收益相关性，辅助比较持有期稳定性和分散化效果。
+
+## API 集成
+
+- `fund_api/` 提供公开的请求/响应数据结构和 Python 客户端。
+- `API_CONTRACT.md` 说明 `/v1/research` 的请求字段、响应结构和客户端调用方式。
+- 客户端通过 `FUND_RESEARCH_API_URL` 与 `FUND_RESEARCH_API_TOKEN` 环境变量连接实现该接口的服务。
 
 ## 下一步接组员抓取的多维数据
 
@@ -66,4 +75,4 @@ DEEPSEEK_BASE_URL  # https://api.deepseek.com/v1
 DEEPSEEK_MODEL     # deepseek-chat
 ```
 
-同样的配置需要粘贴到 Streamlit Cloud 的 **App settings -> Secrets**。不要把 Tailscale 内网地址写进云端：云端无法访问你电脑上的 `100.x.x.x` 地址，必须使用公开可访问的 HTTPS 中转端点或官方端点。用户在聊天中发送过的旧密钥应立即撤销并换新。
+同样的配置需要粘贴到 Streamlit Cloud 的 **App settings -> Secrets**。不要把 Tailscale 内网地址写进云端：云端无法访问你电脑上的 `100.x.x.x` 地址，必须使用公开可访问的 HTTPS 中转端点或官方端点。
