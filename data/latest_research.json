@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-04T11:08:12+08:00",
+  "fetched_at": "2026-11-04T19:48:26+08:00",
   "source_mode": "auto",
   "profile": {
     "core_weight": 60,
@@ -15,324 +15,276 @@
       "code": "510300",
       "name": "沪深300ETF",
       "category": "宽基指数",
-      "latest_value": 4.066999912261963,
-      "total_return": 0.23279778165931675,
-      "annualized_return": 0.0265243658694001,
-      "annualized_volatility": 0.19207113822609484,
+      "latest_value": 4.175000190734863,
+      "total_return": 0.26553505891338225,
+      "annualized_return": 0.029895187929196654,
+      "annualized_volatility": 0.19215198610530196,
       "max_drawdown": -0.4510074262437961,
-      "calmar_ratio": 0.058811372775627244,
-      "momentum_60d": -0.11567733583333284,
-      "win_rate": 0.49250645994832043,
+      "calmar_ratio": 0.06628535627046758,
+      "momentum_60d": -0.10234354543342561,
+      "win_rate": 0.49328512396694213,
       "current_aum": NaN,
-      "avg_volume": 1089966195.65,
+      "avg_volume": 1178926989.95,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "510500",
       "name": "中证500ETF",
       "category": "宽基指数",
-      "latest_value": 6.375999927520752,
-      "total_return": 0.5423468736872143,
-      "annualized_return": 0.05569598209655435,
-      "annualized_volatility": 0.23640086029241586,
+      "latest_value": 6.660999774932861,
+      "total_return": 0.6112880011423902,
+      "annualized_return": 0.06148627729627454,
+      "annualized_volatility": 0.23686080555993191,
       "max_drawdown": -0.3965452862065345,
-      "calmar_ratio": 0.1404530176852133,
-      "momentum_60d": -0.14070082722891808,
-      "win_rate": 0.5116279069767442,
+      "calmar_ratio": 0.155054868725007,
+      "momentum_60d": -0.12366794868802966,
+      "win_rate": 0.5118801652892562,
       "current_aum": NaN,
-      "avg_volume": 460878446.5,
+      "avg_volume": 494899240.1166667,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159915",
       "name": "创业板ETF",
       "category": "成长指数",
-      "latest_value": 2.4019999504089355,
-      "total_return": 0.8678070960116799,
-      "annualized_return": 0.08128389149896154,
-      "annualized_volatility": 0.31150497482736395,
+      "latest_value": 2.561000108718872,
+      "total_return": 0.9914464091214572,
+      "annualized_return": 0.0899879373490422,
+      "annualized_volatility": 0.3123072976208057,
       "max_drawdown": -0.5658465895446377,
-      "calmar_ratio": 0.1436500510931317,
-      "momentum_60d": -0.27759401023701247,
-      "win_rate": 0.4806201550387597,
+      "calmar_ratio": 0.15903239325248836,
+      "momentum_60d": -0.2712008670457482,
+      "win_rate": 0.48088842975206614,
       "current_aum": NaN,
-      "avg_volume": 2340678733.4666667,
+      "avg_volume": 2460141538.1833334,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159949",
       "name": "创业板50ETF",
       "category": "成长指数",
-      "latest_value": 1.0770000219345093,
-      "total_return": 1.2390852558309389,
-      "annualized_return": 0.10608575851353885,
-      "annualized_volatility": 0.33282628150537535,
+      "latest_value": 1.1519999504089355,
+      "total_return": 1.395010261044796,
+      "annualized_return": 0.11543918553453891,
+      "annualized_volatility": 0.33355479445158986,
       "max_drawdown": -0.5899053876881551,
-      "calmar_ratio": 0.1798352087091287,
-      "momentum_60d": -0.3140127478006076,
-      "win_rate": 0.469250645994832,
+      "calmar_ratio": 0.19569101748154255,
+      "momentum_60d": -0.30852344269271026,
+      "win_rate": 0.46952479338842973,
       "current_aum": NaN,
-      "avg_volume": 1319477656.2166667,
+      "avg_volume": 1377963139.0166667,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "513100",
       "name": "纳指ETF",
       "category": "海外指数",
-      "latest_value": 2.186000108718872,
-      "total_return": 3.3737497469515674,
-      "annualized_return": 0.20271190247156246,
-      "annualized_volatility": 0.24330302862726333,
+      "latest_value": 2.242000102996826,
+      "total_return": 3.4857945541890363,
+      "annualized_return": 0.20652334806564254,
+      "annualized_volatility": 0.24327924318665134,
       "max_drawdown": -0.28568022185936814,
-      "calmar_ratio": 0.7095762568097959,
-      "momentum_60d": 0.02773860492070379,
-      "win_rate": 0.5278925619834711,
+      "calmar_ratio": 0.7229179070272069,
+      "momentum_60d": 0.022810306905198363,
+      "win_rate": 0.5281362932369644,
       "current_aum": NaN,
-      "avg_volume": 176174980.36666667,
+      "avg_volume": 180151759.08333334,
       "as_of": "2026-11-04",
-      "quality_score": 0.883,
+      "quality_score": 0.8838,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "512100",
       "name": "中证1000ETF",
       "category": "小盘指数",
-      "latest_value": 2.5369999408721924,
-      "total_return": 0.6800767145556348,
-      "annualized_return": 0.06705162360665917,
-      "annualized_volatility": 0.25405607986538914,
+      "latest_value": 2.6519999504089355,
+      "total_return": 0.7562331365892654,
+      "annualized_return": 0.07298514933446998,
+      "annualized_volatility": 0.25453213905830285,
       "max_drawdown": -0.4582253453508478,
-      "calmar_ratio": 0.14632892808519787,
-      "momentum_60d": -0.11510294742566984,
-      "win_rate": 0.5193798449612403,
+      "calmar_ratio": 0.15927785329855051,
+      "momentum_60d": -0.09887873600404806,
+      "win_rate": 0.5196280991735537,
       "current_aum": NaN,
-      "avg_volume": 1218481918.3166666,
+      "avg_volume": 1324391574.8166666,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "588000",
       "name": "科创50ETF",
       "category": "科技成长",
-      "latest_value": 1.2209999561309814,
-      "total_return": -0.15203622441866516,
-      "annualized_return": -0.02667373695349673,
-      "annualized_volatility": 0.32559078384568135,
+      "latest_value": 1.340000033378601,
+      "total_return": -0.06939268762681183,
+      "annualized_return": -0.011720719884882325,
+      "annualized_volatility": 0.32836200088943374,
       "max_drawdown": -0.5964071604096659,
-      "calmar_ratio": -0.04472403875093454,
-      "momentum_60d": -0.25366752544473403,
-      "win_rate": 0.4755677907777013,
+      "calmar_ratio": -0.019652211882955066,
+      "momentum_60d": -0.21453689531069353,
+      "win_rate": 0.4759284731774415,
       "current_aum": NaN,
-      "avg_volume": 4816883960.0,
+      "avg_volume": 5002575498.616667,
       "as_of": "2026-11-04",
-      "quality_score": 0.8555,
+      "quality_score": 0.8566,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "512880",
       "name": "证券ETF",
       "category": "行业指数",
-      "latest_value": 1.00600004196167,
-      "total_return": 0.3047989700070366,
-      "annualized_return": 0.033838837756319906,
-      "annualized_volatility": 0.2983593857660987,
+      "latest_value": 1.0219999551773071,
+      "total_return": 0.32555112648136086,
+      "annualized_return": 0.03588141067070372,
+      "annualized_volatility": 0.2983093188169952,
       "max_drawdown": -0.4499999868519168,
-      "calmar_ratio": 0.07519741943338186,
-      "momentum_60d": -0.08959273792124034,
-      "win_rate": 0.4625322997416021,
+      "calmar_ratio": 0.07973647048685659,
+      "momentum_60d": -0.07427537972856779,
+      "win_rate": 0.46332644628099173,
       "current_aum": NaN,
-      "avg_volume": 1533151793.8,
+      "avg_volume": 1556187133.75,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "512480",
       "name": "半导体ETF",
       "category": "行业指数",
-      "latest_value": 0.7129999995231628,
-      "total_return": -0.28700000047683716,
-      "annualized_return": -0.044138565085380166,
-      "annualized_volatility": 0.7226956086992188,
-      "max_drawdown": -0.7429704334310643,
-      "calmar_ratio": -0.059408239008309764,
-      "momentum_60d": -0.22584148038004082,
-      "win_rate": 0.4961111111111111,
+      "latest_value": 0.7720000147819519,
+      "total_return": -0.2279999852180481,
+      "annualized_return": -0.03394325154151534,
+      "annualized_volatility": 0.7235625660973626,
+      "max_drawdown": -0.7469358183872641,
+      "calmar_ratio": -0.04544333088056137,
+      "momentum_60d": -0.2033023434283141,
+      "win_rate": 0.4963908939478068,
       "current_aum": NaN,
-      "avg_volume": 1335894207.2333333,
+      "avg_volume": 1343912000.2333333,
       "as_of": "2026-11-04",
-      "quality_score": 0.87,
+      "quality_score": 0.8709,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "516160",
       "name": "新能源ETF",
       "category": "行业指数",
-      "latest_value": 1.965999960899353,
-      "total_return": 0.9654102399856992,
-      "annualized_return": 0.12395752407017557,
-      "annualized_volatility": 0.993231213952939,
+      "latest_value": 2.052999973297119,
+      "total_return": 1.0523841558789795,
+      "annualized_return": 0.1324058857045045,
+      "annualized_volatility": 0.9929987918440071,
       "max_drawdown": -0.6684456141994413,
-      "calmar_ratio": 0.18544145018982935,
-      "momentum_60d": -0.19787842481094065,
-      "win_rate": 0.4572250179726815,
+      "calmar_ratio": 0.19808026695347444,
+      "momentum_60d": -0.17384303421954372,
+      "win_rate": 0.45761494252873564,
       "current_aum": NaN,
-      "avg_volume": 55901818.03333333,
+      "avg_volume": 56523097.85,
       "as_of": "2026-11-04",
-      "quality_score": 0.8728,
+      "quality_score": 0.8739,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "515050",
       "name": "5GETF",
       "category": "行业指数",
-      "latest_value": 0.6340000033378601,
-      "total_return": -0.3659999966621399,
-      "annualized_return": -0.06189659772560019,
-      "annualized_volatility": 0.9281011485719675,
-      "max_drawdown": -0.8096096042451968,
-      "calmar_ratio": -0.07645240051630403,
-      "momentum_60d": -0.2994474879769854,
-      "win_rate": 0.4967930029154519,
+      "latest_value": 0.6880000233650208,
+      "total_return": -0.31199997663497925,
+      "annualized_return": -0.05108329297771452,
+      "annualized_volatility": 0.9283530985354734,
+      "max_drawdown": -0.8093093078042637,
+      "calmar_ratio": -0.06311961630134783,
+      "momentum_60d": -0.30223121463807856,
+      "win_rate": 0.4970862470862471,
       "current_aum": NaN,
-      "avg_volume": 954769544.95,
+      "avg_volume": 965551432.4166666,
       "as_of": "2026-11-04",
-      "quality_score": 0.8714,
+      "quality_score": 0.8724,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "512010",
       "name": "医药ETF",
       "category": "行业指数",
-      "latest_value": 0.3799999952316284,
-      "total_return": -0.0243902364376285,
-      "annualized_return": -0.0030839246154220623,
-      "annualized_volatility": 0.2641596036279892,
+      "latest_value": 0.3889999985694885,
+      "total_return": -0.0012836805463366519,
+      "annualized_return": -0.00016066021377147965,
+      "annualized_volatility": 0.26424198361180856,
       "max_drawdown": -0.6550561616402983,
-      "calmar_ratio": -0.0047078781881842585,
-      "momentum_60d": 0.016042733022677336,
-      "win_rate": 0.4630490956072351,
+      "calmar_ratio": -0.00024526173964866955,
+      "momentum_60d": 0.015665828648156577,
+      "win_rate": 0.46332644628099173,
       "current_aum": NaN,
-      "avg_volume": 1075408840.4333334,
+      "avg_volume": 1086065958.9333334,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "159919",
       "name": "沪深300ETF（深市）",
       "category": "宽基指数",
-      "latest_value": 4.244999885559082,
-      "total_return": 0.3133266047254124,
-      "annualized_return": 0.03468160339057813,
-      "annualized_volatility": 0.1975460585782413,
+      "latest_value": 4.363999843597412,
+      "total_return": 0.35014305114855837,
+      "annualized_return": 0.038266008132546325,
+      "annualized_volatility": 0.19763830879132338,
       "max_drawdown": -0.42797998550651917,
-      "calmar_ratio": 0.08103557307599807,
-      "momentum_60d": -0.11580925203112657,
-      "win_rate": 0.4935400516795866,
+      "calmar_ratio": 0.08941074215715501,
+      "momentum_60d": -0.10205767001868793,
+      "win_rate": 0.4943181818181818,
       "current_aum": NaN,
-      "avg_volume": 248404740.6,
+      "avg_volume": 278736855.85,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "512660",
       "name": "军工ETF",
       "category": "行业指数",
-      "latest_value": 1.003000020980835,
-      "total_return": 0.5196969410987826,
-      "annualized_return": 0.053744170509957945,
-      "annualized_volatility": 0.3095860870983014,
+      "latest_value": 1.0369999408721924,
+      "total_return": 0.5712119691901798,
+      "annualized_return": 0.058147349112159574,
+      "annualized_volatility": 0.309741781926649,
       "max_drawdown": -0.5094850941943216,
-      "calmar_ratio": 0.10548722842411459,
-      "momentum_60d": -0.08900993161760729,
-      "win_rate": 0.48372093023255813,
+      "calmar_ratio": 0.11412963750021254,
+      "momentum_60d": -0.07078863029708216,
+      "win_rate": 0.4839876033057851,
       "current_aum": NaN,
-      "avg_volume": 265006736.63333333,
+      "avg_volume": 270213696.06666666,
       "as_of": "2026-11-04",
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "source": "Yahoo Finance public chart"
     },
     {
       "code": "515790",
       "name": "光伏ETF",
       "category": "行业指数",
-      "latest_value": 0.6899999976158142,
-      "total_return": -0.3100000023841858,
-      "annualized_return": -0.06087246616690867,
-      "annualized_volatility": 0.3462515581021546,
+      "latest_value": 0.7260000109672546,
+      "total_return": -0.27399998903274536,
+      "annualized_return": -0.05275357164979011,
+      "annualized_volatility": 0.3466623129611856,
       "max_drawdown": -0.6706996425100948,
-      "calmar_ratio": -0.09075965202410625,
-      "momentum_60d": -0.17067309689967025,
-      "win_rate": 0.4669943820224719,
+      "calmar_ratio": -0.0786545396868854,
+      "momentum_60d": -0.1377672156900943,
+      "win_rate": 0.4673684210526316,
       "current_aum": NaN,
-      "avg_volume": 176060109.01666668,
+      "avg_volume": 178738845.43333334,
       "as_of": "2026-11-04",
-      "quality_score": 0.8746,
+      "quality_score": 0.8758,
       "source": "Yahoo Finance public chart"
     }
   ],
   "quality": [
     {
       "code": "510300",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "510500",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159915",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159949",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "513100",
       "rows": 1936,
       "start_date": "2018-11-06",
       "end_date": "2026-11-04",
@@ -344,124 +296,172 @@
       "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
-      "code": "512100",
-      "rows": 1935,
+      "code": "510500",
+      "rows": 1936,
       "start_date": "2018-11-06",
       "end_date": "2026-11-04",
       "duplicate_rows": 0,
-      "missing_dates": 152,
+      "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159915",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159949",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "513100",
+      "rows": 1937,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 150,
+      "invalid_values": 0,
+      "quality_score": 0.8838,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 150 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512100",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
       "code": "588000",
-      "rows": 1453,
+      "rows": 1454,
       "start_date": "2020-09-28",
       "end_date": "2026-11-04",
       "duplicate_rows": 0,
-      "missing_dates": 140,
+      "missing_dates": 139,
       "invalid_values": 0,
-      "quality_score": 0.8555,
+      "quality_score": 0.8566,
       "status": "需关注",
-      "warnings": "工作日序列缺失 140 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 139 天；节假日和停牌需人工确认"
     },
     {
       "code": "512880",
-      "rows": 1935,
+      "rows": 1936,
       "start_date": "2018-11-06",
       "end_date": "2026-11-04",
       "duplicate_rows": 0,
-      "missing_dates": 152,
+      "missing_dates": 151,
       "invalid_values": 0,
-      "quality_score": 0.8822,
+      "quality_score": 0.883,
       "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
     },
     {
       "code": "512480",
-      "rows": 1800,
+      "rows": 1801,
       "start_date": "2019-05-08",
       "end_date": "2026-11-04",
       "duplicate_rows": 0,
-      "missing_dates": 156,
+      "missing_dates": 155,
       "invalid_values": 0,
-      "quality_score": 0.87,
+      "quality_score": 0.8709,
       "status": "需关注",
-      "warnings": "工作日序列缺失 156 天；节假日和停牌需人工确认"
+      "warnings": "工作日序列缺失 155 天；节假日和停牌需人工确认"
     },
     {
       "code": "516160",
-      "rows": 1391,
+      "rows": 1392,
       "start_date": "2021-01-22",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 117,
+      "invalid_values": 0,
+      "quality_score": 0.8739,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 117 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515050",
+      "rows": 1716,
+      "start_date": "2019-09-17",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 146,
+      "invalid_values": 0,
+      "quality_score": 0.8724,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 146 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512010",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "159919",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "512660",
+      "rows": 1936,
+      "start_date": "2018-11-06",
+      "end_date": "2026-11-04",
+      "duplicate_rows": 0,
+      "missing_dates": 151,
+      "invalid_values": 0,
+      "quality_score": 0.883,
+      "status": "需关注",
+      "warnings": "工作日序列缺失 151 天；节假日和停牌需人工确认"
+    },
+    {
+      "code": "515790",
+      "rows": 1425,
+      "start_date": "2020-12-07",
       "end_date": "2026-11-04",
       "duplicate_rows": 0,
       "missing_dates": 118,
       "invalid_values": 0,
-      "quality_score": 0.8728,
+      "quality_score": 0.8758,
       "status": "需关注",
       "warnings": "工作日序列缺失 118 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "515050",
-      "rows": 1715,
-      "start_date": "2019-09-17",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 147,
-      "invalid_values": 0,
-      "quality_score": 0.8714,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 147 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "512010",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "159919",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "512660",
-      "rows": 1935,
-      "start_date": "2018-11-06",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 152,
-      "invalid_values": 0,
-      "quality_score": 0.8822,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 152 天；节假日和停牌需人工确认"
-    },
-    {
-      "code": "515790",
-      "rows": 1424,
-      "start_date": "2020-12-07",
-      "end_date": "2026-11-04",
-      "duplicate_rows": 0,
-      "missing_dates": 119,
-      "invalid_values": 0,
-      "quality_score": 0.8746,
-      "status": "需关注",
-      "warnings": "工作日序列缺失 119 天；节假日和停牌需人工确认"
     }
   ],
   "events": [
@@ -707,6 +707,16 @@
     },
     {
       "code": "159915",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-11-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/159915,AN202611041831408137.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "159915",
       "title": "易方达创业板交易型开放式指数证券投资基金2026年第3季度报告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-27 00:00",
@@ -813,16 +823,6 @@
       "url": "https://fund.eastmoney.com/gonggao/159915,AN202608301828738228.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "半年报",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "159915",
-      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-08-26 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/159915,AN202608261828469484.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -949,6 +949,26 @@
       "code": "513100",
       "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
       "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-11-05 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202611041831416585.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-11-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/513100,AN202611041831398613.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "513100",
+      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
+      "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-11-04 00:00",
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202611031831377317.html",
       "source": "eastmoney_fund_disclosure",
@@ -1041,26 +1061,6 @@
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-29 00:00",
       "url": "https://fund.eastmoney.com/gonggao/513100,AN202610291831156966.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示及临时停牌公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-10-29 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610281831127027.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "513100",
-      "title": "国泰基金管理有限公司关于纳斯达克100交易型开放式指数证券投资基金二级市场交易价格溢价风险提示公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-10-28 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/513100,AN202610281831082718.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
       "evidence_level": "公开披露文件索引，需打开原文核验"
@@ -1787,6 +1787,16 @@
     },
     {
       "code": "512010",
+      "title": "易方达基金管理有限公司关于网上交易平台系统维护的通知",
+      "publisher": "东方财富公开基金公告索引",
+      "published_at": "2026-11-04 00:00",
+      "url": "https://fund.eastmoney.com/gonggao/512010,AN202611041831408137.html",
+      "source": "eastmoney_fund_disclosure",
+      "document_type": "其他公告",
+      "evidence_level": "公开披露文件索引，需打开原文核验"
+    },
+    {
+      "code": "512010",
       "title": "易方达沪深300医药卫生交易型开放式指数证券投资基金2026年第3季度报告",
       "publisher": "东方财富公开基金公告索引",
       "published_at": "2026-10-27 00:00",
@@ -1893,16 +1903,6 @@
       "url": "https://fund.eastmoney.com/gonggao/512010,AN202609081829127267.html",
       "source": "eastmoney_fund_disclosure",
       "document_type": "其他公告",
-      "evidence_level": "公开披露文件索引，需打开原文核验"
-    },
-    {
-      "code": "512010",
-      "title": "易方达基金管理有限公司关于旗下基金关联交易事项的公告",
-      "publisher": "东方财富公开基金公告索引",
-      "published_at": "2026-09-05 00:00",
-      "url": "https://fund.eastmoney.com/gonggao/512010,AN202609041829024324.html",
-      "source": "eastmoney_fund_disclosure",
-      "document_type": "关联交易",
       "evidence_level": "公开披露文件索引，需打开原文核验"
     },
     {
@@ -2273,9 +2273,9 @@
       "name": "纳指ETF",
       "target_weight": 60.0,
       "action": "等待验证",
-      "net_return_range": "-4.1% / +1.4% / +6.9%",
+      "net_return_range": "-4.0% / +1.4% / +6.9%",
       "max_drawdown": -0.28568022185936814,
-      "reason": "核心仓候选得分 0.98；年化历史收益 +20.3%，60日动量 +2.8%，最大回撤 -28.6%。",
+      "reason": "核心仓候选得分 0.98；年化历史收益 +20.7%，60日动量 +2.3%，最大回撤 -28.6%。",
       "evidence": "历史区间 2026-11-04 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -28.6% 超过用户阈值；数据质量未达到 90%"
     },
@@ -2285,9 +2285,9 @@
       "name": "医药ETF",
       "target_weight": 35.0,
       "action": "不碰",
-      "net_return_range": "-6.2% / -0.2% / +5.7%",
+      "net_return_range": "-6.1% / -0.2% / +5.8%",
       "max_drawdown": -0.6550561616402983,
-      "reason": "战术仓候选得分 0.66；年化历史收益 -0.3%，60日动量 +1.6%，最大回撤 -65.5%。",
+      "reason": "战术仓候选得分 0.66；年化历史收益 -0.0%，60日动量 +1.6%，最大回撤 -65.5%。",
       "evidence": "历史区间 2026-11-04 截止；数据质量 88%；净收益情景按 20 个交易日、手续费/滑点参数计算",
       "risk_flags": "历史最大回撤 -65.5% 超过用户阈值；数据质量未达到 90%"
     }
@@ -2297,8 +2297,8 @@
       "code": "510300",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 4.0670；样本质量 88%。",
-        "历史累计收益 +23.3%，年化历史收益 +2.7%。",
+        "截至 2026-11-04，最新值 4.1750；样本质量 88%。",
+        "历史累计收益 +26.6%，年化历史收益 +3.0%。",
         "年化波动 19.2%，历史最大回撤 -45.1%。"
       ],
       "positive_evidence": [
@@ -2306,7 +2306,7 @@
       ],
       "risk_signals": [
         "历史最大回撤达到 -45.1%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2316,22 +2316,22 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +2.7%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.0%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "510500",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 6.3760；样本质量 88%。",
-        "历史累计收益 +54.2%，年化历史收益 +5.6%。",
-        "年化波动 23.6%，历史最大回撤 -39.7%。"
+        "截至 2026-11-04，最新值 6.6610；样本质量 88%。",
+        "历史累计收益 +61.1%，年化历史收益 +6.1%。",
+        "年化波动 23.7%，历史最大回撤 -39.7%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。"
       ],
       "risk_signals": [
         "历史最大回撤达到 -39.7%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2341,14 +2341,14 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +5.6%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +6.1%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "159915",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 2.4020；样本质量 88%。",
-        "历史累计收益 +86.8%，年化历史收益 +8.1%。",
+        "截至 2026-11-04，最新值 2.5610；样本质量 88%。",
+        "历史累计收益 +99.1%，年化历史收益 +9.0%。",
         "年化波动 31.2%，历史最大回撤 -56.6%。"
       ],
       "positive_evidence": [
@@ -2357,7 +2357,7 @@
       "risk_signals": [
         "历史最大回撤达到 -56.6%，应与用户回撤阈值核对。",
         "年化波动达到 31.2%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2367,23 +2367,23 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +8.1%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +9.0%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "159949",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 1.0770；样本质量 88%。",
-        "历史累计收益 +123.9%，年化历史收益 +10.6%。",
-        "年化波动 33.3%，历史最大回撤 -59.0%。"
+        "截至 2026-11-04，最新值 1.1520；样本质量 88%。",
+        "历史累计收益 +139.5%，年化历史收益 +11.5%。",
+        "年化波动 33.4%，历史最大回撤 -59.0%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。"
       ],
       "risk_signals": [
         "历史最大回撤达到 -59.0%，应与用户回撤阈值核对。",
-        "年化波动达到 33.3%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "年化波动达到 33.4%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2393,23 +2393,23 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +10.6%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +11.5%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "513100",
       "status": "黄灯",
       "facts": [
-        "截至 2026-11-04，最新值 2.1860；样本质量 88%。",
-        "历史累计收益 +337.4%，年化历史收益 +20.3%。",
+        "截至 2026-11-04，最新值 2.2420；样本质量 88%。",
+        "历史累计收益 +348.6%，年化历史收益 +20.7%。",
         "年化波动 24.3%，历史最大回撤 -28.6%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。",
-        "收益/回撤比为 0.71，可作为继续研究的量化证据。"
+        "收益/回撤比为 0.72，可作为继续研究的量化证据。"
       ],
       "risk_signals": [
         "历史最大回撤达到 -28.6%，应与用户回撤阈值核对。",
-        "工作日序列缺失 151 天；节假日和停牌需人工确认"
+        "工作日序列缺失 150 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2419,23 +2419,23 @@
       ],
       "conclusion": "等待验证：存在回撤、波动或数据口径风险，暂不因故事买入。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +20.3%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +20.7%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "512100",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 2.5370；样本质量 88%。",
-        "历史累计收益 +68.0%，年化历史收益 +6.7%。",
-        "年化波动 25.4%，历史最大回撤 -45.8%。"
+        "截至 2026-11-04，最新值 2.6520；样本质量 88%。",
+        "历史累计收益 +75.6%，年化历史收益 +7.3%。",
+        "年化波动 25.5%，历史最大回撤 -45.8%。"
       ],
       "positive_evidence": [
         "历史样本的年化收益为正，但不代表未来收益。"
       ],
       "risk_signals": [
         "历史最大回撤达到 -45.8%，应与用户回撤阈值核对。",
-        "年化波动达到 25.4%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "年化波动达到 25.5%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2445,21 +2445,21 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +6.7%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +7.3%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "588000",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 1.2210；样本质量 86%。",
-        "历史累计收益 -15.2%，年化历史收益 -2.7%。",
-        "年化波动 32.6%，历史最大回撤 -59.6%。"
+        "截至 2026-11-04，最新值 1.3400；样本质量 86%。",
+        "历史累计收益 -6.9%，年化历史收益 -1.2%。",
+        "年化波动 32.8%，历史最大回撤 -59.6%。"
       ],
       "positive_evidence": [],
       "risk_signals": [
         "历史最大回撤达到 -59.6%，应与用户回撤阈值核对。",
-        "年化波动达到 32.6%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 140 天；节假日和停牌需人工确认"
+        "年化波动达到 32.8%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 139 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2469,14 +2469,14 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -2.7%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -1.2%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "512880",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 1.0060；样本质量 88%。",
-        "历史累计收益 +30.5%，年化历史收益 +3.4%。",
+        "截至 2026-11-04，最新值 1.0220；样本质量 88%。",
+        "历史累计收益 +32.6%，年化历史收益 +3.6%。",
         "年化波动 29.8%，历史最大回撤 -45.0%。"
       ],
       "positive_evidence": [
@@ -2485,7 +2485,7 @@
       "risk_signals": [
         "历史最大回撤达到 -45.0%，应与用户回撤阈值核对。",
         "年化波动达到 29.8%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2495,21 +2495,21 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.4%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.6%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "512480",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 0.7130；样本质量 87%。",
-        "历史累计收益 -28.7%，年化历史收益 -4.4%。",
-        "年化波动 72.3%，历史最大回撤 -74.3%。"
+        "截至 2026-11-04，最新值 0.7720；样本质量 87%。",
+        "历史累计收益 -22.8%，年化历史收益 -3.4%。",
+        "年化波动 72.4%，历史最大回撤 -74.7%。"
       ],
       "positive_evidence": [],
       "risk_signals": [
-        "历史最大回撤达到 -74.3%，应与用户回撤阈值核对。",
-        "年化波动达到 72.3%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 156 天；节假日和停牌需人工确认"
+        "历史最大回撤达到 -74.7%，应与用户回撤阈值核对。",
+        "年化波动达到 72.4%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 155 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
         "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
@@ -2519,14 +2519,14 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -4.4%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -3.4%，仅作压力测试比较，不能外推未来。"
     },
     {
       "code": "516160",
       "status": "红灯",
       "facts": [
-        "截至 2026-11-04，最新值 1.9660；样本质量 87%。",
-        "历史累计收益 +96.5%，年化历史收益 +12.4%。",
+        "截至 2026-11-04，最新值 2.0530；样本质量 87%。",
+        "历史累计收益 +105.2%，年化历史收益 +13.2%。",
         "年化波动 99.3%，历史最大回撤 -66.8%。"
       ],
       "positive_evidence": [
@@ -2535,6 +2535,129 @@
       "risk_signals": [
         "历史最大回撤达到 -66.8%，应与用户回撤阈值核对。",
         "年化波动达到 99.3%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 117 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +13.2%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "515050",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-11-04，最新值 0.6880；样本质量 87%。",
+        "历史累计收益 -31.2%，年化历史收益 -5.1%。",
+        "年化波动 92.8%，历史最大回撤 -80.9%。"
+      ],
+      "positive_evidence": [],
+      "risk_signals": [
+        "历史最大回撤达到 -80.9%，应与用户回撤阈值核对。",
+        "年化波动达到 92.8%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 146 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -5.1%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512010",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-11-04，最新值 0.3890；样本质量 88%。",
+        "历史累计收益 -0.1%，年化历史收益 -0.0%。",
+        "年化波动 26.4%，历史最大回撤 -65.5%。"
+      ],
+      "positive_evidence": [],
+      "risk_signals": [
+        "历史最大回撤达到 -65.5%，应与用户回撤阈值核对。",
+        "年化波动达到 26.4%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -0.0%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "159919",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-11-04，最新值 4.3640；样本质量 88%。",
+        "历史累计收益 +35.0%，年化历史收益 +3.8%。",
+        "年化波动 19.8%，历史最大回撤 -42.8%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -42.8%，应与用户回撤阈值核对。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.8%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "512660",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-11-04，最新值 1.0370；样本质量 88%。",
+        "历史累计收益 +57.1%，年化历史收益 +5.8%。",
+        "年化波动 31.0%，历史最大回撤 -50.9%。"
+      ],
+      "positive_evidence": [
+        "历史样本的年化收益为正，但不代表未来收益。"
+      ],
+      "risk_signals": [
+        "历史最大回撤达到 -50.9%，应与用户回撤阈值核对。",
+        "年化波动达到 31.0%，战术仓需控制仓位和交易频率。",
+        "工作日序列缺失 151 天；节假日和停牌需人工确认"
+      ],
+      "verification_questions": [
+        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
+        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
+        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
+        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
+      ],
+      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
+      "source": "规则化基线",
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +5.8%，仅作压力测试比较，不能外推未来。"
+    },
+    {
+      "code": "515790",
+      "status": "红灯",
+      "facts": [
+        "截至 2026-11-04，最新值 0.7260；样本质量 88%。",
+        "历史累计收益 -27.4%，年化历史收益 -5.3%。",
+        "年化波动 34.7%，历史最大回撤 -67.1%。"
+      ],
+      "positive_evidence": [],
+      "risk_signals": [
+        "历史最大回撤达到 -67.1%，应与用户回撤阈值核对。",
+        "年化波动达到 34.7%，战术仓需控制仓位和交易频率。",
         "工作日序列缺失 118 天；节假日和停牌需人工确认"
       ],
       "verification_questions": [
@@ -2545,130 +2668,7 @@
       ],
       "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
       "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +12.4%，仅作压力测试比较，不能外推未来。"
-    },
-    {
-      "code": "515050",
-      "status": "红灯",
-      "facts": [
-        "截至 2026-11-04，最新值 0.6340；样本质量 87%。",
-        "历史累计收益 -36.6%，年化历史收益 -6.2%。",
-        "年化波动 92.8%，历史最大回撤 -81.0%。"
-      ],
-      "positive_evidence": [],
-      "risk_signals": [
-        "历史最大回撤达到 -81.0%，应与用户回撤阈值核对。",
-        "年化波动达到 92.8%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 147 天；节假日和停牌需人工确认"
-      ],
-      "verification_questions": [
-        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
-        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
-        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
-        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
-      ],
-      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
-      "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -6.2%，仅作压力测试比较，不能外推未来。"
-    },
-    {
-      "code": "512010",
-      "status": "红灯",
-      "facts": [
-        "截至 2026-11-04，最新值 0.3800；样本质量 88%。",
-        "历史累计收益 -2.4%，年化历史收益 -0.3%。",
-        "年化波动 26.4%，历史最大回撤 -65.5%。"
-      ],
-      "positive_evidence": [],
-      "risk_signals": [
-        "历史最大回撤达到 -65.5%，应与用户回撤阈值核对。",
-        "年化波动达到 26.4%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
-      ],
-      "verification_questions": [
-        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
-        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
-        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
-        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
-      ],
-      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
-      "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -0.3%，仅作压力测试比较，不能外推未来。"
-    },
-    {
-      "code": "159919",
-      "status": "红灯",
-      "facts": [
-        "截至 2026-11-04，最新值 4.2450；样本质量 88%。",
-        "历史累计收益 +31.3%，年化历史收益 +3.5%。",
-        "年化波动 19.8%，历史最大回撤 -42.8%。"
-      ],
-      "positive_evidence": [
-        "历史样本的年化收益为正，但不代表未来收益。"
-      ],
-      "risk_signals": [
-        "历史最大回撤达到 -42.8%，应与用户回撤阈值核对。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
-      ],
-      "verification_questions": [
-        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
-        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
-        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
-        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
-      ],
-      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
-      "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +3.5%，仅作压力测试比较，不能外推未来。"
-    },
-    {
-      "code": "512660",
-      "status": "红灯",
-      "facts": [
-        "截至 2026-11-04，最新值 1.0030；样本质量 88%。",
-        "历史累计收益 +52.0%，年化历史收益 +5.4%。",
-        "年化波动 31.0%，历史最大回撤 -50.9%。"
-      ],
-      "positive_evidence": [
-        "历史样本的年化收益为正，但不代表未来收益。"
-      ],
-      "risk_signals": [
-        "历史最大回撤达到 -50.9%，应与用户回撤阈值核对。",
-        "年化波动达到 31.0%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 152 天；节假日和停牌需人工确认"
-      ],
-      "verification_questions": [
-        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
-        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
-        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
-        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
-      ],
-      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
-      "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 +5.4%，仅作压力测试比较，不能外推未来。"
-    },
-    {
-      "code": "515790",
-      "status": "红灯",
-      "facts": [
-        "截至 2026-11-04，最新值 0.6900；样本质量 87%。",
-        "历史累计收益 -31.0%，年化历史收益 -6.1%。",
-        "年化波动 34.6%，历史最大回撤 -67.1%。"
-      ],
-      "positive_evidence": [],
-      "risk_signals": [
-        "历史最大回撤达到 -67.1%，应与用户回撤阈值核对。",
-        "年化波动达到 34.6%，战术仓需控制仓位和交易频率。",
-        "工作日序列缺失 119 天；节假日和停牌需人工确认"
-      ],
-      "verification_questions": [
-        "核对基金合同、招募说明书、最新定期报告和跟踪误差口径。",
-        "确认最新数据是否覆盖停牌、分红、拆分、合并和基金更名。",
-        "将实际账户费用、滑点和持有期成本替换为当前参数后再复核。",
-        "已抓取 12 条事件线索；逐条回到原始公告核验，不把新闻摘要当事实。"
-      ],
-      "conclusion": "不碰：风险信号与数据/回撤约束叠加，先完成核查。",
-      "source": "规则化基线",
-      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -6.1%，仅作压力测试比较，不能外推未来。"
+      "goal_fit": "五年十倍目标对应约 58.5% 年化收益；该标的历史样本年化收益为 -5.3%，仅作压力测试比较，不能外推未来。"
     }
   ]
 }
