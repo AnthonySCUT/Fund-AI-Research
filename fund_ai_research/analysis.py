@@ -70,6 +70,26 @@ class ResearchCard:
         return asdict(self)
 
 
+def _validated_card(item: object, code: str, source: str) -> Optional[ResearchCard]:
+    """Reject malformed model output so the next provider/baseline can run."""
+    if not isinstance(item, dict) or item.get("status") not in {"绿灯", "黄灯", "红灯"}:
+        return None
+    fields = ("facts", "positive_evidence", "risk_signals", "verification_questions")
+    for field in fields:
+        values = item.get(field)
+        if not isinstance(values, list) or any(not isinstance(v, str) or not v.strip() for v in values):
+            return None
+    if not item["facts"]:
+        return None
+    conclusion = item.get("conclusion")
+    goal_fit = item.get("goal_fit", "")
+    if not isinstance(conclusion, str) or not conclusion.strip() or not isinstance(goal_fit, str):
+        return None
+    return ResearchCard(code=code, source=source, status=item["status"],
+                        conclusion=conclusion, goal_fit=goal_fit,
+                        **{field: item[field] for field in fields})
+
+
 class RuleBasedResearchAnalyzer:
     """Deterministic baseline. It is intentionally explainable and works offline."""
 
@@ -218,18 +238,8 @@ class OpenAICompatibleAnalyzer:
             content = response.json()["choices"][0]["message"]["content"]
             content = content.strip().removeprefix("```json").removesuffix("```").strip()
             parsed = json.loads(content)
-            return ResearchCard(
-                code=metric.code,
-                status=parsed.get("status", "黄灯"),
-                facts=parsed.get("facts", []),
-                positive_evidence=parsed.get("positive_evidence", []),
-                risk_signals=parsed.get("risk_signals", []),
-                verification_questions=parsed.get("verification_questions", []),
-                conclusion=parsed.get("conclusion", "等待人工复核。"),
-                source=self.label,
-                goal_fit=parsed.get("goal_fit", ""),
-            )
-        except (requests.RequestException, KeyError, IndexError, ValueError, json.JSONDecodeError):
+            return _validated_card(parsed, metric.code, self.label)
+        except (requests.RequestException, AttributeError, TypeError, KeyError, IndexError, ValueError):
             return None
 
     def analyze_many(
@@ -292,24 +302,28 @@ class OpenAICompatibleAnalyzer:
             content = response.json()["choices"][0]["message"]["content"]
             content = content.strip().removeprefix("```json").removesuffix("```").strip()
             parsed = json.loads(content)
+            if not isinstance(parsed, dict) or not isinstance(parsed.get("cards"), list):
+                return {}
+            allowed_codes = {metric.code for metric in metric_list}
             cards: Dict[str, ResearchCard] = {}
-            for item in parsed.get("cards", []):
-                code = item.get("code")
-                if not code or code not in quality_map:
+            duplicates = set()
+            seen = set()
+            for item in parsed["cards"]:
+                if not isinstance(item, dict):
                     continue
-                cards[code] = ResearchCard(
-                    code=code,
-                    status=item.get("status", "黄灯"),
-                    facts=item.get("facts", []),
-                    positive_evidence=item.get("positive_evidence", []),
-                    risk_signals=item.get("risk_signals", []),
-                    verification_questions=item.get("verification_questions", []),
-                    conclusion=item.get("conclusion", "等待人工复核。"),
-                    source=self.label,
-                    goal_fit=item.get("goal_fit", ""),
-                )
+                code = item.get("code")
+                if not isinstance(code, str) or code not in allowed_codes:
+                    continue
+                if code in seen:
+                    duplicates.add(code)
+                seen.add(code)
+                card = _validated_card(item, code, self.label)
+                if card is not None:
+                    cards[code] = card
+            for code in duplicates:
+                cards.pop(code, None)
             return cards
-        except (requests.RequestException, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError):
+        except (requests.RequestException, AttributeError, KeyError, IndexError, TypeError, ValueError):
             return {}
 
 

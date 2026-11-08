@@ -23,13 +23,24 @@ def _stable_json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), default=str)
 
 
+def _quality_facts(value: Any) -> dict:
+    """Use the same shape for dataclass reports and serialized UI table rows."""
+    row = _as_dict(value)
+    row.pop("status", None)  # Derived display value, absent from QualityReport.
+    warnings = row.get("warnings", [])
+    if isinstance(warnings, str):
+        warnings = [] if warnings in {"", "无"} else warnings.split("；")
+    row["warnings"] = warnings
+    return row
+
+
 def research_fingerprint(metric: Any, quality: Any, events: Iterable[Any]) -> str:
     """Fingerprint the facts that feed one AI research card."""
     event_rows = [_as_dict(event) for event in events]
     event_rows.sort(key=_stable_json)
     payload = {
         "metric": _as_dict(metric),
-        "quality": _as_dict(quality),
+        "quality": _quality_facts(quality),
         "events": event_rows,
     }
     return hashlib.sha256(_stable_json(payload).encode("utf-8")).hexdigest()
