@@ -5,6 +5,7 @@ from unittest.mock import patch
 import pandas as pd
 import requests
 
+from fund_ai_research.adjustments import CorporateAction, load_actions, standardize
 from fund_ai_research.analysis import analyze_metrics
 from fund_ai_research.analytics import (
     calculate_metrics,
@@ -175,3 +176,80 @@ def test_incremental_fingerprints_change_only_the_affected_fund():
 
     assert before["510300"] != after["510300"]
     assert before["510500"] == after["510500"]
+
+
+def _synthetic_frame(dates, closes):
+    return pd.DataFrame(
+        {
+            "trade_date": pd.DatetimeIndex(dates),
+            "close": closes,
+            "aum": 1.0,
+            "volume": 1.0,
+        }
+    )
+
+
+def test_first_daily_return_is_not_zero_filled():
+    dates = pd.bdate_range("2026-01-05", periods=5)
+    history = _synthetic_frame(dates, [1.0, 1.1, 1.2, 1.1, 1.3])
+    clean = normalize_history(history, "T")
+    assert pd.isna(clean["daily_return"].iloc[0])
+    assert clean["cumulative_return"].iloc[0] == 0.0
+
+
+def test_holidays_are_not_counted_as_missing_days():
+    full = pd.bdate_range("2026-02-09", "2026-02-27")
+    trading = [d for d in full if not pd.Timestamp("2026-02-16") <= d <= pd.Timestamp("2026-02-20")]
+    history = _synthetic_frame(trading, [1.0 + 0.01 * i for i in range(len(trading))])
+    report = validate_history(history, "T", trading_days=trading)
+    assert report.missing_dates == 0
+    assert report.quality_score == 1.0
+
+
+def test_split_adjustment_bridges_price_unit_change():
+    dates = pd.bdate_range("2024-01-01", periods=10)
+    history = _synthetic_frame(dates, [2.0] * 5 + [1.0] * 5)
+    actions = [CorporateAction("T", date(2024, 1, 8), 2.0, "split", True, "test")]
+    adjusted, status = standardize(history, "T", actions)
+    assert status == "split_adjusted"
+    assert adjusted["close"].round(6).nunique() == 1
+    assert float(adjusted["close"].pct_change().abs().max() or 0) == 0.0
+
+
+def test_already_adjusted_source_is_not_adjusted_twice():
+    dates = pd.bdate_range("2024-01-01", periods=10)
+    history = _synthetic_frame(dates, [1.0] * 10)
+    actions = [CorporateAction("T", date(2024, 1, 8), 2.0, "split", True, "test")]
+    adjusted, status = standardize(history, "T", actions)
+    assert status == "split_adjusted"
+    assert sorted(adjusted["split_factor"].unique()) == [1.0]
+
+
+def test_unverified_split_is_applied_but_flagged():
+    dates = pd.bdate_range("2024-01-01", periods=10)
+    history = _synthetic_frame(dates, [3.0] * 5 + [1.0] * 5)
+    adjusted, status = standardize(history, "T", [])
+    assert status == "unverified"
+    assert float(adjusted["close"].pct_change().abs().max() or 0) == 0.0
+
+
+def test_gap_returns_are_excluded_and_flagged():
+    full = pd.bdate_range("2026-01-05", "2026-01-30")
+    trading = [d for d in full if not pd.Timestamp("2026-01-12") <= d <= pd.Timestamp("2026-01-14")]
+    history = _synthetic_frame(trading, [1.0 + 0.01 * i for i in range(len(trading))])
+    report = validate_history(history, "T", trading_days=full)
+    metric = calculate_metrics(history, "T", "T", "x", report, "test", trading_days=full)
+    assert report.missing_dates == 3
+    assert metric.missing_policy == "gap_excluded"
+
+
+def test_new_metric_fields_have_safe_defaults():
+    dates = pd.bdate_range("2026-01-05", periods=5)
+    history = _synthetic_frame(dates, [1.0, 1.1, 1.2, 1.1, 1.3])
+    report = validate_history(history, "T")
+    metric = calculate_metrics(history, "T", "T", "x", report, "test")
+    payload = metric.as_dict()
+    assert payload["price_basis"] == "split_adjusted_close"
+    assert payload["corporate_action_status"] == "none"
+    assert payload["missing_policy"] == "none"
+    assert load_actions("does-not-exist.json") == {}
