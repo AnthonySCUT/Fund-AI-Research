@@ -56,7 +56,7 @@ except ImportError:
 
 st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v7-cache-label"
+APP_VERSION = "expanded-universe-reports-v8-split-adjusted"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -125,7 +125,7 @@ def cache_ttl_seconds() -> int:
 
 
 CACHE_TTL_SECONDS = cache_ttl_seconds()
-CACHE_SCHEMA_VERSION = "research-cache-v1"
+CACHE_SCHEMA_VERSION = "research-cache-v2"
 BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
