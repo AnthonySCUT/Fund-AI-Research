@@ -1,0 +1,14 @@
+{
+  "schema": "corporate-actions-v1",
+  "note": "已核实的拆分/合份事件。ratio = 1 份拆成 N 份。新增事件只需改这个文件，不需要改代码。",
+  "actions": [
+    {
+      "code": "512480",
+      "ex_date": "2026-07-03",
+      "ratio": 2.0,
+      "kind": "split",
+      "verified": true,
+      "evidence": "https://www.sse.com.cn/assortment/options/mnjyzxxx/c/c_20260703_10824231.shtml"
+    }
+  ]
+}
