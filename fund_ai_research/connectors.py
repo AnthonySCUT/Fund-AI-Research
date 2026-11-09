@@ -153,14 +153,76 @@ class YahooFinanceConnector:
             timestamps = result.get("timestamp", [])
             quote = result["indicators"]["quote"][0]
             values = quote.get("close", [])
-            frame = pd.DataFrame({"trade_date": pd.to_datetime(timestamps, unit="s"), "close": values})
+            frame = pd.DataFrame(
+                {
+                    "trade_date": pd.to_datetime(timestamps, unit="s").normalize(),
+                    "close": values,
+                }
+            )
+            # ``adjclose`` includes dividend reinvestment, so it is kept only as
+            # a reconciliation reference and never feeds the indicators.
+            adjusted = result["indicators"].get("adjclose") or []
+            if adjusted:
+                frame["adj_close"] = adjusted[0].get("adjclose", [np.nan] * len(frame))
+            else:
+                frame["adj_close"] = np.nan
             frame["aum"] = np.nan
             frame["volume"] = quote.get("volume", [np.nan] * len(frame))
             frame["source_id"] = f"yahoo_chart:{profile.symbol}"
+            frame["price_field"] = "yahoo:quote.close"
             frame["fetched_at"] = datetime.now().isoformat(timespec="seconds")
-            return frame.dropna(subset=["close"])
+            frame = frame.dropna(subset=["close"]).reset_index(drop=True)
+            frame.attrs["chart_events"] = self._parse_chart_events(result, profile)
+            return frame
         except (requests.RequestException, KeyError, IndexError, ValueError) as exc:
             raise DataFetchError(f"Yahoo 行情抓取失败：{profile.symbol}，{exc}") from exc
+
+    @staticmethod
+    def _parse_chart_events(result: dict, profile: FundProfile) -> List[EventRecord]:
+        """Turn chart splits/dividends into records.
+
+        An empty result is itself informative: it means the endpoint returned
+        nothing, not that the fund never had a corporate action.
+        """
+        events = result.get("events") or {}
+        records: List[EventRecord] = []
+        for item in (events.get("splits") or {}).values():
+            try:
+                published = datetime.fromtimestamp(int(item.get("date", 0)))
+            except (TypeError, ValueError):
+                published = None
+            numerator = item.get("numerator")
+            denominator = item.get("denominator")
+            records.append(
+                EventRecord(
+                    code=profile.code,
+                    title=f"{profile.name} 拆份 {numerator}:{denominator}（Yahoo chart events）",
+                    publisher="Yahoo Finance chart events",
+                    published_at=published or datetime.now(),
+                    url="",
+                    source="yahoo_chart_events",
+                    document_type="拆分/除权",
+                    evidence_level="数据源事件，需交易所公告核实",
+                )
+            )
+        for item in (events.get("dividends") or {}).values():
+            try:
+                published = datetime.fromtimestamp(int(item.get("date", 0)))
+            except (TypeError, ValueError):
+                published = None
+            records.append(
+                EventRecord(
+                    code=profile.code,
+                    title=f"{profile.name} 现金分红 {item.get('amount', '')}（Yahoo chart events）",
+                    publisher="Yahoo Finance chart events",
+                    published_at=published or datetime.now(),
+                    url="",
+                    source="yahoo_chart_events",
+                    document_type="分红公告",
+                    evidence_level="数据源事件，需交易所公告核实",
+                )
+            )
+        return records
 
     def fetch_events(self, code: str, limit: int = 8) -> List[EventRecord]:
         profile = self.profiles[code]
@@ -208,14 +270,20 @@ class EastmoneyConnector:
         market = "1" if symbol.endswith(".SS") else "0"
         return f"{market}.{symbol.split('.')[0]}"
 
-    def fetch_history(self, code: str, start: Optional[date] = None, end: Optional[date] = None) -> pd.DataFrame:
+    def fetch_history(
+        self,
+        code: str,
+        start: Optional[date] = None,
+        end: Optional[date] = None,
+        fqt: str = "0",
+    ) -> pd.DataFrame:
         profile = self.profiles[code]
         start = start or profile.inception_date
         end = end or date.today()
         params = {
             "secid": self._secid(profile.symbol),
             "klt": "101",
-            "fqt": "1",
+            "fqt": str(fqt),
             "beg": start.strftime("%Y%m%d"),
             "end": end.strftime("%Y%m%d"),
             "fields1": "f1,f2,f3,f4,f5,f6",
@@ -230,13 +298,20 @@ class EastmoneyConnector:
             if not rows:
                 raise DataFetchError(f"东方财富没有返回 {profile.symbol} 的日线数据")
             parsed = [row.split(",") for row in rows]
+            # ``fields2`` starts at f51 and skips f52 (open), so the column
+            # order is: date, close, high, low, volume, amount, ...
+            # Indexing open as close would silently feed high prices into every
+            # indicator on the fallback path.
             frame = pd.DataFrame(
                 {
-                    "trade_date": [row[0] for row in parsed],
-                    "close": [row[2] for row in parsed],
+                    "trade_date": pd.to_datetime([row[0] for row in parsed]).normalize(),
+                    "close": [row[1] for row in parsed],
+                    "high": [row[2] for row in parsed],
+                    "low": [row[3] for row in parsed],
                     "aum": np.nan,
-                    "volume": [row[5] for row in parsed],
+                    "volume": [row[4] for row in parsed],
                     "source_id": f"eastmoney_kline:{profile.symbol}",
+                    "price_field": f"eastmoney:fqt={fqt}",
                     "fetched_at": datetime.now().isoformat(timespec="seconds"),
                 }
             )
@@ -436,20 +511,25 @@ class CompositeConnector:
         self.fund_disclosure = EastmoneyFundDisclosureConnector(profiles)
 
     def fetch_history(self, code: str, start: Optional[date] = None, end: Optional[date] = None) -> tuple[pd.DataFrame, str]:
+        # The suffix states the price basis Pod 3 consumes. The leading source
+        # keywords are a stable contract used by the app's source badges, so the
+        # prefix is appended to and never rewritten.
+        basis = "｜价格口径:拆分调整后收盘价"
+        demo_basis = "｜演示口径"
         if self.mode == "eastmoney":
             try:
-                return self.eastmoney.fetch_history(code, start, end), "东方财富公开日线"
+                return self.eastmoney.fetch_history(code, start, end), f"东方财富公开日线{basis}"
             except DataFetchError:
-                return self.demo.fetch_history(code, start, end), "演示数据（东方财富不可用时回退）"
+                return self.demo.fetch_history(code, start, end), f"演示数据（东方财富不可用时回退）{demo_basis}"
         if self.mode in {"auto", "yahoo"}:
             try:
-                return self.yahoo.fetch_history(code, start, end), "Yahoo Finance public chart"
+                return self.yahoo.fetch_history(code, start, end), f"Yahoo Finance public chart{basis}"
             except DataFetchError:
                 try:
-                    return self.eastmoney.fetch_history(code, start, end), "东方财富公开日线（Yahoo 限流回退）"
+                    return self.eastmoney.fetch_history(code, start, end), f"东方财富公开日线（Yahoo 限流回退）{basis}"
                 except DataFetchError:
-                    return self.demo.fetch_history(code, start, end), "演示数据（真实行情不可用）"
-        return self.demo.fetch_history(code, start, end), "演示数据"
+                    return self.demo.fetch_history(code, start, end), f"演示数据（真实行情不可用）{demo_basis}"
+        return self.demo.fetch_history(code, start, end), f"演示数据{demo_basis}"
 
     def fetch_events(self, code: str) -> List[EventRecord]:
         if self.mode in {"auto", "yahoo", "eastmoney"}:

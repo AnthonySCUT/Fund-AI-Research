@@ -68,9 +68,11 @@ def test_eastmoney_history_parser_uses_real_close_and_volume():
             return None
 
         def json(self):
+            # Real layout: date, close, high, low, volume, amount, amplitude,
+            # pct_chg, change, turnover (fields2 skips f52/open).
             return {"data": {"klines": [
-                "2026-09-04,4.600,4.620,4.650,4.590,123456,570000000,1.30,0.43,0.02,0.50",
-                "2026-09-07,4.630,4.634,4.670,4.610,234567,1080000000,1.30,0.30,0.01,0.70",
+                "2026-09-04,4.620,4.650,4.590,123456,570000000,1.30,0.43,0.02,0.50",
+                "2026-09-07,4.634,4.670,4.610,234567,1080000000,1.30,0.30,0.01,0.70",
             ]}}
 
     with patch("fund_ai_research.connectors.requests.get", return_value=FakeResponse()):
