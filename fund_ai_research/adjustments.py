@@ -88,32 +88,53 @@ def detect_candidates(
     returns = close.pct_change(fill_method=None)
 
     candidates: List[CorporateAction] = []
-    for position in np.flatnonzero(np.asarray(returns.to_numpy() <= -threshold)):
-        if position == 0:
+    upper_threshold = threshold / (1.0 - threshold)
+
+    for position in range(1, len(frame)):
+        ret = returns.iloc[position]
+        if pd.isna(ret):
             continue
         previous = float(close.iloc[position - 1])
         current = float(close.iloc[position])
         if previous <= 0 or current <= 0:
             continue
-        candidates.append(
-            CorporateAction(
-                code=code,
-                ex_date=dates.iloc[position].date(),
-                ratio=round(previous / current, 4),
-                kind="split",
-                verified=False,
-                evidence="单源单日跌幅超过阈值，自动检测",
+
+        if ret <= -threshold:
+            candidates.append(
+                CorporateAction(
+                    code=code,
+                    ex_date=dates.iloc[position].date(),
+                    ratio=round(previous / current, 4),
+                    kind="split",
+                    verified=False,
+                    evidence="单源单日跌幅超过阈值，自动检测",
+                )
             )
-        )
+        elif ret >= upper_threshold:
+            candidates.append(
+                CorporateAction(
+                    code=code,
+                    ex_date=dates.iloc[position].date(),
+                    ratio=round(previous / current, 4),
+                    kind="reverse_split",
+                    verified=False,
+                    evidence="单源单日暴涨超过阈值，自动检测反向跳变",
+                )
+            )
     return candidates
 
 
 def _match_verified(
     verified: Sequence[CorporateAction],
-    ex_date: date,
+    candidate: CorporateAction,
+    tolerance: float = RATIO_TOLERANCE,
 ) -> Optional[CorporateAction]:
     for action in verified:
-        if action.ex_date == ex_date:
+        if (
+            action.ex_date == candidate.ex_date
+            and action.ratio > 0
+            and abs(candidate.ratio - action.ratio) / action.ratio <= tolerance
+        ):
             return action
     return None
 
@@ -126,13 +147,14 @@ def standardize(
     """Return (split-adjusted frame, corporate action status).
 
     The adjustment is applied only where this particular source *shows* a
-    discontinuity. A source that already delivers a continuous series (for
-    example an adjusted feed) is therefore never adjusted twice.
+    discontinuity that matches a verified announcement. Unverified jumps are never
+    adjusted into synthetic splits; they trigger an ``unverified`` status so the
+    source selector can switch to a valid feed before metrics are computed.
 
     Status values:
         ``none``            no corporate action applies to this series
-        ``split_adjusted``  every applied factor has announcement evidence
-        ``unverified``      at least one factor came from detection only
+        ``split_adjusted``  verified corporate actions applied or series is already continuous
+        ``unverified``      detected candidate discontinuities not verified by announcements
     """
     if frame is None or frame.empty:
         return frame, "none"
@@ -150,16 +172,18 @@ def standardize(
     working["raw_close"] = raw_close
     verified = list(verified_actions or [])
 
-    applied: List[Tuple[date, float, bool]] = []
+    min_date = working["trade_date"].min().date()
+    max_date = working["trade_date"].max().date()
+    verified_in_range = [a for a in verified if min_date < a.ex_date <= max_date]
+
+    applied: List[Tuple[date, float, str]] = []
+    unverified_candidates: List[CorporateAction] = []
     for candidate in detect_candidates(working, code):
-        announced = _match_verified(verified, candidate.ex_date)
-        if announced is not None:
-            # The announcement is authoritative even when its ratio differs
-            # slightly from the observed one; the difference is a data point
-            # for the reconciliation report, not a reason to guess.
-            applied.append((announced.ex_date, announced.ratio, True))
+        announced = _match_verified(verified_in_range, candidate)
+        if announced is not None and announced.verified:
+            applied.append((announced.ex_date, announced.ratio, announced.evidence))
         else:
-            applied.append((candidate.ex_date, candidate.ratio, False))
+            unverified_candidates.append(candidate)
 
     factor = pd.Series(1.0, index=working.index, dtype="float64")
     for ex_date, ratio, _ in applied:
@@ -168,13 +192,24 @@ def standardize(
     working["split_factor"] = factor
     working["adjust_state"] = np.where(factor.to_numpy() == 1.0, "raw", "adjusted")
     working["close"] = raw_close * working["split_factor"]
+    for col in ("high", "low"):
+        if col in working.columns:
+            working[col] = pd.to_numeric(working[col], errors="coerce") * working["split_factor"]
 
-    if applied:
-        status = "split_adjusted" if all(flag for _, _, flag in applied) else "unverified"
-    elif verified:
-        # A verified action exists for this code but this source already
-        # delivers a continuous series, so no adjustment was needed.
+    working.attrs["applied_actions"] = [
+        {"ex_date": ex_date.isoformat(), "ratio": ratio, "evidence": ev}
+        for ex_date, ratio, ev in applied
+    ]
+    working.attrs["unverified_candidates"] = [
+        {"ex_date": c.ex_date.isoformat(), "ratio": c.ratio, "kind": c.kind, "evidence": c.evidence}
+        for c in unverified_candidates
+    ]
+
+    if unverified_candidates:
+        status = "unverified"
+    elif applied or verified_in_range:
         status = "split_adjusted"
     else:
         status = "none"
+
     return working, status

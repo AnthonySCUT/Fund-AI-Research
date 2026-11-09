@@ -38,7 +38,7 @@ except ImportError:
         frame = frame.dropna(subset=["trade_date", "close"]).sort_values("trade_date")
         output = frame[["trade_date"]].copy()
         for window in windows:
-            output[f"rolling_{window}d"] = frame["close"].pct_change(window)
+            output[f"rolling_{window}d"] = frame["close"].pct_change(window, fill_method=None)
         return output
 
     def max_drawdown_recovery_days(history):
@@ -75,6 +75,10 @@ def source_status(source: str) -> tuple[str, str]:
     """Classify provenance for display and recommendation guardrails."""
     if "演示数据" in source:
         return "演示数据", "不可用于实际走势比较"
+    if "双源校验换源" in source:
+        return "真实行情（双源校验换源）", "主源存在尺度或局部异常，已切换至核实有效源"
+    if "交叉校验未完成" in source:
+        return "真实行情（交叉校验未完成）", "备用源不可用，单源未完成交叉校验"
     if "回退" in source:
         return "真实行情（回退）", "建议核对主数据源"
     return "真实行情", "可进入研究流程"
@@ -644,7 +648,7 @@ with tab_detail:
     if len(result.histories) >= 2:
         close_series = {}
         for code, history_frame in result.histories.items():
-            close_series[profiles[code].name] = history_frame.set_index("trade_date")["close"].pct_change()
+            close_series[profiles[code].name] = history_frame.set_index("trade_date")["close"].pct_change(fill_method=None)
         correlation = pd.DataFrame(close_series).corr().round(2)
         st.subheader("研究样本收益相关性")
         st.dataframe(correlation.style.format("{:.2f}"), width="stretch")
