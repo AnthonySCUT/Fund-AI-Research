@@ -5,6 +5,7 @@ from typing import Dict, List, Optional, Sequence
 
 import pandas as pd
 
+from .adjustments import load_actions, standardize
 from .analytics import calculate_metrics, normalize_history, validate_history
 from .connectors import CompositeConnector, DEFAULT_FUNDS
 from .models import EventRecord, FundMetrics, FundProfile, QualityReport, Recommendation
@@ -53,6 +54,21 @@ class PipelineResult:
         return pd.DataFrame(rows)
 
 
+def _union_calendar(histories: Sequence[pd.DataFrame]) -> List[pd.Timestamp]:
+    """Exchange trading days actually observed across the fetched funds.
+
+    Deriving the calendar from the data avoids a hard-coded holiday list and
+    keeps the check fund-agnostic: a date missing from every source is a
+    holiday, not a data gap.
+    """
+    dates = set()
+    for history in histories:
+        if history is None or history.empty or "trade_date" not in history:
+            continue
+        dates.update(pd.to_datetime(history["trade_date"]).dt.normalize().tolist())
+    return sorted(dates)
+
+
 def run_pipeline(
     codes: Sequence[str],
     source_mode: str = "demo",
@@ -87,15 +103,33 @@ def run_pipeline(
     with ThreadPoolExecutor(max_workers=workers) as executor:
         fetched = list(executor.map(fetch_one, valid_codes))
 
+    # The union of the fetched dates is the exchange calendar for this run:
+    # holidays are absent from every source, so they are never counted missing.
+    calendar = _union_calendar([history for _, history, _, _ in fetched])
+    actions = load_actions()
+
     for code, history, source, code_events in fetched:
-        clean = normalize_history(history, code)
-        report = validate_history(history, code)
+        standardized, action_status = standardize(history, code, actions.get(code, []))
+        clean = normalize_history(standardized, code)
+        report = validate_history(standardized, code, trading_days=calendar)
         histories[code] = clean
         quality.append(report)
         profile = profile_map[code]
-        if not clean.empty:
-            metrics.append(calculate_metrics(clean, code, profile.name, profile.category, report, source))
+        events.extend(history.attrs.get("chart_events", []) or [])
         events.extend(code_events)
+        if not clean.empty:
+            metric = calculate_metrics(
+                clean,
+                code,
+                profile.name,
+                profile.category,
+                report,
+                source,
+                trading_days=calendar,
+            )
+            metric.price_basis = "demo" if "演示数据" in source else "split_adjusted_close"
+            metric.corporate_action_status = action_status
+            metrics.append(metric)
     recommendations, profile = build_personalized_recommendations(
         metrics,
         aggression=aggression,
