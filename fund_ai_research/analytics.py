@@ -22,22 +22,34 @@ def normalize_history(history: pd.DataFrame, code: str) -> pd.DataFrame:
     frame["code"] = code
     frame = frame.dropna(subset=["trade_date", "close"])
     frame = frame.sort_values("trade_date").drop_duplicates("trade_date", keep="last")
-    frame["daily_return"] = frame["close"].pct_change().fillna(0.0)
-    frame["cumulative_return"] = (1.0 + frame["daily_return"]).cumprod() - 1.0
+    # The first observation has no predecessor: keep it as NaN instead of
+    # inventing a zero return, so it never enters the volatility sample.
+    frame["daily_return"] = frame["close"].pct_change(fill_method=None)
+    first_close = float(frame["close"].iloc[0]) if not frame.empty else 0.0
+    if first_close:
+        frame["cumulative_return"] = frame["close"] / first_close - 1.0
+    else:
+        frame["cumulative_return"] = np.nan
     running_peak = frame["close"].cummax()
     frame["drawdown"] = frame["close"] / running_peak - 1.0
     frame["rolling_vol_20d"] = frame["daily_return"].rolling(20).std() * np.sqrt(252)
     return frame.reset_index(drop=True)
 
 
-def validate_history(history: pd.DataFrame, code: str) -> QualityReport:
+def validate_history(history: pd.DataFrame, code: str, trading_days: Optional[Iterable] = None) -> QualityReport:
     missing_columns = REQUIRED_COLUMNS.difference(history.columns)
     frame = normalize_history(history, code)
     raw_dates = pd.to_datetime(history.get("trade_date", history.get("date")), errors="coerce")
     duplicate_rows = int(raw_dates.duplicated().sum()) if raw_dates is not None else 0
     invalid_values = int((frame[["close", "aum", "volume"]] < 0).sum().sum())
     missing_dates = 0
-    if len(frame) >= 2:
+    if trading_days is not None and not frame.empty:
+        # Missing days are judged against the exchange trading days actually
+        # observed across the fetched funds, so holidays are never penalised.
+        calendar = pd.DatetimeIndex(sorted(pd.to_datetime(list(trading_days)).normalize().unique()))
+        window = calendar[(calendar >= frame["trade_date"].min()) & (calendar <= frame["trade_date"].max())]
+        missing_dates = int(len(window.difference(pd.DatetimeIndex(frame["trade_date"]))))
+    elif len(frame) >= 2:
         expected = pd.date_range(frame["trade_date"].min(), frame["trade_date"].max(), freq="B")
         missing_dates = max(0, len(expected.difference(frame["trade_date"])))
     warnings: List[str] = []
@@ -46,7 +58,10 @@ def validate_history(history: pd.DataFrame, code: str) -> QualityReport:
     if duplicate_rows:
         warnings.append(f"发现 {duplicate_rows} 条重复日期记录，已保留最后一条")
     if missing_dates:
-        warnings.append(f"工作日序列缺失 {missing_dates} 天；节假日和停牌需人工确认")
+        if trading_days is not None:
+            warnings.append(f"交易日序列缺失 {missing_dates} 天；已按共同交易日核对，停牌需人工确认")
+        else:
+            warnings.append(f"工作日序列缺失 {missing_dates} 天；节假日和停牌需人工确认")
     if invalid_values:
         warnings.append(f"发现 {invalid_values} 个负值字段")
     score = 1.0
@@ -78,11 +93,23 @@ def calculate_metrics(
     category: str,
     quality: QualityReport,
     source: str,
+    trading_days: Optional[Iterable] = None,
 ) -> FundMetrics:
     frame = normalize_history(history, code)
     if frame.empty:
         raise ValueError(f"{code} 没有有效历史数据")
-    returns = frame["daily_return"].replace([np.inf, -np.inf], np.nan).dropna()
+    returns = frame["daily_return"].replace([np.inf, -np.inf], np.nan)
+    missing_policy = "none"
+    if trading_days is not None:
+        # A return that spans more than one trading day is a gap return: it
+        # measures several sessions at once and would distort daily volatility.
+        calendar = pd.DatetimeIndex(sorted(pd.to_datetime(list(trading_days)).normalize().unique()))
+        position = pd.Series(np.arange(len(calendar)), index=calendar)
+        gaps = frame["trade_date"].map(position).diff() > 1
+        if bool(gaps.any()):
+            missing_policy = "gap_excluded"
+        returns = returns[~gaps.fillna(False).astype(bool)]
+    returns = returns.dropna()
     years = max((frame["trade_date"].iloc[-1] - frame["trade_date"].iloc[0]).days / 365.25, 1 / 252)
     total_return = float(frame["close"].iloc[-1] / frame["close"].iloc[0] - 1)
     annualized_return = float((1 + total_return) ** (1 / years) - 1) if total_return > -1 else -1.0
@@ -107,6 +134,7 @@ def calculate_metrics(
         as_of=frame["trade_date"].iloc[-1].date(),
         quality_score=quality.quality_score,
         source=source,
+        missing_policy=missing_policy,
     )
 
 
