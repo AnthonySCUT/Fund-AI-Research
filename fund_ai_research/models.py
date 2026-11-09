@@ -53,6 +53,11 @@ class FundMetrics:
     as_of: date
     quality_score: float
     source: str
+    # Price-basis disclosure. Defaults keep every existing caller working; the
+    # pipeline fills the real values when it standardizes the series.
+    price_basis: str = "split_adjusted_close"
+    corporate_action_status: str = "none"
+    missing_policy: str = "none"
 
     def as_dict(self) -> Dict[str, Any]:
         return {
@@ -72,6 +77,9 @@ class FundMetrics:
             "as_of": self.as_of.isoformat(),
             "quality_score": self.quality_score,
             "source": self.source,
+            "price_basis": self.price_basis,
+            "corporate_action_status": self.corporate_action_status,
+            "missing_policy": self.missing_policy,
         }
 
 
