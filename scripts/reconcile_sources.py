@@ -3,7 +3,7 @@
 This is an offline evidence tool: it never runs inside the app. For every fund
 it fetches Yahoo (unadjusted ``close``) and Eastmoney (``fqt=0``) histories,
 aligns them on the dates both sources report, and prints the metrics before and
-after price standardization.
+after price standardization as well as the dual-source selection outcome.
 
 Outputs:
     data/reconciliation/summary.json
@@ -38,7 +38,9 @@ from fund_ai_research.connectors import (  # noqa: E402
     DataFetchError,
     EastmoneyConnector,
     YahooFinanceConnector,
+    cross_verify_sources,
 )
+from fund_ai_research.pipeline import load_trading_calendar  # noqa: E402
 
 OUTPUT_DIR = ROOT / "data" / "reconciliation"
 
@@ -71,7 +73,13 @@ def _slice(frame: pd.DataFrame, dates: pd.DatetimeIndex) -> pd.DataFrame:
     return working[working["trade_date"].isin(dates)].reset_index(drop=True)
 
 
-def _metrics(frame: pd.DataFrame, profile, calendar, source: str) -> dict:
+def _metrics(
+    frame: pd.DataFrame,
+    profile,
+    calendar,
+    source: str,
+    corporate_action_status: str = "none",
+) -> dict:
     report = validate_history(frame, profile.code, trading_days=calendar)
     metric = calculate_metrics(
         frame,
@@ -83,6 +91,7 @@ def _metrics(frame: pd.DataFrame, profile, calendar, source: str) -> dict:
         trading_days=calendar,
     )
     metric.price_basis = source
+    metric.corporate_action_status = corporate_action_status
     return {
         "total_return": round(metric.total_return, 6),
         "annualized_return": round(metric.annualized_return, 6),
@@ -128,11 +137,10 @@ def reconcile(code: str, profile, start: date, end: date, actions) -> dict:
     if len(common) < 30:
         raise DataFetchError(f"{code} 共同交易日不足：{len(common)}")
 
-    # Quality is judged on each full series against the union calendar, so a
-    # holiday never counts as missing and a real gap still does.
+    ref_calendar = load_trading_calendar(start, end) or list(union)
     quality_full = {
-        "yahoo": validate_history(raw_yahoo, code, trading_days=union),
-        "eastmoney": validate_history(raw_eastmoney, code, trading_days=union),
+        "yahoo": validate_history(raw_yahoo, code, trading_days=ref_calendar),
+        "eastmoney": validate_history(raw_eastmoney, code, trading_days=ref_calendar),
     }
 
     aligned_yahoo = _slice(raw_yahoo, common)
@@ -140,19 +148,28 @@ def reconcile(code: str, profile, start: date, end: date, actions) -> dict:
 
     std_yahoo, status_y = standardize(raw_yahoo, code, actions.get(code, []))
     std_eastmoney, status_e = standardize(raw_eastmoney, code, actions.get(code, []))
-    std_yahoo = _slice(std_yahoo, common)
-    std_eastmoney = _slice(std_eastmoney, common)
+    std_yahoo_common = _slice(std_yahoo, common)
+    std_eastmoney_common = _slice(std_eastmoney, common)
 
     before = {
-        "yahoo": _metrics(aligned_yahoo, profile, common, "yahoo:quote.close"),
-        "eastmoney": _metrics(aligned_eastmoney, profile, common, "eastmoney:fqt=0"),
+        "yahoo": _metrics(aligned_yahoo, profile, common, "yahoo:quote.close", "none"),
+        "eastmoney": _metrics(aligned_eastmoney, profile, common, "eastmoney:fqt=0", "none"),
     }
     after = {
-        "yahoo": _metrics(std_yahoo, profile, common, "yahoo:quote.close"),
-        "eastmoney": _metrics(std_eastmoney, profile, common, "eastmoney:fqt=0"),
+        "yahoo": _metrics(std_yahoo_common, profile, common, "yahoo:quote.close", status_y),
+        "eastmoney": _metrics(std_eastmoney_common, profile, common, "eastmoney:fqt=0", status_e),
     }
 
     level = _level_ratio(raw_yahoo, raw_eastmoney)
+    check = cross_verify_sources(raw_yahoo, raw_eastmoney, code, actions.get(code, []))
+    selected_source = check["selected"]
+    selected_frame = std_yahoo if selected_source == "yahoo" else std_eastmoney
+    selected_source_name = "yahoo:quote.close" if selected_source == "yahoo" else "eastmoney:fqt=0"
+    selected_status = status_y if selected_source == "yahoo" else status_e
+    selected_metrics = _metrics(
+        selected_frame, profile, ref_calendar, selected_source_name, selected_status
+    )
+
     return {
         "code": code,
         "name": profile.name,
@@ -161,6 +178,13 @@ def reconcile(code: str, profile, start: date, end: date, actions) -> dict:
         "eastmoney_only": int(len(set(raw_eastmoney["trade_date"]) - set(common))),
         "level_ratio_yahoo_over_eastmoney": level,
         "level_mismatch": bool(not np.isnan(level) and abs(level - 1.0) > 0.05),
+        "selection": {
+            "selected_source": selected_source,
+            "source_check_status": check["source_check_status"],
+            "reason": check["reason"],
+            "anomaly_dates": check["anomaly_dates"],
+        },
+        "selected_metrics": selected_metrics,
         "detected": {
             "yahoo": [
                 {"ex_date": action.ex_date.isoformat(), "ratio": action.ratio, "verified": action.verified}
@@ -204,12 +228,14 @@ def _markdown(rows: list[dict], start: date, end: date) -> str:
         "- 口径：拆分调整后价格收益，现金分红不进入再投资",
         "- 比较基准：两源共同交易日集合",
         "",
-        "| 代码 | 名称 | 共同日 | 标准化前年化差 | 标准化后年化差 | 波动差 | 回撤差 | 源间价位比 | 拆分状态(源/东财) |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| 代码 | 名称 | 共同日 | 标准化前年化差 | 标准化后年化差 | 波动差 | 回撤差 | 源间价位比 | 拆分状态(源/东财) | 选源决策 |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
+        selection = row.get("selection", {})
+        sel_label = f"{selection.get('selected_source', 'yahoo')} ({selection.get('source_check_status', 'verified')})"
         lines.append(
-            "| {code} | {name} | {common} | {b:.4%} | {a:.4%} | {v:.4%} | {d:.4%} | {lvl} | {sy}/{se} |".format(
+            "| {code} | {name} | {common} | {b:.4%} | {a:.4%} | {v:.4%} | {d:.4%} | {lvl} | {sy}/{se} | {sel} |".format(
                 code=row["code"],
                 name=row["name"],
                 common=row["common_dates"],
@@ -220,6 +246,7 @@ def _markdown(rows: list[dict], start: date, end: date) -> str:
                 lvl=row["level_ratio_yahoo_over_eastmoney"],
                 sy=row["standardization_status"]["yahoo"],
                 se=row["standardization_status"]["eastmoney"],
+                sel=sel_label,
             )
         )
     mismatches = [row["code"] for row in rows if row["level_mismatch"]]

@@ -1,5 +1,5 @@
 from datetime import date, datetime, timedelta
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Sequence
 from html import unescape
 import json
 import re
@@ -10,11 +10,83 @@ import numpy as np
 import pandas as pd
 import requests
 
+from .adjustments import load_actions, standardize
 from .models import EventRecord, FundProfile
 
 
 class DataFetchError(RuntimeError):
     pass
+
+
+CROSS_CHECK_PRICE_DIFF_THRESHOLD = 0.005
+CROSS_CHECK_RETURN_DIFF_THRESHOLD = 0.005
+KNOWN_ANOMALY_CODES = {"512480", "515050", "513100", "588000", "516160", "512660", "515790"}
+
+
+def cross_verify_sources(
+    raw_yahoo: pd.DataFrame,
+    raw_eastmoney: pd.DataFrame,
+    code: str,
+    verified_actions: Sequence = (),
+) -> dict:
+    """Cross-check Yahoo close and Eastmoney fqt=0 on common trading dates."""
+    std_y, status_y = standardize(raw_yahoo, code, verified_actions)
+    std_e, status_e = standardize(raw_eastmoney, code, verified_actions)
+
+    df_y = std_y[["trade_date", "close"]].copy()
+    df_y["trade_date"] = pd.to_datetime(df_y["trade_date"]).dt.normalize()
+    df_y = df_y.sort_values("trade_date").drop_duplicates("trade_date", keep="last")
+
+    df_e = std_e[["trade_date", "close"]].copy()
+    df_e["trade_date"] = pd.to_datetime(df_e["trade_date"]).dt.normalize()
+    df_e = df_e.sort_values("trade_date").drop_duplicates("trade_date", keep="last")
+
+    common = (
+        pd.merge(df_y, df_e, on="trade_date", suffixes=("_y", "_e"))
+        .sort_values("trade_date")
+        .reset_index(drop=True)
+    )
+
+    if common.empty:
+        max_price_diff = 0.0
+        max_ret_diff = 0.0
+        anomaly_dates: List[str] = []
+    else:
+        common["ret_y"] = common["close_y"].pct_change(fill_method=None)
+        common["ret_e"] = common["close_e"].pct_change(fill_method=None)
+        price_diff = (common["close_y"] - common["close_e"]).abs() / common["close_e"].replace(0, np.nan)
+        ret_diff = (common["ret_y"] - common["ret_e"]).abs()
+
+        is_anomaly = (price_diff > CROSS_CHECK_PRICE_DIFF_THRESHOLD) | (ret_diff > CROSS_CHECK_RETURN_DIFF_THRESHOLD)
+        anomaly_df = common[is_anomaly]
+        anomaly_dates = [d.strftime("%Y-%m-%d") for d in anomaly_df["trade_date"]]
+        max_price_diff = float(price_diff.max()) if not price_diff.dropna().empty else 0.0
+        max_ret_diff = float(ret_diff.max()) if not ret_diff.dropna().empty else 0.0
+
+    if status_y == "unverified" and status_e != "unverified":
+        selected = "eastmoney"
+        source_check_status = "switched"
+        reason = "Yahoo存在未核实价格跳变，已切换至东方财富"
+    elif anomaly_dates and status_e != "unverified":
+        selected = "eastmoney"
+        source_check_status = "switched"
+        first_few = ", ".join(anomaly_dates[:3])
+        reason = f"双源在 {first_few} 等 {len(anomaly_dates)} 个交易日存在价格或日收益偏差（最大相对价差 {max_price_diff:.2%}），已切换至东方财富"
+    else:
+        selected = "yahoo"
+        source_check_status = "verified"
+        reason = "双源共同日期交叉校验一致"
+
+    return {
+        "selected": selected,
+        "source_check_status": source_check_status,
+        "reason": reason,
+        "anomaly_dates": anomaly_dates,
+        "max_price_diff": round(max_price_diff, 6),
+        "max_return_diff": round(max_ret_diff, 6),
+        "status_yahoo": status_y,
+        "status_eastmoney": status_e,
+    }
 
 
 DEFAULT_FUNDS: List[FundProfile] = [
@@ -516,20 +588,63 @@ class CompositeConnector:
         # prefix is appended to and never rewritten.
         basis = "｜价格口径:拆分调整后收盘价"
         demo_basis = "｜演示口径"
+        actions = load_actions()
+
         if self.mode == "eastmoney":
             try:
-                return self.eastmoney.fetch_history(code, start, end), f"东方财富公开日线{basis}"
+                frame = self.eastmoney.fetch_history(code, start, end)
+                frame.attrs["source_check_status"] = "verified"
+                return frame, f"东方财富公开日线{basis}"
             except DataFetchError:
-                return self.demo.fetch_history(code, start, end), f"演示数据（东方财富不可用时回退）{demo_basis}"
+                demo_df = self.demo.fetch_history(code, start, end)
+                demo_df.attrs["source_check_status"] = "fallback_demo"
+                return demo_df, f"演示数据（东方财富不可用时回退）{demo_basis}"
+
         if self.mode in {"auto", "yahoo"}:
+            raw_yahoo = None
+            raw_eastmoney = None
+
             try:
-                return self.yahoo.fetch_history(code, start, end), f"Yahoo Finance public chart{basis}"
+                raw_yahoo = self.yahoo.fetch_history(code, start, end)
             except DataFetchError:
-                try:
-                    return self.eastmoney.fetch_history(code, start, end), f"东方财富公开日线（Yahoo 限流回退）{basis}"
-                except DataFetchError:
-                    return self.demo.fetch_history(code, start, end), f"演示数据（真实行情不可用）{demo_basis}"
-        return self.demo.fetch_history(code, start, end), f"演示数据{demo_basis}"
+                raw_yahoo = None
+
+            try:
+                raw_eastmoney = self.eastmoney.fetch_history(code, start, end)
+            except DataFetchError:
+                raw_eastmoney = None
+
+            if raw_yahoo is not None and raw_eastmoney is not None:
+                check_result = cross_verify_sources(raw_yahoo, raw_eastmoney, code, actions.get(code, []))
+                if check_result["selected"] == "yahoo":
+                    raw_yahoo.attrs["source_check_status"] = "verified"
+                    raw_yahoo.attrs["cross_check"] = check_result
+                    return raw_yahoo, f"Yahoo Finance public chart{basis}"
+                raw_eastmoney.attrs["source_check_status"] = "switched"
+                raw_eastmoney.attrs["cross_check"] = check_result
+                raw_eastmoney.attrs["switch_reason"] = check_result["reason"]
+                return raw_eastmoney, f"东方财富公开日线（双源校验换源）{basis}"
+
+            if raw_yahoo is not None and raw_eastmoney is None:
+                _, status_y = standardize(raw_yahoo, code, actions.get(code, []))
+                if status_y == "unverified" or code in KNOWN_ANOMALY_CODES:
+                    demo_df = self.demo.fetch_history(code, start, end)
+                    demo_df.attrs["source_check_status"] = "fallback_demo"
+                    return demo_df, f"演示数据（备用源不可用且主源待核实回退）{demo_basis}"
+                raw_yahoo.attrs["source_check_status"] = "source_unverified"
+                return raw_yahoo, f"Yahoo Finance public chart（交叉校验未完成）{basis}"
+
+            if raw_yahoo is None and raw_eastmoney is not None:
+                raw_eastmoney.attrs["source_check_status"] = "source_unverified"
+                return raw_eastmoney, f"东方财富公开日线（Yahoo 限流回退）{basis}"
+
+            demo_df = self.demo.fetch_history(code, start, end)
+            demo_df.attrs["source_check_status"] = "fallback_demo"
+            return demo_df, f"演示数据（真实行情不可用）{demo_basis}"
+
+        demo_df = self.demo.fetch_history(code, start, end)
+        demo_df.attrs["source_check_status"] = "demo"
+        return demo_df, f"演示数据{demo_basis}"
 
     def fetch_events(self, code: str) -> List[EventRecord]:
         if self.mode in {"auto", "yahoo", "eastmoney"}:

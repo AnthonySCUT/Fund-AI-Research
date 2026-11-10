@@ -32,7 +32,7 @@ def normalize_history(history: pd.DataFrame, code: str) -> pd.DataFrame:
         frame["cumulative_return"] = np.nan
     running_peak = frame["close"].cummax()
     frame["drawdown"] = frame["close"] / running_peak - 1.0
-    frame["rolling_vol_20d"] = frame["daily_return"].rolling(20).std() * np.sqrt(252)
+    frame["rolling_vol_20d"] = frame["daily_return"].rolling(20).std(ddof=0) * np.sqrt(252)
     return frame.reset_index(drop=True)
 
 
@@ -147,7 +147,7 @@ def rolling_returns(history: pd.DataFrame, windows: Tuple[int, ...] = (21, 63, 2
     frame = normalize_history(history, str(history.get("code", "")))
     output = frame[["trade_date"]].copy()
     for window in windows:
-        output[f"rolling_{window}d"] = frame["close"].pct_change(window)
+        output[f"rolling_{window}d"] = frame["close"].pct_change(window, fill_method=None)
     return output
 
 
