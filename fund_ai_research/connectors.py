@@ -20,6 +20,7 @@ class DataFetchError(RuntimeError):
 
 CROSS_CHECK_PRICE_DIFF_THRESHOLD = 0.005
 CROSS_CHECK_RETURN_DIFF_THRESHOLD = 0.005
+MIN_COMMON_DATES = 2
 KNOWN_ANOMALY_CODES = {"512480", "515050", "513100", "588000", "516160", "512660", "515790"}
 
 
@@ -63,7 +64,25 @@ def cross_verify_sources(
         max_price_diff = float(price_diff.max()) if not price_diff.dropna().empty else 0.0
         max_ret_diff = float(ret_diff.max()) if not ret_diff.dropna().empty else 0.0
 
-    if status_y == "unverified" and status_e != "unverified":
+    if len(common) < MIN_COMMON_DATES:
+        if status_y == "unverified" or code in KNOWN_ANOMALY_CODES:
+            if status_e != "unverified":
+                selected = "eastmoney"
+                source_check_status = "source_unverified"
+                reason = "双源共同交易日不足，主源待核实，已使用东方财富但交叉校验未完成"
+            else:
+                selected = "fallback_demo"
+                source_check_status = "fallback_demo"
+                reason = "双源共同交易日不足且行情待核实，触发安全回退"
+        else:
+            selected = "yahoo"
+            source_check_status = "source_unverified"
+            reason = f"双源共同交易日不足（仅 {len(common)} 天，至少需 {MIN_COMMON_DATES} 天），交叉校验未完成"
+    elif (status_y == "unverified" and status_e == "unverified") or (anomaly_dates and status_e == "unverified"):
+        selected = "fallback_demo"
+        source_check_status = "fallback_demo"
+        reason = "双源均存在未核实价格跳变或差异无法消解，触发安全回退"
+    elif status_y == "unverified" and status_e != "unverified":
         selected = "eastmoney"
         source_check_status = "switched"
         reason = "Yahoo存在未核实价格跳变，已切换至东方财富"
@@ -616,13 +635,22 @@ class CompositeConnector:
 
             if raw_yahoo is not None and raw_eastmoney is not None:
                 check_result = cross_verify_sources(raw_yahoo, raw_eastmoney, code, actions.get(code, []))
+                if check_result["selected"] == "fallback_demo":
+                    demo_df = self.demo.fetch_history(code, start, end)
+                    demo_df.attrs["source_check_status"] = "fallback_demo"
+                    demo_df.attrs["cross_check"] = check_result
+                    return demo_df, f"演示数据（双源校验异常回退）{demo_basis}"
                 if check_result["selected"] == "yahoo":
-                    raw_yahoo.attrs["source_check_status"] = "verified"
+                    raw_yahoo.attrs["source_check_status"] = check_result["source_check_status"]
                     raw_yahoo.attrs["cross_check"] = check_result
+                    if check_result["source_check_status"] == "source_unverified":
+                        return raw_yahoo, f"Yahoo Finance public chart（交叉校验未完成）{basis}"
                     return raw_yahoo, f"Yahoo Finance public chart{basis}"
-                raw_eastmoney.attrs["source_check_status"] = "switched"
+                raw_eastmoney.attrs["source_check_status"] = check_result["source_check_status"]
                 raw_eastmoney.attrs["cross_check"] = check_result
                 raw_eastmoney.attrs["switch_reason"] = check_result["reason"]
+                if check_result["source_check_status"] == "source_unverified":
+                    return raw_eastmoney, f"东方财富公开日线（交叉校验未完成）{basis}"
                 return raw_eastmoney, f"东方财富公开日线（双源校验换源）{basis}"
 
             if raw_yahoo is not None and raw_eastmoney is None:

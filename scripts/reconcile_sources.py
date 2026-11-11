@@ -36,6 +36,7 @@ from fund_ai_research.analytics import calculate_metrics, validate_history  # no
 from fund_ai_research.connectors import (  # noqa: E402
     DEFAULT_FUNDS,
     DataFetchError,
+    DemoConnector,
     EastmoneyConnector,
     YahooFinanceConnector,
     cross_verify_sources,
@@ -163,12 +164,22 @@ def reconcile(code: str, profile, start: date, end: date, actions) -> dict:
     level = _level_ratio(raw_yahoo, raw_eastmoney)
     check = cross_verify_sources(raw_yahoo, raw_eastmoney, code, actions.get(code, []))
     selected_source = check["selected"]
-    selected_frame = std_yahoo if selected_source == "yahoo" else std_eastmoney
-    selected_source_name = "yahoo:quote.close" if selected_source == "yahoo" else "eastmoney:fqt=0"
-    selected_status = status_y if selected_source == "yahoo" else status_e
+    selected_calendar = ref_calendar
+    if selected_source == "yahoo":
+        selected_frame, selected_source_name, selected_status = std_yahoo, "yahoo:quote.close", status_y
+    elif selected_source == "eastmoney":
+        selected_frame, selected_source_name, selected_status = std_eastmoney, "eastmoney:fqt=0", status_e
+    elif selected_source == "fallback_demo":
+        demo = DemoConnector([profile]).fetch_history(code, start, end)
+        selected_frame, selected_status = standardize(demo, code, actions.get(code, []))
+        selected_source_name = "demo_deterministic"
+        selected_calendar = None
+    else:
+        raise ValueError(f"未知选源结果：{selected_source}")
     selected_metrics = _metrics(
-        selected_frame, profile, ref_calendar, selected_source_name, selected_status
+        selected_frame, profile, selected_calendar, selected_source_name, selected_status
     )
+    selected_metrics["source"] = selected_source_name
 
     return {
         "code": code,
