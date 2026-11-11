@@ -14,7 +14,7 @@ from fund_ai_research.analytics import (
     rolling_returns,
     validate_history,
 )
-from fund_ai_research.connectors import DEFAULT_FUNDS, DemoConnector, EastmoneyConnector, EastmoneyFundDisclosureConnector, OfficialDisclosureConnector
+from fund_ai_research.connectors import DEFAULT_FUNDS, CompositeConnector, DemoConnector, EastmoneyConnector, EastmoneyFundDisclosureConnector, OfficialDisclosureConnector, cross_verify_sources
 from fund_ai_research.incremental import fingerprints_for_records
 from fund_ai_research.models import EventRecord
 from fund_ai_research.recommender import build_personalized_recommendations
@@ -225,12 +225,77 @@ def test_already_adjusted_source_is_not_adjusted_twice():
     assert sorted(adjusted["split_factor"].unique()) == [1.0]
 
 
-def test_unverified_split_is_applied_but_flagged():
+def test_unverified_split_is_flagged_without_changing_prices():
     dates = pd.bdate_range("2024-01-01", periods=10)
     history = _synthetic_frame(dates, [3.0] * 5 + [1.0] * 5)
     adjusted, status = standardize(history, "T", [])
     assert status == "unverified"
-    assert float(adjusted["close"].pct_change().abs().max() or 0) == 0.0
+    assert (adjusted["split_factor"] == 1.0).all()
+    pd.testing.assert_series_equal(adjusted["close"], history["close"])
+
+
+def test_unresolved_dual_source_anomaly_falls_back_to_demo():
+    dates = pd.bdate_range("2024-01-01", periods=2)
+    yahoo = _synthetic_frame(dates, [10.0, 5.0])
+    eastmoney = _synthetic_frame(dates, [10.0, 4.0])
+    result = cross_verify_sources(yahoo, eastmoney, "510300")
+    assert result["status_yahoo"] == result["status_eastmoney"] == "unverified"
+    assert result["selected"] == result["source_check_status"] == "fallback_demo"
+
+    connector = CompositeConnector("auto")
+    with patch.object(connector.yahoo, "fetch_history", return_value=yahoo), \
+         patch.object(connector.eastmoney, "fetch_history", return_value=eastmoney):
+        frame, label = connector.fetch_history("510300", dates[0].date(), dates[-1].date())
+    assert frame.attrs["source_check_status"] == "fallback_demo"
+    assert frame.attrs["cross_check"]["selected"] == "fallback_demo"
+    assert "演示数据（双源校验异常回退）" in label
+
+
+def test_price_disagreement_with_unverified_eastmoney_falls_back():
+    dates = pd.bdate_range("2024-01-01", periods=2)
+    result = cross_verify_sources(
+        _synthetic_frame(dates, [10.0, 10.0]),
+        _synthetic_frame(dates, [10.0, 4.0]),
+        "510300",
+    )
+    assert result["selected"] == result["source_check_status"] == "fallback_demo"
+
+
+def test_insufficient_common_dates_remain_unverified():
+    dates = pd.bdate_range("2024-01-01", periods=3)
+    yahoo = _synthetic_frame(dates[:2], [10.0, 10.0])
+    for east_dates in (dates[2:], dates[1:]):
+        eastmoney = _synthetic_frame(east_dates, [10.0] * len(east_dates))
+        result = cross_verify_sources(yahoo, eastmoney, "510300")
+        assert result["selected"] == "yahoo"
+        assert result["source_check_status"] == "source_unverified"
+        connector = CompositeConnector("auto")
+        with patch.object(connector.yahoo, "fetch_history", return_value=yahoo.copy()), \
+             patch.object(connector.eastmoney, "fetch_history", return_value=eastmoney):
+            frame, label = connector.fetch_history("510300")
+        assert frame.attrs["source_check_status"] == "source_unverified"
+        assert "交叉校验未完成" in label
+
+
+def test_insufficient_common_dates_with_suspect_primary():
+    dates = pd.bdate_range("2024-01-01", periods=4)
+    yahoo = _synthetic_frame(dates[:2], [10.0, 5.0])
+    eastmoney = _synthetic_frame(dates[2:], [10.0, 10.0])
+    for code in ("510300", "512480"):
+        primary = yahoo if code == "510300" else _synthetic_frame(dates[:2], [10.0, 10.0])
+        result = cross_verify_sources(primary, eastmoney, code)
+        assert result["selected"] == "eastmoney"
+        assert result["source_check_status"] == "source_unverified"
+        connector = CompositeConnector("auto")
+        with patch.object(connector.yahoo, "fetch_history", return_value=primary), \
+             patch.object(connector.eastmoney, "fetch_history", return_value=eastmoney.copy()):
+            frame, label = connector.fetch_history(code)
+        assert frame.attrs["source_check_status"] == "source_unverified"
+        assert "交叉校验未完成" in label
+
+    bad_eastmoney = _synthetic_frame(dates[2:], [10.0, 4.0])
+    result = cross_verify_sources(yahoo, bad_eastmoney, "510300")
+    assert result["selected"] == result["source_check_status"] == "fallback_demo"
 
 
 def test_gap_returns_are_excluded_and_flagged():
