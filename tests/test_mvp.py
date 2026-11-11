@@ -298,6 +298,26 @@ def test_insufficient_common_dates_with_suspect_primary():
     assert result["selected"] == result["source_check_status"] == "fallback_demo"
 
 
+def test_reconciliation_fallback_metrics_use_demo_data():
+    from scripts.reconcile_sources import _metrics, reconcile
+
+    profile = DEFAULT_FUNDS[0]
+    dates = pd.bdate_range("2024-01-01", periods=40)
+    yahoo = _synthetic_frame(dates, [10.0] * 39 + [5.0])
+    eastmoney = _synthetic_frame(dates, [10.0] * 39 + [4.0])
+    start, end = dates[0].date(), dates[-1].date()
+    with patch("scripts.reconcile_sources._fetch_with_retry", side_effect=[yahoo, eastmoney]):
+        result = reconcile(profile.code, profile, start, end, {})
+
+    demo = DemoConnector([profile]).fetch_history(profile.code, start, end)
+    standardized, status = standardize(demo, profile.code, [])
+    expected = _metrics(standardized, profile, None, "demo_deterministic", status)
+    expected["source"] = "demo_deterministic"
+    assert result["selection"]["selected_source"] == "fallback_demo"
+    assert result["selected_metrics"] == expected
+    assert result["selected_metrics"]["total_return"] != result["after"]["eastmoney"]["total_return"]
+
+
 def test_gap_returns_are_excluded_and_flagged():
     full = pd.bdate_range("2026-01-05", "2026-01-30")
     trading = [d for d in full if not pd.Timestamp("2026-01-12") <= d <= pd.Timestamp("2026-01-14")]
