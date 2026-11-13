@@ -22,7 +22,7 @@ except ImportError as exc:
     st.stop()
 
 from fund_ai_research.connectors import DEFAULT_FUNDS
-from fund_ai_research.incremental import fingerprints_for_records
+from fund_ai_research.incremental import fingerprints_for_records, fingerprints_for_snapshot
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
 
 try:
@@ -56,7 +56,7 @@ except ImportError:
 
 st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v8-split-adjusted"
+APP_VERSION = "expanded-universe-reports-v9-pod3-session"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -78,10 +78,16 @@ def source_status(source: str) -> tuple[str, str]:
     if "双源校验换源" in source:
         return "真实行情（双源校验换源）", "主源存在尺度或局部异常，已切换至核实有效源"
     if "交叉校验未完成" in source:
-        return "真实行情（交叉校验未完成）", "备用源不可用，单源未完成交叉校验"
+        return "真实行情（交叉校验未完成）", "仅取得单源或共同交易日不足，交叉校验未完成"
     if "回退" in source:
         return "真实行情（回退）", "建议核对主数据源"
     return "真实行情", "可进入研究流程"
+
+
+def research_display_state(result: PipelineResult, action: str) -> str:
+    if any("演示数据" in metric.source for metric in result.metrics):
+        return "仅演示，不可执行"
+    return action
 
 
 def as_display_number(value: float, suffix: str = "") -> str:
@@ -129,7 +135,7 @@ def cache_ttl_seconds() -> int:
 
 
 CACHE_TTL_SECONDS = cache_ttl_seconds()
-CACHE_SCHEMA_VERSION = "research-cache-v2"
+CACHE_SCHEMA_VERSION = "research-cache-v3-pod3-session"
 BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
@@ -355,7 +361,11 @@ if run_button or "result" not in st.session_state:
     previous_result = st.session_state.get("result")
     previous_params = st.session_state.get("params")
     previous_cards = dict(st.session_state.get("cards", {}))
-    if run_button and previous_result is not None:
+    if start > end:
+        st.error("历史起点不能晚于历史终点，请修正日期后重新提交。")
+        if previous_result is None:
+            st.stop()
+    if start <= end and run_button and previous_result is not None:
         # Keep the last usable snapshot visible while the new network/AI run is in progress.
         old_result_placeholder = st.empty()
         with old_result_placeholder.container(border=True):
@@ -372,25 +382,38 @@ if run_button or "result" not in st.session_state:
             old_display = previous_result.recommendations_frame[
                 ["role", "code", "name", "target_weight", "action"]
             ].copy()
+            old_display["action"] = old_display["action"].map(
+                lambda action: research_display_state(previous_result, action)
+            )
+            st.caption(
+                f"旧结果查询区间：{previous_params['start'].isoformat()} 至 {previous_params['end'].isoformat()} · "
+                + "数据来源：" + "、".join(sorted({item.source for item in previous_result.metrics}))
+            )
             old_display.columns = ["仓位角色", "代码", "基金", "目标权重", "研究状态"]
             old_display["目标权重"] = old_display["目标权重"].map(lambda value: f"{value:.0f}%")
             st.dataframe(old_display, hide_index=True, width="stretch")
-    with st.spinner("正在抓取、质检并计算候选组合…"):
-        refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
-        st.session_state.result = refreshed_result
-        st.session_state.params = params
-        changed_codes = changed_research_codes(previous_result, refreshed_result)
-        st.session_state["_research_refresh_codes"] = changed_codes
-        if previous_cards:
-            current_codes = {metric.code for metric in refreshed_result.metrics}
-            st.session_state.cards = {
-                code: card for code, card in previous_cards.items() if code in current_codes
-            }
-        else:
-            st.session_state.pop("cards", None)
+    if start <= end:
+        with st.spinner("正在抓取、质检并计算候选组合…"):
+            refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
+            if not refreshed_result.metrics:
+                st.warning("本次查询没有可用行情，请调整日期或基金后重新提交。")
+                if previous_result is None:
+                    st.stop()
+            else:
+                st.session_state.result = refreshed_result
+                st.session_state.params = params
+                changed_codes = changed_research_codes(previous_result, refreshed_result)
+                st.session_state["_research_refresh_codes"] = changed_codes
+                if previous_cards:
+                    current_codes = {metric.code for metric in refreshed_result.metrics}
+                    st.session_state.cards = {
+                        code: card for code, card in previous_cards.items() if code in current_codes
+                    }
+                else:
+                    st.session_state.pop("cards", None)
     if old_result_placeholder is not None:
         old_result_placeholder.empty()
-    if run_button:
+    if run_button and start <= end and refreshed_result.metrics:
         cache_hit = (
             previous_result is not None
             and previous_params == params
@@ -428,8 +451,19 @@ if "cards" not in st.session_state:
             )
         st.session_state["_cards_analyzer_signature"] = analyzer_signature
     elif scheduled_cards:
-        st.session_state.cards = {code: card for code, card in scheduled_cards.items() if code in profiles}
-        missing_codes = {metric.code for metric in result.metrics if metric.code not in st.session_state.cards}
+        snapshot_payload = json.loads(snapshot_path.read_text(encoding="utf-8"))
+        snapshot_fingerprints = fingerprints_for_snapshot(snapshot_payload)
+        current_fingerprints = fingerprints_for_records(result.metrics, result.quality, result.events)
+        matching_codes = {
+            code for code, fingerprint in current_fingerprints.items()
+            if snapshot_fingerprints.get(code) == fingerprint
+        }
+        st.session_state.cards = {
+            code: card for code, card in scheduled_cards.items() if code in matching_codes
+        }
+        st.session_state["_snapshot_card_codes"] = set(st.session_state.cards)
+        st.session_state["_snapshot_card_fetched_at"] = snapshot_payload.get("fetched_at")
+        missing_codes = {metric.code for metric in result.metrics} - set(st.session_state.cards)
         if missing_codes:
             st.session_state.cards.update(
                 analyze_metrics(
@@ -438,7 +472,8 @@ if "cards" not in st.session_state:
                     result.events,
                 )
             )
-        st.info("当前使用 GitHub Actions 最近一次后台 AI 快照；新增标的暂以离线规则基线补齐，配置 Streamlit Secrets 后可实时分析全部标的。")
+        if matching_codes:
+            st.info("已沿用与当前样本事实一致的后台研究卡片，其余标的使用当前样本生成。")
     else:
         with st.spinner("正在生成离线规则研究卡片…"):
             st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
@@ -451,31 +486,40 @@ else:
         ]
     )
     refresh_codes = set(st.session_state.pop("_research_refresh_codes", set()))
+    current_codes = {metric.code for metric in result.metrics}
+    refresh_codes |= current_codes - set(st.session_state.cards)
     if grok_config.enabled or deepseek_config.enabled:
-        current_codes = {metric.code for metric in result.metrics}
         previous_signature = st.session_state.get("_cards_analyzer_signature")
         if previous_signature != analyzer_signature:
             refresh_codes = current_codes
-        else:
-            refresh_codes |= current_codes - set(st.session_state.cards)
-        if refresh_codes:
-            changed_metrics = [metric for metric in result.metrics if metric.code in refresh_codes]
-            changed_quality = [item for item in result.quality if item.code in refresh_codes]
-            changed_events = [event for event in result.events if event.code in refresh_codes]
-            with st.spinner(f"正在更新 {len(refresh_codes)} 支基金的研究卡片…"):
-                st.session_state.cards.update(
-                    cached_analyze_metrics(
-                        CACHE_SCHEMA_VERSION,
-                        changed_metrics,
-                        changed_quality,
-                        changed_events,
-                        analyzer_signature,
-                    )
+    refresh_codes &= current_codes
+    if refresh_codes:
+        changed_metrics = [metric for metric in result.metrics if metric.code in refresh_codes]
+        changed_quality = [item for item in result.quality if item.code in refresh_codes]
+        changed_events = [event for event in result.events if event.code in refresh_codes]
+        with st.spinner(f"正在更新 {len(refresh_codes)} 支基金的研究卡片…"):
+            st.session_state.cards.update(
+                cached_analyze_metrics(
+                    CACHE_SCHEMA_VERSION,
+                    changed_metrics,
+                    changed_quality,
+                    changed_events,
+                    analyzer_signature,
                 )
-        st.session_state["_cards_analyzer_signature"] = analyzer_signature
+            )
+        st.session_state["_snapshot_card_codes"] = (
+            st.session_state.get("_snapshot_card_codes", set()) - refresh_codes
+        ) & current_codes
+    st.session_state["_cards_analyzer_signature"] = analyzer_signature
+
 cards = st.session_state.cards
 
 profile = result.profile
+active_params = st.session_state.params
+st.caption(
+    f"当前结果查询区间：{active_params['start'].isoformat()} 至 {active_params['end'].isoformat()} · "
+    + "数据来源：" + "、".join(sorted({item.source for item in result.metrics}))
+)
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 kpi1.metric("研究基金", len(result.metrics))
 kpi2.metric("核心仓目标", f"{profile['core_weight']}%")
@@ -484,7 +528,11 @@ kpi4.metric("现金缓冲", f"{profile['cash_weight']}%")
 source_rows = []
 for item in result.metrics:
     status, note = source_status(item.source)
-    source_rows.append({"code": item.code, "status": status, "note": note, "source": item.source})
+    source_rows.append({
+        "code": item.code, "status": status, "note": note, "source": item.source,
+        "来源校验状态": item.source_check_status, "价格口径": item.price_basis,
+        "公司行动状态": item.corporate_action_status, "缺口处理": item.missing_policy,
+    })
 source_frame = pd.DataFrame(source_rows)
 demo_codes = [item.code for item in result.metrics if "演示数据" in item.source]
 fallback_codes = [item.code for item in result.metrics if "回退" in item.source and "演示数据" not in item.source]
@@ -537,8 +585,7 @@ with tab_reco:
         st.warning("当前组合含演示数据，以下候选只用于验证页面流程，不代表真实基金判断。")
     if result.recommendations:
         display = result.recommendations_frame[["role", "code", "name", "target_weight", "action", "net_return_range", "max_drawdown"]].copy()
-        if demo_codes:
-            display["action"] = "仅演示，不可执行"
+        display["action"] = display["action"].map(lambda action: research_display_state(result, action))
         display["target_weight"] = display["target_weight"].map(lambda x: f"{x:.0f}%")
         display["max_drawdown"] = display["max_drawdown"].map(pct)
         display.columns = ["仓位角色", "代码", "基金", "目标权重", "研究状态", "净收益情景（低/中/高）", "历史最大回撤"]
@@ -549,7 +596,7 @@ with tab_reco:
         )
         st.bar_chart(allocation, horizontal=True)
         for item in result.recommendations:
-            with st.expander(f"{item.role} · {item.code} {item.name} · {item.action}"):
+            with st.expander(f"{item.role} · {item.code} {item.name} · {research_display_state(result, item.action)}"):
                 st.write(item.reason)
                 st.write("**证据与口径**")
                 for evidence in item.evidence:
@@ -563,6 +610,12 @@ with tab_reco:
     st.subheader("AI 研究卡片")
     for code, card in cards.items():
         with st.expander(f"{code} · {profiles[code].name} · {card.status} · {card.source}"):
+            if code in st.session_state.get("_snapshot_card_codes", set()):
+                st.caption(
+                    "后台快照卡片 · " + card.source + " · "
+                    + format_beijing_time(st.session_state.get("_snapshot_card_fetched_at"))
+                    + "（北京时间）"
+                )
             st.write(card.conclusion)
             col_a, col_b = st.columns(2)
             with col_a:
@@ -602,7 +655,7 @@ with tab_metrics:
         columns={"total_return": "累计收益", "annualized_return": "年化收益", "max_drawdown": "最大回撤"}
     )
     st.bar_chart(compare)
-    selected_chart = st.selectbox("查看净值与回撤", options=list(result.histories), format_func=lambda code: profile_label(profiles[code]))
+    selected_chart = st.selectbox("查看净值与回撤", options=[metric.code for metric in result.metrics], format_func=lambda code: profile_label(profiles[code]))
     history = result.histories[selected_chart].set_index("trade_date")
     st.line_chart(history[["close"]].rename(columns={"close": "净值/收盘价"}))
     st.line_chart(history[["drawdown"]].rename(columns={"drawdown": "回撤"}))
@@ -611,7 +664,7 @@ with tab_detail:
     st.subheader("基金详情与风险画像")
     detail_code = st.selectbox(
         "选择基金",
-        options=list(result.histories),
+        options=[metric.code for metric in result.metrics],
         format_func=lambda code: profile_label(profiles[code]),
         key="detail_select",
     )
@@ -636,6 +689,10 @@ with tab_detail:
                 "样本截至": detail_metric.as_of.isoformat(),
                 "数据源": detail_metric.source,
                 "质量分": pct(detail_metric.quality_score),
+                "价格口径": detail_metric.price_basis,
+                "公司行动状态": detail_metric.corporate_action_status,
+                "缺口处理": detail_metric.missing_policy,
+                "来源校验状态": detail_metric.source_check_status,
                 "平均成交量（60日）": as_display_number(detail_metric.avg_volume),
             }
         ]
@@ -689,7 +746,7 @@ with tab_quality:
     for report in result.quality:
         if report.warnings:
             st.warning(f"{report.code}：" + "；".join(report.warnings))
-    selected_raw = st.selectbox("查看标准化样例", options=list(result.histories), key="raw_select")
+    selected_raw = st.selectbox("查看标准化样例", options=[metric.code for metric in result.metrics], key="raw_select")
     st.dataframe(result.histories[selected_raw].tail(100), hide_index=True, width="stretch")
 
 st.divider()

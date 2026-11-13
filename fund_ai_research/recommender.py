@@ -1,3 +1,4 @@
+from math import isclose
 from typing import Iterable, List, Sequence, Tuple
 
 import numpy as np
@@ -70,7 +71,9 @@ def build_personalized_recommendations(
         if role == "战术仓" and aggression >= 70:
             flags.append("激进参数较高，需重点关注盘中波动与滑点")
         action = "可继续研究" if not flags else "等待验证"
-        if role == "战术仓" and abs(metric.max_drawdown) > max_drawdown / 100 * 1.5:
+        tactical_limit = max_drawdown / 100 * 1.5
+        if (role == "战术仓" and abs(metric.max_drawdown) > tactical_limit
+                and not isclose(abs(metric.max_drawdown), tactical_limit, rel_tol=1e-15, abs_tol=0.0)):
             action = "不碰"
         reason = (
             f"{role}候选得分 {row['core_score' if role == '核心仓' else 'tactical_score']:.2f}；"
