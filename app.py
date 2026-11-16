@@ -200,6 +200,10 @@ def run_once(codes, source_mode, start, end, aggression, max_drawdown, horizon_d
     )
 
 
+class EmptyResearchResult(Exception):
+    """Signal an all-empty fetch so it is excluded from the success cache."""
+
+
 @st.cache_data(ttl=CACHE_TTL_SECONDS, max_entries=128, show_spinner=False)
 def cached_run_once(
     cache_schema,
@@ -216,7 +220,7 @@ def cached_run_once(
 ):
     """Share one fetched/validated result across sessions until the TTL expires."""
     del cache_schema
-    return run_once(
+    result = run_once(
         codes=codes,
         source_mode=source_mode,
         start=start,
@@ -228,6 +232,10 @@ def cached_run_once(
         slippage_bps=slippage_bps,
         annual_fee_rate=annual_fee_rate,
     )
+
+    if not result.metrics:
+        raise EmptyResearchResult()
+    return result
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, max_entries=128, show_spinner=False)
@@ -394,8 +402,11 @@ if run_button or "result" not in st.session_state:
             st.dataframe(old_display, hide_index=True, width="stretch")
     if start <= end:
         with st.spinner("正在抓取、质检并计算候选组合…"):
-            refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
-            if not refreshed_result.metrics:
+            try:
+                refreshed_result = cached_run_once(CACHE_SCHEMA_VERSION, **params)
+            except EmptyResearchResult:
+                refreshed_result = None
+            if refreshed_result is None:
                 st.warning("本次查询没有可用行情，请调整日期或基金后重新提交。")
                 if previous_result is None:
                     st.stop()
@@ -413,7 +424,7 @@ if run_button or "result" not in st.session_state:
                     st.session_state.pop("cards", None)
     if old_result_placeholder is not None:
         old_result_placeholder.empty()
-    if run_button and start <= end and refreshed_result.metrics:
+    if run_button and start <= end and refreshed_result is not None:
         cache_hit = (
             previous_result is not None
             and previous_params == params
