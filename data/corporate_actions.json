@@ -1,0 +1,22 @@
+{
+  "schema": "corporate-actions-v1",
+  "note": "已核实的拆分/合份事件。ratio = 1 份拆成 N 份。新增事件只需改这个文件，不需要改代码。",
+  "actions": [
+    {
+      "code": "512480",
+      "ex_date": "2026-07-03",
+      "ratio": 2.0,
+      "kind": "split",
+      "verified": true,
+      "evidence": "https://data.eastmoney.com/notices/detail/512480/AN202607031826683755.html"
+    },
+    {
+      "code": "515050",
+      "ex_date": "2026-05-13",
+      "ratio": 3.0,
+      "kind": "split",
+      "verified": true,
+      "evidence": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-05-07/515050_20260507_Z8CM.pdf"
+    }
+  ]
+}

@@ -10,4 +10,6 @@ venv/
 .streamlit/secrets.toml
 *.log
 cloudflared.exe
-
+.python-version
+pyproject.toml
+uv.lock
