@@ -549,15 +549,9 @@ demo_codes = [item.code for item in result.metrics if "演示数据" in item.sou
 fallback_codes = [item.code for item in result.metrics if "回退" in item.source and "演示数据" not in item.source]
 latest_as_of = max((item.as_of for item in result.metrics), default=None)
 freshness_days = (date.today() - latest_as_of).days if latest_as_of else None
-if demo_codes:
-    st.error(
-        "以下标的使用了随机演示数据，不能与实际基金走势比较，也不能形成可执行候选："
-        + "、".join(demo_codes)
-        + "。请检查网络或改用东方财富接口。"
-    )
-elif fallback_codes:
+if fallback_codes and not demo_codes:
     st.warning("部分标的使用了真实行情回退接口：" + "、".join(fallback_codes) + "；建议核对来源和更新时间。")
-else:
+elif not demo_codes:
     st.success("当前结果全部来自真实行情接口，可进入研究流程；仍需人工核对公告原文。")
 freshness_label = "暂无有效日期"
 if freshness_days is not None:
@@ -592,8 +586,6 @@ tab_reco, tab_metrics, tab_detail, tab_events, tab_quality = st.tabs(["个性化
 with tab_reco:
     st.subheader("候选组合")
     st.info("AI 负责统一执行数据整理、规则计算和证据结构化；使用者负责选择研究假设、风险偏好和最终行动。")
-    if demo_codes:
-        st.warning("当前组合含演示数据，以下候选只用于验证页面流程，不代表真实基金判断。")
     if result.recommendations:
         display = result.recommendations_frame[["role", "code", "name", "target_weight", "action", "net_return_range", "max_drawdown"]].copy()
         display["action"] = display["action"].map(lambda action: research_display_state(result, action))

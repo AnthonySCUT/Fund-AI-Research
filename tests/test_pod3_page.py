@@ -48,12 +48,13 @@ def test_cost_and_horizon_reach_calculation(page):
     assert "12.5 bps" in page.session_state["result"].profile["cost_assumption"]
 
 
-def test_single_fund_keeps_roles_and_demo_notice(page):
+def test_single_fund_keeps_roles_and_demo_labels(page):
     page.multiselect[0].set_value(["510300"])
     page.button[0].click().run()
     assert not page.exception
     assert [r.code for r in page.session_state["result"].recommendations] == ["510300", "510300"]
-    assert any("演示数据" in x.value for x in page.warning)
+    assert not any("演示数据" in x.value for x in page.warning)
+    assert not any("以下标的使用了随机演示数据" in x.value for x in page.error)
     tables = [x.value for x in page.dataframe if "研究状态" in x.value.columns]
     assert any(set(table["研究状态"]) == {"仅演示，不可执行"} for table in tables)
 
