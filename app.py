@@ -343,10 +343,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.caption("数据抓取、质检、指标计算、证据式研究卡片和个性化持仓候选。任何真实交易都需要人工确认。")
-st.info(
-    f"五年十倍目标的数学门槛约为 {FIVE_YEAR_TEN_X_ANNUALIZED:.1%} 年化收益。"
-    "本页面将其作为压力测试基准，与历史指标和风险信号对照，不代表预测或收益承诺。"
-)
 if not selected_codes:
     st.warning("请至少选择一支基金。")
     st.stop()
@@ -483,8 +479,6 @@ if "cards" not in st.session_state:
                     result.events,
                 )
             )
-        if matching_codes:
-            st.info("已沿用与当前样本事实一致的后台研究卡片，其余标的使用当前样本生成。")
     else:
         with st.spinner("正在生成离线规则研究卡片…"):
             st.session_state.cards = analyze_metrics(result.metrics, result.quality, result.events)
