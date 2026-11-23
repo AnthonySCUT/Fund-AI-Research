@@ -31,6 +31,46 @@ jobs:
         run: python -m pytest -q tests/test_desktop_launcher.py
       - name: Package EXE
         run: python -m PyInstaller --noconfirm --clean desktop/fund_ai_research.spec
+      - name: Smoke test packaged local server
+        shell: pwsh
+        run: |
+          $bundleDir = (Resolve-Path "dist/FundAIResearch").Path
+          $exe = Join-Path $bundleDir "FundAIResearch.exe"
+          $appScript = Join-Path $bundleDir "_internal/app.py"
+          $stdoutLog = Join-Path $env:RUNNER_TEMP "desktop-smoke.log"
+          $stderrLog = Join-Path $env:RUNNER_TEMP "desktop-smoke-error.log"
+          $secretPath = Join-Path $env:RUNNER_TEMP "desktop-smoke-secrets.toml"
+          $port = 18501
+          $server = Start-Process -FilePath $exe -ArgumentList @("--fund-ai-streamlit-server", $appScript, "$port", $secretPath) -WorkingDirectory $env:RUNNER_TEMP -PassThru -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog
+          try {
+            $ready = $false
+            for ($attempt = 0; $attempt -lt 90; $attempt++) {
+              $server.Refresh()
+              if ($server.HasExited) {
+                Get-Content $stdoutLog, $stderrLog -ErrorAction SilentlyContinue
+                throw "Packaged Streamlit process exited before becoming healthy."
+              }
+              try {
+                $response = Invoke-WebRequest -Uri "http://127.0.0.1:$port/_stcore/health" -TimeoutSec 2
+                if ($response.StatusCode -eq 200) {
+                  $ready = $true
+                  break
+                }
+              } catch {
+                Start-Sleep -Seconds 1
+              }
+            }
+            if (-not $ready) {
+              Get-Content $stdoutLog, $stderrLog -ErrorAction SilentlyContinue
+              throw "Packaged Streamlit health endpoint did not return HTTP 200."
+            }
+            Write-Host "Packaged desktop server returned HTTP 200."
+          } finally {
+            $server.Refresh()
+            if (-not $server.HasExited) {
+              Stop-Process -Id $server.Id -Force
+            }
+          }
       - name: Create downloadable ZIP
         run: Compress-Archive -Path dist/FundAIResearch/* -DestinationPath FundAIResearch-Windows.zip
       - uses: actions/upload-artifact@v4
