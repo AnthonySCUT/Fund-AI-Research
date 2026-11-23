@@ -71,11 +71,11 @@ jobs:
               Stop-Process -Id $server.Id -Force
             }
           }
-      - name: Create downloadable ZIP
-        run: Compress-Archive -Path dist/FundAIResearch/* -DestinationPath FundAIResearch-Windows.zip
+      - name: Add desktop instructions
+        run: Copy-Item desktop/README.txt dist/FundAIResearch/README.txt
       - uses: actions/upload-artifact@v4
         with:
           name: FundAIResearch-Windows
-          path: FundAIResearch-Windows.zip
+          path: dist/FundAIResearch/
           if-no-files-found: error
           retention-days: 30
