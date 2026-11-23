@@ -17,6 +17,17 @@ py -3 -m streamlit run app.py
 
 浏览器打开终端显示的本地地址即可。页面默认使用“官方披露 + 自动真实行情”：事件优先来自上交所/深交所基金公告，价格历史按 Yahoo Finance -> 东方财富 -> 演示数据回退，并在页面明确标注来源。
 
+## Windows 独立桌面版
+
+桌面版在本机启动相同的 Streamlit 应用，并通过 Windows WebView2 窗口显示；行情和 AI 接口仍按当前网络数据源运行。桌面包不包含 API Key。
+
+1. 在 GitHub 仓库的 **Actions -> Build Windows desktop app** 中选择 **Run workflow**。
+2. 构建完成后，从该次运行的 **Artifacts** 下载 `FundAIResearch-Windows` 并解压。
+3. 双击 `FundAIResearch.exe`。首次运行需要 Windows 上可用的 Microsoft Edge WebView2 Runtime。
+4. 如需启用 Grok/DeepSeek，在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 中填写 `desktop/secrets.example.toml` 对应配置；密钥仅保存在本机。未配置密钥时，应用使用项目现有的离线规则基线。
+
+该应用使用独立的本地缓存与会话；关闭桌面窗口时，本地研究服务随之退出。网站继续按原有方式运行。
+
 ## 当前能力
 
 - 15 支被动 ETF 研究宇宙：沪深 300、中证 500、创业板、创业板 50、纳指、中证 1000、科创 50、证券、半导体、新能源、5G、医药、军工、光伏等；页面默认选中 12 支，可手动调整。

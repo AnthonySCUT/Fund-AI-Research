@@ -8,6 +8,8 @@ venv/
 .env.*
 !.env.example
 .streamlit/secrets.toml
+secrets.toml
+desktop/*.local.toml
 *.log
 cloudflared.exe
 .python-version

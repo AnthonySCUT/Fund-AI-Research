@@ -1,0 +1,41 @@
+name: Build Windows desktop app
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "app.py"
+      - "fund_ai_research/**"
+      - "data/**"
+      - "requirements.txt"
+      - "desktop/**"
+      - "tests/test_desktop_launcher.py"
+      - ".github/workflows/build_windows_desktop.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: desktop/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r desktop/requirements.txt pytest
+      - name: Run desktop packaging tests
+        run: python -m pytest -q tests/test_desktop_launcher.py
+      - name: Package EXE
+        run: python -m PyInstaller --noconfirm --clean desktop/fund_ai_research.spec
+      - name: Create downloadable ZIP
+        run: Compress-Archive -Path dist/FundAIResearch/* -DestinationPath FundAIResearch-Windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FundAIResearch-Windows
+          path: FundAIResearch-Windows.zip
+          if-no-files-found: error
+          retention-days: 30
