@@ -46,20 +46,38 @@ class Response:
     {'cards': [valid_card(), valid_card()]}])
 def test_invalid_primary_output_falls_back(payload):
     metric, quality = inputs()
-    with patch.dict(os.environ, {'GROK_API_KEY': 'test', 'DEEPSEEK_API_KEY': 'test'}), patch(
+    with patch.dict(os.environ, {'LLM_API_KEY': 'test', 'LLM_BASE_URL': 'https://custom.example/v1', 'DEEPSEEK_API_KEY': 'test'}), patch(
         'fund_ai_research.analysis.requests.post', side_effect=[Response(payload), Response({'cards': [valid_card()]})]
     ) as post:
         cards = analyze_metrics([metric], [quality], [])
-    assert cards[metric.code].source.startswith('Deepseek:')
+    assert cards[metric.code].source.startswith('DeepSeek:')
     assert post.call_count == 2
 
 
 def test_both_malformed_providers_use_rule_baseline():
     metric, quality = inputs()
-    with patch.dict(os.environ, {'GROK_API_KEY': 'test', 'DEEPSEEK_API_KEY': 'test'}), patch(
+    with patch.dict(os.environ, {'LLM_API_KEY': 'test', 'LLM_BASE_URL': 'https://custom.example/v1', 'DEEPSEEK_API_KEY': 'test'}), patch(
         'fund_ai_research.analysis.requests.post', return_value=Response({'cards': [None]})
     ):
         assert analyze_metrics([metric], [quality], [])[metric.code].source == '规则化基线'
+
+
+def test_deepseek_is_default_and_ignores_legacy_provider_settings():
+    metric, quality = inputs()
+    payload = {'cards': [valid_card()]}
+    env = {
+        'LLM_API_KEY': '', 'DEEPSEEK_API_KEY': 'deepseek-test',
+        'DEEPSEEK_BASE_URL': 'https://api.deepseek.example/v1',
+        'DEEPSEEK_MODEL': 'deepseek-chat',
+        'GROK_API_KEY': 'legacy-test', 'GROK_BASE_URL': 'https://legacy.example/v1',
+    }
+    with patch.dict(os.environ, env, clear=False), patch(
+        'fund_ai_research.analysis.requests.post', return_value=Response(payload)
+    ) as post:
+        cards = analyze_metrics([metric], [quality], [])
+    assert cards[metric.code].source.startswith('DeepSeek:')
+    assert post.call_count == 1
+    assert post.call_args.args[0] == 'https://api.deepseek.example/v1/chat/completions'
 
 
 @pytest.mark.parametrize('payload', [None, [], dict(valid_card(), facts=1)])

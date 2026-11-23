@@ -27,9 +27,9 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Fetch, validate and analyze
         env:
-          GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
-          GROK_BASE_URL: ${{ secrets.GROK_BASE_URL }}
-          GROK_MODEL: ${{ secrets.GROK_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_BASE_URL: ${{ secrets.DEEPSEEK_BASE_URL }}
           DEEPSEEK_MODEL: ${{ secrets.DEEPSEEK_MODEL }}

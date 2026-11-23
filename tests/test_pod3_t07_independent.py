@@ -9,6 +9,7 @@ from streamlit.testing.v1 import AppTest
 
 from fund_ai_research.analysis import OpenAICompatibleAnalyzer
 from fund_ai_research.connectors import CompositeConnector, DemoConnector
+from fund_ai_research.presentation import concise_source_label
 
 @pytest.mark.parametrize("initial_failure", [False, True], ids=["with_previous_result", "first_load"])
 def test_P01_same_parameters_can_retry_after_upstream_recovers(initial_failure):
@@ -69,7 +70,11 @@ def test_t07_source_contract_reaches_page(status, label, basis):
     table = next(x.value for x in app.dataframe if "来源校验状态" in x.value.columns and "接口标签" in x.value.columns)
     assert set(table["来源校验状态"]) == {status}
     assert set(table["价格口径"]) == {basis}
-    assert set(table["接口标签"]) == {label}
+    assert set(table["接口标签"]) == {concise_source_label(label)}
+    summary = next(item.value for item in app.caption if str(item.value).startswith("当前结果查询区间："))
+    assert concise_source_label(label) in summary
+    assert "交叉校验未完成" not in summary
+    assert "备用源不可用且主源待核实回退" not in summary
     assert set(table["公司行动状态"]) == {m.corporate_action_status for m in metrics}
     assert set(table["缺口处理"]) == {m.missing_policy for m in metrics}
     if status == "verified":

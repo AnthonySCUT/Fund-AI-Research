@@ -16,23 +16,20 @@
 
 ## Secrets 示例
 
-不使用大模型时无需配置 Secrets，页面会使用离线规则基线。
-
-推荐同时配置 Grok 主用和 DeepSeek 兜底：
+默认 AI 服务为 DeepSeek；如需其他 OpenAI-compatible 服务，可同时添加 `LLM_*` 配置。自定义接口优先，失败时自动回退到 DeepSeek。
 
 ```toml
-GROK_API_KEY = "在 Streamlit Cloud 控制台填写"
-GROK_BASE_URL = "公开可访问的 HTTPS OpenAI-compatible 地址"
-GROK_MODEL = "grok-4.5"
 DEEPSEEK_API_KEY = "在 Streamlit Cloud 控制台填写"
 DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
 DEEPSEEK_MODEL = "deepseek-chat"
+# Optional custom OpenAI-compatible provider.
+LLM_API_KEY = ""
+LLM_BASE_URL = ""
+LLM_MODEL = ""
 LLM_TIMEOUT_SECONDS = "20"
 ```
 
-如果只测试 DeepSeek，可以只保留 DeepSeek 三项。如果只测试 Grok，可以只保留 Grok 三项。Grok 和 DeepSeek 的请求失败时，代码会自动尝试下一供应商，最后回到离线规则分析。
-
-Grok 中转端点必须能从 Streamlit Cloud 和 GitHub Actions 访问。Tailscale 的 `100.x.x.x` 内网地址只能在加入同一 Tailnet 的设备使用，不能直接作为云端 Secrets。
+不使用大模型时无需配置 Secrets，页面会使用规则化研究。自定义端点需能从 Streamlit Cloud 和 GitHub Actions 访问。
 
 不要把真实 Key 写进仓库文件；只粘贴到 Secrets。已经在聊天或截图里暴露过的 Key 应先在供应商后台撤销，再生成新 Key。
 

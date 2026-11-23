@@ -121,7 +121,7 @@ def test_eastmoney_public_disclosure_parser_classifies_reports():
     assert "AN202608291234567890" in events[0].url
 
 
-def test_deepseek_fallback_is_used_when_grok_request_fails():
+def test_deepseek_fallback_is_used_when_custom_endpoint_fails():
     metric = calculate_metrics(
         normalize_history(DemoConnector().fetch_history("510300", date(2025, 1, 1), date(2026, 1, 1)), "510300"),
         "510300",
@@ -140,16 +140,20 @@ def test_deepseek_fallback_is_used_when_grok_request_fails():
             return {"choices": [{"message": {"content": '{"cards":[{"code":"510300","status":"黄灯","facts":["ok"],"positive_evidence":[],"risk_signals":[],"verification_questions":[],"conclusion":"fallback"}]}'}}]}
 
     with patch.dict(os.environ, {
-        "GROK_API_KEY": "grok-test",
-        "GROK_BASE_URL": "https://grok.example/v1",
+        "LLM_API_KEY": "custom-test",
+        "LLM_BASE_URL": "https://custom.example/v1",
+        "LLM_MODEL": "custom-model",
         "DEEPSEEK_API_KEY": "deepseek-test",
         "DEEPSEEK_BASE_URL": "https://deepseek.example/v1",
+        "DEEPSEEK_MODEL": "deepseek-chat",
     }, clear=False), patch("fund_ai_research.analysis.requests.post", side_effect=[requests.Timeout(), FakeResponse()]) as post:
         cards = analyze_metrics([metric], [quality], [])
 
-    assert cards["510300"].source == "Deepseek:deepseek-chat"
+    assert cards["510300"].source == "DeepSeek:deepseek-chat"
     assert cards["510300"].conclusion == "fallback"
     assert post.call_count == 2
+    assert post.call_args_list[0].args[0] == "https://custom.example/v1/chat/completions"
+    assert post.call_args_list[1].args[0] == "https://deepseek.example/v1/chat/completions"
 
 
 def test_incremental_fingerprints_change_only_the_affected_fund():

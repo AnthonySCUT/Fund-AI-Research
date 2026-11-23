@@ -24,7 +24,7 @@ py -3 -m streamlit run app.py
 1. 在 GitHub 仓库的 **Actions -> Build Windows desktop app** 中选择 **Run workflow**。
 2. 构建完成后，从该次运行的 **Artifacts** 下载 `FundAIResearch-Windows` 并解压一次。
 3. 打开解压出的 `FundAIResearch` 文件夹，双击 `FundAIResearch.exe`。首次运行需要 Windows 上可用的 Microsoft Edge WebView2 Runtime。
-4. 首次运行会在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 创建空白配置模板；如需启用 Grok/DeepSeek，在该文件填写对应 API Key。密钥仅保存在本机。未配置密钥时，应用使用项目现有的离线规则基线。
+4. 首次运行会在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 创建配置模板；填写 `DEEPSEEK_API_KEY` 即可使用 DeepSeek，也可设置 `LLM_API_KEY`、`LLM_BASE_URL`、`LLM_MODEL` 接入自定义兼容接口。密钥仅保存在本机。未配置密钥时，应用使用规则化研究。
 
 该应用使用独立的本地缓存与会话；关闭桌面窗口时，本地研究服务随之退出。网站继续按原有方式运行。
 
@@ -39,11 +39,10 @@ py -3 -m streamlit run app.py
 - 研究卡片区分事实、正面证据、风险信号、待验证问题和研究结论。
 - 事件与证据页同时抓取东方财富普通公告流（`type=0`）和定期报告流（`type=3`），去重后分类展示年报、半年报、季报、招募说明书/基金合同、分红、治理、人事和关联交易等文档线索，并保留公告日期、原文链接与证据级别；公告索引不替代报告正文，AI 会明确要求打开原文核验。
 - 五年十倍目标按数学门槛约 58.5% 年化收益进行压力测试；目标不是预测，也不是收益承诺。
-- AI 分析按 Grok -> DeepSeek 顺序尝试：Grok 请求失败、超时、鉴权失败或返回不完整时自动交给 DeepSeek；两者都不可用时使用离线规则基线。DeepSeek 只分析已抓取的结构化事实和公告链接，不替代官网行情接口。
+- AI 分析默认使用 DeepSeek；配置 `LLM_*` 后优先使用自定义兼容接口，失败或返回不完整时自动交给 DeepSeek；未配置可用接口时使用规则化研究。AI 只分析已抓取的结构化事实和公告链接，不替代官网行情接口。
 - 上交所 ETF 披露页和深交所基金公告页作为一级事件来源，保存公告标题、发布日期、发布方和原始链接；页面编码异常时自动修正。
-- 配好 `GROK_*` 环境变量后，也可以直接运行 `run_grok.ps1` 启动页面。
-- 也可以直接运行 `start.ps1`，脚本会提示输入 Key 并自动配置 Grok。
-- 也可以运行 `start_deepseek.ps1`，单独使用 DeepSeek 的 OpenAI-compatible 接口分析研究卡片；生产环境推荐同时配置两套 Secrets 以获得自动兜底。
+- 运行 `start.ps1` 可启动页面并按需输入 DeepSeek Key；也可运行 `run_app.ps1` 直接启动。
+- `LLM_*` 自定义兼容接口和 DeepSeek 可同时配置，自定义接口优先、DeepSeek 自动兜底。
 - `.github/workflows/scheduled_research.yml` 会在工作日北京时间 07:30、12:00、15:30 自动运行，生成 `data/latest_research.json` 和 `data/latest_research.md` 并提交回 GitHub。Streamlit Cloud 会因提交自动重新部署。
 - 侧边栏参数放在表单中，修改后点击“运行抓取与分析”才会发起新任务；选中多支基金时会并行抓取，并将 AI 研究卡片合并为一次请求。
 - 指标对比表会额外展示历史年化收益距离五年十倍所需约 58.5% 年化门槛的差距；这是压力测试和筛选视图，不是收益预测。
@@ -69,7 +68,7 @@ py -3 -m streamlit run app.py
 
 ## 加载时间说明
 
-首次运行自动真实行情时，系统会并行抓取行情和新闻；网络异常时会尝试另一个真实接口，最后才回退到演示数据。配置 Grok 或 DeepSeek 后，多个基金会合并为一次研究请求，默认最多等待 20 秒；可通过 `LLM_TIMEOUT_SECONDS` 或 `GROK_TIMEOUT_SECONDS` 调整。结果会保存在当前页面会话中，调整页面显示不会再次调用 AI。
+首次运行自动真实行情时，系统会并行抓取行情和新闻；网络异常时会尝试另一个真实接口，最后才回退到演示数据。配置 DeepSeek 或自定义兼容接口后，多个基金会合并为一次研究请求，默认最多等待 20 秒；可通过 `LLM_TIMEOUT_SECONDS` 或 `DEEPSEEK_TIMEOUT_SECONDS` 调整。结果会保存在当前页面会话中，调整页面显示不会再次调用 AI。
 
 中国 ETF 的价格历史默认选择 Yahoo Finance 真实行情，并带有浏览器请求头和 429 重试；也可以手动选择“中国 ETF 真实行情（东方财富）”。两个真实源都失败时，页面会明确提示“演示数据”，此时不能拿图表和实际基金走势比较。
 
@@ -78,12 +77,12 @@ py -3 -m streamlit run app.py
 在 GitHub 仓库的 **Settings -> Secrets and variables -> Actions** 中添加：
 
 ```text
-GROK_API_KEY       # Grok 主用密钥
-GROK_BASE_URL      # 公开可访问的 HTTPS OpenAI-compatible 地址
-GROK_MODEL         # 例如 grok-4.5
-DEEPSEEK_API_KEY   # DeepSeek 兜底密钥
+DEEPSEEK_API_KEY   # 默认 AI 服务
 DEEPSEEK_BASE_URL  # https://api.deepseek.com/v1
 DEEPSEEK_MODEL     # deepseek-chat
+LLM_API_KEY        # 可选：自定义兼容接口；优先于 DeepSeek
+LLM_BASE_URL       # 可选：自定义接口地址
+LLM_MODEL          # 可选：自定义模型名称
 ```
 
-同样的配置需要粘贴到 Streamlit Cloud 的 **App settings -> Secrets**。不要把 Tailscale 内网地址写进云端：云端无法访问你电脑上的 `100.x.x.x` 地址，必须使用公开可访问的 HTTPS 中转端点或官方端点。
+同样的配置需要粘贴到 Streamlit Cloud 的 **App settings -> Secrets**。自定义接口地址需能从云端访问。

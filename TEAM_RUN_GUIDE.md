@@ -83,7 +83,7 @@ python -m streamlit run app.py --server.port 8502
 9. 在“事件与证据”查看自动抓取的事件线索。新闻只作为线索，必须回到正式公告或定期报告核验。
 10. 在“数据质检”查看重复、缺失、负值、数据质量分和标准化后的样例。
 
-参数修改后请点击“运行抓取与分析”再提交。网络数据抓取会并行处理选中的基金；Grok 研究卡片失败或不完整时会自动改用 DeepSeek，最后才使用离线规则基线。首次运行或切换数据源时等待时间较长属于正常现象，页面显示结果后，普通交互不会重复请求 AI。
+参数修改后请点击“运行抓取与分析”再提交。网络数据抓取会并行处理选中的基金；自定义兼容接口失败或返回不完整时会自动改用 DeepSeek，最后使用规则化基线。首次运行或切换数据源时等待时间较长属于正常现象，页面显示结果后，普通交互不会重复请求 AI。
 
 ## 6. 测试代码
 
@@ -105,83 +105,29 @@ python -m pytest -q
 - Yahoo 限流时会优先回退到东方财富；两个真实接口都失败时才会使用演示数据，页面会显示红色警告，不能把这类图表与真实基金走势比较。
 - Yahoo 新闻属于二级信息，不是一级公开披露证据。
 
-## 8. 可选：接入大模型研究卡片
+## 8. AI 研究接口
 
-默认使用离线规则化研究卡片，不需要 API Key。只有在团队明确配置后，才会调用 OpenAI-compatible 接口。
+项目默认使用 DeepSeek；配置 `LLM_*` 后优先调用用户指定的 OpenAI-compatible 接口，失败时回退到 DeepSeek。两类服务都不可用时使用规则化研究卡片。
 
-PowerShell 临时配置示例：
-
-```powershell
-$env:LLM_API_KEY = "你的 API Key"
-$env:LLM_BASE_URL = "https://你的兼容接口/v1"
-$env:LLM_MODEL = "你的模型名称"
-python -m streamlit run app.py
-```
-
-当前只把公开行情指标和事件线索发送给接口，不要把账号、密码、身份证、券商 Token 或未脱敏持仓信息放进输入。生产化前必须增加权限、脱敏、审计和人工审批。
-
-Grok 不可用时，代码会把同一批已抓取事实交给 DeepSeek；DeepSeek 不会自动替代交易所/行情接口，也不会凭空补全财报。官网公告链接仍需人工回看。
-
-### 8.1 使用 Tailscale + CC Switch 的 Grok 中转
-
-你的 Grok 配置属于 OpenAI Chat Completions 兼容端点，项目不需要 Anthropic SDK，也不需要把 CC Switch 的配置文件复制进项目。只要运行页面的电脑能通过 Tailscale 访问该地址，就可以直接使用。Streamlit Cloud 和 GitHub Actions 无法直接访问 `100.x.x.x` 内网地址，云端必须改成公开可访问的 HTTPS 端点：
-
-```powershell
-$env:GROK_API_KEY = "重新生成的 Key"
-$env:GROK_BASE_URL = "http://100.94.190.42:18080/v1"
-$env:GROK_MODEL = "grok-4.5"
-.\run_grok.ps1
-```
-
-推荐直接运行交互式启动器，免去手动配置环境变量：
+首次启动可运行：
 
 ```powershell
 .\start.ps1
 ```
 
-脚本会用英文提示输入新的 API Key，输入时隐藏显示，并自动设置 Grok 地址和模型。启动后保持 PowerShell 窗口打开。
+脚本会可选地隐藏输入 DeepSeek Key；已有 `.streamlit/secrets.toml` 或环境变量时直接启动。桌面版可在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 配置。
 
-两个启动脚本均使用纯 ASCII 字符，兼容 Windows PowerShell 5.1。旧版脚本含有无 BOM 的 UTF-8 中文，可能在中文 Windows 上被错误解码，出现乱码、字符串未终止或缺少右括号等解析错误；请使用修复后的脚本。
-
-也可以使用项目通用变量：
+自定义接口可用环境变量配置：
 
 ```powershell
-$env:LLM_API_KEY = "重新生成的 Key"
-$env:LLM_BASE_URL = "http://100.94.190.42:18080/v1"
-$env:LLM_MODEL = "grok-4.5"
+$env:LLM_API_KEY = "你的 API Key"
+$env:LLM_BASE_URL = "https://你的兼容接口/v1"
+$env:LLM_MODEL = "你的模型名称"
+$env:LLM_TIMEOUT_SECONDS = "20"
 python -m streamlit run app.py
 ```
 
-检查连通性（不会发送 API Key）：
-
-```powershell
-Test-NetConnection 100.94.190.42 -Port 18080
-```
-
-如果 `TcpTestSucceeded` 为 `False`，先确认 Tailscale 已登录、设备在线，并且 ACL 允许访问 18080 端口。不要把该地址改成带末尾 `/` 的形式；程序会自动拼接 `/chat/completions`。
-
-安全要求：你在聊天中粘贴过的 Key 已经暴露，必须在供应商侧撤销并重新生成。不要把新 Key 写进 `app.py`、README、Git、截图或 ZIP；只在当前 PowerShell 会话用 `$env:GROK_API_KEY` 临时注入。
-
-### 8.2 使用 DeepSeek
-
-DeepSeek 使用 OpenAI-compatible Chat Completions，只替换 AI 分析服务，不替换行情数据源。推荐直接运行：
-
-```powershell
-.\start_deepseek.ps1
-```
-
-脚本会隐藏输入 Key，并自动设置：
-
-```text
-https://api.deepseek.com/v1
-deepseek-chat
-```
-
-如需缩短模型等待时间，可在当前 PowerShell 会话设置：
-
-```powershell
-$env:GROK_TIMEOUT_SECONDS = "10"
-```
+只配置 DeepSeek 时使用 `DEEPSEEK_API_KEY`、`DEEPSEEK_BASE_URL` 和 `DEEPSEEK_MODEL`。AI 只分析已抓取的结构化事实和事件线索，不替代行情数据源。
 
 ## 9. 目录说明
 

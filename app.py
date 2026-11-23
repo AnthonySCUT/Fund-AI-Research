@@ -24,6 +24,7 @@ except ImportError as exc:
 from fund_ai_research.connectors import DEFAULT_FUNDS
 from fund_ai_research.incremental import fingerprints_for_records, fingerprints_for_snapshot
 from fund_ai_research.pipeline import PipelineResult, run_pipeline
+from fund_ai_research.presentation import concise_source_label
 
 try:
     from fund_ai_research.analytics import max_drawdown_recovery_days, rolling_returns
@@ -56,7 +57,7 @@ except ImportError:
 
 st.set_page_config(page_title="AI 基金智能投研", page_icon="📊", layout="wide")
 
-APP_VERSION = "expanded-universe-reports-v9-pod3-session"
+APP_VERSION = "expanded-universe-reports-v10-provider-neutral"
 if st.session_state.get("_app_version") != APP_VERSION:
     for _key in ("result", "cards", "params"):
         st.session_state.pop(_key, None)
@@ -135,7 +136,7 @@ def cache_ttl_seconds() -> int:
 
 
 CACHE_TTL_SECONDS = cache_ttl_seconds()
-CACHE_SCHEMA_VERSION = "research-cache-v3-pod3-session"
+CACHE_SCHEMA_VERSION = "research-cache-v4-provider-neutral"
 BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
@@ -246,7 +247,7 @@ def cached_analyze_metrics(cache_schema, metrics, quality, events, analyzer_sign
 
 
 profiles = {profile.code: profile for profile in DEFAULT_FUNDS}
-grok_config = OpenAICompatibleAnalyzer(provider="grok")
+custom_config = OpenAICompatibleAnalyzer(provider="custom")
 deepseek_config = OpenAICompatibleAnalyzer(provider="deepseek")
 snapshot_path = Path(__file__).parent / "data" / "latest_research.json"
 scheduled_cards = load_snapshot_cards(snapshot_path) if snapshot_path.exists() else {}
@@ -259,14 +260,14 @@ with st.sidebar:
         except (OSError, ValueError):
             st.caption("后台快照：读取失败")
     st.caption(f"共享缓存周期：{cache_duration_label(CACHE_TTL_SECONDS)}")
-    if grok_config.enabled and deepseek_config.enabled:
-        st.success(f"AI 分析：{grok_config.label} 主用，{deepseek_config.label} 兜底")
-    elif grok_config.enabled:
-        st.success(f"AI 分析：{grok_config.label}（未配置 DeepSeek 兜底）")
+    if custom_config.enabled and deepseek_config.enabled:
+        st.success("AI 分析：自定义兼容接口优先，DeepSeek 兜底")
+    elif custom_config.enabled:
+        st.success(f"AI 分析：{custom_config.label}")
     elif deepseek_config.enabled:
-        st.warning(f"AI 分析：{deepseek_config.label}")
+        st.success(f"AI 分析：{deepseek_config.label}")
     else:
-        st.info("AI 分析：离线规则基线")
+        st.info("未配置 API 密钥时使用规则化研究；可配置 DeepSeek 或自定义兼容接口。")
     with st.form("research_parameters"):
         source_label = st.radio(
             "数据源",
@@ -391,7 +392,7 @@ if run_button or "result" not in st.session_state:
             )
             st.caption(
                 f"旧结果查询区间：{previous_params['start'].isoformat()} 至 {previous_params['end'].isoformat()} · "
-                + "数据来源：" + "、".join(sorted({item.source for item in previous_result.metrics}))
+                + "数据来源：" + "、".join(sorted({concise_source_label(item.source) for item in previous_result.metrics}))
             )
             old_display.columns = ["仓位角色", "代码", "基金", "目标权重", "研究状态"]
             old_display["目标权重"] = old_display["目标权重"].map(lambda value: f"{value:.0f}%")
@@ -441,10 +442,10 @@ if run_button or "result" not in st.session_state:
 
 result: PipelineResult = st.session_state.result
 if "cards" not in st.session_state:
-    if grok_config.enabled or deepseek_config.enabled:
+    if custom_config.enabled or deepseek_config.enabled:
         analyzer_signature = "|".join(
             [
-                f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
+                f"custom:{custom_config.label}:{custom_config.base_url}:{custom_config.enabled}",
                 f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
             ]
         )
@@ -486,14 +487,14 @@ if "cards" not in st.session_state:
 else:
     analyzer_signature = "|".join(
         [
-            f"grok:{grok_config.label}:{grok_config.base_url}:{grok_config.enabled}",
+            f"custom:{custom_config.label}:{custom_config.base_url}:{custom_config.enabled}",
             f"deepseek:{deepseek_config.label}:{deepseek_config.base_url}:{deepseek_config.enabled}",
         ]
     )
     refresh_codes = set(st.session_state.pop("_research_refresh_codes", set()))
     current_codes = {metric.code for metric in result.metrics}
     refresh_codes |= current_codes - set(st.session_state.cards)
-    if grok_config.enabled or deepseek_config.enabled:
+    if custom_config.enabled or deepseek_config.enabled:
         previous_signature = st.session_state.get("_cards_analyzer_signature")
         if previous_signature != analyzer_signature:
             refresh_codes = current_codes
@@ -523,7 +524,7 @@ profile = result.profile
 active_params = st.session_state.params
 st.caption(
     f"当前结果查询区间：{active_params['start'].isoformat()} 至 {active_params['end'].isoformat()} · "
-    + "数据来源：" + "、".join(sorted({item.source for item in result.metrics}))
+    + "数据来源：" + "、".join(sorted({concise_source_label(item.source) for item in result.metrics}))
 )
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 kpi1.metric("研究基金", len(result.metrics))
@@ -534,7 +535,7 @@ source_rows = []
 for item in result.metrics:
     status, note = source_status(item.source)
     source_rows.append({
-        "code": item.code, "status": status, "note": note, "source": item.source,
+        "code": item.code, "status": status, "note": note, "source": concise_source_label(item.source),
         "来源校验状态": item.source_check_status, "价格口径": item.price_basis,
         "公司行动状态": item.corporate_action_status, "缺口处理": item.missing_policy,
     })
