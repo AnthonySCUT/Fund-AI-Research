@@ -73,6 +73,7 @@ def run_server_mode(argv: list[str]) -> int:
     app_path = Path(argv[0])
     port = int(argv[1])
     secrets_path = Path(argv[2])
+    os.environ["STREAMLIT_GLOBAL_DEVELOPMENT_MODE"] = "false"
     sys.argv = streamlit_argv(app_path, port, secrets_path)
     from streamlit.web.cli import main
 
