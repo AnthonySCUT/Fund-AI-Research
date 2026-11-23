@@ -48,6 +48,14 @@ def streamlit_argv(app_path: Path, port: int, secrets_path: Path) -> list[str]:
     return args
 
 
+def ensure_secrets_file(root: Path, secrets_path: Path) -> None:
+    if secrets_path.exists():
+        return
+    template = root / "secrets.example.toml"
+    if template.is_file():
+        secrets_path.write_text(template.read_text(encoding="utf-8"), encoding="utf-8")
+
+
 def server_process_command(app_path: Path, port: int, secrets_path: Path) -> list[str]:
     if getattr(sys, "frozen", False):
         return [sys.executable, SERVER_MODE, str(app_path), str(port), str(secrets_path)]
@@ -94,6 +102,7 @@ def run_desktop() -> int:
     data_dir.mkdir(parents=True, exist_ok=True)
     log_path = data_dir / "desktop.log"
     secrets_path = data_dir / "secrets.toml"
+    ensure_secrets_file(root, secrets_path)
     app_path = root / "app.py"
     port = choose_port()
     url = f"http://127.0.0.1:{port}"

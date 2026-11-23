@@ -6,6 +6,7 @@ root = Path(SPECPATH).parent
 datas = [
     (str(root / "app.py"), "."),
     (str(root / "data"), "data"),
+    (str(root / "desktop" / "secrets.example.toml"), "."),
 ]
 binaries = []
 hiddenimports = []

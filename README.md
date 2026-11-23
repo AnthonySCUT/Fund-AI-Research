@@ -24,7 +24,7 @@ py -3 -m streamlit run app.py
 1. 在 GitHub 仓库的 **Actions -> Build Windows desktop app** 中选择 **Run workflow**。
 2. 构建完成后，从该次运行的 **Artifacts** 下载 `FundAIResearch-Windows` 并解压。
 3. 双击 `FundAIResearch.exe`。首次运行需要 Windows 上可用的 Microsoft Edge WebView2 Runtime。
-4. 如需启用 Grok/DeepSeek，在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 中填写 `desktop/secrets.example.toml` 对应配置；密钥仅保存在本机。未配置密钥时，应用使用项目现有的离线规则基线。
+4. 首次运行会在 `%LOCALAPPDATA%\FundAIResearch\secrets.toml` 创建空白配置模板；如需启用 Grok/DeepSeek，在该文件填写对应 API Key。密钥仅保存在本机。未配置密钥时，应用使用项目现有的离线规则基线。
 
 该应用使用独立的本地缓存与会话；关闭桌面窗口时，本地研究服务随之退出。网站继续按原有方式运行。
 
